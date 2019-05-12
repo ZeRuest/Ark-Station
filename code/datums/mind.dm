@@ -271,7 +271,7 @@
 			return
 
 		var/datum/goal/ambition/ambition = SSgoals.ambitions[src]
-		var/new_ambition = input("Enter a new ambition", "Memory", ambition ? html_decode(ambition.description) : "") as null|message
+		var/new_ambition = input("Enter a new ambition", "Memory", ambition ? rhtml_decode(ambition.description) : "") as null|message
 		if(isnull(new_ambition))
 			return
 		new_ambition = sanitize(new_ambition)

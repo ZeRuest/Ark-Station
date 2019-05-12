@@ -358,7 +358,7 @@
 
 	// This uses similar editing mechanism as the FileManager program, therefore it supports various paper tags and remembers formatting.
 	if(href_list["edit_body"])
-		var/oldtext = html_decode(msg_body)
+		var/oldtext = rhtml_decode(msg_body)
 		oldtext = replacetext(oldtext, "\[br\]", "\n")
 
 		var/newtext = sanitize(replacetext(input(usr, "Enter your message. You may use most tags from paper formatting", "Message Editor", oldtext) as message|null, "\n", "\[br\]"), 20000)

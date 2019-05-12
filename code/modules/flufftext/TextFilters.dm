@@ -1,7 +1,7 @@
 //This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:32
 
 proc/Intoxicated(phrase)
-	phrase = html_decode(phrase)
+	phrase = rhtml_decode(phrase)
 	var/leng=lentext(phrase)
 	var/counter=lentext(phrase)
 	var/newphrase=""
@@ -24,7 +24,7 @@ proc/Intoxicated(phrase)
 	return newphrase
 
 proc/NewStutter(phrase,stunned)
-	phrase = html_decode(phrase)
+	phrase = rhtml_decode(phrase)
 
 	var/list/split_phrase = splittext(phrase," ") //Split it up into words.
 
@@ -93,7 +93,7 @@ proc/RadioChat(mob/living/user, message, distortion_chance = 60, distortion_spee
 	var/datum/language/language
 	if(user)
 		language = user.get_default_language()
-	message = html_decode(message)
+	message = rhtml_decode(message)
 	var/new_message = ""
 	var/input_size = length(message)
 	var/lentext = 0
@@ -134,14 +134,14 @@ proc/RadioChat(mob/living/user, message, distortion_chance = 60, distortion_spee
 					if(english_only)
 						newletter += "*"
 					else
-						newletter = pick("ø", "Ð", "%", "æ", "µ")
+						newletter = pick("ï¿½", "ï¿½", "%", "ï¿½", "ï¿½")
 				distortion += 0.5 * distortion_speed
 			else if(prob(0.75 * distortion)) // Incomprehensible
 				newletter = pick("<", ">", "!", "$", "%", "^", "&", "*", "~", "#")
 				distortion += 0.75 * distortion_speed
 			else if(prob(0.05 * distortion)) // Total cut out
 				if(!english_only)
-					newletter = "¦w¡¼b»%> -BZZT-"
+					newletter = "ï¿½wï¿½ï¿½bï¿½%> -BZZT-"
 				else
 					newletter = "srgt%$hjc< -BZZT-"
 				new_message += newletter
@@ -151,15 +151,15 @@ proc/RadioChat(mob/living/user, message, distortion_chance = 60, distortion_spee
 					if("s")
 						newletter = "$"
 					if("e")
-						newletter = "£"
+						newletter = "ï¿½"
 					if("w")
-						newletter = "ø"
+						newletter = "ï¿½"
 					if("y")
-						newletter = "¡"
+						newletter = "ï¿½"
 					if("x")
-						newletter = "æ"
+						newletter = "ï¿½"
 					if("u")
-						newletter = "µ"
+						newletter = "ï¿½"
 		else
 			if(prob(0.2 * distortion))
 				newletter = " *crackle* "
