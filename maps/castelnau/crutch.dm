@@ -1,39 +1,45 @@
 /obj
 	var/list/req_one_access = list()
 
-/turf/simulated/wall/titanium_r
+///turf/simulated/wall/titanium_r
+////turf/simulated/wall/r_titanium
 
 /obj/effect/paint_stripe/nt_red
 
-/obj/effect/wallframe_spawn/reinforced/prepainted
+///obj/effect/wallframe_spawn/reinforced/prepainted
+///obj/effect/wallframe_spawn/reinforced
 
-/obj/structure/bed/chair/shuttle/red
+///obj/structure/bed/chair/shuttle/red
+///obj/structure/bed/chair/shuttle
 
-/obj/machinery/sleeper/survival_pod
+///obj/machinery/sleeper/survival_pod
+///obj/machinery/sleeper
 
-/obj/structure/closet/medical_wall/filled/small_shuttle
+///obj/structure/closet/medical_wall/filled/small_shuttle
+///obj/structure/closet/medical_wall/filled/shuttle
 
 /obj/effect/floor_decal/industrial/warning/half
 
-/obj/random/trash/space
-
-/obj/item/device/healthanalyzer
+///obj/random/trash/space
 
 /obj/structure/closet/medical_wall/filled/shuttle
 
- /obj/structure/closet/l3closet/xeno_anom
+/obj/structure/closet/l3closet/xeno_anom
 
- /obj/structure/closet/emcloset/full
+/obj/structure/closet/emcloset/full
 
- /obj/item/weapon/mining_scanner
+///obj/item/weapon/mining_scanner
+///obj/item/device/scanner/mining
 
- /obj/item/device/analyzer/plant_analyzer
+///obj/item/device/analyzer/plant_analyzer
+///obj/item/device/scanner/plant
 
-/obj/item/device/slime_scanner
+///obj/item/device/slime_scanner
+///obj/item/device/scanner/xenobio
 
 /obj/effect/floor_decal/industrial/danger/corner
 
-/obj/structure/plasticflaps/mining
+///obj/structure/plasticflaps/mining
 
 /obj/structure/closet/jcloset/sierra
 
@@ -63,8 +69,6 @@
 
 /obj/structure/closet/medical_wall/filled/security
 
-/obj/item/weapon/ladder_mobile
-
 /obj/machinery/door/airlock/glass/engineering/no_stripe
 
 /obj/effect/wallframe_spawn/reinforced/polarized/prepainted
@@ -75,7 +79,7 @@
 
 /obj/machinery/door/airlock/security/striped
 
-/obj/structure/closet/secure_closet/quartermaster_sierra
+///obj/structure/closet/secure_closet/quartermaster_sierra
 
 /obj/effect/paint/nt_white
 
@@ -87,13 +91,15 @@
 
 /obj/item/weapon/material/kitchen/utensil/knife/plastic
 
-/obj/item/weapon/clipboard
+///obj/item/weapon/clipboard
+///obj/item/weapon/material/clipboard
 
 /obj/structure/closet/medical_wall/filled/security
 
 /obj/machinery/door/airlock/security/striped
 
-/obj/item/stack/rods/fifty
+///obj/item/stack/rods/fifty
+///obj/item/stack/material/rods/fifty
 
 /obj/structure/closet/secure_closet/warden/sierra
 
@@ -103,15 +109,15 @@
 
 /obj/item/weapon/pen/multi/cmd/captain
 
-/obj/machinery/blackbox_recorder
+///obj/machinery/blackbox_recorder
 
 /obj/item/weapon/pen/multi/cmd/hop
 
-/obj/structure/closet/secure_closet/captains/sierra
+///obj/structure/closet/secure_closet/captains/sierra
 
 /obj/item/weapon/book/manual/nt_sop
 
-/obj/machinery/uniform_vendor
+///obj/machinery/uniform_vendor
 
 /obj/machinery/floor_light/prebuilt/bar/violet
 
@@ -137,7 +143,8 @@
 
 /obj/structure/closet/secure_closet/hop/sierra
 
-/obj/item/device/mass_spectrometer/adv
+///obj/item/device/mass_spectrometer/adv
+///obj/item/device/scanner/spectrometer/adv
 
 /obj/structure/closet/crate/freezer/nanoblood
 
@@ -153,12 +160,16 @@
 
 /obj/item/weapon/reagent_containers/glass/bottle/hyronalin
 
-/obj/item/device/cassette/custom
+///obj/item/device/cassette/custom
 
 /obj/structure/shotgun_rack
 
 /obj/structure/closet/secure_closet/bar_sierra
 
-/obj/item/weapon/material/knife/butch
+///obj/item/weapon/material/knife/butch
 
 /obj/effect/wallframe_spawn/reinforced_phoron/prepainted
+
+///obj/structure/magshield/nav_light/red
+
+///obj/structure/magshield/nav_light/red
