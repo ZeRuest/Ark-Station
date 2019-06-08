@@ -19,7 +19,7 @@
 	)
 	dock_target = "prometeus_shuttle"
 	current_location = "nav_prometeus_dock"
-	landmark_transition = "nav_transit_prometeus"
+	landmark_transition = "nav_prometeus_transit"
 	range = 1
 	fuel_consumption = 4
 	logging_home_tag = "nav_prometeus_dock"
@@ -48,7 +48,7 @@
 	)
 	dock_target = "bixie_shuttle"
 	current_location = "nav_bixie_dock"
-	landmark_transition = "nav_transit_bixie"
+	landmark_transition = "nav_bixie_transit"
 	range = 1
 	fuel_consumption = 4
 	logging_home_tag = "nav_bixie_dock"
@@ -73,7 +73,7 @@
 	shuttle_area = list(
 		/area/shuttle/castelnau/perseus/cockpit,
 		/area/shuttle/castelnau/perseus/power,
-		/area/shuttle/castelnau/perseus/cargo	
+		/area/shuttle/castelnau/perseus/cargo
 	)
 	dock_target = "perseus_shuttle"
 	current_location = "nav_perseus_dock"
