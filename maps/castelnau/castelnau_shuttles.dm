@@ -58,6 +58,7 @@
 /obj/effect/shuttle_landmark/castelnau/hangar/bixie
 	name = "Bixie Hangar"
 	landmark_tag = "nav_bixie_dock"
+	docking_controller = "bixie_shuttle_dock"
 	base_area = /area/space
 	base_turf = /turf/space
 
