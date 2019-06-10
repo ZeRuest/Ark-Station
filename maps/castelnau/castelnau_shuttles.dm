@@ -17,7 +17,7 @@
 		/area/shuttle/castelnau/prometeus/equip,
 		/area/shuttle/castelnau/prometeus/eva
 	)
-	dock_target = "prometeus_shuttle"
+	dock_target = "prometeus_shuttle_airlock"
 	current_location = "nav_prometeus_dock"
 	landmark_transition = "nav_prometeus_transit"
 	range = 1
@@ -29,6 +29,7 @@
 /obj/effect/shuttle_landmark/castelnau/hangar/prometeus
 	name = "Prometeus Hangar"
 	landmark_tag = "nav_prometeus_dock"
+	docking_controller = "prometeus_shuttle_dock"
 	base_area = /area/space
 	base_turf = /turf/space
 
