@@ -309,8 +309,3 @@ obj/item/modular_computer/CtrlAltClick(mob/user)
 	if(!CanPhysicallyInteract(user))
 		return
 	open_terminal(user)
-
-/obj/item/modular_computer/CouldUseTopic(var/mob/user)
-	..()
-	if(LAZYLEN(interact_sounds) && CanPhysicallyInteract(user))
-		playsound(src, pick(interact_sounds), interact_sound_volume)

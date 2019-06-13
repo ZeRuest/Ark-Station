@@ -73,7 +73,6 @@
 	speed = 2
 	melee_damage_lower = 5
 	melee_damage_upper = 15
-	melee_damage_flags = DAM_SHARP
 	attacktext = "mauled"
 	cold_damage_per_tick = 0
 	speak_chance = 5
@@ -101,7 +100,6 @@
 	speed = 1
 	melee_damage_lower = 1
 	melee_damage_upper = 8
-	melee_damage_flags = DAM_SHARP
 	attacktext = "gouged"
 	cold_damage_per_tick = 0
 	speak_chance = 5
@@ -123,7 +121,6 @@
 	speed = 1
 	melee_damage_lower = 3
 	melee_damage_upper = 12
-	melee_damage_flags = DAM_SHARP
 	attacktext = "gouged"
 	cold_damage_per_tick = 0
 	speak_chance = 2

@@ -33,7 +33,6 @@
 	size = 12
 	available_on_ntnet = 1
 	requires_ntnet = 1
-	category = PROG_MONITOR
 
 /datum/nano_module/camera_monitor
 	name = "Camera Monitoring program"

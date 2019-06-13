@@ -20,8 +20,9 @@
 				if(M)
 					if(!M.get_amount())
 						return
-					while(metal_amount < 150000 && M.use(1))
+					while(metal_amount < 150000 && M.amount)
 						src.metal_amount += O.matter[MATERIAL_STEEL] /*O:height * O:width * O:length * 100000.0*/
+						M.use(1)
 						count++
 
 					to_chat(user, "You insert [count] metal sheet\s into the fabricator.")

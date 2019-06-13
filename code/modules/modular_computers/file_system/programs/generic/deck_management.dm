@@ -11,7 +11,6 @@
 	size = 18
 	available_on_ntnet = 1
 	requires_ntnet = 1
-	category = PROG_SUPPLY
 
 /datum/nano_module/deck_management
 	name = "Deck Management Program"

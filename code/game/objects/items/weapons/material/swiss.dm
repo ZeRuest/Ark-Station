@@ -60,7 +60,7 @@
 		edge = initial(edge)
 		sharp = initial(sharp)
 		hitsound = initial(hitsound)
-		attack_verb = closed_attack_verbs
+		attack_verb = initial(attack_verb)
 		siemens_coefficient = initial(siemens_coefficient)
 	if(active_tool == SWISSKNF_CLOSED)
 		w_class = initial(w_class)

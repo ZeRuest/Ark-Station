@@ -89,17 +89,18 @@
 	else if(authenticated_account)
 		if(istype(I,/obj/item/weapon/spacecash))
 			var/obj/item/weapon/spacecash/dolla = I
+			if(prob(50))
+				playsound(loc, 'sound/items/polaroid1.ogg', 50, 1)
+			else
+				playsound(loc, 'sound/items/polaroid2.ogg', 50, 1)
 
-			//deposit the cash
-			if(authenticated_account.deposit(dolla.worth, "Credit deposit", machine_id))
-				if(prob(50))
-					playsound(loc, 'sound/items/polaroid1.ogg', 50, 1)
-				else
-					playsound(loc, 'sound/items/polaroid2.ogg', 50, 1)
+			//create a transaction log entry
+			var/datum/transaction/T = new(authenticated_account.owner_name, "Credit deposit", dolla.worth, machine_id)
+			authenticated_account.do_transaction(T)
 
-				to_chat(user, "<span class='info'>You insert [I] into [src].</span>")
-				src.attack_hand(user)
-				qdel(I)
+			to_chat(user, "<span class='info'>You insert [I] into [src].</span>")
+			src.attack_hand(user)
+			qdel(I)
 	else
 		..()
 
@@ -167,10 +168,10 @@
 								t += "<tr>"
 								t += "<td>[T.date]</td>"
 								t += "<td>[T.time]</td>"
-								t += "<td>[T.get_target_name()]</td>"
+								t += "<td>[T.target_name]</td>"
 								t += "<td>[T.purpose]</td>"
 								t += "<td>T[T.amount]</td>"
-								t += "<td>[T.get_source_name()]</td>"
+								t += "<td>[T.source_terminal]</td>"
 								t += "</tr>"
 							t += "</table>"
 							t += "<A href='?src=\ref[src];choice=print_transaction'>Print</a><br>"
@@ -239,9 +240,11 @@
 					else if(transfer_amount <= authenticated_account.money)
 						var/target_account_number = text2num(href_list["target_acc_number"])
 						var/transfer_purpose = href_list["purpose"]
-						var/datum/money_account/target_account = get_account(target_account_number)
-						if(target_account && authenticated_account.transfer(target_account, transfer_amount, transfer_purpose))
+						if(charge_to_account(target_account_number, authenticated_account.owner_name, transfer_purpose, machine_id, transfer_amount))
 							to_chat(usr, "\icon[src]<span class='info'>Funds transfer successful.</span>")
+							//create an entry in the account transaction log
+							var/datum/transaction/T = new("Account #[target_account_number]", transfer_purpose, -transfer_amount, machine_id)
+							authenticated_account.do_transaction(T)
 						else
 							to_chat(usr, "\icon[src]<span class='warning'>Funds transfer failed.</span>")
 
@@ -292,7 +295,8 @@
 								//create an entry in the account transaction log
 								var/datum/money_account/failed_account = get_account(tried_account_num)
 								if(failed_account)
-									failed_account.log_msg("Unauthorized login attempt", machine_id)
+									var/datum/transaction/T = new(failed_account.owner_name, "Unauthorised login attempt", 0, machine_id)
+									failed_account.do_transaction(T)
 							else
 								to_chat(usr, "\icon[src] <span class='warning'>Incorrect pin/account combination entered, [max_pin_attempts - number_incorrect_tries] attempts remaining.</span>")
 								previous_account_number = tried_account_num
@@ -306,7 +310,8 @@
 						view_screen = NO_SCREEN
 
 						//create a transaction log entry
-						authenticated_account.log_msg("Remote terminal access", machine_id)
+						var/datum/transaction/T = new(authenticated_account.owner_name, "Remote terminal access", 0, machine_id)
+						authenticated_account.do_transaction(T)
 
 						to_chat(usr, "\icon[src] <span class='info'>Access granted. Welcome user '[authenticated_account.owner_name].'</span>")
 
@@ -317,10 +322,13 @@
 				if(amount <= 0)
 					alert("That is not a valid amount.")
 				else if(authenticated_account && amount > 0)
-					//create an entry in the account transaction log
-					if(authenticated_account.withdraw(amount, "Credit withdrawal", machine_id))
+					if(amount <= authenticated_account.money)
 						playsound(src, 'sound/machines/chime.ogg', 50, 1)
 						spawn_ewallet(amount,src.loc,usr)
+
+						//create an entry in the account transaction log
+						var/datum/transaction/T = new(authenticated_account.owner_name, "Credit withdrawal", -amount, machine_id)
+						authenticated_account.do_transaction(T)
 					else
 						to_chat(usr, "\icon[src]<span class='warning'>You don't have enough funds to do that!</span>")
 			if("withdrawal")
@@ -329,10 +337,13 @@
 				if(amount <= 0)
 					alert("That is not a valid amount.")
 				else if(authenticated_account && amount > 0)
-					//remove the money
-					if(authenticated_account.withdraw(amount, "Credit withdrawal", machine_id))
+					if(amount <= authenticated_account.money)
 						playsound(src, 'sound/machines/chime.ogg', 50, 1)
 						spawn_money(amount,src.loc,usr)
+
+						//remove the money
+						var/datum/transaction/T = new(authenticated_account.owner_name, "Credit withdrawal", -amount, machine_id)
+						authenticated_account.do_transaction(T)
 					else
 						to_chat(usr, "\icon[src]<span class='warning'>You don't have enough funds to do that!</span>")
 			if("balance_statement")
@@ -381,10 +392,10 @@
 						R.info += "<tr>"
 						R.info += "<td>[T.date]</td>"
 						R.info += "<td>[T.time]</td>"
-						R.info += "<td>[T.get_target_name()]</td>"
+						R.info += "<td>[T.target_name]</td>"
 						R.info += "<td>[T.purpose]</td>"
 						R.info += "<td>T[T.amount]</td>"
-						R.info += "<td>[T.get_source_name()]</td>"
+						R.info += "<td>[T.source_terminal]</td>"
 						R.info += "</tr>"
 					R.info += "</table>"
 

@@ -219,6 +219,3 @@
 			pulsesound = "extremely fast and faint"
 
 	. = "[pulsesound] pulse"
-
-/obj/item/organ/internal/heart/get_mechanical_assisted_descriptor()
-	return "pacemaker-assisted [name]"

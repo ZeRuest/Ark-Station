@@ -231,7 +231,7 @@
 	chem_products = list(
 		/datum/reagent/toxin/phoron = 20
 		)
-	construction_difficulty = MATERIAL_HARD_DIY
+	construction_difficulty = 2
 	ore_name = "phoron"
 	ore_compresses_to = MATERIAL_PHORON
 	ore_result_amount = 5
@@ -246,7 +246,6 @@
 	xarch_source_mineral = MATERIAL_PHORON
 	ore_icon_overlay = "gems"
 	sale_price = 5
-	value = 200
 
 /material/phoron/supermatter
 	name = MATERIAL_SUPERMATTER

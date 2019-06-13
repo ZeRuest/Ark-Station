@@ -39,7 +39,6 @@
 	var/datum/wifi/receiver/button/door/wifi_receiver
 	var/material/implicit_material
 	autoset_access = FALSE // Uses different system with buttons.
-	pry_mod = 1.35
 
 /obj/machinery/door/blast/Initialize()
 	. = ..()
@@ -154,7 +153,7 @@
 			to_chat(user, "<span class='notice'>\The [src] is already fully functional.</span>")
 			return
 		var/obj/item/stack/P = C
-		if(!P.can_use(amt))
+		if(P.amount < amt)
 			to_chat(user, "<span class='warning'>You don't have enough sheets to repair this! You need at least [amt] sheets.</span>")
 			return
 		to_chat(user, "<span class='notice'>You begin repairing \the [src]...</span>")
@@ -253,7 +252,6 @@
 	min_force = 15
 	maxhealth = 500
 	explosion_resistance = 10
-	pry_mod = 0.55
 
 /obj/machinery/door/blast/shutters/open
 	begins_closed = FALSE

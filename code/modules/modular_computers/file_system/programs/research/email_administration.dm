@@ -10,7 +10,6 @@
 	available_on_ntnet = 1
 	nanomodule_path = /datum/nano_module/program/email_administration
 	required_access = access_network
-	category = PROG_ADMIN
 
 /datum/nano_module/program/email_administration
 	name = "Email Administration"

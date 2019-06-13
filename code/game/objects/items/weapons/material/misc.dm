@@ -10,8 +10,6 @@
 	attack_verb = list("jabbed","stabbed","ripped")
 	does_spin = FALSE
 	var/spent
-	worth_multiplier = 15
-
 
 /obj/item/weapon/material/harpoon/bomb
 	name = "explosive harpoon"
@@ -41,7 +39,6 @@
 	thrown_force_divisor = 0.3
 	sharp = FALSE
 	edge = FALSE
-	worth_multiplier = 6
 
 /obj/item/weapon/material/hatchet
 	name = "hatchet"
@@ -122,4 +119,5 @@
 	slot_flags = SLOT_BACK
 	origin_tech = list(TECH_MATERIAL = 2, TECH_COMBAT = 2)
 	attack_verb = list("chopped", "sliced", "cut", "reaped")
-	worth_multiplier = 20
+
+

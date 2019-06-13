@@ -135,6 +135,7 @@ Using robohead because of restricting to roboticist */
 					to_chat(user, "<span class='notice'>You need three cable coils to wire the devices.</span>")
 					..()
 					return
+				C.use(3)
 				buildstep++
 				to_chat(user, "<span class='notice'>You wire the assembly</span>")
 				desc = "This TV camera assembly has wires sticking out"
@@ -148,11 +149,12 @@ Using robohead because of restricting to roboticist */
 		if(4)
 			if(istype(W, /obj/item/stack/material/steel))
 				var/obj/item/stack/material/steel/S = W
-				if(S.use(1))
-					buildstep++
-					to_chat(user, "<span class='notice'>You encase the assembly.</span>")
-					var/turf/T = get_turf(src)
-					new /obj/item/device/camera/tvcamera(T)
-					qdel(src)
-					return
+				buildstep++
+				S.use(1)
+				to_chat(user, "<span class='notice'>You encase the assembly.</span>")
+				var/turf/T = get_turf(src)
+				new /obj/item/device/camera/tvcamera(T)
+				qdel(src)
+				return
+
 	..()

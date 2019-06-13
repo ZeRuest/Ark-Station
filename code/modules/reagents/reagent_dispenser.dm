@@ -287,7 +287,6 @@
 			anchored = !anchored
 		return
 	else
-		flick("[icon_state]-vend", src)
 		return ..()
 
 /obj/structure/reagent_dispensers/beerkeg

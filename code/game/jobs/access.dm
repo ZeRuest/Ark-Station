@@ -3,12 +3,12 @@
 /obj/var/list/req_access = list()
 
 //returns 1 if this mob has sufficient access to use this object
-/atom/movable/proc/allowed(mob/M)
+/obj/proc/allowed(mob/M)
 	//check if it doesn't require any access at all
 	if(src.check_access(null))
-		return TRUE
+		return 1
 	if(!istype(M))
-		return FALSE
+		return 0
 	return check_access_list(M.GetAccess())
 
 /atom/movable/proc/GetAccess()
@@ -22,19 +22,17 @@
 /atom/movable/proc/GetIdCard()
 	return null
 
-/atom/movable/proc/check_access(obj/item/I)
+/obj/proc/check_access(obj/item/I)
 	return check_access_list(I ? I.GetAccess() : list())
 
-/atom/movable/proc/check_access_list(list/L)
-	var/list/R = get_req_access()
-
-	if(!R)
-		R = list()
+/obj/proc/check_access_list(var/list/L)
+	if(!req_access)
+		req_access = list()
 	if(!istype(L, /list))
-		return FALSE
-	return has_access(R, L)
+		return 0
+	return has_access(req_access, L)
 
-/proc/has_access(list/req_access, list/accesses)
+/proc/has_access(var/list/req_access, var/list/accesses)
 	for(var/req in req_access)
 		if(islist(req))
 			var/found = FALSE
@@ -55,13 +53,6 @@
 	for(var/access_pattern in access_patterns)
 		if(has_access(access_pattern, access))
 			return 1
-
-// Used for retrieving required access information, if available
-/atom/movable/proc/get_req_access()
-	return null
-
-/obj/get_req_access()
-	return req_access
 
 /proc/get_centcom_access(job)
 	switch(job)

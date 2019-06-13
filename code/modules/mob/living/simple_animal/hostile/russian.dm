@@ -25,7 +25,6 @@
 	unsuitable_atmos_damage = 15
 	faction = "russian"
 	status_flags = CANPUSH
-	melee_damage_flags = DAM_SHARP|DAM_EDGE
 
 
 /mob/living/simple_animal/hostile/russian/ranged

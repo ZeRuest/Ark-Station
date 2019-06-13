@@ -106,8 +106,6 @@
 	var/list/areaindex = list()
 
 	for(var/obj/item/device/radio/beacon/R in world)
-		if(!R.functioning)
-			continue
 		var/turf/T = get_turf(R)
 		if (!T)
 			continue
@@ -201,7 +199,7 @@
 
 /obj/machinery/teleport/hub
 	name = "teleporter hub"
-	desc = "The teleporter hub handles all of the impossibly complex busywork required in instant matter transmission."
+	desc = "It's the hub of a teleporting machine."
 	icon_state = "tele0"
 	dir = 4
 	idle_power_usage = 10
@@ -231,8 +229,8 @@
 	return ..()
 
 /obj/machinery/teleport/station
-	name = "projector"
-	desc = "This machine is capable of projecting a miniature wormhole leading directly to its provided target."
+	name = "station"
+	desc = "It's the station thingy of a teleport thingy." //seriously, wtf.
 	icon_state = "controller"
 	dir = 4
 	var/engaged = 0
@@ -266,12 +264,6 @@
 	if (!(com && com.locked))
 		audible_message("<span class='warning'>Failure: Cannot authenticate locked on coordinates. Please reinstate coordinate matrix.</span>")
 		return
-
-	if(istype(com.locked, /obj/item/device/radio/beacon))
-		var/obj/item/device/radio/beacon/B = com.locked
-		if(!B.functioning)
-			audible_message("<span class='warning'>Failure: Unable to establish connection to provided coordinates. Please reinstate coordinate matrix.</span>")
-			return
 
 	if (hub)
 		hub.icon_state = "tele1"

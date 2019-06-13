@@ -9,7 +9,6 @@
 	available_on_ntnet = 1
 	nanomodule_path = /datum/nano_module/records
 	usage_flags = PROGRAM_ALL
-	category = PROG_OFFICE
 
 /datum/nano_module/records
 	name = "Crew Records"

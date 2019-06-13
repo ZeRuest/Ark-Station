@@ -11,7 +11,6 @@
 	var/wall_type =  /turf/simulated/wall/elevator
 	var/floor_type = /turf/simulated/floor/tiled/dark
 	var/door_type =  /obj/machinery/door/airlock/lift
-	var/firedoor_type = /obj/machinery/door/firedoor
 
 	var/list/areas_to_use = list()
 
@@ -190,9 +189,7 @@
 						lift.doors += newdoor
 						newdoor.lift = cfloor
 					else
-						var/obj/machinery/door/firedoor/newfiredoor = new firedoor_type(checking)
 						cfloor.doors += newdoor
-						cfloor.doors += newfiredoor
 						newdoor.floor = cfloor
 
 		// Place exterior control panel.

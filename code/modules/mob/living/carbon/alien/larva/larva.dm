@@ -4,7 +4,7 @@
 
 	speak_emote = list("hisses")
 	icon_state = "larva"
-	language = LANGUAGE_XENOPHAGE_GLOBAL
+	language = "Hivemind"
 	maxHealth = 25
 	health = 25
 
@@ -18,7 +18,7 @@
 /mob/living/carbon/alien/larva/New()
 	..()
 	time_of_birth = world.time
-	add_language(LANGUAGE_XENOPHAGE) //Bonus language.
+	add_language("Xenophage") //Bonus language.
 	internal_organs |= new /obj/item/organ/internal/xeno/hivenode(src)
 	create_reagents(100)
 

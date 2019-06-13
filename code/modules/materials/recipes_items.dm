@@ -257,9 +257,3 @@
 	result_type = /obj/item/weapon/material/clipboard
 	req_amount = 5
 	send_material_data = 1
-
-/datum/stack_recipe/urn
-	title = "urn"
-	result_type = /obj/item/weapon/material/urn
-	req_amount = 5
-	send_material_data = 1

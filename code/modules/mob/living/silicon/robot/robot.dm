@@ -94,7 +94,6 @@
 	var/tracking_entities = 0 //The number of known entities currently accessing the internal camera
 	var/braintype = "Cyborg"
 	var/intenselight = 0	// Whether cyborg's integrated light was upgraded
-	var/vtec = FALSE
 
 	var/list/robot_verbs_default = list(
 		/mob/living/silicon/robot/proc/sensor_mode,
@@ -107,7 +106,7 @@
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
 
-	add_language(LANGUAGE_ROBOT_GLOBAL, 1)
+	add_language("Robot Talk", 1)
 	add_language(LANGUAGE_EAL, 1)
 
 	wires = new(src)
@@ -509,7 +508,7 @@
 				to_chat(usr, "<span class='notice'>You install the [W.name].</span>")
 				return
 
-	if(isWelder(W) && user.a_intent != I_HURT)
+	if(isWelder(W))
 		if (src == user)
 			to_chat(user, "<span class='warning'>You lack the reach to be able to repair yourself.</span>")
 			return
@@ -541,7 +540,7 @@
 			for(var/mob/O in viewers(user, null))
 				O.show_message(text("<span class='warning'>[user] has fixed some of the burnt wires on [src]!</span>"), 1)
 
-	else if(isCrowbar(W) && user.a_intent != I_HURT)	// crowbar means open or close the cover - we all know what a crowbar is by now
+	else if(isCrowbar(W))	// crowbar means open or close the cover - we all know what a crowbar is by now
 		if(opened)
 			if(cell)
 				user.visible_message("<span class='notice'>\The [user] begins clasping shut \the [src]'s maintenance hatch.</span>", "<span class='notice'>You begin closing up \the [src].</span>")
@@ -723,8 +722,23 @@
 /mob/living/silicon/robot/attack_generic(var/mob/user, var/damage, var/attack_message)
 	return ..(user,Floor(damage/2),attack_message)
 
-/mob/living/silicon/robot/get_req_access()
-	return req_access
+/mob/living/silicon/robot/proc/allowed(mob/M)
+	//check if it doesn't require any access at all
+	if(check_access(null))
+		return 1
+	if(istype(M, /mob/living/carbon/human))
+		var/mob/living/carbon/human/H = M
+		//if they are holding or wearing a card that has access, that works
+		if(check_access(H.get_active_hand()) || check_access(H.wear_id))
+			return 1
+	else if(istype(M, /mob/living/silicon/robot))
+		var/mob/living/silicon/robot/R = M
+		if(check_access(R.get_active_hand()) || istype(R.get_active_hand(), /obj/item/weapon/card/robot))
+			return 1
+	return 0
+
+/mob/living/silicon/robot/proc/check_access(obj/item/weapon/card/id/I)
+	return has_access(req_access, I.access)
 
 /mob/living/silicon/robot/on_update_icon()
 	overlays.Cut()

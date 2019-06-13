@@ -36,17 +36,6 @@
 		playsound(loc, 'sound/machines/ping.ogg', 40, 1)
 		to_chat(user,"<span class='notice'>New survey data stored - [scan_results[2]] GEP.</span>")
 
-/obj/item/device/scanner/mining/proc/put_disk_in_hand(var/mob/M)
-	if(!survey_data)
-		to_chat(M,"<span class='warning'>There is no survey data stored on the [src].</span>")
-		return 0
-	visible_message("<span class='notice'>The [src] spits out a disk containing [survey_data] GEP.</span>")
-	var/obj/item/weapon/disk/survey/D = new(get_turf(src))
-	D.data = survey_data
-	survey_data = 0
-	M.put_in_hands(D)
-	return 1
-
 /obj/item/device/scanner/mining/verb/get_data()
 	set category = "Object"
 	set name = "Get Survey Data"
@@ -57,7 +46,14 @@
 		return
 	if(M.incapacitated())
 		return
-	put_disk_in_hand(M)
+	if(!survey_data)
+		to_chat(M,"<span class='warning'>There is no survey data stored on the [src].</span>")
+		return
+	visible_message("<span class='notice'>The [src] spits out a disk containing [survey_data] GEP.</span>")
+	var/obj/item/weapon/disk/survey/D = new(get_turf(src))
+	D.data = survey_data
+	survey_data = 0
+	M.put_in_hands(D)
 
 /obj/item/weapon/disk/survey
 	name = "survey data disk"

@@ -17,4 +17,11 @@
 	max_damage = 300
 	broken_damage = 150
 	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_CLIMBABLE
-	interact_sounds = list("keyboard", "keystroke")
+
+/obj/item/modular_computer/console/CouldUseTopic(var/mob/user)
+	..()
+	if(istype(user, /mob/living/carbon))
+		if(prob(50))
+			playsound(src, "keyboard", 40)
+		else
+			playsound(src, "keystroke", 40)

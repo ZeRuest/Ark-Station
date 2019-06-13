@@ -167,8 +167,7 @@
 		/obj/item/device/tape/random = 3,
 		/obj/item/device/camera,
 		/obj/item/toy/therapy_blue,
-		/obj/item/weapon/storage/belt/general,
-		/obj/item/weapon/material/urn
+		/obj/item/weapon/storage/belt/general
 	)
 
 /obj/structure/closet/secure_closet/virology

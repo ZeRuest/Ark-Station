@@ -74,7 +74,6 @@ Civilian
 
 	max_skill = list(   SKILL_PILOT       = SKILL_MAX)
 	skill_points = 24
-	required_language = null
 
 /datum/job/stowaway
 	title = "Stowaway"
@@ -99,4 +98,3 @@ Civilian
 	)
 	latejoin_at_spawnpoints = 1
 	announced = FALSE
-	required_language = null

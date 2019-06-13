@@ -27,8 +27,7 @@
 	var/datum/reagents/R = get_ingested_reagents()
 	if(istype(R)) 
 		R.clear_reagents()
-	set_nutrition(400)
-	set_hydration(400)
+	nutrition = 400
 	..()
 
 /mob/living/carbon/Move(NewLoc, direct)
@@ -36,18 +35,12 @@
 	if(!.)
 		return
 
-	if(stat != DEAD)
-
-		if((MUTATION_FAT in src.mutations) && (move_intent.flags & MOVE_INTENT_EXERTIVE) && src.bodytemperature <= 360)
-			bodytemperature += 2
-
-		var/nut_removed = DEFAULT_HUNGER_FACTOR/10
-		var/hyd_removed = DEFAULT_THIRST_FACTOR/10
+	if (src.nutrition && src.stat != 2)
+		src.nutrition -= DEFAULT_HUNGER_FACTOR/10
 		if (move_intent.flags & MOVE_INTENT_EXERTIVE)
-			nut_removed *= 2
-			hyd_removed *= 2
-		adjust_nutrition(-nut_removed)
-		adjust_hydration(-hyd_removed)
+			src.nutrition -= DEFAULT_HUNGER_FACTOR/10
+	if((MUTATION_FAT in src.mutations) && (move_intent.flags & MOVE_INTENT_EXERTIVE) && src.bodytemperature <= 360)
+		src.bodytemperature += 2
 
 	// Moving around increases germ_level faster
 	if(germ_level < GERM_LEVEL_MOVE_CAP && prob(8))
@@ -406,17 +399,6 @@
 	if(default_language && can_speak(default_language))
 		return default_language
 
-/mob/living/carbon/proc/get_any_good_language(set_default=FALSE)
-	var/datum/language/result = get_default_language()
-	if (!result)
-		for (var/datum/language/L in languages)
-			if (can_speak(L))
-				result = L
-				if (set_default)
-					set_default_language(result)
-				break
-	return result
-
 /mob/living/carbon/show_inv(mob/user as mob)
 	user.set_machine(src)
 	var/dat = {"
@@ -492,15 +474,3 @@
 
 /mob/living/carbon/proc/get_ingested_reagents()
 	return reagents
-
-/mob/living/carbon/proc/set_nutrition(var/amt)
-	nutrition = Clamp(amt, 0, initial(nutrition))
-
-/mob/living/carbon/proc/adjust_nutrition(var/amt)
-	set_nutrition(nutrition + amt)
-
-/mob/living/carbon/proc/set_hydration(var/amt)
-	hydration = Clamp(amt, 0, initial(hydration))
-
-/mob/living/carbon/proc/adjust_hydration(var/amt)
-	set_hydration(hydration + amt)

@@ -10,8 +10,6 @@
 
 /obj/effect/decal/cleanable/Initialize()
 	. = ..()
-	if(isspace(loc))
-		return INITIALIZE_HINT_QDEL
 	hud_overlay = new /image/hud_overlay('icons/obj/hud_tile.dmi', src, "caution")
 	hud_overlay.plane = EFFECTS_ABOVE_LIGHTING_PLANE
 
@@ -26,7 +24,6 @@
 /obj/effect/decal/cleanable/Destroy()
 	SSpersistence.forget_value(src, /datum/persistent/filth)
 	. = ..()
-
 /obj/effect/decal/cleanable/water_act(var/depth)
 	..()
 	qdel(src)

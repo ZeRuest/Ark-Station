@@ -1,6 +1,5 @@
 /obj/item/weapon/material/kitchen
 	icon = 'icons/obj/kitchen.dmi'
-	worth_multiplier = 1.1
 
 /*
  * Utensils

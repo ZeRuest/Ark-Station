@@ -453,7 +453,7 @@
 	src << browse('html/changelog.html', "window=changes;size=675x650")
 	if(prefs.lastchangelog != changelog_hash)
 		prefs.lastchangelog = changelog_hash
-		SScharacter_setup.queue_preferences_save(prefs)
+		prefs.save_preferences()
 		winset(src, "rpane.changelog", "background-color=none;font-style=;")
 
 /mob/verb/cancel_camera()
@@ -973,14 +973,8 @@
 
 /mob/set_dir()
 	if(facing_dir)
-		if(!canface() || lying || restrained())
+		if(!canface() || lying || buckled || restrained())
 			facing_dir = null
-		else if(buckled)
-			if(buckled.obj_flags & OBJ_FLAG_ROTATABLE)
-				buckled.set_dir(facing_dir)
-				return ..(facing_dir)
-			else
-				facing_dir = null
 		else if(dir != facing_dir)
 			return ..(facing_dir)
 	else
@@ -1118,7 +1112,4 @@
 	return FALSE
 
 /mob/proc/get_footstep(var/footstep_type)
-	return
-
-/mob/proc/handle_embedded_and_stomach_objects()
 	return

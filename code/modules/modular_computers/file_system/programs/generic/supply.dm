@@ -14,7 +14,6 @@
 	size = 21
 	available_on_ntnet = 1
 	requires_ntnet = 1
-	category = PROG_SUPPLY
 
 /datum/computer_file/program/supply/process_tick()
 	..()

@@ -14,11 +14,7 @@
 /obj/effect/overmap/sector/exoplanet/desert/generate_atmosphere()
 	..()
 	if(atmosphere)
-		var/limit = 1000
-		if(habitability_class <= HABITABILITY_OKAY)
-			var/datum/species/human/H = /datum/species/human
-			limit = initial(H.heat_level_1) - rand(1,10)
-		atmosphere.temperature = min(T20C + rand(20, 100), limit)
+		atmosphere.temperature = T20C + rand(20, 100)
 		atmosphere.update_values()
 
 /obj/effect/overmap/sector/exoplanet/desert/adapt_seed(var/datum/seed/S)

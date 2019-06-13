@@ -37,7 +37,8 @@
 						M.death()
 					if(istype(I,/obj/item/stack/material))//Only deconstructs one sheet at a time instead of the entire stack
 						var/obj/item/stack/material/S = I
-						if(S.use(1))
+						if(S.get_amount() > 1)
+							S.use(1)
 							loaded_item = S
 						else
 							qdel(S)

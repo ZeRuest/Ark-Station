@@ -21,7 +21,6 @@
 	hitsound = 'sound/effects/Glasshit.ogg'
 	conductive = 0
 	sale_price = 1
-	value = 4
 
 /material/glass/proc/is_reinforced()
 	return (integrity > 75) //todo
@@ -42,8 +41,7 @@
 	icon_colour = GLASS_COLOR_PHORON
 	stack_origin_tech = list(TECH_MATERIAL = 4)
 	wire_product = null
-	construction_difficulty = MATERIAL_HARD_DIY
+	construction_difficulty = 2
 	alloy_product = TRUE
 	alloy_materials = list(MATERIAL_SAND = 2500, MATERIAL_PLATINUM = 1250)
 	sale_price = 2
-	value = 40

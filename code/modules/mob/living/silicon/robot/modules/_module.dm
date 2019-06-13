@@ -11,7 +11,8 @@
 	var/networks = list()
 	var/languages = list(
 		LANGUAGE_HUMAN_EURO = 1,
-		LANGUAGE_UNATHI_SINTA = 0,
+		LANGUAGE_UNATHI = 0,
+		LANGUAGE_SIIK_MAAS = 0,
 		LANGUAGE_SKRELLIAN = 0,
 		LANGUAGE_GUTTER = 1,
 		LANGUAGE_SIGN = 0,
@@ -122,7 +123,7 @@
 
 	if(R.silicon_radio)
 		R.silicon_radio.recalculateChannels()
-	R.choose_icon(0, R.set_module_sprites(list("Default" = initial(R.icon_state))))
+	R.choose_icon(0, R.set_module_sprites(list("Default" = "robot")))
 
 /obj/item/weapon/robot_module/Destroy()
 	QDEL_NULL_LIST(equipment)

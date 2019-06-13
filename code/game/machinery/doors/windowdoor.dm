@@ -15,7 +15,6 @@
 	var/obj/item/weapon/airlock_electronics/electronics = null
 	explosion_resistance = 5
 	air_properties_vary_with_direction = 1
-	pry_mod = 0.5
 
 /obj/machinery/door/window/New()
 	..()
@@ -268,7 +267,6 @@
 	var/id = null
 	maxhealth = 300
 	health = 300.0 //Stronger doors for prison (regular window door health is 150)
-	pry_mod = 0.65
 
 
 /obj/machinery/door/window/northleft

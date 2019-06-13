@@ -8,7 +8,7 @@
 	health = 100
 	maxHealth = 100
 	mob_size = 4
-	species_language = LANGUAGE_XENOPHAGE
+	species_language = "Xenophage"
 
 	var/dead_icon
 	var/language

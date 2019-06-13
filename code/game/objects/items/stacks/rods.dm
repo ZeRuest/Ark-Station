@@ -43,7 +43,7 @@
 	if(isWelder(W))
 		var/obj/item/weapon/weldingtool/WT = W
 
-		if(!can_use(2))
+		if(get_amount() < 2)
 			to_chat(user, "<span class='warning'>You need at least two rods to do this.</span>")
 			return
 

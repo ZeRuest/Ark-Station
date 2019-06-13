@@ -13,6 +13,7 @@
 /obj/item/modular_computer/pda/install_default_programs()
 	..()
 
+	hard_drive.store_file(new /datum/computer_file/program/chatclient())
 	hard_drive.store_file(new /datum/computer_file/program/email_client())
 	hard_drive.store_file(new /datum/computer_file/program/crew_manifest())
 	hard_drive.store_file(new /datum/computer_file/program/wordprocessor())
@@ -41,10 +42,6 @@
 	..()
 	scanner = new /obj/item/weapon/computer_hardware/scanner/reagent(src)
 
-/obj/item/modular_computer/pda/heads/install_default_programs()
-	..()
-	hard_drive.store_file(new /datum/computer_file/program/reports())
-
 /obj/item/modular_computer/pda/heads/hop/install_default_hardware()
 	..()
 	scanner = new /obj/item/weapon/computer_hardware/scanner/paper(src)
@@ -64,10 +61,6 @@
 /obj/item/modular_computer/pda/heads/rd/install_default_hardware()
 	..()
 	scanner = new /obj/item/weapon/computer_hardware/scanner/paper(src)
-
-/obj/item/modular_computer/pda/cargo/install_default_programs()
-	..()
-	hard_drive.store_file(new /datum/computer_file/program/reports())
 
 /obj/item/modular_computer/pda/cargo/install_default_hardware()
 	..()

@@ -9,9 +9,6 @@
 	ruin_tags_blacklist = RUIN_HABITAT|RUIN_WATER
 	features_budget = 6
 
-/obj/effect/overmap/sector/exoplanet/barren/generate_habitability()
-	return HABITABILITY_BAD
-
 /obj/effect/overmap/sector/exoplanet/barren/generate_atmosphere()
 	..()
 	atmosphere.remove_ratio(0.9)

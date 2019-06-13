@@ -21,7 +21,7 @@
 	if(istype(thing, /obj/item/grab))
 		var/obj/item/grab/G = thing
 		if(enter_bath(G.affecting))
-			qdel(G)
+			user.unEquip(G)
 		return
 	. = ..()
 
