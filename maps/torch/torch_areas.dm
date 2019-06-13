@@ -744,6 +744,11 @@
 	name = "\improper Command - CL's Office"
 	req_access = list(access_liaison)
 
+/area/crew_quarters/heads/office/cl/backroom
+	icon_state = "heads_cl"
+	name = "\improper Command - CL's Backroom"
+	req_access = list(access_liaison)
+
 /area/crew_quarters/heads/office/sgr
 	icon_state = "heads_sr"
 	name = "\improper Command - SCGR's Office"
@@ -925,6 +930,7 @@
 
 /area/quartermaster/hangar/top
 	name = "\improper Hangar Upper Walkway"
+	req_access = list()
 
 /area/quartermaster/flightcontrol
 	name = "\improper Flight Control Tower"
@@ -943,6 +949,7 @@
 /area/rnd/entry
 	name = "\improper Research and Development Access"
 	icon_state = "decontamination"
+	req_access = list()
 
 /area/rnd/locker
 	name = "\improper Research Locker Room"
@@ -1244,6 +1251,10 @@
 
 /area/bridge/disciplinary_board_room
 	name = "\improper Disciplinary Board Room"
+	sound_env = SMALL_ENCLOSED
+
+/area/bridge/disciplinary_board_room/deliberation
+	name = "\improper Deliberation Room"
 	sound_env = SMALL_ENCLOSED
 
 /area/crew_quarters/heads

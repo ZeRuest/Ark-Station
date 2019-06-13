@@ -11,10 +11,6 @@
 			tally -= 2
 		tally -= 1
 
-	var/obj/item/organ/internal/stomach/stomach = internal_organs_by_name[BP_STOMACH]
-	if(embedded_flag || (stomach && stomach.contents.len))
-		handle_embedded_and_stomach_objects() //Moving with objects stuck in you can cause bad times.
-
 	if(CE_SPEEDBOOST in chem_effects)
 		tally -= chem_effects[CE_SPEEDBOOST]
 
@@ -44,11 +40,11 @@
 				if(item_slowdown >= 0)
 					var/size_mod = size_strength_mod()
 					if(size_mod + 1 > 0)
-						item_slowdown = item_slowdown / (species.strength + size_mod + 1)
+						item_slowdown = item_slowdown / (size_mod + 1)
 					else
-						item_slowdown = item_slowdown - species.strength - size_mod
+						item_slowdown = item_slowdown - size_mod
 				total_item_slowdown += max(item_slowdown, 0)
-		tally += round(total_item_slowdown)
+		tally += total_item_slowdown
 
 		for(var/organ_name in list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT))
 			var/obj/item/organ/external/E = get_organ(organ_name)
@@ -62,8 +58,8 @@
 
 	if(MUTATION_FAT in src.mutations)
 		tally += 1.5
-	if (bodytemperature < 283.222)
-		tally += (283.222 - bodytemperature) / 10 * 1.75
+	if (bodytemperature < species.cold_discomfort_level)
+		tally += (species.cold_discomfort_level - bodytemperature) / 10 * 1.75
 
 	tally += max(2 * stance_damage, 0) //damaged/missing feet or legs is slow
 
@@ -141,6 +137,7 @@
 	var/lac_chance =  10 * encumbrance()
 	if(lac_chance && prob(skill_fail_chance(SKILL_HAULING, lac_chance)))
 		make_reagent(1, /datum/reagent/lactate)
+		adjust_hydration(-DEFAULT_THIRST_FACTOR)
 		switch(rand(1,20))
 			if(1)
 				visible_message("<span class='notice'>\The [src] is sweating heavily!</span>", "<span class='notice'>You are sweating heavily!</span>")
