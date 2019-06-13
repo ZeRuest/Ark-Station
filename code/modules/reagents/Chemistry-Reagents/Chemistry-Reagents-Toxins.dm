@@ -11,6 +11,7 @@
 	heating_products = list(/datum/reagent/toxin/denatured)
 	heating_point = 100 CELSIUS
 	heating_message = "goes clear."
+	value = 2
 
 	var/target_organ
 	var/strength = 4 // How much damage it deals per unit
@@ -80,7 +81,12 @@
 	taste_description = "absolutely vile"
 	color = "#91d895"
 	target_organ = BP_LIVER
-	strength = 7
+	strength = 5
+
+/datum/reagent/toxin/venom/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(prob(volume*2))
+		M.confused = max(M.confused, 3)
+	..()
 
 /datum/reagent/toxin/chlorine
 	name = "Chlorine"
@@ -304,6 +310,7 @@
 	reagent_state = LIQUID
 	color = "#c8a5dc"
 	overdose = REAGENTS_OVERDOSE
+	value = 2.4
 
 /datum/reagent/lexorin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -324,6 +331,7 @@
 	taste_mult = 0.9
 	reagent_state = LIQUID
 	color = "#13bc5e"
+	value = 3.1
 
 /datum/reagent/mutagen/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	if(prob(33))
@@ -360,6 +368,7 @@
 	taste_mult = 1.3
 	reagent_state = LIQUID
 	color = "#801e28"
+	value = 1.2
 
 /datum/reagent/slimejelly/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -378,6 +387,7 @@
 	color = "#009ca8"
 	metabolism = REM * 0.5
 	overdose = REAGENTS_OVERDOSE
+	value = 2.5
 
 /datum/reagent/soporific/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -411,6 +421,7 @@
 	color = "#000067"
 	metabolism = REM * 0.5
 	overdose = REAGENTS_OVERDOSE * 0.5
+	value = 2.6
 
 /datum/reagent/chloralhydrate/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -454,6 +465,7 @@
 	color = "#60a584"
 	metabolism = REM * 0.5
 	overdose = REAGENTS_OVERDOSE
+	value = 2.8
 
 /datum/reagent/space_drugs/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -478,6 +490,7 @@
 	color = "#202040"
 	metabolism = REM * 0.25
 	overdose = REAGENTS_OVERDOSE
+	value = 2.5
 
 /datum/reagent/serotrotium/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -496,7 +509,7 @@
 	overdose = REAGENTS_OVERDOSE
 	heating_point = 61 CELSIUS
 	heating_products = list(/datum/reagent/potassium, /datum/reagent/acetone, /datum/reagent/sugar)
-
+	value = 2
 
 /datum/reagent/cryptobiolin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -514,6 +527,7 @@
 	reagent_state = LIQUID
 	color = "#c8a5dc"
 	overdose = REAGENTS_OVERDOSE
+	value = 1.8
 
 /datum/reagent/impedrezene/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -534,6 +548,7 @@
 	color = "#b31008"
 	metabolism = REM * 0.25
 	overdose = REAGENTS_OVERDOSE
+	value = 0.6
 
 /datum/reagent/mindbreaker/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -551,6 +566,7 @@
 	color = "#e700e7"
 	overdose = REAGENTS_OVERDOSE
 	metabolism = REM * 0.5
+	value = 0.7
 
 /datum/reagent/psilocybin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -667,6 +683,7 @@
 	reagent_state = LIQUID
 	color = "#13bc5e"
 	metabolism = REM * 0.2
+	value = 2
 
 /datum/reagent/slimetoxin/affect_blood(var/mob/living/carbon/human/H, var/alien, var/removed)
 	if(!istype(H))
@@ -747,6 +764,7 @@
 	reagent_state = LIQUID
 	color = "#535e66"
 	hidden_from_codex = TRUE
+	value = 9
 
 /datum/reagent/xenomicrobes
 	name = "Xenomicrobes"
@@ -756,6 +774,7 @@
 	color = "#535e66"
 	hidden_from_codex = TRUE
 	heating_point = 100 CELSIUS
+	value = 5
 
 /datum/reagent/toxin/hair_remover
 	name = "Hair Remover"
@@ -772,7 +791,7 @@
 	if(alien == IS_SKRELL)	//skrell can't have hair unless you hack it in, also to prevent tentacles from falling off
 		return
 	M.species.set_default_hair(M)
-	to_chat(M, "<span class='warning'>Your feel a chill, your skin feels lighter..</span>")
+	to_chat(M, "<span class='warning'>You feel a chill and your skin feels lighter..</span>")
 	remove_self(volume)
 
 /datum/reagent/toxin/zombie

@@ -95,7 +95,7 @@
 				return
 
 		var/obj/item/stack/cable_coil/cable = W
-		if(!cable.amount >= 5)
+		if(!cable.can_use(5))
 			to_chat(user, "You need five units of cable to repair \the [src].")
 			return
 
@@ -144,7 +144,7 @@
 	holder = new_holder
 	return
 
-/obj/item/rig_module/proc/check()
+/obj/item/rig_module/proc/check(var/charge = 50)
 
 	if(damage >= 2)
 		to_chat(usr, "<span class='warning'>The [interface_name] is damaged beyond use!</span>")
@@ -170,7 +170,7 @@
 		to_chat(usr, "<span class='danger'>Access denied.</span>")
 		return 0
 
-	if(!holder.check_power_cost(usr, use_power_cost, 0, src, (istype(usr,/mob/living/silicon ? 1 : 0) ) ) )
+	if(!holder.check_power_cost(usr, charge, 0, src, (istype(usr,/mob/living/silicon ? 1 : 0) ) ) )
 		return 0
 
 	return 1
@@ -178,7 +178,7 @@
 //Proc for one-use abilities like teleport.
 /obj/item/rig_module/proc/engage()
 
-	if(!check())
+	if(!check(use_power_cost))
 		return 0
 
 	next_use = world.time + module_cooldown
@@ -267,7 +267,16 @@
 /mob/proc/SetupStat(var/obj/item/weapon/rig/R)
 	if(R && !R.canremove && R.installed_modules.len && statpanel("Hardsuit Modules"))
 		var/cell_status = R.cell ? "[R.cell.charge]/[R.cell.maxcharge]" : "ERROR"
-		stat("Suit charge", cell_status)
+		stat("Suit Charge:", cell_status)
+		var/air_tank
+		if(R.air_supply)//makes sure you have tank
+			if(R.air_supply.air_contents)//make sure your tank has air
+				air_tank = "[round(R.air_supply.air_contents.return_pressure())] kPa"
+			else
+				air_tank = "0 kPa"
+		else
+			air_tank = "NOT FOUND"
+		stat("Tank Pressure:", air_tank)
 		for(var/obj/item/rig_module/module in R.installed_modules)
 			for(var/stat_rig_module/SRM in module.stat_modules)
 				if(SRM.CanUse())
