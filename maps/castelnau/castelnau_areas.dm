@@ -737,6 +737,10 @@
 	name = "Galley Cold Storage"
 	icon_state = "kitchen"
 
+/area/crew_quarters/laundry
+	name = "Laundry Room"
+	icon_state = "Sleep"
+
 /area/crew_quarters/lounge
 	name = "Lounge"
 	icon_state = "crew_quarters"
