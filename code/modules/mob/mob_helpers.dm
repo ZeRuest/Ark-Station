@@ -222,7 +222,7 @@ var/list/global/organ_rel_size = list(
 			. += "*"
 	. = JOINTEXT(.)
 	if(re_encode)
-		. = html_encode(.)
+		. = rhtml_encode(.)
 
 proc/slur(phrase)
 	phrase = rhtml_decode(phrase)
