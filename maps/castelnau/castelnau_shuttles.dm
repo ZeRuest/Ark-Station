@@ -89,6 +89,7 @@
 /obj/effect/shuttle_landmark/castelnau/hangar/perseus
 	name = "Perseus Hangar"
 	landmark_tag = "nav_perseus_dock"
+	docking_controller = "perseus_shuttle_dock"
 	base_area = /area/space
 	base_turf = /turf/space
 
