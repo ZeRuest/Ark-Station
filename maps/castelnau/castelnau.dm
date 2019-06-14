@@ -67,9 +67,10 @@
 	#include "castelnau-1.dmm"
 	#include "castelnau-2.dmm"
 	#include "castelnau-3.dmm"
-	#include "castelnau-5.dmm"
+	#include "z1-admin.dmm"
+	#include "z2-transit.dmm"
 
-//	#include "../away/empty.dmm"
+	#include "../away/empty.dmm"
 
 //	#include "../away/bearcat/bearcat.dm"
 //	#include "../away/mining/mining.dm"
