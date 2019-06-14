@@ -12,3 +12,12 @@
 
 /obj/machinery/light/small/green
 	light_type = /obj/item/weapon/light/bulb/green
+
+/obj/machinery/floor_light/prebuilt/bar/violet
+    icon = 'icons/turf/flooring/circuit.dmi'
+    light_outer_range = 3
+    icon_state = "vcircuit"
+    light_max_bright = 1
+    light_color = "#9400D3"
+    default_light_colour = "#9400D3"
+    on = 1
