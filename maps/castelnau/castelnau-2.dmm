@@ -119,7 +119,7 @@
 "co" = (/obj/machinery/light{dir = 1},/obj/machinery/atmospherics/unary/vent_pump/on,/obj/effect/floor_decal/borderfloor{dir = 1; icon_state = "borderfloor_white"},/obj/effect/floor_decal/corner/yellow/border{icon_state = "bordercolor"; dir = 1},/obj/effect/floor_decal/borderfloor/corner2{dir = 1; icon_state = "borderfloorcorner2_white"},/obj/effect/floor_decal/corner/yellow/bordercorner2{icon_state = "bordercolorcorner2"; dir = 1},/turf/simulated/floor/tiled,/area/hallway/primary/seconddeck/center)
 "cp" = (/obj/structure/closet/emcloset,/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled/steel_grid,/area/hallway/primary/seconddeck/center)
 "cq" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/engineering/foyer)
-"cr" = (/obj/machinery/atmospherics/unary/vent_scrubber/on,/obj/item/device/radio/intercom,/obj/structure/bed/chair/padded/yellow,/turf/simulated/floor/tiled,/area/engineering/foyer)
+"cr" = (/obj/machinery/atmospherics/unary/vent_scrubber/on,/obj/item/device/radio/intercom{pixel_y = 24},/obj/structure/bed/chair/padded/yellow,/turf/simulated/floor/tiled,/area/engineering/foyer)
 "cs" = (/obj/machinery/light{dir = 1; icon_state = "tube_map"},/obj/machinery/atmospherics/unary/vent_pump/on,/obj/structure/bed/chair/padded/yellow,/turf/simulated/floor/tiled,/area/engineering/foyer)
 "ct" = (/obj/effect/floor_decal/industrial/warning{icon_state = "danger"; dir = 4},/obj/machinery/power/apc{dir = 1; name = "north bump"; pixel_x = 0; pixel_y = 24; req_access = list(11)},/obj/structure/cable/green{d2 = 2; icon_state = "0-2"},/obj/structure/flora/pottedplant/minitree,/turf/simulated/floor/tiled/steel_grid,/area/engineering/foyer)
 "cu" = (/obj/machinery/atmospherics/unary/vent_scrubber/on,/obj/structure/cable/green{d1 = 2; d2 = 4; icon_state = "2-4"},/obj/structure/disposalpipe/trunk,/obj/effect/floor_decal/industrial/hatch/yellow,/obj/machinery/disposal,/turf/simulated/floor/tiled/monotile,/area/engineering/hallway)
@@ -492,7 +492,7 @@
 "jx" = (/turf/simulated/wall,/area/security/sierra/hallway/aft)
 "jy" = (/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 1},/obj/effect/floor_decal/borderfloorblack/corner{dir = 8; icon_state = "borderfloorcorner_white"},/obj/effect/floor_decal/corner/brown/bordercorner{dir = 8},/turf/simulated/floor/tiled/dark,/area/quartermaster/storage)
 "jz" = (/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 1},/turf/simulated/floor/tiled/dark,/area/quartermaster/storage)
-"jA" = (/obj/effect/floor_decal/industrial/warning/corner{dir = 1},/obj/machinery/button/remote/blast_door{id = "qm_warehouse2"; name = "Warehouse Door Control"; pixel_x = -6; pixel_y = 24; req_access = list(31)},/obj/structure/table/steel,/turf/simulated/floor/tiled/dark,/area/quartermaster/storage)
+"jA" = (/obj/effect/floor_decal/industrial/warning/corner{dir = 1},/obj/machinery/button/remote/blast_door{id = "qm_warehouse2"; name = "Warehouse Door Control"; pixel_x = -6; pixel_y = 24; req_access = list("ACCESS_QUARTERMASTER")},/obj/structure/table/steel,/turf/simulated/floor/tiled/dark,/area/quartermaster/storage)
 "jB" = (/obj/item/modular_computer/console/preset/merchant{dir = 2},/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled/dark,/area/quartermaster/storage)
 "jC" = (/obj/machinery/merchant_pad,/obj/effect/floor_decal/industrial/warning/fulltile,/turf/simulated/floor/tiled/dark,/area/quartermaster/storage)
 "jD" = (/obj/structure/closet/crate,/turf/simulated/floor/tiled/dark,/area/quartermaster/storage)
@@ -574,13 +574,13 @@
 "lb" = (/obj/machinery/atmospherics/unary/vent_scrubber/on,/obj/effect/floor_decal/corner/green/mono,/obj/structure/flora/pottedplant/large,/turf/simulated/floor/tiled,/area/security/prison)
 "lc" = (/obj/machinery/cryopod{icon_state = "body_scanner_0"; dir = 2},/obj/effect/floor_decal/corner/green/half{icon_state = "bordercolorhalf"; dir = 1},/obj/machinery/light/small{dir = 1; icon_state = "bulb_map"},/turf/simulated/floor/tiled,/area/security/prison)
 "ld" = (/obj/structure/closet{name = "Prisoner's Locker"},/obj/item/clothing/head/soft/orange,/obj/random/contraband,/obj/random/drinkbottle,/obj/effect/floor_decal/corner/green/mono,/turf/simulated/floor/tiled/monotile,/area/security/prison)
-"le" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/conveyor_switch,/obj/machinery/light{dir = 8; icon_state = "tube_map"},/turf/simulated/floor/tiled/monotile,/area/quartermaster/storage)
+"le" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/conveyor_switch{id = "cargo_conveyor_1"},/obj/machinery/light/spot{dir = 8; icon_state = "tube_map"},/turf/simulated/floor/tiled/monotile,/area/quartermaster/storage)
 "lf" = (/obj/effect/floor_decal/industrial/loading{icon_state = "loadingarea"; dir = 1},/turf/simulated/floor/tiled/monotile,/area/quartermaster/storage)
 "lg" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/dark,/area/quartermaster/storage)
 "lh" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/conveyor_switch,/turf/simulated/floor/tiled/monotile,/area/quartermaster/storage)
 "li" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/tiled/dark,/area/quartermaster/storage)
 "lj" = (/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 8},/turf/simulated/floor/tiled/dark,/area/quartermaster/storage)
-"lk" = (/obj/effect/floor_decal/borderfloorblack{dir = 4; icon_state = "borderfloor_white"},/obj/effect/floor_decal/corner/brown/border{dir = 4},/obj/structure/table/steel,/obj/item/device/flashlight/lamp,/obj/machinery/light{dir = 4; icon_state = "tube_map"},/turf/simulated/floor/tiled/dark,/area/quartermaster/storage)
+"lk" = (/obj/effect/floor_decal/borderfloorblack{dir = 4; icon_state = "borderfloor_white"},/obj/effect/floor_decal/corner/brown/border{dir = 4},/obj/structure/table/steel,/obj/item/device/flashlight/lamp,/obj/machinery/light/spot{icon_state = "tube_map"; dir = 4},/turf/simulated/floor/tiled/dark,/area/quartermaster/storage)
 "ll" = (/obj/machinery/atmospherics/pipe/simple/visible/yellow,/obj/machinery/meter,/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/engineering/atmos)
 "lm" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/engineering/atmos)
 "ln" = (/obj/machinery/atmospherics/pipe/simple/visible/green,/obj/machinery/meter,/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/engineering/atmos)
@@ -615,7 +615,7 @@
 "lQ" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/effect/floor_decal/corner/green/half{icon_state = "bordercolorhalf"; dir = 8},/turf/simulated/floor/tiled,/area/security/prison)
 "lR" = (/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled/monotile,/area/security/prison)
 "lS" = (/obj/effect/floor_decal/corner/green/half{icon_state = "bordercolorhalf"; dir = 4},/turf/simulated/floor/tiled,/area/security/prison)
-"lT" = (/obj/machinery/conveyor{icon_state = "conveyor0"; dir = 10},/obj/machinery/floodlight,/turf/simulated/floor/tiled/monotile,/area/quartermaster/storage)
+"lT" = (/obj/machinery/conveyor{dir = 10; icon_state = "conveyor0"; id = "cargo_conveyor_1"},/obj/machinery/floodlight,/turf/simulated/floor/tiled/monotile,/area/quartermaster/storage)
 "lU" = (/obj/machinery/conveyor{icon_state = "conveyor0"; dir = 9},/turf/simulated/floor/tiled/monotile,/area/quartermaster/storage)
 "lV" = (/obj/machinery/conveyor{icon_state = "conveyor0"; dir = 10},/turf/simulated/floor/tiled/monotile,/area/quartermaster/storage)
 "lW" = (/obj/machinery/conveyor{icon_state = "conveyor0"; dir = 10},/obj/structure/reagent_dispensers/watertank,/turf/simulated/floor/tiled/monotile,/area/quartermaster/storage)
@@ -661,7 +661,7 @@
 "mK" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 10},/turf/simulated/floor/tiled,/area/security/prison)
 "mL" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 10},/obj/structure/bed/padded,/obj/item/weapon/bedsheet/yellow,/obj/machinery/alarm{alarm_id = "misc_research"; dir = 8; icon_state = "alarm0"; pixel_x = 23},/obj/effect/floor_decal/corner/green/half{icon_state = "bordercolorhalf"; dir = 4},/turf/simulated/floor/tiled,/area/security/prison)
 "mM" = (/obj/machinery/conveyor,/obj/structure/plasticflaps,/turf/simulated/floor,/area/quartermaster/storage)
-"mN" = (/obj/machinery/conveyor{icon_state = "conveyor0"; dir = 1},/obj/structure/plasticflaps,/obj/machinery/floodlight,/turf/simulated/floor,/area/quartermaster/storage)
+"mN" = (/obj/machinery/conveyor{dir = 9; icon_state = "conveyor0"; id = "cargo_conveyor_1"},/turf/simulated/floor/tiled/monotile,/area/quartermaster/storage)
 "mO" = (/obj/machinery/door/airlock/mining{id_tag = null; name = "Warehouse"; req_access = list(31)},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/door/firedoor,/turf/simulated/floor,/area/quartermaster/storage)
 "mP" = (/obj/machinery/conveyor,/obj/structure/plasticflaps,/turf/simulated/floor/tiled/dark,/area/quartermaster/storage)
 "mQ" = (/obj/machinery/conveyor{icon_state = "conveyor0"; dir = 1},/obj/structure/plasticflaps,/turf/simulated/floor,/area/quartermaster/storage)
@@ -701,7 +701,7 @@
 "ny" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/tiled,/area/security/prison)
 "nz" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1; layer = 2.4; level = 2},/obj/structure/bed/padded,/obj/item/weapon/bedsheet/red,/obj/effect/floor_decal/corner/green/mono,/obj/machinery/light/small,/turf/simulated/floor/tiled,/area/security/prison)
 "nA" = (/obj/structure/lattice,/obj/machinery/atmospherics/pipe/simple/heat_exchanging{icon_state = "intact"; dir = 9},/turf/space,/area/space)
-"nB" = (/obj/machinery/conveyor,/obj/structure/closet/crate/internals,/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 8},/turf/simulated/floor,/area/quartermaster/storage)
+"nB" = (/obj/machinery/conveyor{dir = 1; id = "cargo_conveyor_1"},/obj/structure/plasticflaps,/turf/simulated/floor,/area/quartermaster/storage)
 "nC" = (/obj/machinery/conveyor{icon_state = "conveyor0"; dir = 1},/turf/simulated/floor,/area/quartermaster/storage)
 "nD" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor,/area/quartermaster/storage)
 "nE" = (/obj/machinery/conveyor,/turf/simulated/floor,/area/quartermaster/storage)
@@ -737,7 +737,7 @@
 "oi" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{icon_state = "map-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 9},/obj/structure/cable/green{d1 = 1; d2 = 8; icon_state = "1-8"},/turf/simulated/floor/tiled/monotile,/area/security/prison)
 "oj" = (/obj/machinery/alarm{alarm_id = "misc_research"; dir = 8; icon_state = "alarm0"; pixel_x = 23},/obj/effect/floor_decal/borderfloor{dir = 4; icon_state = "borderfloor_white"},/obj/effect/floor_decal/corner/green/border{icon_state = "bordercolor"; dir = 4},/turf/simulated/floor/tiled/steel_grid,/area/security/prison)
 "ok" = (/obj/machinery/door/firedoor,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/door/airlock/civilian{name = "Long Term Bathroom"},/turf/simulated/floor/tiled/freezer,/area/security/prison)
-"ol" = (/obj/machinery/conveyor{icon_state = "conveyor0"; dir = 1},/obj/structure/closet/crate/freezer/rations,/turf/simulated/floor,/area/quartermaster/storage)
+"ol" = (/obj/machinery/conveyor{dir = 2; icon_state = "conveyor0"; id = "cargo_conveyor_1"},/obj/structure/plasticflaps,/obj/machinery/floodlight,/turf/simulated/floor,/area/quartermaster/storage)
 "om" = (/obj/machinery/atmospherics/unary/vent_pump/on{icon_state = "map_vent_out"; dir = 1},/turf/simulated/floor,/area/quartermaster/storage)
 "on" = (/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 1},/turf/simulated/floor,/area/quartermaster/storage)
 "oo" = (/obj/machinery/conveyor,/obj/machinery/power/port_gen/pacman,/turf/simulated/floor,/area/quartermaster/storage)
@@ -770,7 +770,7 @@
 "oP" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/table/standard,/obj/item/weapon/towel/random,/obj/item/weapon/towel/random,/obj/machinery/light/small{dir = 1; icon_state = "bulb_map"},/turf/simulated/floor/tiled/freezer,/area/security/prison)
 "oQ" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 9},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 4},/turf/simulated/floor/tiled/freezer,/area/security/prison)
 "oR" = (/obj/structure/hygiene/shower{dir = 8; icon_state = "shower"; pixel_x = -7},/obj/structure/curtain/open/shower,/turf/simulated/floor/tiled/freezer,/area/security/prison)
-"oS" = (/obj/machinery/conveyor,/obj/machinery/portable_atmospherics/canister/oxygen,/turf/simulated/floor,/area/quartermaster/storage)
+"oS" = (/obj/machinery/conveyor{dir = 1; id = "cargo_conveyor_1"},/obj/structure/closet/crate/internals,/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 8},/turf/simulated/floor,/area/quartermaster/storage)
 "oT" = (/turf/simulated/floor,/area/quartermaster/storage)
 "oU" = (/obj/machinery/conveyor{dir = 4; icon_state = "conveyor0"; id = "bixie_conveyor"},/obj/structure/closet/crate/solar_assembly,/obj/item/stack/material/steel/fifty,/obj/item/stack/material/plasteel/ten,/obj/item/stack/material/rods/fifty,/turf/simulated/floor,/area/quartermaster/storage)
 "oV" = (/obj/machinery/conveyor{icon_state = "conveyor0"; dir = 9},/turf/simulated/floor,/area/quartermaster/storage)
@@ -800,8 +800,8 @@
 "pt" = (/obj/machinery/atmospherics/unary/vent_pump/on{icon_state = "map_vent_out"; dir = 1},/obj/machinery/alarm{dir = 1; icon_state = "alarm0"; pixel_y = -20},/turf/simulated/floor/tiled/freezer,/area/security/prison)
 "pu" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1; layer = 2.4; level = 2},/obj/structure/closet/secure_closet{name = "long term cell locker"; req_access = list(1)},/obj/machinery/alarm{dir = 1; icon_state = "alarm0"; pixel_y = -20},/obj/effect/floor_decal/industrial/outline/red,/turf/simulated/floor/tiled/dark/monotile,/area/security/prison)
 "pv" = (/obj/structure/hygiene/shower{dir = 8; icon_state = "shower"; pixel_x = -7},/obj/structure/curtain/open/shower,/obj/item/weapon/soap,/turf/simulated/floor/tiled/freezer,/area/security/prison)
-"pw" = (/obj/machinery/conveyor{icon_state = "conveyor0"; dir = 6},/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 8},/turf/simulated/floor,/area/quartermaster/storage)
-"px" = (/obj/machinery/conveyor{icon_state = "conveyor0"; dir = 5},/obj/structure/closet/crate/medical,/turf/simulated/floor,/area/quartermaster/storage)
+"pw" = (/obj/machinery/conveyor{dir = 2; icon_state = "conveyor0"; id = "cargo_conveyor_1"},/turf/simulated/floor,/area/quartermaster/storage)
+"px" = (/obj/machinery/conveyor{dir = 1; id = "cargo_conveyor_1"},/turf/simulated/floor,/area/quartermaster/storage)
 "py" = (/obj/machinery/conveyor{icon_state = "conveyor0"; dir = 5},/obj/machinery/light/small/red,/turf/simulated/floor,/area/quartermaster/storage)
 "pz" = (/obj/item/weapon/caution/cone,/turf/simulated/floor,/area/quartermaster/storage)
 "pA" = (/obj/machinery/conveyor{dir = 4; icon_state = "conveyor0"; id = "bixie_conveyor"},/obj/structure/closet/toolcloset,/turf/simulated/floor,/area/quartermaster/storage)
@@ -928,6 +928,7 @@
 "rR" = (/obj/structure/catwalk,/obj/machinery/power/apc{dir = 8; name = "west bump"; pixel_x = -24},/obj/structure/cable/green,/turf/simulated/floor/plating,/area/thruster/d3port{name = "Second Deck Port Nacelle"})
 "rS" = (/obj/structure/catwalk,/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 1},/turf/simulated/floor/plating,/area/thruster/d3port{name = "Second Deck Port Nacelle"})
 "rT" = (/obj/structure/catwalk,/obj/machinery/alarm{alarm_id = "xenobio4_alarm"; dir = 2; icon_state = "alarm0"; pixel_x = 0; pixel_y = 24},/turf/simulated/floor/plating,/area/thruster/d3port{name = "Second Deck Port Nacelle"})
+"rU" = (/obj/machinery/conveyor{dir = 2; icon_state = "conveyor0"; id = "cargo_conveyor_1"},/obj/structure/closet/crate/freezer/rations,/turf/simulated/floor,/area/quartermaster/storage)
 "rV" = (/obj/machinery/atmospherics/pipe/zpipe/up/fuel{icon_state = "up"; dir = 4},/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 1},/obj/machinery/computer/general_air_control/large_tank_control/nacelle/chamber/first{icon_state = "computer"; dir = 8},/turf/simulated/floor/plating,/area/thruster/d3port{name = "Second Deck Port Nacelle"})
 "rW" = (/obj/machinery/atmospherics/pipe/manifold/visible/fuel{dir = 1},/obj/machinery/door/blast/regular/open{dir = 4; id = "bridgeblastdoors"},/turf/simulated/floor/plating,/area/thruster/d3port{name = "Second Deck Port Nacelle"})
 "rX" = (/obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction{icon_state = "intact"; dir = 4},/turf/simulated/floor/reinforced/airless,/area/thruster/d3port{name = "Second Deck Port Nacelle"})
@@ -937,6 +938,8 @@
 "sb" = (/obj/machinery/atmospherics/pipe/manifold/visible/fuel{dir = 1},/obj/structure/catwalk,/turf/simulated/floor/plating,/area/thruster/d3port{name = "Second Deck Port Nacelle"})
 "sc" = (/obj/machinery/atmospherics/unary/engine{icon_state = "nozzle"; dir = 8},/turf/simulated/wall/r_wall/hull,/area/thruster/d3port{name = "Second Deck Port Nacelle"})
 "sd" = (/obj/structure/sign/warning/hot_exhaust{pixel_x = -28},/turf/space,/area/space)
+"se" = (/obj/machinery/conveyor{dir = 1; id = "cargo_conveyor_1"},/obj/machinery/portable_atmospherics/canister/oxygen,/turf/simulated/floor,/area/quartermaster/storage)
+"sf" = (/obj/machinery/conveyor{dir = 6; icon_state = "conveyor0"; id = "cargo_conveyor_1"},/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 8},/turf/simulated/floor,/area/quartermaster/storage)
 "sg" = (/obj/structure/ladder/up,/obj/structure/catwalk,/turf/simulated/floor/plating,/area/thruster/d3port{name = "Second Deck Port Nacelle"})
 "sh" = (/obj/structure/catwalk,/obj/machinery/firealarm{dir = 1; pixel_y = -28},/turf/simulated/floor/plating,/area/thruster/d3port{name = "Second Deck Port Nacelle"})
 "si" = (/obj/structure/catwalk,/obj/structure/railing/mapped,/turf/simulated/floor/plating,/area/thruster/d3port{name = "Second Deck Port Nacelle"})
@@ -947,6 +950,7 @@
 "sn" = (/obj/machinery/atmospherics/pipe/manifold/hidden/fuel,/turf/simulated/wall/ocp_wall,/area/thruster/d3port{name = "Second Deck Port Nacelle"})
 "so" = (/obj/machinery/atmospherics/pipe/simple/visible/fuel{dir = 4},/obj/structure/ladder/up,/obj/structure/catwalk,/turf/simulated/floor/plating,/area/thruster/d3port{name = "Second Deck Port Nacelle"})
 "sp" = (/obj/machinery/atmospherics/pipe/manifold4w/visible/fuel,/obj/structure/catwalk,/turf/simulated/floor/plating,/area/thruster/d3port{name = "Second Deck Port Nacelle"})
+"sq" = (/obj/machinery/conveyor{dir = 5; icon_state = "conveyor0"; id = "cargo_conveyor_1"},/obj/structure/closet/crate/medical,/turf/simulated/floor,/area/quartermaster/storage)
 "st" = (/obj/machinery/atmospherics/pipe/zpipe/up/cyan{icon_state = "up"; dir = 4},/turf/simulated/floor/plating,/area/thruster/d3port{name = "Second Deck Port Nacelle"})
 "su" = (/obj/machinery/atmospherics/pipe/manifold/visible/cyan,/obj/structure/catwalk,/obj/machinery/light/small/red,/obj/structure/railing/mapped{dir = 8; icon_state = "railing0-1"; tag = "icon-railing0 (EAST)"},/obj/machinery/meter,/turf/simulated/floor/plating,/area/thruster/d3port{name = "Second Deck Port Nacelle"})
 "sv" = (/obj/machinery/atmospherics/pipe/simple/visible/yellow{dir = 4; icon_state = "intact"},/obj/machinery/door/blast/regular/open{dir = 4; id = "bridgeblastdoors"},/obj/machinery/meter,/turf/simulated/floor/plating,/area/thruster/d3port{name = "Second Deck Port Nacelle"})
@@ -1052,12 +1056,12 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabhiv
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaagWjcjdjejfjgjheqjijjjkjljmjnjojpjqjrjskRjujvjwjxfrjyjzjzjAjBjCjDjEjFjGjHgtiUiUiUiUiUkyjIiUkAjLiUjMjNjOhVjQiZjRjSjTjUjVjWjXjYjZkakbkcjbobaWaWaWpmaaaEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabhkdkeepkfkgkhkikjkikikkkkklkkklklklkkkkkkkkkkkhkmknkokpkpkqkrkrksktjHgtiUjJjKkwkxkukzkxkvkBkCkDkEkFkGkHiZkIkJkKiZkLkMkNjYkOkPkQkcjbhWbybzbznAaWaEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabhbhepepepkgkhlEkSkTkUkkkVkWkXkYkYkZlakklblcldkhlelflglhlflilhlfljlkjHgtiUlllmlnlolllnlolplqlolrlskFltluiZiZlviZiZlwlxlylzlAjajajajbhWbybzbzbAaaaEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabhlBlCeplDkhmTlFlGlHlIlJlKlLlMlMlNlOlPlQlRlSkhlTlUlglVlUlilWlUlXlYjHgtiUlZmambmcmdmemfmgmhmimjmjkFmknojammmnmmmompmqmrmsmtkPmumvjbhWbybzbznAaWaFaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadwmwmxepkgkhmymzmAmBlPmCmDmEmFmFmGmHmImJmKmLkhmMmNmOmPmQmRmMmSjHjHjHgtiUmVmUmUmUmVmUmUmUmWmUmXmYmZnanbjancndnenfngnhnijYnjkankmvjbhWbybzbzbAaaaEaaaaaaaarOaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadwnlmwnmkgkhnnpukknpkknqnrnsntnunvnwlPnxnynzkhnBnCnDnEnCnFnEnGnHnIjHnJnKnLnMnMnMsGnMnMsHnNnOnPnQnRnSnTjanUnVnWnWnXnWnYnZoajajajajbhWbybzbznAaWaEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadwocodepkgkhkhkhkhoeofogohoiojkkkkkkkkkkokkkkhnEolomnEnConooopoqorjHosiUmVmUmUmUmVmUmUmVmUmUkFkFmjkFmjjaotouovowoxoyozoAoBoCoDoEjbhWbybzbzbAaaaEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadvdwdwbhoFoGoGoHkhkhkhoIoJoKoLkkoMoNoOoPoQoRkhoSnCoTnEnCoTnEnGoUoVjHosiUoWmamaoXoYmaoZrQmapapcpcpcpcpcpdpepfpgpgphpipjpkplpnpopopphWbybzbznAaWaEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaWxcbhbhbhbhoFoGoHkhkhkhkhkhkhpqprpsptpbpvkhpwpxoTnGpypznGpApBpDjHosiUlllmlmpElllmpElllmpEpFpGpHpIpJpKpLpMpNpgpOpPozpQpRpSpTpTqoqvbybzbzbAaaaEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabhlBlCeplDkhmTlFlGlHlIlJlKlLlMlMlNlOlPlQlRlSkhlTmNlglVlUlilWlUlXlYjHgtiUlZmambmcmdmemfmgmhmimjmjkFmknojammmnmmmompmqmrmsmtkPmumvjbhWbybzbznAaWaFaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadwmwmxepkgkhmymzmAmBlPmCmDmEmFmFmGmHmImJmKmLkhnBolmOmPmQmRmMmSjHjHjHgtiUmVmUmUmUmVmUmUmUmWmUmXmYmZnanbjancndnenfngnhnijYnjkankmvjbhWbybzbzbAaaaEaaaaaaaarOaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadwnlmwnmkgkhnnpukknpkknqnrnsntnunvnwlPnxnynzkhoSpwnDnEnCnFnEnGnHnIjHnJnKnLnMnMnMsGnMnMsHnNnOnPnQnRnSnTjanUnVnWnWnXnWnYnZoajajajajbhWbybzbznAaWaEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadwocodepkgkhkhkhkhoeofogohoiojkkkkkkkkkkokkkkhpxrUomnEnConooopoqorjHosiUmVmUmUmUmVmUmUmVmUmUkFkFmjkFmjjaotouovowoxoyozoAoBoCoDoEjbhWbybzbzbAaaaEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadvdwdwbhoFoGoGoHkhkhkhoIoJoKoLkkoMoNoOoPoQoRkhsepwoTnEnCoTnEnGoUoVjHosiUoWmamaoXoYmaoZrQmapapcpcpcpcpcpdpepfpgpgphpipjpkplpnpopopphWbybzbznAaWaEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaWxcbhbhbhbhoFoGoHkhkhkhkhkhkhpqprpsptpbpvkhsfsqoTnGpypznGpApBpDjHosiUlllmlmpElllmpElllmpEpFpGpHpIpJpKpLpMpNpgpOpPozpQpRpSpTpTqoqvbybzbzbAaaaEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacwcwcwcwbhbhbhoFoGpVpWoGoHkhkhkhkhkhkhkhkhjHpXpXpXjHjHpXpXpXjHjHosiUpYpZqaqbqcqdqbqeqfqbqgqhqiqjqkpgqlqmqnpUqpqqqrqsqtqDququppqJbybzbznAaWaEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacwcwcwbhbhbhbhbhbhoFoGoGoGoGoGoGqxqyqyqyqyqyqyqzqyqyqyqyqyqAiUiUiUiUiUiUiUiUiUiUiUiUiUiUiUiUpgqBpMqCqwqEqFqGqHqIcjckckjbaWaaaWaaaWaaaEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeraaaaaaaaaaaaaaaaaaaaaaaaaaaacwaaaaaWaaaWbhbhbhbhbhbhbhbhqMqNqOqPqQqRqMqMqRqSqTqPqUqVqWqXqYqZraqXrbrcrdrerfrgrhrhrhrhripgrjpgpgjajajajajarkjajbjbaEaEaFaEaEaEaEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
