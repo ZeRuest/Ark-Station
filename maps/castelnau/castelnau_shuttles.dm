@@ -1,3 +1,78 @@
+/datum/shuttle/autodock/ferry/escape_pod/castelnaupod
+	category = /datum/shuttle/autodock/ferry/escape_pod/castelnaupod
+	sound_takeoff = 'sound/effects/rocket.ogg'
+	sound_landing = 'sound/effects/rocket_backwards.ogg'
+	var/number
+
+/datum/shuttle/autodock/ferry/escape_pod/castelnaupod/New()
+	name = "Escape Pod [number]"
+	dock_target = "escape_pod_[number]"
+	arming_controller = "escape_pod_[number]_berth"
+	waypoint_station = "escape_pod_[number]_start"
+	landmark_transition = "escape_pod_[number]_internim"
+	waypoint_offsite = "escape_pod_[number]_out"
+	..()
+
+/obj/effect/shuttle_landmark/escape_pod/
+	var/number
+
+/obj/effect/shuttle_landmark/escape_pod/start
+	name = "Docked"
+
+/obj/effect/shuttle_landmark/escape_pod/start/New()
+	landmark_tag = "escape_pod_[number]_start"
+	docking_controller = "escape_pod_[number]_berth"
+	..()
+
+/obj/effect/shuttle_landmark/escape_pod/transit
+	name = "In transit"
+
+/obj/effect/shuttle_landmark/escape_pod/transit/New()
+	landmark_tag = "escape_pod_[number]_internim"
+	..()
+
+/obj/effect/shuttle_landmark/escape_pod/out
+	name = "Escaped"
+
+/obj/effect/shuttle_landmark/escape_pod/out/New()
+	landmark_tag = "escape_pod_[number]_out"
+	..()
+
+//Pods
+
+/datum/shuttle/autodock/ferry/escape_pod/castelnaupod/escape_pod6
+	warmup_time = 10
+	shuttle_area = /area/shuttle/escape_pod6/station
+	number = 6
+/obj/effect/shuttle_landmark/escape_pod/start/pod6
+	number = 6
+/obj/effect/shuttle_landmark/escape_pod/out/pod6
+	number = 6
+/obj/effect/shuttle_landmark/escape_pod/transit/pod6
+	number = 6
+
+/datum/shuttle/autodock/ferry/escape_pod/castelnaupod/escape_pod7
+	warmup_time = 10
+	shuttle_area = /area/shuttle/escape_pod7/station
+	number = 7
+/obj/effect/shuttle_landmark/escape_pod/start/pod7
+	number = 7
+/obj/effect/shuttle_landmark/escape_pod/out/pod7
+	number = 7
+/obj/effect/shuttle_landmark/escape_pod/transit/pod7
+	number = 7
+
+/datum/shuttle/autodock/ferry/escape_pod/castelnaupod/escape_pod8
+	warmup_time = 10
+	shuttle_area = /area/shuttle/escape_pod8/station
+	number = 8
+/obj/effect/shuttle_landmark/escape_pod/start/pod8
+	number = 8
+/obj/effect/shuttle_landmark/escape_pod/out/pod8
+	number = 8
+/obj/effect/shuttle_landmark/escape_pod/transit/pod8
+	number = 8
+
 //Prometeus
 
 /datum/shuttle/autodock/overmap/prometeus
