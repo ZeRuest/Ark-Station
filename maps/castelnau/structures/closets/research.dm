@@ -1,7 +1,8 @@
 /*
- * Sierra Science
+ * Castenlau Science
  */
 
+/*
 /obj/structure/closet/secure_closet/RD_sierra
 	name = "research director's locker"
 	req_access = list(access_rd)
@@ -44,31 +45,23 @@
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/toxins, /obj/item/weapon/storage/backpack/satchel/tox)),
 		new /datum/atom_creator/simple(/obj/item/weapon/storage/backpack/messenger/tox, 50)
 	)
+*/
 
-/obj/structure/closet/secure_closet/xenoarchaeologist_sierra
-	name = "xenoarchaeologist's locker"
-	req_access = list(access_xenoarch)
-	icon = 'maps/sierra/icons/obj/closets.dmi'
-	icon_state = "secureres1"
-	icon_closed = "secureres"
-	icon_locked = "secureres1"
-	icon_opened = "secureresopen"
-	icon_off = "secureresoff"
+/obj/structure/closet/secure_closet/xenoarchaeologist/castenlau
+	req_access = list(74)
 
-/obj/structure/closet/secure_closet/xenoarchaeologist_sierra/WillContain()
+/obj/structure/closet/secure_closet/xenoarchaeologist/castenlau/WillContain()
 	return list(
-		/obj/item/clothing/under/rank/scientist/nanotrasen,
-		/obj/item/clothing/suit/storage/toggle/labcoat/science/nanotrasen,
 		/obj/item/clothing/suit/storage/toggle/labcoat,
 		/obj/item/clothing/shoes/white,
 		/obj/item/device/radio/headset/headset_sci,
-		/obj/item/clothing/mask/gas/alt,
-		/obj/item/weapon/clipboard,
+		/obj/item/clothing/mask/gas,
+		/obj/random/clipboard,
 		/obj/item/weapon/folder,
 		/obj/item/device/taperecorder,
 		/obj/item/device/tape/random = 3,
 		/obj/item/device/camera,
-		/obj/item/device/analyzer,
+		/obj/item/device/scanner/gas,
 		/obj/item/weapon/storage/belt/general,
 		/obj/item/taperoll/research,
 		/obj/item/clothing/gloves/latex,
@@ -80,32 +73,23 @@
 		new /datum/atom_creator/simple(/obj/item/weapon/storage/backpack/dufflebag, 50)
 	)
 
-/obj/structure/closet/secure_closet/scientist_sierra
-	name = "researcher's locker"
-	req_one_access = list(access_research)
-	icon = 'maps/sierra/icons/obj/closets.dmi'
-	icon_state = "secureres1"
-	icon_closed = "secureres"
-	icon_locked = "secureres1"
-	icon_opened = "secureresopen"
-	icon_off = "secureresoff"
+/obj/structure/closet/secure_closet/scientist/castenlau
+	req_access = list(74)
 
-/obj/structure/closet/secure_closet/scientist_sierra/WillContain()
+/obj/structure/closet/secure_closet/scientist/castenlau/WillContain()
 	return list(
-		/obj/item/clothing/under/rank/scientist/nanotrasen,
-		/obj/item/clothing/suit/storage/toggle/labcoat/science/nanotrasen,
 		/obj/item/clothing/suit/storage/toggle/labcoat,
 		/obj/item/clothing/shoes/white,
 		/obj/item/device/radio/headset/headset_sci,
-		/obj/item/clothing/mask/gas/half,
+		/obj/item/clothing/mask/gas,
 		/obj/item/weapon/tank/emergency/oxygen/engi,
-		/obj/item/weapon/clipboard,
+		/obj/random/clipboard,
 		/obj/item/weapon/folder,
 		/obj/item/device/taperecorder,
 		/obj/item/weapon/storage/belt/general,
 		/obj/item/device/tape/random = 3,
 		/obj/item/device/camera,
-		/obj/item/device/analyzer,
+		/obj/item/device/scanner/gas,
 		/obj/item/taperoll/research,
 		/obj/item/clothing/gloves/latex,
 		/obj/item/clothing/glasses/science,

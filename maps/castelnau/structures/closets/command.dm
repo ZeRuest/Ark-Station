@@ -17,7 +17,12 @@
 		/obj/item/clothing/gloves/captain,
 		/obj/item/weapon/storage/box/PDAs,
 		/obj/item/weapon/storage/box/ids,
+		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack, /obj/item/weapon/storage/backpack/satchel/grey)),
+		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag, /obj/item/weapon/storage/backpack/messenger)),
 	)
+
+/obj/structure/closet/secure_closet/hop/castelnau
+	name = "first officer's locker"
 
 /obj/structure/closet/secure_closet/hop/castelnau/WillContain()
 	return list(
@@ -32,10 +37,12 @@
 		/obj/item/device/megaphone,
 		/obj/item/weapon/storage/box/PDAs,
 		/obj/item/weapon/storage/box/ids,
+		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack, /obj/item/weapon/storage/backpack/satchel/grey)),
+		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag, /obj/item/weapon/storage/backpack/messenger)),
 	)
 
 /obj/structure/closet/secure_closet/adjutant
-	name = "Second Officer's locker"
+	name = "second officer's locker"
 	req_access = list(access_bridge)
 
 /obj/structure/closet/secure_closet/adjutant/WillContain()
