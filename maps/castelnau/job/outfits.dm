@@ -27,7 +27,7 @@ Keeping them simple for now, just spawning with basic EC uniforms, and pretty mu
 /decl/hierarchy/outfit/job/castelnau/crew/command/captain
 	name = OUTFIT_JOB_NAME("Captain - Castelnau")
 	glasses = /obj/item/clothing/glasses/sunglasses
-	uniform = /obj/item/clothing/under/rank/captain
+	uniform = /obj/item/clothing/under/color/grey
 	l_ear = /obj/item/device/radio/headset/heads/castelnau_captain
 	shoes = /obj/item/clothing/shoes/brown
 	head = /obj/item/clothing/head/caphat
@@ -42,7 +42,7 @@ Keeping them simple for now, just spawning with basic EC uniforms, and pretty mu
 
 /decl/hierarchy/outfit/job/castelnau/crew/command/hop
 	name = OUTFIT_JOB_NAME("First Officer - Castelnau")
-	uniform = /obj/item/clothing/under/rank/head_of_personnel
+	uniform = /obj/item/clothing/under/color/grey
 	l_ear = /obj/item/device/radio/headset/heads/hop
 	shoes = /obj/item/clothing/shoes/laceup
 	id_type = /obj/item/weapon/card/id/castelnau/silver
@@ -50,7 +50,7 @@ Keeping them simple for now, just spawning with basic EC uniforms, and pretty mu
 
 /decl/hierarchy/outfit/job/castelnau/crew/command/adjutant
 	name = OUTFIT_JOB_NAME("Second Officer - Castelnau")
-	uniform = /obj/item/clothing/under
+	uniform = /obj/item/clothing/under/color/grey
 	shoes = /obj/item/clothing/shoes/black
 	l_ear = /obj/item/device/radio/headset/adjutant
 	id_type = /obj/item/weapon/card/id/castelnau/crew/adjutant
@@ -72,7 +72,7 @@ Keeping them simple for now, just spawning with basic EC uniforms, and pretty mu
 
 /decl/hierarchy/outfit/job/castelnau/crew/engineering/senior_engineer
 	name = OUTFIT_JOB_NAME("Senior Engineer - Castelnau")
-	uniform = /obj/item/clothing/under
+	uniform = /obj/item/clothing/under/rank/engineer
 	shoes = /obj/item/clothing/shoes
 	id_type = /obj/item/weapon/card/id/castelnau/crew/engineering/senior
 	pda_type = /obj/item/modular_computer/pda/heads/ce
@@ -184,7 +184,7 @@ Keeping them simple for now, just spawning with basic EC uniforms, and pretty mu
 
 /decl/hierarchy/outfit/job/castelnau/crew/supply/prospector
 	name = OUTFIT_JOB_NAME("Prospector")
-	uniform = /obj/item/clothing/under/rank/ntwork
+	uniform = /obj/item/clothing/under/color/grey
 	shoes = /obj/item/clothing/shoes
 	id_type = /obj/item/weapon/card/id/castelnau/crew/supply/mining
 	l_ear = /obj/item/device/radio/headset/headset_mining
@@ -232,7 +232,7 @@ Keeping them simple for now, just spawning with basic EC uniforms, and pretty mu
 
 /decl/hierarchy/outfit/job/castelnau/crew/research/senior_scientist
 	name = OUTFIT_JOB_NAME("Senior Researcher - Castelnau")
-	uniform = /obj/item/clothing/under/rank/scientist/executive/nanotrasen
+	uniform = /obj/item/clothing/under/color/white
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	shoes = /obj/item/clothing/shoes/white
 	pda_type = /obj/item/modular_computer/pda/heads/rd
@@ -264,7 +264,7 @@ Keeping them simple for now, just spawning with basic EC uniforms, and pretty mu
 
 /decl/hierarchy/outfit/job/castelnau/crew/research/assist/testsubject
 	name = OUTFIT_JOB_NAME("Testing Assistant")
-	uniform = /obj/item/clothing/under/rank/ntwork
+	uniform = /obj/item/clothing/under/color/white
 
 	//////////
 	//CREWMEN//
