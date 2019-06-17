@@ -244,7 +244,7 @@ var/list/nrods = list()
 
 
 
-/obj/machinery/power/nuclear_rod/setupexample  //äëÿ òåñòîâ
+/obj/machinery/power/nuclear_rod/setupexample  //для тестов
 	rodtemp = 2000
 	anchored = 1
 	accepted_rads = 200
