@@ -1421,3 +1421,35 @@
 
 /area/tdome/testing/engineering/unpowered
 	requires_power = 1
+
+//Z 1
+/area/shuttle/administration/centcom
+	name = "\improper Administration Shuttle"
+	icon_state = "shuttlered"
+	req_access = list(access_cent_general)
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
+
+/area/shuttle/escape_pod1/centcom
+	icon_state = "shuttle"
+	req_access = list(access_cent_general)
+
+/area/shuttle/escape_pod2/centcom
+	icon_state = "shuttle"
+	req_access = list(access_cent_general)
+
+/area/shuttle/escape_pod3/centcom
+	icon_state = "shuttle"
+	req_access = list(access_cent_general)
+
+/area/shuttle/escape_pod5/centcom
+	icon_state = "shuttle"
+	req_access = list(access_cent_general)
+
+/area/shuttle/transport1/centcom
+	icon_state = "shuttle"
+	name = "\improper Transport Shuttle Centcom"
+
+/area/prison/solitary
+	name = "Solitary Confinement"
+	icon_state = "brig"
+	req_access = list(access_brig)
