@@ -6,7 +6,7 @@
 "af" = (/turf/simulated/floor/reinforced/oxygen,/area/thruster/d1starboard)
 "ag" = (/turf/simulated/wall/r_wall,/area/thruster/d1starboard)
 "ah" = (/obj/structure/lattice,/obj/structure/catwalk,/turf/simulated/open,/area/thruster/d1starboard)
-"ai" = (/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/simple/hidden/fuel{icon_state = "intact"; dir = 6},/turf/simulated/floor/plating,/area/thruster/d1starboard)
+"ai" = (/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/simple/hidden/fuel{icon_state = "intact"; dir = 6},/turf/simulated/floor/airless,/area/thruster/d1starboard)
 "aj" = (/obj/machinery/atmospherics/unary/engine{icon_state = "nozzle"; dir = 8},/turf/simulated/wall/r_wall/hull,/area/thruster/d1starboard)
 "ak" = (/obj/structure/ladder,/obj/machinery/firealarm{dir = 8; pixel_x = -24; pixel_y = 4},/turf/simulated/floor/plating,/area/thruster/d1starboard)
 "al" = (/obj/structure/catwalk,/obj/machinery/alarm{alarm_id = "xenobio4_alarm"; dir = 2; icon_state = "alarm0"; pixel_x = 0; pixel_y = 24},/turf/simulated/floor/plating,/area/thruster/d1starboard)
@@ -14,8 +14,8 @@
 "an" = (/obj/effect/wallframe_spawn/reinforced_phoron,/obj/machinery/atmospherics/pipe/simple/visible/green{icon_state = "intact"; dir = 4},/obj/machinery/meter,/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/thruster/d1starboard)
 "ao" = (/obj/machinery/atmospherics/unary/outlet_injector{dir = 8; frequency = 1441; icon_state = "map_injector"; id = "fuel2_in"; pixel_y = 1; use_power = 1},/turf/simulated/floor/reinforced/hydrogen/fuel,/area/thruster/d1starboard)
 "ap" = (/turf/simulated/floor/reinforced/hydrogen/fuel,/area/thruster/d1starboard)
-"aq" = (/obj/structure/ladder,/turf/simulated/floor,/area/thruster/d1starboard)
-"ar" = (/obj/machinery/atmospherics/pipe/manifold/visible/fuel{icon_state = "map"; dir = 8},/obj/structure/catwalk,/turf/simulated/floor/plating,/area/thruster/d1starboard)
+"aq" = (/obj/structure/ladder,/turf/simulated/floor/airless,/area/thruster/d1starboard)
+"ar" = (/obj/machinery/atmospherics/pipe/manifold/visible/fuel{icon_state = "map"; dir = 8},/obj/structure/catwalk,/turf/simulated/floor/airless,/area/thruster/d1starboard)
 "as" = (/obj/structure/catwalk,/obj/machinery/power/apc{dir = 8; name = "west bump"; pixel_x = -24},/obj/structure/cable/green{d2 = 2; icon_state = "0-2"},/turf/simulated/floor/plating,/area/thruster/d1starboard)
 "at" = (/obj/structure/lattice,/obj/structure/catwalk,/obj/machinery/light/navigation/delay2,/turf/space,/area/space)
 "au" = (/obj/structure/catwalk,/obj/machinery/light/small/red,/turf/simulated/floor/plating,/area/thruster/d1starboard)
@@ -25,7 +25,7 @@
 "ay" = (/obj/machinery/atmospherics/pipe/simple/hidden/fuel{dir = 4; icon_state = "intact"},/turf/simulated/floor/reinforced/hydrogen/fuel,/area/thruster/d1starboard)
 "az" = (/obj/machinery/atmospherics/pipe/simple/hidden/fuel{dir = 4; icon_state = "intact"},/turf/simulated/wall/r_wall,/area/thruster/d1starboard)
 "aA" = (/obj/structure/lattice,/obj/machinery/atmospherics/pipe/simple/visible/fuel{dir = 4},/obj/structure/catwalk,/turf/simulated/open,/area/thruster/d1starboard)
-"aB" = (/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/manifold/visible/fuel,/turf/simulated/floor/plating,/area/thruster/d1starboard)
+"aB" = (/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/manifold/visible/fuel,/turf/simulated/floor/airless,/area/thruster/d1starboard)
 "aC" = (/turf/simulated/wall/r_wall/hull,/area/hallway/primary/firstdeck/fore)
 "aD" = (/obj/machinery/door/airlock/external/glass{frequency = 1380; id_tag = "merchant_shuttle_station_exterior"; locked = 1; name = "Docking Port Airlock"; req_access = list(13)},/obj/machinery/shield_diffuser,/turf/simulated/floor/tiled/techfloor/grid,/area/hallway/primary/firstdeck/fore)
 "aE" = (/turf/simulated/wall/r_wall/hull,/area/maintenance/firstdeck/aftstarboard)
@@ -871,6 +871,7 @@
 "qM" = (/obj/machinery/button/remote/blast_door{dir = 4; id = "bar"; name = "Bar Shutters"; pixel_x = -22; pixel_y = 6; req_access = list(25)},/obj/structure/table/steel,/obj/machinery/floor_light/prebuilt/bar/violet,/turf/simulated/floor/tiled/dark,/area/crew_quarters/bar)
 "qN" = (/obj/machinery/vending/boozeomat{icon_state = "fridge_dark"; dir = 8},/obj/machinery/floor_light/prebuilt/bar/violet,/turf/simulated/floor/tiled/dark,/area/crew_quarters/bar)
 "qO" = (/obj/structure/table/reinforced,/obj/machinery/chemical_dispenser/bar_coffee/full,/obj/machinery/floor_light/prebuilt/bar/violet,/turf/simulated/floor/tiled/dark,/area/crew_quarters/bar)
+"qP" = (/obj/machinery/atmospherics/pipe/manifold/visible/fuel{dir = 1},/obj/structure/catwalk,/turf/simulated/floor/airless,/area/thruster/d1port)
 "qQ" = (/obj/structure/extinguisher_cabinet{dir = 8; pixel_y = -22},/obj/structure/table/marble,/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 1},/obj/machinery/floor_light/prebuilt/bar/violet,/turf/simulated/floor/tiled/dark,/area/crew_quarters/bar)
 "qR" = (/obj/structure/table/marble,/obj/effect/floor_decal/corner/grey/diagonal{dir = 4},/obj/machinery/reagent_temperature,/turf/simulated/floor/tiled/white,/area/crew_quarters/galley)
 "qS" = (/obj/structure/table/marble,/obj/effect/floor_decal/corner/grey/diagonal{dir = 4},/obj/machinery/reagent_temperature/cooler,/obj/structure/extinguisher_cabinet{dir = 8; pixel_y = -22},/turf/simulated/floor/tiled/white,/area/crew_quarters/galley)
@@ -948,15 +949,17 @@
 "sm" = (/turf/simulated/wall/r_wall/hull,/area/maintenance/firstdeck/aftport)
 "sn" = (/obj/effect/wallframe_spawn/reinforced/hull,/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/maintenance/firstdeck/aftport)
 "so" = (/turf/simulated/wall/r_wall/hull,/area/thruster/d1port)
+"sp" = (/obj/structure/ladder,/turf/simulated/floor/airless,/area/thruster/d1port)
 "sq" = (/obj/structure/catwalk,/obj/machinery/power/apc{dir = 8; name = "west bump"; pixel_x = -24},/obj/structure/cable/green,/turf/simulated/floor/plating,/area/thruster/d1port)
 "sr" = (/obj/structure/catwalk,/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 1},/turf/simulated/floor/plating,/area/thruster/d1port)
 "ss" = (/obj/machinery/atmospherics/pipe/zpipe/down/fuel{icon_state = "down"; dir = 4},/obj/structure/lattice,/obj/machinery/computer/general_air_control/large_tank_control/nacelle/fuel/first{icon_state = "computer"; dir = 8},/turf/simulated/open,/area/thruster/d1port)
+"st" = (/obj/machinery/atmospherics/pipe/manifold/visible/fuel{icon_state = "map"; dir = 8},/obj/structure/catwalk,/turf/simulated/floor/airless,/area/thruster/d1port)
 "su" = (/obj/machinery/atmospherics/pipe/simple/hidden/fuel{dir = 4; icon_state = "intact"},/obj/machinery/air_sensor/nacelle/first/fuel,/turf/simulated/floor/reinforced/hydrogen/fuel,/area/thruster/d1port)
 "sv" = (/obj/machinery/atmospherics/pipe/simple/hidden/fuel{dir = 4; icon_state = "intact"},/turf/simulated/floor/reinforced/hydrogen/fuel,/area/thruster/d1port)
 "sw" = (/obj/machinery/atmospherics/pipe/simple/hidden/fuel{dir = 4; icon_state = "intact"},/turf/simulated/floor/reinforced/oxygen,/area/thruster/d1port)
 "sx" = (/obj/machinery/atmospherics/pipe/simple/hidden/fuel{dir = 4; icon_state = "intact"},/turf/simulated/wall/r_wall,/area/thruster/d1port)
 "sy" = (/obj/structure/lattice,/obj/machinery/atmospherics/pipe/simple/visible/fuel{dir = 4},/obj/structure/catwalk,/turf/simulated/open,/area/thruster/d1port)
-"sz" = (/obj/machinery/atmospherics/pipe/manifold/visible/fuel{dir = 1},/obj/structure/catwalk,/turf/simulated/floor/plating,/area/thruster/d1port)
+"sz" = (/obj/machinery/atmospherics/pipe/simple/visible/fuel{dir = 5},/obj/structure/catwalk,/turf/simulated/floor/airless,/area/thruster/d1port)
 "sA" = (/obj/machinery/atmospherics/unary/engine{icon_state = "nozzle"; dir = 8},/turf/simulated/wall/r_wall/hull,/area/thruster/d1port)
 "sB" = (/obj/structure/ladder,/obj/machinery/firealarm{dir = 8; pixel_x = -24; pixel_y = 4},/turf/simulated/floor/plating,/area/thruster/d1port)
 "sC" = (/obj/structure/catwalk,/obj/machinery/alarm{dir = 1; icon_state = "alarm0"; pixel_y = -20},/turf/simulated/floor/plating,/area/thruster/d1port)
@@ -965,12 +968,9 @@
 "sG" = (/turf/simulated/floor/reinforced/hydrogen/fuel,/area/thruster/d1port)
 "sH" = (/turf/simulated/floor/reinforced/oxygen,/area/thruster/d1port)
 "sI" = (/turf/simulated/wall/r_wall,/area/thruster/d1port)
-"sJ" = (/obj/structure/ladder,/turf/simulated/floor,/area/thruster/d1port)
-"sK" = (/obj/machinery/atmospherics/pipe/manifold/visible/fuel{icon_state = "map"; dir = 8},/obj/structure/catwalk,/turf/simulated/floor/plating,/area/thruster/d1port)
 "sL" = (/obj/structure/lattice,/obj/structure/catwalk,/obj/structure/railing/mapped{dir = 8; icon_state = "railing0-1"},/obj/structure/railing/mapped,/turf/space,/area/space)
 "sM" = (/obj/machinery/atmospherics/pipe/zpipe/down/cyan{icon_state = "down"; dir = 4},/obj/structure/railing/mapped{icon_state = "railing0-1"; dir = 1},/turf/simulated/open,/area/thruster/d1port)
 "sP" = (/obj/structure/lattice,/obj/structure/catwalk,/turf/simulated/open,/area/thruster/d1port)
-"sQ" = (/obj/machinery/atmospherics/pipe/simple/visible/fuel{dir = 5},/obj/structure/catwalk,/turf/simulated/floor/plating,/area/thruster/d1port)
 "sR" = (/obj/effect/landmark/map_data{height = 3},/turf/space,/area/space)
 "sS" = (/obj/effect/floor_decal/corner/grey/diagonal{dir = 4},/obj/machinery/button/remote/blast_door{dir = 4; id = "kitchen"; name = "Kitchen Shutters"; pixel_x = -24; pixel_y = -4; req_access = list(35)},/obj/machinery/light_switch{dir = 4; pixel_x = -24; pixel_y = 6},/obj/machinery/atmospherics/unary/vent_scrubber/on,/turf/simulated/floor/tiled/white,/area/crew_quarters/galley)
 "sT" = (/obj/item/device/eftpos{eftpos_name = "Bartender EFTPOS scanner"},/obj/structure/table/marble,/obj/machinery/floor_light/prebuilt/bar/violet,/turf/simulated/floor/tiled/dark,/area/crew_quarters/bar)
@@ -1070,9 +1070,9 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaWaMaMaMaMaMpVpVpVpVpVpVpVpVpVrCrDrErFrvrvrGrvrHrIrIrJrIrKrIrIrIrIrIrIrLrIrIrIrIrIrMrNrOrNrPrQrNrNrNrRrNrSrTrUrVpapaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaMaMaMaMaMrWrWrXaMpVpVpVpVpVrYrZsarYrYrYrYrYrYrYrYrYrYrYrYrYrYrYrYrYrYrYrYsbscsdsesesesfscsgshsioZsjskpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaarYslrYrYrWrXaMaMaMaMaMaMaMaMaMaMaMaMaMaMaMaMsmsmsmsmsnsnsnsmsoohsososososososososososoaPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaMaWaMaMaMaMaMaMaMsosqsrsspjsusvsvswsxsyszsAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaRaSsosBsCsDpysFsGsGmvsIsJsKsAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasLaMsosososMpRaTsGsHafsIsPsQsAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaMaWaMaMaMaMaMaMaMsosqsrsspjsusvsvswsxsyqPsAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaRaSsosBsCsDpysFsGsGmvsIspstsAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasLaMsosososMpRaTsGsHafsIsPszsAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasLrWaMsososososososososososoaPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaKaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaataMaMaMaWaMaNaMaMgiaMaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
