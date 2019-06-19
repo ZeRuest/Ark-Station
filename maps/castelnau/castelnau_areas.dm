@@ -123,10 +123,6 @@
 	name = "Second Deck Teleporter"
 	icon_state = "teleporter"
 
-/area/maintenance/bluespace
-	name = "Bluespace Drive"
-	icon_state = "engineering"
-
 /area/crew_quarters/safe_room/seconddeck
 	name = "Second Deck Safe Room"
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
@@ -468,6 +464,7 @@
 
 /area/crew_quarters/heads/office/captain
 	name = "Command - Captain's Office"
+	icon_state = "captain"
 	sound_env = MEDIUM_SOFTFLOOR
 
 /area/crew_quarters/heads/office/hop
