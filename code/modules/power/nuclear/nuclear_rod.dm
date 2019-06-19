@@ -19,7 +19,7 @@ var/list/nrods = list()
 	var/integrity = 100
 	var/broken = 0
 	var/id_tag
-	var/list/possible_reactions
+	var/list/possible_reactions = list()
 
 /obj/machinery/power/nuclear_rod/New()  // Тут все по идее понятно
 	..()
@@ -164,11 +164,11 @@ var/list/nrods = list()
 
 	if(reactants.len)
 		var/list/produced_reactants
-		possible_reactions = new/list
+		possible_reactions = typesof(/decl/nuclear_reaction)
 		for (var/decl/nuclear_reaction/p_reaction in typesof(/decl/nuclear_reaction))   //Создаем список возм. реакций из всех реакций
 
 			if(p_reaction.substance in reactants && accepted_rads >= p_reaction.required_rads)
-				possible_reactions.Add(p_reaction)
+			//	possible_reactions.Add(p_reaction)
 			else
 				possible_reactions.Remove(p_reaction)  //Для изначально полного списка
 
