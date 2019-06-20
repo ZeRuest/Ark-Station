@@ -72,6 +72,7 @@
 	#include "z2-transit.dmm"
 
 	#include "../away/empty.dmm"
+	#include "../reactor 4 tests.dmm"
 
 //	#include "../away/bearcat/bearcat.dm"
 //	#include "../away/mining/mining.dm"

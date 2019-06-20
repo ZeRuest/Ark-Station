@@ -7,10 +7,6 @@ var/list/nuclear_reactions
 	var/radiation = 0
 	var/list/products = list()
 
-
-
-
-
 /decl/nuclear_reaction/U235_chain
 	substance = "U235"
 	required_rads = 10
