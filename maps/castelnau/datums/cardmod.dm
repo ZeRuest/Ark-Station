@@ -55,13 +55,14 @@
 					"allowed" = (access in id_card.access) ? 1 : 0)))
 			data["all_centcom_access"] = all_centcom_access
 		else
-			var/list/all_castel_acc_types = typesof(/datum/access/castelnau/)
+			var/list/regions = list()
+			var/list/all_castel_acc_types = typesof(/datum/access/castelnau)
 			all_castel_acc_types -= /datum/access/castelnau
 			var/list/valid_ids = list()
-			for (var/datum/access/acc in all_castel_acc_types)
-				valid_ids += acc.id
-				world << acc.id
-			var/list/regions = list()
+			for (var/acc in all_castel_acc_types)
+				var/datum/access/castelnau/ac = new acc
+				valid_ids += ac.id
+				qdel(acc)
 			for(var/i = 1; i <= 8; i++)
 				var/list/accesses = list()
 				for(var/access in get_region_accesses(i))
