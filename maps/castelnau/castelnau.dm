@@ -14,7 +14,6 @@
 //	#include "castelnau_unit_testing.dm"
 
 	#include "datums/reports.dm"
-//	#include "datums/cardmod.dm"
 
 	#include "items/cards_ids.dm"
 	#include "items/encryption_keys.dm"
@@ -31,6 +30,8 @@
 	#include "job/access.dm"
 	#include "job/jobs.dm"
 	#include "job/outfits.dm"
+
+	#include "datums/cardmod.dm"
 
 	#include "job/jobs_cargo.dm"
 	#include "job/jobs_command.dm"
