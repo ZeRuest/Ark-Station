@@ -156,8 +156,6 @@ var/list/nrods = list()
 			var/decl/nuclear_reaction/p_reaction = new p_reaction_type
 			if(!p_reaction.substance || p_reaction.type in possible_reactions)
 				continue
-			to_world(p_reaction.substance)
-			to_world(reactants[p_reaction.substance])
 			if(reactants[p_reaction.substance] && accepted_rads >= p_reaction.required_rads)
 				possible_reactions += p_reaction.type
 
