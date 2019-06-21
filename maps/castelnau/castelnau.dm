@@ -27,12 +27,11 @@
 //	#include "items/manuals.dm"
 //	#include "items/uniform_vendor.dm"
 
-	#include "job/access.dm"
-	#include "job/jobs.dm"
-	#include "job/outfits.dm"
-
 	#include "datums/cardmod.dm"
 
+	#include "job/access.dm"
+
+	#include "job/jobs.dm"
 	#include "job/jobs_cargo.dm"
 	#include "job/jobs_command.dm"
 	#include "job/jobs_engineering.dm"
@@ -41,6 +40,16 @@
 	#include "job/jobs_research.dm"
 	#include "job/jobs_security.dm"
 	#include "job/jobs_service.dm"
+
+	#include "job/outfits/castelnau_outfits.dm"
+	#include "job/outfits/command_outfits.dm"
+	#include "job/outfits/engineering_outfits.dm"
+	#include "job/outfits/medical_outfits.dm"
+	#include "job/outfits/misc_outfits.dm"
+	#include "job/outfits/research_outfits.dm"
+	#include "job/outfits/security_outfits.dm"
+	#include "job/outfits/service_outfits.dm"
+	#include "job/outfits/supply_outfits.dm"
 
 	#include "machinery/apc.dm"
 	#include "machinery/lighting.dm"
