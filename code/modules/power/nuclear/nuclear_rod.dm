@@ -19,7 +19,7 @@ var/list/nrods = list()
 	var/integrity = 100
 	var/broken = 0
 	var/id_tag
-	var/list/possible_reactions
+	var/list/possible_reactions = new /list(0)
 
 /obj/machinery/power/nuclear_rod/New()  // Тут все по идее понятно
 	..()
@@ -152,19 +152,16 @@ var/list/nrods = list()
 
 	if(reactants.len)
 		var/list/produced_reactants
-		possible_reactions = subtypesof(/decl/nuclear_reaction)
-		for(var/p_reaction_type in possible_reactions)   //Создаем список возм. реакций из всех реакций
+		for(var/p_reaction_type in subtypesof(/decl/nuclear_reaction))   //Создаем список возм. реакций из всех реакций
 			var/decl/nuclear_reaction/p_reaction = new p_reaction_type
-
-			if(!p_reaction.substance)
+			if(!p_reaction.substance || p_reaction.type in possible_reactions)
 				continue
+			to_world(p_reaction.substance)
+			to_world(reactants[p_reaction.substance])
+			if(reactants[p_reaction.substance] && accepted_rads >= p_reaction.required_rads)
+				possible_reactions += p_reaction.type
 
-			if(p_reaction.substance in reactants && accepted_rads >= p_reaction.required_rads)
-			//	possible_reactions.Add(p_reaction)
-			else
-				possible_reactions.Remove(p_reaction)  //Для изначально полного списка
-
-		while(possible_reactions.len)                 //А теперь пройдемся по ним и последовательно выполним
+		/*while(possible_reactions.len)                 //А теперь пройдемся по ним и последовательно выполним
 			var/decl/nuclear_reaction/cur_reaction = pick(possible_reactions)
 			var/max_num_reactants = 0
 			if(accepted_rads > cur_reaction.required_rads)
@@ -206,6 +203,8 @@ var/list/nrods = list()
 
 		for(var/prreactant in produced_reactants)
 			AddReact(prreactant, produced_reactants[prreactant])  //а теперь все произведенное идет обратно в ректанты
+		*/
+	return 1
 
 /obj/machinery/power/nuclear_rod/setupexample  //для тестов
 	rodtemp = 2000
