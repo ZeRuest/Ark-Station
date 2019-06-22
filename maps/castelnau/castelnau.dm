@@ -41,6 +41,17 @@
 	#include "job/jobs_security.dm"
 	#include "job/jobs_service.dm"
 
+	#include "loadout/_defines.dm"
+	#include "loadout/loadout_accessories.dm"
+	#include "loadout/loadout_eyes.dm"
+	#include "loadout/loadout_gloves.dm"
+	#include "loadout/loadout_head.dm"
+	#include "loadout/loadout_shoes.dm"
+	#include "loadout/loadout_suit.dm"
+	#include "loadout/loadout_uniform.dm"
+	#include "loadout/loadout_xeno.dm"
+	#include "loadout/~defines.dm"
+
 	#include "job/outfits/castelnau_outfits.dm"
 	#include "job/outfits/command_outfits.dm"
 	#include "job/outfits/engineering_outfits.dm"
