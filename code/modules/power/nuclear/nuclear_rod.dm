@@ -1,7 +1,7 @@
 var/list/nrods = list()
 
 
-/obj/machinery/power/nuclear_rod   //дефайн, сорь за слишком большое число слова Ядерный
+/obj/machinery/power/nuclear_rod   //пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	name = "Nuclear rod"
 	desc = "A nuclear rod, that generates radiation, thermal energy and some problems ."
 	icon = 'icons/obj/machines/nuclearcore.dmi'
@@ -21,7 +21,7 @@ var/list/nrods = list()
 	var/id_tag
 	var/list/possible_reactions = new /list(0)
 
-/obj/machinery/power/nuclear_rod/New()  // тут все понятно
+/obj/machinery/power/nuclear_rod/New()  // пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	..()
 	nrods += src
 
@@ -36,13 +36,13 @@ var/list/nrods = list()
 		to_chat(user, "The thermometer placed on the rod indicates that \the [src] has the temperature of [rodtemp] K.")
 		return 1
 
-/obj/machinery/power/nuclear_rod/attackby(var/obj/item/weapon/nuclearfuel/F, var/mob/user)  //кладем стержень внутрь
+/obj/machinery/power/nuclear_rod/attackby(var/obj/item/weapon/nuclearfuel/F, var/mob/user)  //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	if(!reactants && rodtemp < 1000)
 		playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
 		reactants = F.reactants
 		qdel(F)
 
-/obj/machinery/power/nuclear_rod/attack_hand(mob/user)   //вынимаем стержень
+/obj/machinery/power/nuclear_rod/attack_hand(mob/user)   //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	add_fingerprint(user)
 	if(reactants && do_after(user, 10,src) && rodtemp < 1000)
 
@@ -51,7 +51,7 @@ var/list/nrods = list()
 		reactants = null
 
 
-/obj/machinery/power/nuclear_rod/attackby(obj/item/weapon/W, mob/user)  // тут у нас реакция на инструменты
+/obj/machinery/power/nuclear_rod/attackby(obj/item/weapon/W, mob/user)  // пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	if(rodtemp < 2000)
 		if(!broken)
 			src.add_fingerprint(user)
@@ -106,7 +106,7 @@ var/list/nrods = list()
 
 
 
-/obj/machinery/power/nuclear_rod/proc/check_state()   // Чтобы не писать в Процесс
+/obj/machinery/power/nuclear_rod/proc/check_state()   // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	if (rodtemp > 4000)
 		integrity -= (rodtemp - 4000)/10
 	if (integrity <= 0 && broken == 0)
@@ -118,7 +118,7 @@ var/list/nrods = list()
 		own_rads = 200
 
 
-/obj/machinery/power/nuclear_rod/Process()     // облучение и нагрев атмоса (в обоих смыслах, привет антагам) + проки
+/obj/machinery/power/nuclear_rod/Process()     // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ (пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ) + пїЅпїЅпїЅпїЅпїЅ
 	React()
 	var/raddecay = rand(109,121)
 	var/datum/gas_mixture/environment = loc.return_air()
@@ -133,7 +133,7 @@ var/list/nrods = list()
 
 
 	else
-		SSradiation.radiate(src, round (own_rads * sealcoeff))    // в принципе, можно ставить любой
+		SSradiation.radiate(src, round (own_rads * sealcoeff))    // пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 	own_rads = own_rads/raddecay*100
 	check_state()
 	on_update_icon()
@@ -161,7 +161,7 @@ var/list/nrods = list()
 		else
 			icon_state = "sealed_rod"
 
-/obj/machinery/power/nuclear_rod/proc/AddReact(var/name, var/quantity = 1)  //нужно для Реакта
+/obj/machinery/power/nuclear_rod/proc/AddReact(var/name, var/quantity = 1)  //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	if(name in reactants)
 		reactants[name] += quantity
 	else
@@ -169,15 +169,13 @@ var/list/nrods = list()
 		reactants[name] = quantity
 
 
-/obj/machinery/power/nuclear_rod/proc/React()  // Тот самый забагованный прок, да-да
+/obj/machinery/power/nuclear_rod/proc/React()  // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅ-пїЅпїЅ
 	var/accepted_rads = SSradiation.get_rads_at_turf(get_turf(src)) - own_rads
 	if (accepted_rads < 0)
 		accepted_rads = 0
 
-
-
 	if(reactants.len)
-		var/list/produced_reactants
+		var/list/produced_reactants = new /list(0)
 		for(var/p_reaction_type in subtypesof(/decl/nuclear_reaction))
 			var/decl/nuclear_reaction/p_reaction = new p_reaction_type
 			if(!p_reaction.substance || (p_reaction.type in possible_reactions))
@@ -185,16 +183,15 @@ var/list/nrods = list()
 			if(reactants[p_reaction.substance] && accepted_rads >= p_reaction.required_rads)
 				possible_reactions += p_reaction.type
 
-		while(possible_reactions.len)                 //а теперь все реакции пустим
+		while(possible_reactions.len)                 //пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 			var/cur_reaction_type = pick(possible_reactions)
 			var/decl/nuclear_reaction/cur_reaction = new cur_reaction_type
 			var/max_num_reactants = 0
 			if(accepted_rads < cur_reaction.required_rads)
-				possible_reactions.Remove(cur_reaction)
+				possible_reactions -= cur_reaction.type
 				continue
 
-
-			if(reactants[cur_reaction.substance] > 0.01)  //„O„Ѓ„‚„u„t„u„|„u„~„y„u „{„Ђ„|„y„‰„u„ѓ„„„r„p „r„ѓ„„„…„Ѓ„p„u„}„Ђ„s„Ђ „r „‚„u„p„{„€„y„ђ
+			if(reactants[cur_reaction.substance] > 0.01)  //пїЅOпїЅпїЅпїЅпїЅпїЅuпїЅtпїЅuпїЅ|пїЅuпїЅ~пїЅyпїЅu пїЅ{пїЅпїЅпїЅ|пїЅyпїЅпїЅпїЅuпїЅпїЅпїЅпїЅпїЅrпїЅp пїЅrпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅpпїЅuпїЅ}пїЅпїЅпїЅsпїЅпїЅ пїЅr пїЅпїЅпїЅuпїЅpпїЅ{пїЅпїЅпїЅyпїЅпїЅ
 				if(cur_reaction.required_rads > 0)
 					max_num_reactants = (10 + accepted_rads/cur_reaction.required_rads) * reactants[cur_reaction.substance] / 2000
 				else
@@ -207,16 +204,16 @@ var/list/nrods = list()
 
 			var/amount_reacting = rand(max_num_reactants * 0.9, max_num_reactants)
 
-			if( reactants[cur_reaction.substance] - amount_reacting >= 0 )  //„T„q„y„‚„p„u„} „y„x „ѓ„Ѓ„y„ѓ„{„p „‚„u„p„{„„„p„~„„„Ђ„r
+			if( reactants[cur_reaction.substance] - amount_reacting >= 0 )  //пїЅTпїЅqпїЅyпїЅпїЅпїЅpпїЅuпїЅ} пїЅyпїЅx пїЅпїЅпїЅпїЅпїЅyпїЅпїЅпїЅ{пїЅp пїЅпїЅпїЅuпїЅpпїЅ{пїЅпїЅпїЅpпїЅ~пїЅпїЅпїЅпїЅпїЅr
 				reactants[cur_reaction.substance] -= amount_reacting
 			else
 				amount_reacting = reactants[cur_reaction.substance]
 				reactants[cur_reaction.substance] = 0
 
 			rodtemp += amount_reacting * cur_reaction.heat_production
-			own_rads +=   amount_reacting * cur_reaction.radiation
+			own_rads += amount_reacting * cur_reaction.radiation
 
-			for(var/pr_reactant in cur_reaction.products)   //„I „t„Ђ„q„p„r„|„‘„u„} „Ѓ„‚„Ђ„t„…„{„„„Ќ „‚„u„p„{„€„y„y
+			for(var/pr_reactant in cur_reaction.products)   //пїЅI пїЅtпїЅпїЅпїЅqпїЅpпїЅrпїЅ|пїЅпїЅпїЅuпїЅ} пїЅпїЅпїЅпїЅпїЅпїЅпїЅtпїЅпїЅпїЅ{пїЅпїЅпїЅпїЅ пїЅпїЅпїЅuпїЅpпїЅ{пїЅпїЅпїЅyпїЅy
 				var/success = 0
 				for(var/check_reactant in produced_reactants)
 					if(check_reactant == pr_reactant)
@@ -226,10 +223,10 @@ var/list/nrods = list()
 				if(!success)
 					produced_reactants[pr_reactant] = cur_reaction.products[pr_reactant] * amount_reacting
 
-			possible_reactions.Remove(cur_reaction)
+			possible_reactions -= cur_reaction.type
 
 		for(var/prreactant in produced_reactants)
-			AddReact(prreactant, produced_reactants[prreactant])  //„p „„„u„Ѓ„u„‚„Ћ „r„ѓ„u „Ѓ„‚„Ђ„y„x„r„u„t„u„~„~„Ђ„u „y„t„u„„ „Ђ„q„‚„p„„„~„Ђ „r „‚„u„{„„„p„~„„„Ќ
+			AddReact(prreactant, produced_reactants[prreactant])  //пїЅp пїЅпїЅпїЅuпїЅпїЅпїЅuпїЅпїЅпїЅпїЅ пїЅrпїЅпїЅпїЅu пїЅпїЅпїЅпїЅпїЅпїЅпїЅyпїЅxпїЅrпїЅuпїЅtпїЅuпїЅ~пїЅ~пїЅпїЅпїЅu пїЅyпїЅtпїЅuпїЅпїЅ пїЅпїЅпїЅqпїЅпїЅпїЅpпїЅпїЅпїЅ~пїЅпїЅ пїЅr пїЅпїЅпїЅuпїЅ{пїЅпїЅпїЅpпїЅ~пїЅпїЅпїЅпїЅ
 	return 1
 
 
@@ -252,12 +249,9 @@ var/list/nrods = list()
 
 
 
-/obj/machinery/power/nuclear_rod/setupexample  //для тестов
+/obj/machinery/power/nuclear_rod/setupexample  //пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	rodtemp = 2000
 	anchored = 1
 	accepted_rads = 200
 	reactants = list("U235" = 1000)
 	id_tag = "pripyat"
-
-
-
