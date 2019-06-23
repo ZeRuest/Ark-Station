@@ -52,7 +52,7 @@
 
 		dat += "<tr>"
 
-		if(I.stat & (BROKEN|NOPOWER))
+		if(I.nocontrol)
 			dat += "<td><span class='danger'>ERROR</span></td>"
 			dat += "<td><span class='danger'>ERROR</span></td>"
 		else

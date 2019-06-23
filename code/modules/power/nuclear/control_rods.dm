@@ -55,7 +55,7 @@ var/list/control_rods = list()
 				qdel(src)
 
 
-/obj/machinery/control_rod/proc/check_power(var/amount)  //пока только заготовка, но вы держитесь
+/obj/machinery/control_rod/proc/try_power(var/amount)  //пока только заготовка, но вы держитесь
 	var/turf/T = src.loc
 
 	var/obj/structure/cable/C = T.get_cable_node()
@@ -67,6 +67,7 @@ var/list/control_rods = list()
 			return 0
 		else
 			return 1
+			PN.draw_power(amount)
 
 
 /obj/machinery/control_rod/Process()
@@ -84,12 +85,12 @@ var/list/control_rods = list()
 
 	if (len - 0.01 > target )
 		len -= speed
-		load = 200
+		load = 20
 	else if (len + 0.01 < target)
 		len += speed
-		load = 300
+		load = 30
 	else
-		load = 5
+		load = 1
 
 //	else if (len == target)
 //	load = 0
@@ -124,10 +125,13 @@ var/list/control_rods = list()
 	var/datum/gas_mixture/environment = loc.return_air()
 	if(environment.temperature > 3000)
 		health -= (environment.temperature - 3000)/10
-	if(check_power(load) && health > 0)
+	if(try_power(load) && health > 0)
 		nocontrol = 0
+
 	else
 		nocontrol = 1
+	if(nocontrol)
+		target = len
 
 
 
