@@ -63,7 +63,8 @@
 	#include "job/outfits/service_outfits.dm"
 	#include "job/outfits/supply_outfits.dm"
 
-	#include "machinery/apc.dm"
+	#include "machinery/apc.dm"	
+	#include "machinery/keycard authentication.dm"
 	#include "machinery/lighting.dm"
 
 	#include "structures/closets/command.dm"
