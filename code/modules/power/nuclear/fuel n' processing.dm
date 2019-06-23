@@ -1,5 +1,5 @@
 /obj/item/weapon/nuclearfuel    //топливо для стержней, высчитывание радиоактивности под вопросом, ибо зачем
-	var/list/reactants
+	var/list/reactants = new /list(0)
 	icon = 'icons/obj/machines/nuclearcore.dmi'
 
 /obj/item/weapon/nuclearfuel/New(var/newloc, var/list/r)
@@ -26,8 +26,8 @@
 	density = 1
 	anchored = 1
 	layer = 4
-	var/list/areactants
-	var/list/buffer
+	var/list/areactants = new /list(0)
+	var/list/buffer = new /list(0)
 	var/summarymass
 	var/transfering_sub
 	use_power = 1
@@ -57,7 +57,7 @@
 				else
 					buffer.Add(reactant)
 					buffer[reactant] = amount
-
+	updateDialog()
 
 
 /obj/machinery/rod_fabricator/attack_ai(mob/user)
@@ -97,6 +97,9 @@
 		return
 	var/dat = "<B>Assembly fabricator</B><BR>"
 
+
+	dat += "<b>Assembly</b><hr>"
+
 	dat += {"
 		<hr>
 		<table border=1 width='100%'>
@@ -104,7 +107,6 @@
 		<td><b>Reactant</b></td>
 		<td><b>Amount</b></td>
 		</tr>"}
-	dat += "<tr><b>Assembly</b></tr>"
 	for(var/reac in areactants)
 
 		dat += "<tr>"
@@ -112,8 +114,16 @@
 		dat += "<td>[reac]</td>"
 		dat += "<td>[areactants[reac]/summarymass*100] %</td>"
 		dat += "</tr>"
+	dat += "</table><hr>"
+	dat += "<b>Buffer</b><hr>"
 
-	dat += "<tr><b>Buffer</b></tr>"
+	dat += {"
+		<hr>
+		<table border=1 width='100%'>
+		<tr>
+		<td><b>Reactant</b></td>
+		<td><b>Amount</b></td>
+		</tr>"}
 
 	for(var/reac in buffer)
 
@@ -165,7 +175,7 @@
 
 
 
-/obj/machinery/centrifuge
+/obj/machinery/centrifuge            // пока пусть будет так, и да, я не тестил
 	name = "Uranium processing centrifuge"
 	icon = 'icons/obj/machines/nuclearcore.dmi'
 	icon_state = ""
