@@ -73,6 +73,17 @@
 /obj/effect/shuttle_landmark/escape_pod/transit/pod8
 	number = 8
 
+/datum/shuttle/autodock/ferry/escape_pod/castelnaupod/escape_pod9
+	warmup_time = 10
+	shuttle_area = /area/shuttle/escape_pod9/station
+	number = 9
+/obj/effect/shuttle_landmark/escape_pod/start/pod9
+	number = 9
+/obj/effect/shuttle_landmark/escape_pod/out/pod9
+	number = 9
+/obj/effect/shuttle_landmark/escape_pod/transit/pod9
+	number = 9
+
 //Prometeus
 
 /datum/shuttle/autodock/overmap/prometeus
