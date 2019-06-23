@@ -16,6 +16,10 @@
 	add_fingerprint(user)
 	interact(user)
 
+/obj/machinery/computer/rod_control/Process()
+	updateDialog()
+
+
 /obj/machinery/computer/rod_control/interact(var/mob/user)
 
 	if(stat & (BROKEN|NOPOWER))
@@ -32,7 +36,8 @@
 		to_chat(user, "<span class='warning'>This console has not been assigned to any reactor. Please, input console id with a multitool.</span>")
 		return
 
-	var/dat = "<B>Reactor Control #[id_tag]</B><BR>"
+	var/dat = "<B>Reactor Control #[id_tag]</B>"
+	dat += "<hr><b><A href='?src=\ref[src];setall=1'>Set overall target length</b>"
 	dat += {"
 		<hr>
 		<table border=1 width='100%'>
@@ -51,13 +56,13 @@
 			dat += "<td><span class='danger'>ERROR</span></td>"
 			dat += "<td><span class='danger'>ERROR</span></td>"
 		else
-			dat += "<td><a href='?src=\ref[src];machine=\ref[I];set_targ=1'>\[[I.target]\]</a></td>"
+			dat += "<td><a href='?src=\ref[src];machine=\ref[I];set_targ=1'>\[[I.target] meters\]</a></td>"
 			dat += "<td>[I.len] meters </td>"
 
 		dat += "</tr>"
 
 	dat += {"</table><hr>
-		<A href='?src=\ref[src];close=1'>Close</A><BR>"}
+		<A href='?src=\ref[src];close=1'>Close</A>"}
 
 	var/datum/browser/popup = new(user, "rod_control", "Reactor Control Console", 800, 400, src)
 	popup.set_content(dat)
@@ -79,6 +84,13 @@
 	if( href_list["close"] )
 		user << browse(null, "window=rod_control")
 		user.unset_machine()
+
+	if( href_list["setall"] )
+		var/new_overall = input("Enter new overall length", "Setting new length", 0) as num
+		for(var/obj/machinery/control_rod/C in control_rods)
+			if(C.target != new_overall)
+				C.target = new_overall
+		return TOPIC_REFRESH
 
 	return TOPIC_REFRESH
 

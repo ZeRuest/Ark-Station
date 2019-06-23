@@ -5,7 +5,7 @@ var/list/control_rods = list()
 	desc = "A control rods, keeping reactor from meltdown ."
 	icon = 'icons/obj/machines/nuclearcore.dmi'
 	icon_state = "cr_0"
-	anchored = 0
+	anchored = 1
 	density = 0
 	use_power = 0
 	var/base_accp = 10
@@ -16,6 +16,7 @@ var/list/control_rods = list()
 	var/health = 200
 	var/id_tag
 	var/load = 0
+	var/nocontrol = 0
 
 
 
@@ -34,7 +35,27 @@ var/list/control_rods = list()
 		return 1
 
 
-/obj/machinery/control_rod/proc/power()  //пока только заготовка, но вы держитесь
+/obj/machinery/control_rod/attackby(obj/item/weapon/W, mob/user)
+	if(health > 0)
+		if(isMultitool(W))
+			var/new_id = input("Enter a new ident tag.", "Control rod", id_tag) as null|text
+			if(new_id && user.Adjacent(src))
+				id_tag = new_id
+
+		else if(isWelder(W))
+			to_chat(user, "<span class='notice'>You are fixing the control rods with [W].</span>")
+			playsound(src, 'sound/items/Welder.ogg', 10, 1)
+			if(do_after(user, 40,src))
+				health = 100
+	else
+		if(isWelder(W))
+			to_chat(user, "<span class='notice'>You are removing that remained from the control rods [W].</span>")
+			playsound(src, 'sound/items/Welder.ogg', 10, 1)
+			if(do_after(user, 20,src))
+				qdel(src)
+
+
+/obj/machinery/control_rod/proc/check_power(var/amount)  //пока только заготовка, но вы держитесь
 	var/turf/T = src.loc
 
 	var/obj/structure/cable/C = T.get_cable_node()
@@ -42,14 +63,17 @@ var/list/control_rods = list()
 	if(C)	PN = C.powernet
 
 	if(PN)
-//		var/load = 300
-		load = PN.draw_power(load) //what we actually get
+		if(PN.avail < amount)
+			return 0
+		else
+			return 1
 
 
 /obj/machinery/control_rod/Process()
 	update_state_of_rod()
 	move()
 	update_icon()
+	check()
 	rad_resistance = len * base_accp
 
 
@@ -64,29 +88,47 @@ var/list/control_rods = list()
 	else if (len + 0.01 < target)
 		len += speed
 		load = 300
+	else
+		load = 5
 
 //	else if (len == target)
 //	load = 0
 
 /obj/machinery/control_rod/proc/update_state_of_rod()
-	switch(len)
-		if (-1 to 0.1)
-			icon_state = "cr_0"
-			density = 0
-		if (0.1 to 1)
-			icon_state = "cr_1"
-			density = 0
-		if (1 to 2)
-			icon_state = "cr_2"
-			density = 1
-		if (2 to 3)
-			icon_state = "cr_3"
-			density = 1
-		if (3 to 4.2)
-			icon_state = "cr_4"
-			density = 1
-		if (-1 to 0.001)
-			len = 0
+	if(target > 4)
+		target = 4
+	if (target == 0 && len <= 0.1)
+		len = 0
+	if(health <= 0)
+		icon_state = "cr_broken"
+	else
+		switch(len)
+			if (-1 to 0.1)
+				icon_state = "cr_0"
+				density = 0
+			if (0.1 to 1)
+				icon_state = "cr_1"
+				density = 0
+			if (1 to 2)
+				icon_state = "cr_2"
+				density = 1
+			if (2 to 3)
+				icon_state = "cr_3"
+				density = 1
+			if (3 to 4.2)
+				icon_state = "cr_4"
+				density = 1
+
+
+/obj/machinery/control_rod/proc/check()
+	var/datum/gas_mixture/environment = loc.return_air()
+	if(environment.temperature > 3000)
+		health -= (environment.temperature - 3000)/10
+	if(check_power(load) && health > 0)
+		nocontrol = 0
+	else
+		nocontrol = 1
+
 
 
 /obj/machinery/control_rod/setup_control

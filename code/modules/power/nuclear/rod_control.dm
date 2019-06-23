@@ -16,6 +16,9 @@
 	add_fingerprint(user)
 	interact(user)
 
+/obj/machinery/computer/reactor_control/Process()
+	updateDialog()
+
 /obj/machinery/computer/reactor_control/interact(var/mob/user)
 
 	if(stat & (BROKEN|NOPOWER))
