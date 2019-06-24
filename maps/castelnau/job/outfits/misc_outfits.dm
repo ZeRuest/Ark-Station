@@ -19,13 +19,13 @@
 
 /decl/hierarchy/outfit/job/castelnau/ert
 	name = OUTFIT_JOB_NAME("ERT - Castelnau")
-	uniform = /obj/item/clothing/under
-	head = /obj/item/clothing/head/beret/centcom/officer
-	gloves = /obj/item/clothing/gloves
+	uniform = /obj/item/clothing/under/solgov/utility
+	head = /obj/item/clothing/head/soft/black
+	gloves = /obj/item/clothing/gloves/thick
 	id_type = /obj/item/weapon/card/id/centcom/ERT
 	pda_type = /obj/item/modular_computer/pda/ert
 	l_ear = /obj/item/device/radio/headset/ert
-	shoes = /obj/item/clothing/shoes
+	shoes = /obj/item/clothing/shoes/dutyboots
 
 /decl/hierarchy/outfit/job/castelnau/ert/leader
 	name = OUTFIT_JOB_NAME("ERT Leader - Castelnau")

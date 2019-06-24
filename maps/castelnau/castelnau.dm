@@ -27,6 +27,20 @@
 //	#include "items/manuals.dm"
 //	#include "items/uniform_vendor.dm"
 
+	#include "items/clothing/solgov-accessory.dm"
+	#include "items/clothing/solgov-armor.dm"
+	#include "items/clothing/solgov-feet.dm"
+	#include "items/clothing/solgov-hands.dm"
+	#include "items/clothing/solgov-head.dm"
+	#include "items/clothing/solgov-suit.dm"
+	#include "items/clothing/solgov-under.dm"
+	#include "items/clothing/terran-accessory.dm"
+	#include "items/clothing/terran-feet.dm"
+	#include "items/clothing/terran-hands.dm"
+	#include "items/clothing/terran-head.dm"
+	#include "items/clothing/terran-suit.dm"
+	#include "items/clothing/terran-under.dm"
+
 	#include "datums/cardmod.dm"
 
 	#include "job/access.dm"
@@ -63,7 +77,7 @@
 	#include "job/outfits/service_outfits.dm"
 	#include "job/outfits/supply_outfits.dm"
 
-	#include "machinery/apc.dm"	
+	#include "machinery/apc.dm"
 	#include "machinery/keycard authentication.dm"
 	#include "machinery/lighting.dm"
 
