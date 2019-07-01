@@ -14,6 +14,11 @@
 
 /area/maintenance/exterior	
 
+#define CREATE_CST_AREA(P) /area/castelnau/P  
+
+/area/castelnau/
+	icon = 'maps/castelnau/icons/areas.dmi'
+
 /area/shuttle/escape_pod6/station
 	name = "Escape Pod One"
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
@@ -225,9 +230,14 @@
 	requires_power = 1
 
 //Prometeus
+
+/area/shuttle/castelnau/prometeus
+	req_access = list(access_castelnau_prometeus)
+
 /area/shuttle/castelnau/prometeus/cockpit
 	icon_state = "pro_crew"
 	name = "Prometeus - Cockpit"
+	req_access = list(access_castelnau_prometeus_helm)
 
 /area/shuttle/castelnau/prometeus/external
 	icon_state = "pro_ext"
@@ -274,9 +284,13 @@
 	name = "Prometeus - EVA"
 
 //Perseus
+/area/shuttle/castelnau/perseus
+	req_access = list(access_castelnau_perseus)
+
 /area/shuttle/castelnau/perseus/cockpit
 	icon_state = "per_helm"
 	name = "Perseus - cockpit"
+	req_access = list(access_castelnau_perseus_helm)
 
 /area/shuttle/castelnau/perseus/power
 	icon_state = "per_eng"
@@ -287,9 +301,13 @@
 	name = "Perseus - Cargo Bay"
 
 //Bixie
+/area/shuttle/castelnau/bixie 
+	req_access = list(access_castelnau_bixie)
+
 /area/shuttle/castelnau/bixie/cockpit
 	icon_state = "bix_helm"
 	name = "Bixie - Cockpit"
+	req_access = list(access_castelnau_bixie_helm)
 
 /area/shuttle/castelnau/bixie/power
 	icon_state = "bix_eng"
@@ -299,311 +317,334 @@
 	icon_state = "bix_carg"
 	name = "Bixie - Cargo Bay"
 
+//Access base
+CREATE_CST_AREA(maintenance)
+	req_access = list(access_castelnau_maint_tunnels)
+
+CREATE_CST_AREA(engineering)
+	req_access = list(access_castelnau_engineering)
+
+CREATE_CST_AREA(medical)
+	req_access = list(access_castelnau_medical)
+
+CREATE_CST_AREA(security)
+	req_access = list(access_castelnau_security) 
+
+CREATE_CST_AREA(command)
+	req_access = list(access_castelnau_command) 
 
 //THIRD_DECK(Z-1)
-/area/hallway/primary/thirddeck/fore
+CREATE_CST_AREA(hallway/primary/thirddeck/fore)
 	name = "Third Deck Fore Hallway"
 	icon_state = "hallF"
 	
-/area/hallway/primary/thirddeck/aft
+CREATE_CST_AREA(hallway/primary/thirddeck/aft)
 	name = "Third Deck Aft Hallway"
 	icon_state = "hallA"
 
-/area/maintenance/thirddeck/starboard
+CREATE_CST_AREA(maintenance/thirddeck/starboard)
 	name = "Third Deck Starboard Maintenance"
 	icon_state = "smaint"
 
-/area/maintenance/thirddeck/port
+CREATE_CST_AREA(maintenance/thirddeck/port)
 	name = "Third Deck Port Maintenance"
 	icon_state = "pmaint"
 
-/area/janitor
+CREATE_CST_AREA(civ/janitor)
 	name = "Custodial Closet"
 	icon_state = "janitor"
+	req_access = access_castelnau_janitor
 
-/area/storage/expedition
+CREATE_CST_AREA(storage/expedition)
 	name = "Expedition Storage"
 	icon_state = "storage"
 	sound_env = SMALL_ENCLOSED
 
-/area/storage/cargo
+CREATE_CST_AREA(storage/cargo)
 	name = "Cargo Storage"
 	icon_state = "quartstorage"
 	sound_env = SMALL_ENCLOSED
 
-/area/quartermaster/hangar
+CREATE_CST_AREA(supply/hangar)
 	name = "Hangar Deck"
 	icon_state = "hangar"
 	sound_env = LARGE_ENCLOSED
 
 //SECOND_DECK(Z-2)
-/area/quartermaster/office
+CREATE_CST_AREA(supply/office)
 	name = "Supply Office"
 	icon_state = "quartoffice"
 
-/area/quartermaster/storage
+CREATE_CST_AREA(supply/storage)
 	name = "Warehouse"
 	icon_state = "quartstorage"
 	sound_env = LARGE_ENCLOSED
 
-/area/maintenance/seconddeck/forestarboard
+CREATE_CST_AREA(maintenance/seconddeck/forestarboard)
 	name = "Second Deck Fore Starboard Maintenance"
 	icon_state = "fsmaint"
 
-/area/maintenance/seconddeck/aftstarboard
+CREATE_CST_AREA(maintenance/seconddeck/aftstarboard)
 	name = "Second Deck Aft Starboard Maintenance"
 	icon_state = "asmaint"
 
-/area/maintenance/seconddeck/starboard
+CREATE_CST_AREA(maintenance/seconddeck/starboard)
 	name = "Second Deck Starboard Maintenance"
 	icon_state = "smaint"
 
-/area/maintenance/seconddeck/port
+CREATE_CST_AREA(maintenance/seconddeck/port)
 	name = "Second Deck Port Maintenance"
 	icon_state = "pmaint"
 
-/area/hallway/primary/seconddeck/center
+CREATE_CST_AREA(hallway/primary/seconddeck/center)
 	name = "Second Deck Central Hallway"
 	icon_state = "hallC3"
 
-/area/hallway/primary/seconddeck/central_stairwell
+CREATE_CST_AREA(hallway/primary/seconddeck/central_stairwell)
 	name = "Second Deck Central Stairwell"
 	icon_state = "hallC2"
 
-/area/engineering/storage
+CREATE_CST_AREA(engineering/storage)
 	name = "Engineering Storage"
 	icon_state = "engineering_storage"
 
-/area/engineering/hardstorage
+CREATE_CST_AREA(engineering/hardstorage)
 	name = "Engineering Hard Storage"
 	icon_state = "engineering_storage"
 	sound_env = SMALL_ENCLOSED
 
-/area/engineering/hallway
+CREATE_CST_AREA(engineering/hallway)
 	name = "Engineering Hallway"
 	icon_state = "engineering_workshop"
 
-/area/engineering/atmos
- 	name = "Atmospherics"
- 	icon_state = "atmos"
- 	sound_env = LARGE_ENCLOSED
-
-/area/storage/tech
-	name = "Technical Storage"
-	icon_state = "storage"
-
-/area/engineering/engine_room
+CREATE_CST_AREA(engineering/engine_room)
 	name = "Engine Room"
 	icon_state = "engine"
 	sound_env = LARGE_ENCLOSED
 	area_flags = AREA_FLAG_ION_SHIELDED
+	req_access = list(access_castelnau_engine)
 
-/area/engineering/engine_smes
+CREATE_CST_AREA(engineering/engine_smes)
 	name = "Engineering SMES"
 	icon_state = "engine_smes"
 	sound_env = SMALL_ENCLOSED
 
-/area/engineering/engineering_monitoring
+CREATE_CST_AREA(engineering/engineering_monitoring)
 	name = "Engineering Monitoring Room"
 	icon_state = "engine_monitoring"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 
-/area/thruster
-	icon_state = "thruster"
+CREATE_CST_AREA(engineering/atmos)
+ 	name = "Atmospherics"
+ 	icon_state = "atmos"
+ 	sound_env = LARGE_ENCLOSED
+ 	req_access = list(access_castelnau_atmospherics)
 
-/area/thruster/d1port
+CREATE_CST_AREA(storage/tech)
+	name = "Technical Storage"
+	icon_state = "storage"
+
+CREATE_CST_AREA(thruster)
+	icon_state = "thruster"
+	req_access = list(access_castelnau_thrusters)
+
+CREATE_CST_AREA(thruster/d1port)
 	name = "First Deck Port Nacelle"
 
-/area/thruster/d1starboard
+CREATE_CST_AREA(thruster/d1starboard)
 	name = "First Deck Starboard Nacelle"
 
-/area/thruster/d2port
+CREATE_CST_AREA(thruster/d2port)
 	name = "Second Deck Port Nacelle"
 
-/area/thruster/d2starboard
+CREATE_CST_AREA(thruster/d2starboard)
 	name = "Second Deck Starboard Nacelle"
 
-/area/engineering/foyer
+CREATE_CST_AREA(engineering/foyer)
 	name = "Engineering Foyer"
 	icon_state = "engineering_foyer"
 
-/area/security/
-	icon = 'maps/castelnau/icons/areas.dmi'
-
-/area/security/equip
+CREATE_CST_AREA(security/equip)
 	name = "Security - Equipment"
 	icon_state = "security_equip"
 
-/area/security/processing
+CREATE_CST_AREA(security/processing)
 	name = "Security - Processing"
 	icon_state = "security_processing"
 
-/area/security/hall
+CREATE_CST_AREA(security/hall)
 	name = "Security - Hall"
 	icon_state = "security"
 
-/area/security/brig
+CREATE_CST_AREA(security/brig)
 	name = "Security - Brig"
 	icon_state = "security_brig"
+	req_access = list(access_castelnau_brig)
 
 //FIRST_DECK(Z-3)
-/area/maintenance/firstdeck/aftstarboard
+CREATE_CST_AREA(maintenance/firstdeck/aftstarboard)
 	name = "First Deck Aft Starboard Maintenance"
 	icon_state = "asmaint"
 
-/area/maintenance/firstdeck/aftport
+CREATE_CST_AREA(maintenance/firstdeck/aftport)
 	name = "First Deck Aft Port Maintenance"
 	icon_state = "apmaint"
 
-/area/maintenance/firstdeck/forestarboard
+CREATE_CST_AREA(maintenance/firstdeck/forestarboard)
 	name = "First Deck Fore Starboard Maintenance"
 	icon_state = "fsmaint"
 
-/area/maintenance/firstdeck/centralstarboard
+CREATE_CST_AREA(maintenance/firstdeck/centralstarboard)
 	name = "First Deck Starboard Maintenance"
 	icon_state = "smaint"
 
-/area/maintenance/firstdeck/foreport
+CREATE_CST_AREA(maintenance/firstdeck/foreport)
 	name = "First Deck Fore Maintenance"
 	icon_state = "fpmaint"
 	name = "First Deck Aft Starboard Maintenance"
 	icon_state = "asmaint"
 
-/area/maintenance/firstdeck/aftport
+CREATE_CST_AREA(maintenance/firstdeck/aftport)
 	name = "First Deck Aft Port Maintenance"
 	icon_state = "apmaint"
 
-/area/maintenance/firstdeck/forestarboard
+CREATE_CST_AREA(maintenance/firstdeck/forestarboard)
 	name = "First Deck Fore Starboard Maintenance"
 	icon_state = "fsmaint"
 
-/area/maintenance/firstdeck/centralstarboard
+CREATE_CST_AREA(maintenance/firstdeck/centralstarboard)
 	name = "First Deck Starboard Maintenance"
 	icon_state = "smaint"
 
 	name = "First Deck Fore Maintenance"
 	icon_state = "fpmaint"
 
-/area/shield
+CREATE_CST_AREA(engineering/shield)
 	name = "Shield Generator"
 	icon_state = "engineering"
 	sound_env = SMALL_ENCLOSED
 
-/area/medical/maintenance_equipstorage
+CREATE_CST_AREA(medical/maintenance_equipstorage)
 	name = "Infirmary Maintenance Storage"
 	icon_state = "medbay4"
 
-/area/medical/chemistry
+CREATE_CST_AREA(medical/chemistry)
 	name = "Chemistry"
 	icon_state = "chem"
 
-/area/medical/infirmreception
+CREATE_CST_AREA(medical/infirmreception)
 	name = "Infirmary Reception"
 	icon_state = "medbay2"
 
-area/medical/subacute
+CREATE_CST_AREA(medical/subacute)
 	name = "Sub-Acute Ward"
 	icon_state = "patients"
 
-/area/medical/morgue
+CREATE_CST_AREA(medical/morgue)
 	name = "Morgue"
 	icon_state = "morgue"
 	ambience = list('sound/ambience/ambimo1.ogg','sound/ambience/ambimo2.ogg','sound/music/main.ogg')
 
-/area/medical/sleeper
+CREATE_CST_AREA(medical/sleeper)
 	name = "Emergency Treatment Center"
 	icon_state = "exam_room"
 
-/area/medical/surgery
+CREATE_CST_AREA(medical/surgery)
 	name = "Operating Theatre"
 	icon_state = "surgery"
 
-/area/tcommsat/chamber
+CREATE_CST_AREA(command/tcoms)
 	name = "Telecoms Central Compartment"
 	icon_state = "tcomsatcham"
+	req_access = list(access_castelnau_tcoms)
 
-/area/hallway/primary/firstdeck/fore
+CREATE_CST_AREA(hallway/primary/firstdeck/fore)
 	name = "First Deck Fore Hallway"
 	icon_state = "hallF"
 
-/area/hallway/primary/firstdeck/center
+CREATE_CST_AREA(hallway/primary/firstdeck/center)
 	name = "First Deck Central Hallway"
 	icon_state = "hallC1"
 
-/area/hallway/primary/firstdeck/aft
+CREATE_CST_AREA(hallway/primary/firstdeck/aft)
 	name = "First Deck Aft Hallway"
 	icon_state = "hallA"
 
-/area/maintenance/substation/firstdeck
+CREATE_CST_AREA(engineering/substation)
 	icon = 'maps/castelnau/icons/areas.dmi'
 	name = "Substation"
 	icon_state = "eng_substation"
 
-/area/bar
+CREATE_CST_AREA(civ/bar)
 	name = "Bar"
 	icon_state = "bar"
 	sound_env = LARGE_SOFTFLOOR
 
-/area/restroom
+CREATE_CST_AREA(civ/restroom)
 	name = "Restroom"
 	icon_state = "toilet"
 	sound_env = SMALL_ENCLOSED
 
-/area/laundry
+CREATE_CST_AREA(civ/laundry)
 	name = "Laundry Room"
 	icon_state = "Sleep"
 
-/area/sleep/bunk
+CREATE_CST_AREA(civ/bunk)
 	name = "Dormitory"
 	icon_state = "Sleep"
 	sound_env = SMALL_SOFTFLOOR
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 
-/area/sleep/cryo
+CREATE_CST_AREA(civ/cryo)
 	name = "Cryostorage"
 	icon_state = "Sleep"
 	sound_env = SMALL_SOFTFLOOR
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 
-/area/captain
+CREATE_CST_AREA(command/captain)
 	name = "Command - Captain's Office"
 	icon_state = "captain"
 	sound_env = MEDIUM_SOFTFLOOR
+	req_access = list(access_castelnau_comoffice)
 
-/area/storage/eva
+CREATE_CST_AREA(command/eva)
 	name = "EVA Storage"
 	icon_state = "eva"
+	req_access = list(access_castelnau_eva)
 
-/area/bridge
+CREATE_CST_AREA(command/bridge)
 	name = "Bridge"
 	icon_state = "bridge"
+	req_access = list(access_castelnau_bridge) 
 
-/area/storage/primary
+CREATE_CST_AREA(storage/primary)
 	name = "Primary Tool Storage"
 	icon_state = "primarystorage"
 
-/area/security/ivestigation
+CREATE_CST_AREA(security/ivestigation)
 	name = "Investigation"
 	icon_state = "security_inv"
 
-/area/security/observation
+CREATE_CST_AREA(security/observation)
 	name = "Brig Observation"
 	icon_state = "security_obs"
 
-/area/security/armory
+CREATE_CST_AREA(security/armory)
 	name = "Armory"
 	icon_state = "security_armory"
+	req_access = list(access_castelnau_armory)
 
-/area/lounge
-	name = "\improper Lounge"
+CREATE_CST_AREA(civ/lounge)
+	name = "Lounge"
 	icon_state = "crew_quarters"
 	sound_env = MEDIUM_SOFTFLOOR
 
-/area/kitchen
+CREATE_CST_AREA(civ/kitchen)
 	name = "Kitchen"
 	icon_state = "kitchen"
+	req_access = list(access_castelnau_kitchen)
 
-/area/kitchen/backroom
-	icon = 'maps/castelnau/icons/areas.dmi'
+CREATE_CST_AREA(civ/kitchen_backroom)
 	name = "Kitchen Storage"
 	icon_state = "kitchen_back"
+	req_access = list(access_castelnau_kitchen)

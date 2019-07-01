@@ -2,7 +2,8 @@
 
 	#include "castelnau_announcements.dm"
 	#include "castelnau_antagonism.dm"
-	#include "castelnau_areas.dm"
+	//#include "castelnau_areas.dm"
+	#include "areas_new.dm"
 	#include "castelnau_lobby.dm"
 	#include "castelnau_overmap.dm"
 	#include "castelnau_presets.dm"
