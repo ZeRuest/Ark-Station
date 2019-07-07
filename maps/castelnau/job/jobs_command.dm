@@ -69,8 +69,8 @@
 	economic_power = 7
 	ideal_character_age = 24
 	alt_titles = list(
-		"",
-		"Soldier")
+		"Piloting Officer",
+		"Navigator")
 	outfit_type = /decl/hierarchy/outfit/job/castelnau/crew/command/adjutant
 	allowed_branches = list(/datum/mil_branch/ship_personnel)
 	allowed_ranks = list(/datum/mil_rank/civ/civ)
