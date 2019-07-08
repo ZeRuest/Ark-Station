@@ -42,8 +42,8 @@
 //For jobs that spawn with armor in their lockers
 #define ARMORED_ROLES list(/datum/job/captain, /datum/job/hop, /datum/job/hos, /datum/job/officer, /datum/job/warden, /datum/job/submap/skrellscoutship_crew, /datum/job/submap/skrellscoutship_crew/leader)
 
-#define UNIFORMED_BRANCHES list()
+#define UNIFORMED_BRANCHES list(/datum/mil_branch/science_personnel, /datum/mil_rank/civ/civ, /datum/mil_branch/ship_personnel, /datum/mil_rank/civ/merc)
 
-#define CIVILIAN_BRANCHES list()
+#define CIVILIAN_BRANCHES list(/datum/mil_rank/civ/civ, /datum/mil_rank/civ/merc, /datum/mil_branch/science_personnel, /datum/mil_branch/ship_personnel, /datum/mil_branch/other)
 
 #define SOLGOV_BRANCHES list()
