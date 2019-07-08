@@ -12,9 +12,9 @@
 		/area/shuttle/specops/centcom
 	)
 
-/area/maintenance/exterior	
+/area/maintenance/exterior
 
-#define CREATE_CST_AREA(P) /area/castelnau/P  
+#define CREATE_CST_AREA(P) /area/castelnau/P
 
 /area/castelnau/
 	icon = 'maps/castelnau/icons/areas.dmi'
@@ -222,7 +222,7 @@
 //  CASTELNAU  //
 /////////////////
 
-//Shuttles	
+//Shuttles
 /area/shuttle/castelnau
 	icon = 'maps/castelnau/icons/areas.dmi'
 	base_turf = /turf/space
@@ -301,7 +301,7 @@
 	name = "Perseus - Cargo Bay"
 
 //Bixie
-/area/shuttle/castelnau/bixie 
+/area/shuttle/castelnau/bixie
 	req_access = list(access_castelnau_bixie)
 
 /area/shuttle/castelnau/bixie/cockpit
@@ -328,16 +328,16 @@ CREATE_CST_AREA(medical)
 	req_access = list(access_castelnau_medical)
 
 CREATE_CST_AREA(security)
-	req_access = list(access_castelnau_security) 
+	req_access = list(access_castelnau_security)
 
 CREATE_CST_AREA(command)
-	req_access = list(access_castelnau_command) 
+	req_access = list(access_castelnau_command)
 
 //THIRD_DECK(Z-1)
 CREATE_CST_AREA(hallway/primary/thirddeck/fore)
 	name = "Third Deck Fore Hallway"
 	icon_state = "hallF"
-	
+
 CREATE_CST_AREA(hallway/primary/thirddeck/aft)
 	name = "Third Deck Aft Hallway"
 	icon_state = "hallA"
@@ -615,14 +615,14 @@ CREATE_CST_AREA(command/eva)
 CREATE_CST_AREA(command/bridge)
 	name = "Bridge"
 	icon_state = "bridge"
-	req_access = list(access_castelnau_bridge) 
+	req_access = list(access_castelnau_bridge)
 
 CREATE_CST_AREA(storage/primary)
 	name = "Primary Tool Storage"
 	icon_state = "primarystorage"
 
 CREATE_CST_AREA(security/ivestigation)
-	name = "Investigation"
+	name = "Laboratory"
 	icon_state = "security_inv"
 
 CREATE_CST_AREA(security/observation)
