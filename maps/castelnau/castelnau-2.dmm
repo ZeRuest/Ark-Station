@@ -45,7 +45,7 @@
 "aS" = (/obj/effect/wallframe_spawn/reinforced/hull,/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/castelnau/maintenance/seconddeck/starboard)
 "aT" = (/obj/machinery/door/firedoor,/obj/effect/wallframe_spawn/reinforced/hull,/turf/simulated/floor/plating,/area/castelnau/maintenance/seconddeck/starboard)
 "aU" = (/obj/structure/closet/cabinet,/obj/random/maintenance,/obj/random/drinkbottle,/obj/random/drinkbottle,/turf/simulated/floor/plating,/area/castelnau/maintenance/seconddeck/starboard)
-"aV" = (/obj/structure/cable/green{d1 = 2; d2 = 4; icon_state = "2-4"},/obj/structure/catwalk,/turf/simulated/floor/plating,/area/castelnau/maintenance/seconddeck/starboard)
+"aV" = (/obj/structure/cable/green{d1 = 2; d2 = 4; icon_state = "2-4"},/obj/structure/catwalk,/obj/structure/ladder/up,/turf/simulated/floor/plating,/area/castelnau/maintenance/seconddeck/starboard)
 "aW" = (/obj/structure/lattice,/turf/space,/area/space)
 "aX" = (/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/structure/catwalk,/turf/simulated/floor/plating,/area/castelnau/maintenance/seconddeck/starboard)
 "aY" = (/obj/machinery/door/airlock/hatch/maintenance,/obj/machinery/door/firedoor,/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled/techfloor/grid,/area/castelnau/maintenance/seconddeck/aftstarboard)
