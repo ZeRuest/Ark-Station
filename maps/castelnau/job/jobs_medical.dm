@@ -29,8 +29,7 @@
 		access_castelnau_medical, access_castelnau_morgue, access_castelnau_maint_tunnels
 	)
 
-	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
-							 /datum/computer_file/program/camera_monitor)
+	software_on_spawn = list(/datum/computer_file/program/suit_sensors)
 
 /datum/job/doctor
 	title = "Doctor"
@@ -61,7 +60,6 @@
 		access_castelnau_medical, access_castelnau_morgue
 	)
 
-	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
-							 /datum/computer_file/program/camera_monitor)
+	software_on_spawn = list(/datum/computer_file/program/suit_sensors)
 	skill_points = 22
 

@@ -14,7 +14,7 @@
 	allowed_branches = list(/datum/mil_branch/science_personnel)
 	allowed_ranks = list(/datum/mil_rank/civ/civ)
 
-	access = list()
+	access = list(access_castelnau_prometeus, access_castelnau_prometeus_helm)
 
 	minimal_access = list()
 
@@ -60,7 +60,6 @@
 
 	access = list()
 
-	minimal_access = list()
 	skill_points = 22
 
 /datum/job/roboticist
@@ -88,9 +87,7 @@
 	                    SKILL_DEVICES      = SKILL_MAX,
 	                    SKILL_MEDICAL      = SKILL_MAX)
 
-	access = list()
-
-	minimal_access = list()
+	access = list(access_castelnau_prometeus)
 
 /datum/job/scientist_assistant
 	title = "Research Assistant"
@@ -118,9 +115,7 @@
 	allowed_branches = list(/datum/mil_branch/science_personnel)
 	allowed_ranks = list(/datum/mil_rank/civ/civ)
 
-	access = list()
-
-	minimal_access = list()
+	access = list(access_castelnau_prometeus)
 
 /datum/job/scientist_pilot
 	title = "Research Pilot"
@@ -143,5 +138,4 @@
 	outfit_type = /decl/hierarchy/outfit/job/castelnau/crew/research/assist
 	allowed_branches = list(/datum/mil_branch/science_personnel)
 	allowed_ranks = list(/datum/mil_rank/civ/civ)
-	access = list()
-	minimal_access = list()
+	access = list(access_castelnau_prometeus, access_castelnau_prometeus_helm)

@@ -33,16 +33,14 @@
 	access = list(
 		access_castelnau_perseus, access_castelnau_perseus_helm, access_castelnau_maint_tunnels,
 		access_castelnau_external_airlocks, access_castelnau_engineering, access_castelnau_engine,
-		access_castelnau_atmospherics, access_castelnau_thrusters
+		access_castelnau_atmospherics, access_castelnau_thrusters, access_castelnau_hangar
 	)
 	minimal_access = list()
 
 	software_on_spawn = list(/datum/computer_file/program/power_monitor,
-							 /datum/computer_file/program/supermatter_monitor,
 							 /datum/computer_file/program/alarm_monitor,
 							 /datum/computer_file/program/atmos_control,
 							 /datum/computer_file/program/rcon_console,
-							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/shields_monitor)
 
 /datum/job/engineer
@@ -60,7 +58,8 @@
 
 	alt_titles = list(
 		"Electrician" = /decl/hierarchy/outfit/job/castelnau/crew/engineering/engineer/electr,
-		"Atmospheric Technician" = /decl/hierarchy/outfit/job/castelnau/crew/engineering/engineer/atmos)
+		"Atmospheric Technician" = /decl/hierarchy/outfit/job/castelnau/crew/engineering/engineer/atmos,
+		"Engineering Trainee")
 
 	outfit_type = /decl/hierarchy/outfit/job/castelnau/crew/engineering/engineer
 	allowed_branches = list(/datum/mil_branch/ship_personnel)
@@ -83,14 +82,12 @@
 
 	access = list(access_castelnau_perseus, access_castelnau_maint_tunnels,
 		access_castelnau_external_airlocks, access_castelnau_engineering, access_castelnau_engine,
-		access_castelnau_atmospherics, access_castelnau_thrusters)	
-			       
+		access_castelnau_atmospherics, access_castelnau_thrusters)
+
 	minimal_access = list()
 
 	software_on_spawn = list(/datum/computer_file/program/power_monitor,
-							 /datum/computer_file/program/supermatter_monitor,
 							 /datum/computer_file/program/alarm_monitor,
 							 /datum/computer_file/program/atmos_control,
 							 /datum/computer_file/program/rcon_console,
-							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/shields_monitor)

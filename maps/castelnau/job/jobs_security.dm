@@ -27,13 +27,15 @@
 	                    SKILL_FORENSICS   = SKILL_MAX)
 	skill_points = 25
 
-	access = list()
+	access = list(access_castelnau_sheriff,
+				  access_castelnau_security,
+				  access_castelnau_brig,
+				  access_castelnau_armory,
+				  access_castelnau_maint_tunnels,
+				  access_castelnau_external_airlocks,
+				  access_castelnau_hangar)
 
-	minimal_access = list()
-
-	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
-							 /datum/computer_file/program/camera_monitor)
-
+	software_on_spawn = list(/datum/computer_file/program/digitalwarrant)
 /datum/job/officer
 	title = "Security Officer"
 	department = "Security"
@@ -63,8 +65,11 @@
 	max_skill = list(   SKILL_COMBAT      = SKILL_MAX,
 	                    SKILL_WEAPONS     = SKILL_MAX)
 
-	access = list()
-	minimal_access = list()
+	access = list(access_castelnau_security,
+				  access_castelnau_brig,
+				  access_castelnau_armory,
+				  access_castelnau_maint_tunnels,
+				  access_castelnau_external_airlocks,
+				  access_castelnau_hangar)
 
-	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
-							 /datum/computer_file/program/camera_monitor)
+	software_on_spawn = list(/datum/computer_file/program/digitalwarrant)

@@ -17,7 +17,15 @@
 
 	skill_points = 14
 
-	access = list(access_castelnau_supply)
+	access = list(access_castelnau_supply,
+				  access_castelnau_qm,
+				  access_castelnau_eva,
+				  access_castelnau_maint_tunnels,
+				  access_castelnau_hangar,
+				  access_castelnau_bixie,
+				  access_castelnau_bixie_helm,
+				  access_castelnau_perseus,
+				  access_castelnau_perseus_helm)
 
 	minimal_access = list()
 
@@ -50,6 +58,13 @@
 	allowed_branches = list(/datum/mil_branch/ship_personnel)
 	allowed_ranks = list(/datum/mil_rank/civ/civ)
 
-	access = list()
+	access = list(access_castelnau_supply,
+				  access_castelnau_eva,
+				  access_castelnau_maint_tunnels,
+				  access_castelnau_hangar,
+				  access_castelnau_bixie,
+				  access_castelnau_bixie_helm,
+				  access_castelnau_perseus,
+				  access_castelnau_perseus_helm)
 
 	minimal_access = list()

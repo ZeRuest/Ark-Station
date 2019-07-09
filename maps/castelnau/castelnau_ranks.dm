@@ -20,7 +20,7 @@
 
 /datum/mil_branch/other
 	name = "Other"
-	name_short = "oth"
+	name_short = "Other"
 	email_domain = "freemail.net"
 
 	rank_types = list(
@@ -33,7 +33,7 @@
 
 /datum/mil_branch/ship_personnel
 	name = "Ship Personnel"
-	name_short = "shi"
+	name_short = "Tug"
 	email_domain = "freemail.castelnau.net"
 
 	rank_types = list(
@@ -51,7 +51,7 @@
 
 /datum/mil_branch/science_personnel
 	name = "Science Personnel"
-	name_short = "sci"
+	name_short = "Shuttle"
 	email_domain = "freemail.castelnau.net"
 
 	rank_types = list(

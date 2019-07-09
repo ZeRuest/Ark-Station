@@ -42,9 +42,9 @@
 	desc = "Supply"
 	region = ACCESS_REGION_SUPPLY
 
-/var/const/access_castelnau_supply = "ACCESS_CASTELNAU_QM"
-/datum/access/castelnau/supply
-	id = access_castelnau_supply
+/var/const/access_castelnau_qm = "ACCESS_CASTELNAU_QM"
+/datum/access/castelnau/qm
+	id = access_castelnau_qm
 	desc = "Quartermaster"
 	region = ACCESS_REGION_SUPPLY
 
@@ -65,6 +65,12 @@ var/const/access_castelnau_security = "ACCESS_CASTELNAU_SECURITY"
 /datum/access/castelnau/armory
 	id = access_castelnau_armory
 	desc = "Armory"
+	region = ACCESS_REGION_SECURITY
+
+var/const/access_castelnau_sheriff = "ACCESS_CASTELNAU_SHERIFF"
+/datum/access/castelnau/sheriff
+	id = access_castelnau_sheriff
+	desc = "Sheriff"
 	region = ACCESS_REGION_SECURITY
 
 //Misc
@@ -111,6 +117,12 @@ var/const/access_castelnau_security = "ACCESS_CASTELNAU_SECURITY"
 	id = access_castelnau_bridge
 	desc = "Bridge"
 	region = ACCESS_REGION_COMMAND
+
+/var/const/access_castelnau_captain = "ACCESS_CASTELNAU_CAPTAIN"
+/datum/access/castelnau/captain
+	id = access_castelnau_captain
+	desc = "Captain"
+	region = ACCESS_REGION_NONE
 
 /var/const/access_castelnau_comoffice = "ACCESS_CASTELNAU_COM_OFFICE"
 /datum/access/castelnau/comoffice
