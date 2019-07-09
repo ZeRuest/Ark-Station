@@ -23,7 +23,7 @@
 	desc = "Bixie Helm"
 	region = ACCESS_REGION_GENERAL
 
-/var/const/access_castelnau_perseus = "ACCESS_PERSEUS"
+/var/const/access_castelnau_perseus= "ACCESS_PERSEUS"
 /datum/access/castelnau/perseus_helm
 	id = access_castelnau_perseus_helm
 	desc = "Perseus"
@@ -40,6 +40,12 @@
 /datum/access/castelnau/supply
 	id = access_castelnau_supply
 	desc = "Supply"
+	region = ACCESS_REGION_SUPPLY
+
+/var/const/access_castelnau_supply = "ACCESS_CASTELNAU_QM"
+/datum/access/castelnau/supply
+	id = access_castelnau_supply
+	desc = "Quartermaster"
 	region = ACCESS_REGION_SUPPLY
 
 //Security
@@ -160,7 +166,7 @@ var/const/access_castelnau_security = "ACCESS_CASTELNAU_SECURITY"
 	desc = "Engineering"
 	region = ACCESS_REGION_ENGINEERING
 
-/var/const/access_castelnau_engine = "ACCESS_CASTELNAU_ENGINE"
+/var/const/access_castelnau_engine= "ACCESS_CASTELNAU_ENGINE"
 /datum/access/castelnau/engine
 	id = access_castelnau_engine
 	desc = "Engine"

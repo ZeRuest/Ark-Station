@@ -492,7 +492,7 @@
 "jx" = (/turf/simulated/wall,/area/castelnau/security/hall)
 "jy" = (/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 1},/obj/effect/floor_decal/borderfloorblack/corner{dir = 8; icon_state = "borderfloorcorner_white"},/obj/effect/floor_decal/corner/brown/bordercorner{dir = 8},/turf/simulated/floor/tiled/dark,/area/castelnau/supply/storage)
 "jz" = (/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 1},/turf/simulated/floor/tiled/dark,/area/castelnau/supply/storage)
-"jA" = (/obj/effect/floor_decal/industrial/warning/corner{dir = 1},/obj/machinery/button/remote/blast_door{id = "qm_warehouse2"; name = "Warehouse Door Control"; pixel_x = -6; pixel_y = 24; req_access = list("ACCESS_QUARTERMASTER")},/obj/structure/table/steel,/turf/simulated/floor/tiled/dark,/area/castelnau/supply/storage)
+"jA" = (/obj/effect/floor_decal/industrial/warning/corner{dir = 1},/obj/machinery/button/remote/blast_door{id = "qm_warehouse2"; name = "Warehouse Door Control"; pixel_x = -6; pixel_y = 24; req_access = list("ACCESS_CASTELNAU_QM")},/obj/structure/table/steel,/turf/simulated/floor/tiled/dark,/area/castelnau/supply/storage)
 "jB" = (/obj/item/modular_computer/console/preset/merchant{dir = 2},/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled/dark,/area/castelnau/supply/storage)
 "jC" = (/obj/machinery/merchant_pad,/obj/effect/floor_decal/industrial/warning/fulltile,/turf/simulated/floor/tiled/dark,/area/castelnau/supply/storage)
 "jD" = (/obj/structure/closet/crate,/turf/simulated/floor/tiled/dark,/area/castelnau/supply/storage)
