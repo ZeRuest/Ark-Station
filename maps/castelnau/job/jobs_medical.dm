@@ -25,7 +25,9 @@
 
 	access = list()
 
-	minimal_access = list()
+	minimal_access = list(
+		access_castelnau_medical, access_castelnau_morgue, access_castelnau_maint_tunnels
+	)
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor)
@@ -55,7 +57,9 @@
 	                    SKILL_VIROLOGY    = SKILL_MAX)
 	access = list()
 
-	minimal_access = list()
+	minimal_access = list(
+		access_castelnau_medical, access_castelnau_morgue
+	)
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor)

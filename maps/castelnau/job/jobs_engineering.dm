@@ -30,7 +30,11 @@
 	                    SKILL_ATMOS        = SKILL_MAX,
 	                    SKILL_ENGINES      = SKILL_MAX)
 
-	access = list()
+	access = list(
+		access_castelnau_perseus, access_castelnau_perseus_helm, access_castelnau_maint_tunnels,
+		access_castelnau_external_airlocks, access_castelnau_engineering, access_castelnau_engine,
+		access_castelnau_atmospherics, access_castelnau_thrusters
+	)
 	minimal_access = list()
 
 	software_on_spawn = list(/datum/computer_file/program/power_monitor,
@@ -77,7 +81,9 @@
 	                    SKILL_ENGINES      = SKILL_MAX)
 
 
-	access = list()	
+	access = list(access_castelnau_perseus, access_castelnau_maint_tunnels,
+		access_castelnau_external_airlocks, access_castelnau_engineering, access_castelnau_engine,
+		access_castelnau_atmospherics, access_castelnau_thrusters)	
 			       
 	minimal_access = list()
 
