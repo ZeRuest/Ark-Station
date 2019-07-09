@@ -92,3 +92,21 @@
 				if(EO.abandon_ship)
 					evacuation_controller.handle_evac_option(EO.option_target, usr)
 					return
+
+/obj/machinery/keycard_auth/castelnau/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	if(stat & (NOPOWER|BROKEN))
+		to_chat(user, "This device is not powered.")
+		return
+	if(istype(W,/obj/item/weapon/card/id))
+		var/obj/item/weapon/card/id/ID = W
+		if(access_castelnau_command in ID.access)
+			if(active == 1)
+				//This is not the device that made the initial request. It is the device confirming the request.
+				if(event_source && event_source.event_triggered_by != usr)
+					event_source.confirmed = 1
+					event_source.event_confirmed_by = usr
+				else
+					to_chat(user, "<span class='warning'>Unable to confirm, DNA matches that of origin.</span>")
+			else if(screen == 2)
+				event_triggered_by = usr
+				broadcast_request() //This is the device making the initial event request. It needs to broadcast to other devices

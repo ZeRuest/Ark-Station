@@ -15,6 +15,7 @@
 //	#include "castelnau_unit_testing.dm"
 
 	#include "datums/reports.dm"
+	#include "datums/comm.dm"
 
 	#include "items/cards_ids.dm"
 	#include "items/encryption_keys.dm"
