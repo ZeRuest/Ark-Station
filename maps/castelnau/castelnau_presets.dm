@@ -15,7 +15,7 @@ var/const/NETWORK_PROMETEUS   = "Prometeus"
 		if(NETWORK_HANGAR)
 			return
 		if(NETWORK_PROMETEUS)
-			return 
+			return
 	return get_shared_network_access(network) || ..()*/
 
 /datum/map/castelnau
@@ -179,7 +179,7 @@ var/const/NETWORK_ENGINEERING_OUTPOST = "Engineering Outpost"
 	)
 
 /datum/computer_file/program/merchant
-	required_access = access_cargo
+	required_access = list("ACCESS_CASTELNAU_SUPPLY")
 
 /obj/machinery/computer/shuttle_control/merchant
 	req_access = list(null)
