@@ -21,9 +21,40 @@
 
 	skill_points = 25
 
+
+	access = list(access_castelnau_supply,
+				  access_castelnau_qm,
+				  access_castelnau_eva,
+				  access_castelnau_maint_tunnels,
+				  access_castelnau_hangar,
+				  access_castelnau_bixie,
+				  access_castelnau_bixie_helm,
+				  access_castelnau_perseus,
+				  access_castelnau_perseus_helm,
+				  access_castelnau_security,
+				  access_castelnau_brig,
+				  access_castelnau_armory,
+				  access_castelnau_janitor,
+				  access_castelnau_external_airlocks,
+				  access_castelnau_tcoms,
+				  access_castelnau_netdiag,
+				  access_castelnau_bridge,
+				  access_castelnau_captain,
+				  access_castelnau_comoffice,
+				  access_castelnau_command,
+				  access_castelnau_medical,
+				  access_castelnau_morgue,
+				  access_castelnau_bar,
+				  access_castelnau_kitchen,
+				  access_castelnau_hangar,
+				  access_castelnau_idmod,
+				  access_castelnau_engineering,
+				  access_castelnau_engine,
+				  access_castelnau_atmospherics,
+				  access_castelnau_thrusters)
+
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/card_mod,
-							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
 
 /datum/job/hop
@@ -48,13 +79,38 @@
 
 	skill_points = 20
 
-	access = list()
+	access = list(access_castelnau_supply,
+				  access_castelnau_qm,
+				  access_castelnau_eva,
+				  access_castelnau_maint_tunnels,
+				  access_castelnau_hangar,
+				  access_castelnau_bixie,
+				  access_castelnau_bixie_helm,
+				  access_castelnau_perseus,
+				  access_castelnau_perseus_helm,
+				  access_castelnau_security,
+				  access_castelnau_brig,
+				  access_castelnau_armory,
+				  access_castelnau_janitor,
+				  access_castelnau_external_airlocks,
+				  access_castelnau_tcoms,
+				  access_castelnau_netdiag,
+				  access_castelnau_bridge,
+				  access_castelnau_comoffice,
+				  access_castelnau_command,
+				  access_castelnau_medical,
+				  access_castelnau_morgue,
+				  access_castelnau_bar,
+				  access_castelnau_kitchen,
+				  access_castelnau_hangar,
+				  access_castelnau_idmod,
+				  access_castelnau_engineering,
+				  access_castelnau_atmospherics)
 
 	minimal_access = list()
 
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/card_mod,
-							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
 
 /datum/job/adjutant
@@ -69,8 +125,8 @@
 	economic_power = 7
 	ideal_character_age = 24
 	alt_titles = list(
-		"",
-		"Soldier")
+		"Piloting Officer",
+		"Navigator")
 	outfit_type = /decl/hierarchy/outfit/job/castelnau/crew/command/adjutant
 	allowed_branches = list(/datum/mil_branch/ship_personnel)
 	allowed_ranks = list(/datum/mil_rank/civ/civ)
@@ -82,15 +138,36 @@
 	skill_points = 20
 
 
-	access = list()
-
-	minimal_access = list()
+	access = list(access_castelnau_supply,
+				  access_castelnau_eva,
+				  access_castelnau_maint_tunnels,
+				  access_castelnau_hangar,
+				  access_castelnau_bixie,
+				  access_castelnau_bixie_helm,
+				  access_castelnau_perseus,
+				  access_castelnau_perseus_helm,
+				  access_castelnau_brig,
+				  access_castelnau_armory,
+				  access_castelnau_janitor,
+				  access_castelnau_external_airlocks,
+				  access_castelnau_tcoms,
+				  access_castelnau_netdiag,
+				  access_castelnau_bridge,
+				  access_castelnau_command,
+				  access_castelnau_medical,
+				  access_castelnau_morgue,
+				  access_castelnau_bar,
+				  access_castelnau_hangar,
+				  access_castelnau_idmod,
+				  access_castelnau_engineering,
+				  access_castelnau_engine,
+				  access_castelnau_atmospherics,
+				  access_castelnau_thrusters)
 
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/power_monitor,
 							 /datum/computer_file/program/alarm_monitor,
-							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/shields_monitor,
 							 /datum/computer_file/program/reports,
 							 /datum/computer_file/program/deck_management)

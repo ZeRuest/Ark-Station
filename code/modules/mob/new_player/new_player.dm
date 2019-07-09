@@ -28,7 +28,7 @@
 		return // Not ready yet.
 	var/output = list()
 	output += "<div align='center'>"
-	output += "<i>[GLOB.using_map.get_map_info()]</i>" 
+	output += "<i>[rhtml_decode(GLOB.using_map.get_map_info())]</i>"
 	output +="<hr>"
 	output += "<a href='byond://?src=\ref[src];show_preferences=1'>Setup Character</A> "
 
@@ -63,7 +63,7 @@
 			output += "<a href='byond://?src=\ref[src];ready=1'>Ready Up</a>"
 	else
 		output += "<a href='byond://?src=\ref[src];late_join=1'>Join Game!</A>"
-	
+
 	output += "</div>"
 
 	panel = new(src, "Welcome","Welcome, [client.prefs.real_name]", 560, 280, src)

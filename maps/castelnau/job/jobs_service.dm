@@ -11,9 +11,8 @@
 	allowed_branches = list(/datum/mil_branch/ship_personnel)
 	allowed_ranks = list(/datum/mil_rank/civ/civ)
 
-	access = list()
-
-	minimal_access = list()
+	access = list(access_castelnau_janitor,
+			      access_castelnau_maint_tunnels)
 
 /datum/job/chef
 	title = "Chef"
@@ -33,9 +32,7 @@
 						SKILL_BOTANY    = SKILL_BASIC,
 						SKILL_CHEMISTRY = SKILL_BASIC)
 
-	access = list()
-
-	minimal_access = list()
+	access = list(access_castelnau_kitchen)
 
 /datum/job/bartender
 	department = "Service"
@@ -47,7 +44,7 @@
 	allowed_branches = list(/datum/mil_branch/ship_personnel)
 	allowed_ranks = list(/datum/mil_rank/civ/civ)
 
-	access = list()
+	access = list(access_castelnau_bar)
 
 	minimal_access = list()
 	min_skill = list(	SKILL_COOKING   = SKILL_BASIC,

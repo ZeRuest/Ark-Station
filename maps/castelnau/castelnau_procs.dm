@@ -1,4 +1,4 @@
-/datum/map/bolt_saferooms()
+/* /datum/map/bolt_saferooms()
 	for(var/atype in typesof(/area/crew_quarters/safe_room))
 		var/area/A = locate(atype)
 		if(istype(A))
@@ -12,7 +12,7 @@
 		if(istype(A))
 			for(var/obj/machinery/door/airlock/vault/bolted/V in A.contents)
 				if(V.locked)
-					V.unlock()
+					V.unlock() */
 
 /datum/map/make_maint_all_access(var/radstorm = 0)
 	maint_all_access = 1
