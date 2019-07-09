@@ -24,8 +24,8 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	if(.)
 		H.implant_loyalty(src)
 
-/datum/job/captain/get_access()
-	return get_all_station_access()
+// /datum/job/captain/get_access()
+//	return get_all_station_access()
 
 /datum/job/hop
 	title = "Head of Personnel"
