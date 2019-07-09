@@ -68,3 +68,7 @@
 
 /datum/gear/uniform/corp_overalls
 	allowed_roles = list(/datum/job/mining, /datum/job/scientist_assistant)
+
+/datum/gear/uniform/camo
+	display_name = "camouflage outfit"
+	path = /obj/item/clothing/under/camo

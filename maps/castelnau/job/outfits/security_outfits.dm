@@ -4,7 +4,7 @@
 	pda_type = /obj/item/modular_computer/pda/security
 	pda_slot = slot_l_store
 	shoes = /obj/item/clothing/shoes/jackboots
-	uniform = /obj/item/clothing/under/color/red
+	uniform = /obj/item/clothing/under/camo
 
 /decl/hierarchy/outfit/job/castelnau/crew/security/New()
 	..()
