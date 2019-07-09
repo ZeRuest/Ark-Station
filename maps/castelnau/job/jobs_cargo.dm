@@ -17,7 +17,7 @@
 
 	skill_points = 14
 
-	access = list()
+	access = list(access_castelnau_supply)
 
 	minimal_access = list()
 
