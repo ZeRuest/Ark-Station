@@ -12,7 +12,7 @@
 	region = ACCESS_REGION_NT
 
 /var/const/access_castelnau_bixie= "ACCESS_BIXIE"
-/datum/access/castelnau/bixie
+/datum/access/castelnau/bixie_helm
 	id = access_castelnau_bixie_helm
 	desc = "Bixie"
 	region = ACCESS_REGION_GENERAL
@@ -24,7 +24,7 @@
 	region = ACCESS_REGION_GENERAL
 
 /var/const/access_castelnau_perseus= "ACCESS_PERSEUS"
-/datum/access/castelnau/perseus
+/datum/access/castelnau/perseus_helm
 	id = access_castelnau_perseus_helm
 	desc = "Perseus"
 	region = ACCESS_REGION_GENERAL
