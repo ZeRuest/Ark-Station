@@ -124,7 +124,6 @@
 	#include "../away/voxship/voxship.dm"
 	#include "../away/yacht/yacht.dm"
 
-
 	#define using_map_DATUM /datum/map/castelnau
 
 #elif !defined(MAP_OVERRIDE)
