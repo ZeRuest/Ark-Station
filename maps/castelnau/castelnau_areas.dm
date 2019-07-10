@@ -418,9 +418,22 @@ CREATE_CST_AREA(engineering/hallway)
 	icon_state = "engineering_workshop"
 
 CREATE_CST_AREA(engineering/engine_room)
-	name = "Engine Room"
+	name = "Reactor Room"
 	icon_state = "engine"
 	sound_env = LARGE_ENCLOSED
+	area_flags = AREA_FLAG_ION_SHIELDED
+	req_access = list(access_castelnau_engine)
+
+CREATE_CST_AREA(engineering/gen_room)
+	name = "Generators Room"
+	icon_state = "engine"
+	sound_env = LARGE_ENCLOSED
+	area_flags = AREA_FLAG_ION_SHIELDED
+	req_access = list(access_castelnau_engine)
+
+CREATE_CST_AREA(engineering/reactor_control_room)
+	name = "Reactor Control Room"
+	icon_state = "engine"
 	area_flags = AREA_FLAG_ION_SHIELDED
 	req_access = list(access_castelnau_engine)
 
