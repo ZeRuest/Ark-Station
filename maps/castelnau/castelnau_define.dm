@@ -94,5 +94,5 @@ GLOBAL_LIST_INIT(castelnay_command, list("Captain"))
 		welcome_text += "<br>Сигналов бедстви&#255; не обнаружено.<br />"
 	welcome_text += "<hr>"
 
-	post_comm_message("MSM Prometeus Sensor Readings", welcome_text)
+	post_comm_message("MSM Prometeus Sensor Readings", cyrillic_to_unicode(welcome_text))
 	minor_announcement.Announce(message = "New [GLOB.using_map.company_name] Update available at all communication consoles.")
