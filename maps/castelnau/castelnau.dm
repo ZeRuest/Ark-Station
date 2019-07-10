@@ -2,8 +2,7 @@
 
 	#include "castelnau_announcements.dm"
 	#include "castelnau_antagonism.dm"
-	//#include "castelnau_areas.dm"
-	#include "areas_new.dm"
+	#include "castelnau_areas.dm"
 	#include "castelnau_lobby.dm"
 	#include "castelnau_overmap.dm"
 	#include "castelnau_presets.dm"
@@ -105,22 +104,6 @@
 	#include "z1-admin.dmm"
 	#include "z2-transit.dmm"
 	#include "../away/empty.dmm"
-
-	#include "../reactor 4 tests.dmm"
-
-//	#include "../away/bearcat/bearcat.dm"
-//	#include "../away/mining/mining.dm"
-//	#include "../away/derelict/derelict.dm"
-//	#include "../away/magshield/magshield.dm"
-//	#include "../away/casino/casino.dm"
-//	#include "../away/blueriver/blueriver.dm"
-//	#include "../away/icarus/icarus.dm"
-//	#include "../away/errant_pisces/errant_pisces.dm"
-//	#include "../away/lar_maria/lar_maria.dm"
-//	#include "../away/unishi/unishi.dm"
-//	#include "../away/slavers/slavers_base.dm"
-
-//	#include "crutch.dm"
 
 	#include "../away/bearcat/bearcat.dm"
 	#include "../away/blueriver/blueriver.dm"
