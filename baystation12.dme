@@ -2441,7 +2441,7 @@
 #include "code\modules\power\fusion\gyrotron\gyrotron.dm"
 #include "code\modules\power\nuclear\control_rods.dm"
 #include "code\modules\power\nuclear\crod_control.dm"
-#include "code\modules\power\nuclear\fuel n' processing.dm"
+#include "code\modules\power\nuclear\fuel_and_processing.dm"
 #include "code\modules\power\nuclear\nuclear_reactions.dm"
 #include "code\modules\power\nuclear\nuclear_rod.dm"
 #include "code\modules\power\nuclear\rod_control.dm"
