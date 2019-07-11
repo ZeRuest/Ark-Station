@@ -4,6 +4,7 @@
 
 /obj/structure/closet/secure_closet/quartermaster/castelnau
 	name = "deck chief's locker"
+	req_access = list(access_castelnau_qm)
 
 /obj/structure/closet/secure_closet/quartermaster/castelnau/WillContain()
 	return list(
@@ -24,3 +25,6 @@
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack = 75, /obj/item/weapon/storage/backpack/satchel/grey = 25)),
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/messenger = 75, /obj/item/weapon/storage/backpack/dufflebag = 25))
 	)
+
+/obj/structure/closet/secure_closet/miner
+	req_access = list(access_castelnau_supply)
