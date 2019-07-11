@@ -30,6 +30,12 @@
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag/eng, /obj/item/weapon/storage/backpack/messenger/engi))
 	)
 
+/obj/structure/closet/secure_closet/engineering_electrical
+	req_access = list(access_castelnau_engineering)
+
+/obj/structure/closet/secure_closet/engineering_welding
+	req_access = list(access_castelnau_engineering)
+
 /obj/structure/closet/secure_closet/atmos_personal
 	req_access = list(access_castelnau_atmospherics)
 
