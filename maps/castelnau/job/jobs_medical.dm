@@ -26,7 +26,7 @@
 	access = list()
 
 	minimal_access = list(
-		access_castelnau_medical, access_castelnau_morgue, access_castelnau_maint_tunnels
+		access_castelnau_medical, access_castelnau_morgue, access_castelnau_maint_tunnels, access_castelnau_eva
 	)
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors)
@@ -57,7 +57,7 @@
 	access = list()
 
 	minimal_access = list(
-		access_castelnau_medical, access_castelnau_morgue
+		access_castelnau_medical, access_castelnau_morgue, access_castelnau_maint_tunnels, access_castelnau_eva
 	)
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors)

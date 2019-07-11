@@ -33,7 +33,8 @@
 				  access_castelnau_armory,
 				  access_castelnau_maint_tunnels,
 				  access_castelnau_external_airlocks,
-				  access_castelnau_hangar)
+				  access_castelnau_hangar,
+				  access_castelnau_eva)
 
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant)
 /datum/job/officer
@@ -70,6 +71,7 @@
 				  access_castelnau_armory,
 				  access_castelnau_maint_tunnels,
 				  access_castelnau_external_airlocks,
-				  access_castelnau_hangar)
+				  access_castelnau_hangar,
+				  access_castelnau_eva)
 
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant)

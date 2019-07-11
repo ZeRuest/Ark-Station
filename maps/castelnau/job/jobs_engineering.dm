@@ -33,8 +33,8 @@
 	access = list(
 		access_castelnau_perseus, access_castelnau_perseus_helm, access_castelnau_maint_tunnels,
 		access_castelnau_external_airlocks, access_castelnau_engineering, access_castelnau_engine,
-		access_castelnau_atmospherics, access_castelnau_thrusters, access_castelnau_hangar
-	)
+		access_castelnau_atmospherics, access_castelnau_thrusters, access_castelnau_hangar, access_castelnau_eva)
+
 	minimal_access = list()
 
 	software_on_spawn = list(/datum/computer_file/program/power_monitor,
@@ -82,7 +82,7 @@
 
 	access = list(access_castelnau_perseus, access_castelnau_maint_tunnels,
 		access_castelnau_external_airlocks, access_castelnau_engineering, access_castelnau_engine,
-		access_castelnau_atmospherics, access_castelnau_thrusters)
+		access_castelnau_atmospherics, access_castelnau_thrusters, access_castelnau_eva)
 
 	minimal_access = list()
 
