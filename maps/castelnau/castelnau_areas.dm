@@ -353,7 +353,7 @@ CREATE_CST_AREA(maintenance/thirddeck/port)
 CREATE_CST_AREA(civ/janitor)
 	name = "Custodial Closet"
 	icon_state = "janitor"
-	req_access = list(access_castelnau_janitor)
+	req_access = access_castelnau_janitor
 
 CREATE_CST_AREA(storage/expedition)
 	name = "Expedition Storage"
@@ -369,16 +369,19 @@ CREATE_CST_AREA(supply/hangar)
 	name = "Hangar Deck"
 	icon_state = "hangar"
 	sound_env = LARGE_ENCLOSED
+	req_access = list(access_castelnau_hangar)
 
 //SECOND_DECK(Z-2)
 CREATE_CST_AREA(supply/office)
 	name = "Supply Office"
 	icon_state = "quartoffice"
+	req_access = list(access_castelnau_supply)
 
 CREATE_CST_AREA(supply/storage)
 	name = "Warehouse"
 	icon_state = "quartstorage"
 	sound_env = LARGE_ENCLOSED
+	req_access = list(access_castelnau_supply)
 
 CREATE_CST_AREA(maintenance/seconddeck/forestarboard)
 	name = "Second Deck Fore Starboard Maintenance"
