@@ -353,7 +353,7 @@ CREATE_CST_AREA(maintenance/thirddeck/port)
 CREATE_CST_AREA(civ/janitor)
 	name = "Custodial Closet"
 	icon_state = "janitor"
-	req_access = access_castelnau_janitor
+	req_access = list(access_castelnau_janitor)
 
 CREATE_CST_AREA(storage/expedition)
 	name = "Expedition Storage"
