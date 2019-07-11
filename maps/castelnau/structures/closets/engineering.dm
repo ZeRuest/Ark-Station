@@ -2,6 +2,9 @@
  * Castelnau Engineering
  */
 
+/obj/structure/closet/secure_closet/engineering_personal
+	req_access = list(access_castelnau_engineering)
+
 /obj/structure/closet/secure_closet/engineering_personal/senior
 	name = "senior engineer's locker"
 	req_access = list(access_castelnau_seneng)
