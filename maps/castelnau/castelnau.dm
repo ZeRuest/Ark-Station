@@ -13,8 +13,9 @@
 	#include "castelnau_shuttles.dm"
 //	#include "castelnau_unit_testing.dm"
 
+	#include "datums/cardmod.dm"
 	#include "datums/reports.dm"
-	#include "datums/comm.dm"
+	#include "datums/other_soft.dm"
 
 	#include "items/cards_ids.dm"
 	#include "items/encryption_keys.dm"
@@ -43,8 +44,6 @@
 	#include "items/clothing/terran-head.dm"
 	#include "items/clothing/terran-suit.dm"
 	#include "items/clothing/terran-under.dm"
-
-	#include "datums/cardmod.dm"
 
 	#include "job/access.dm"
 
