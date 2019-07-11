@@ -12,14 +12,14 @@
 /decl/hierarchy/outfit/job/castelnau/crew/engineering/senior_engineer
 	name = OUTFIT_JOB_NAME("Senior Engineer - Castelnau")
 	uniform = /obj/item/clothing/under/rank/engineer
-	shoes = /obj/item/clothing/shoes
+	shoes = /obj/item/clothing/shoes/workboots
 	id_type = /obj/item/weapon/card/id/castelnau/crew/engineering/senior
 	pda_type = /obj/item/modular_computer/pda/heads/ce
 
 /decl/hierarchy/outfit/job/castelnau/crew/engineering/engineer
 	name = OUTFIT_JOB_NAME("Engineer - Castelnau")
 	uniform = /obj/item/clothing/under/rank/engineer
-	shoes = /obj/item/clothing/shoes
+	shoes = /obj/item/clothing/shoes/workboots
 	id_type = /obj/item/weapon/card/id/castelnau/crew/engineering
 
 /decl/hierarchy/outfit/job/castelnau/crew/engineering/engineer/atmos
