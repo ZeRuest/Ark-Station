@@ -68,9 +68,10 @@
 	#include "job/outfits/service_outfits.dm"
 	#include "job/outfits/supply_outfits.dm"
 
-	#include "machinery/apc.dm"
+	#include "machinery/eng_equip.dm"
 	#include "machinery/keycard authentication.dm"
 	#include "machinery/lighting.dm"
+	#include "machinery/vendors_storages.dm"
 
 	#include "structures/closets/command.dm"
 	#include "structures/sofa.dm"
@@ -80,7 +81,8 @@
 	#include "structures/navlights.dm"
 
 	#include "structures/closets/command.dm"
-//	#include "structures/closets/engineering.dm"
+	#include "structures/closets/engineering.dm"
+	#include "structures/closets/medical.dm"
 	#include "structures/closets/research.dm"
 	#include "structures/closets/security.dm"
 	#include "structures/closets/supply.dm"

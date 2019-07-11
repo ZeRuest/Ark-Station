@@ -14,7 +14,7 @@
 	allowed_branches = list(/datum/mil_branch/science_personnel)
 	allowed_ranks = list(/datum/mil_rank/civ/civ)
 
-	access = list(access_castelnau_prometeus, access_castelnau_prometeus_helm)
+	access = list(access_castelnau_prometeus_senior, access_castelnau_prometeus, access_castelnau_prometeus_helm)
 
 	minimal_access = list()
 

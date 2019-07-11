@@ -11,6 +11,12 @@
 	desc = "Prometeus Helm"
 	region = ACCESS_REGION_NT
 
+/var/const/access_castelnau_prometeus_senior = "ACCESS_PROMETEUS_SENIOR_SCIENTIST"
+/datum/access/castelnau/prometeus_senior
+	id = access_castelnau_prometeus_senior
+	desc = "Senior Scientist"
+	region = ACCESS_REGION_NT
+
 /var/const/access_castelnau_bixie= "ACCESS_BIXIE"
 /datum/access/castelnau/bixie_helm
 	id = access_castelnau_bixie_helm
@@ -171,6 +177,12 @@ var/const/access_castelnau_sheriff = "ACCESS_CASTELNAU_SHERIFF"
 	id = access_castelnau_idmod
 	desc = "ID modification"
 	region = ACCESS_REGION_COMMAND
+
+/var/const/access_castelnau_seneng = "ACCESS_CASTELNAU_SENENG"
+/datum/access/castelnau/seneng
+	id = access_castelnau_seneng
+	desc = "Senior Engineer"
+	region = ACCESS_REGION_ENGINEERING
 
 /var/const/access_castelnau_engineering = "ACCESS_CASTELNAU_ENGINEERING"
 /datum/access/castelnau/engineering

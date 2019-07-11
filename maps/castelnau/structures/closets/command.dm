@@ -1,6 +1,8 @@
 /*
- * Sierra Command
+ * Castelnau Command
  */
+/obj/structure/closet/secure_closet/captains/castelnau
+	req_access = list(access_castelnau_captain)
 
 /obj/structure/closet/secure_closet/captains/castelnau/WillContain()
 	return list(
@@ -23,6 +25,7 @@
 
 /obj/structure/closet/secure_closet/hop/castelnau
 	name = "first officer's locker"
+	req_access = list(access_castelnau_comoffice)
 
 /obj/structure/closet/secure_closet/hop/castelnau/WillContain()
 	return list(
@@ -43,7 +46,7 @@
 
 /obj/structure/closet/secure_closet/adjutant
 	name = "second officer's locker"
-	req_access = list(access_bridge)
+	req_access = list(access_castelnau_bridge)
 
 /obj/structure/closet/secure_closet/adjutant/WillContain()
 	return list(

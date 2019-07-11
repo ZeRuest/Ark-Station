@@ -4,6 +4,7 @@
 
 /obj/structure/closet/secure_closet/warden/castenlau
 	name = "sheriff's locker"
+	req_access = list(access_castelnau_sheriff)
 
 /obj/structure/closet/secure_closet/warden/castenlau/WillContain()
 	return list(
@@ -35,6 +36,8 @@
 
 /obj/structure/closet/secure_closet/security/castenlau
 	name = "security officer's locker"
+	req_access = list(access_castelnau_security)
+
 
 /obj/structure/closet/secure_closet/security/castenlau/WillContain()
 	return list(
