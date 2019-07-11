@@ -3011,6 +3011,8 @@
 #include "code\unit_tests\~helpers.dm"
 #include "code\unit_tests\~unit_test_types.dm"
 #include "custom_items\clothing\_defines.dm"
+#include "custom_items\clothing\masks\gasmask.dm"
+#include "custom_items\clothing\suits\misc.dm"
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
 #include "maps\_map_include.dm"
