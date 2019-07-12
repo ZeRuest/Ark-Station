@@ -37,7 +37,7 @@
 
 	access = list(access_castelnau_kitchen)
 
-	minimal_access = list(access_castelnau_kitchen)
+	minimal_access = list(access_castelnau_kitchen, access_castelnau_bar)
 
 /datum/job/bartender
 	department = "Service"
@@ -51,8 +51,8 @@
 
 	access = list(access_castelnau_bar)
 
-	minimal_access = list(access_castelnau_bar)
-	
+	minimal_access = list(access_castelnau_bar, access_castelnau_kitchen)
+
 	min_skill = list(	SKILL_COOKING   = SKILL_BASIC,
 						SKILL_BOTANY    = SKILL_BASIC,
 						SKILL_CHEMISTRY = SKILL_BASIC)
