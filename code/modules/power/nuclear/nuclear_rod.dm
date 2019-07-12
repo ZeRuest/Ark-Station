@@ -225,8 +225,7 @@ var/list/nrods = list()
 
 			rodtemp += amount_reacting * cur_reaction.heat_production * 5
 			own_rads += amount_reacting * cur_reaction.radiation * 2
-			if(own_rads < 40)
-				own_rads += amount_reacting * cur_reaction.radiation * 5
+
 			for(var/pr_reactant in cur_reaction.products)   //?I ?t???q?p?r?|???u?} ???????t???{???? ???u?p?{???y?y
 				var/success = 0
 				for(var/check_reactant in produced_reactants)
