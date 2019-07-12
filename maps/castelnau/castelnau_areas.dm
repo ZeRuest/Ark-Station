@@ -543,6 +543,7 @@ CREATE_CST_AREA(engineering/shield)
 CREATE_CST_AREA(medical/maintenance_equipstorage)
 	name = "Infirmary Maintenance Storage"
 	icon_state = "medbay4"
+	req_access = list(access_castelnau_maint_tunnels)
 
 CREATE_CST_AREA(medical/chemistry)
 	name = "Chemistry"
