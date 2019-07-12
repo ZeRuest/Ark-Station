@@ -52,8 +52,7 @@
 	access = list(access_castelnau_bar)
 
 	minimal_access = list(access_castelnau_bar)
-
-	minimal_access = list()
+	
 	min_skill = list(	SKILL_COOKING   = SKILL_BASIC,
 						SKILL_BOTANY    = SKILL_BASIC,
 						SKILL_CHEMISTRY = SKILL_BASIC)
