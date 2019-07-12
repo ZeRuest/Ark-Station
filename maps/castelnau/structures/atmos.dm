@@ -42,6 +42,21 @@
 	id_tag = "gen_o2"
 
 //
+//SENSORS FOR REACTOR
+//
+
+/obj/machinery/air_sensor/reactor
+	output = 127
+	frequency = 1441
+
+/obj/machinery/air_sensor/reactor/one
+	id_tag = "reac_chamber_1"
+
+/obj/machinery/air_sensor/reactor/two
+	id_tag = "reac_chamber_2"
+
+
+//
 //COMPUTERS FOR ATMOSPHERICS
 //
 
@@ -101,6 +116,22 @@
 	input_tag = "gen_o2_in"
 	output_tag = "gen_o2_out"
 	sensors = list("gen_o2" = "Generator Oxygen Tank")
+
+//
+//COMPUTERS FOR REACTOR
+//
+
+/obj/machinery/computer/general_air_control/large_tank_control/reactor/one
+	name = "Circulation Pumps 1 Control"
+	input_tag = "reac_chamber_in_1"
+	output_tag = "reac_chamber_out_2"
+	sensors = list("reac_chamber_1" = "Reactor Chamber")
+
+/obj/machinery/computer/general_air_control/large_tank_control/reactor/two
+	name = "Generator Hydrogen Tank Control"
+	input_tag = "reac_chamber_in_2"
+	output_tag = "reac_chamber_out_2"
+	sensors = list("reac_chamber_2" = "Reactor Chamber")
 
 //
 //GENERAL
