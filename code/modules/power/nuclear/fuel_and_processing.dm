@@ -256,7 +256,7 @@
 		playsound(src.loc, 'sound/machines/ping.ogg', 50, 1)
 		spawn(50)
 			icon_state = "centrifuge"
-			var/obj/item/weapon/nuclearfuel/pellet/Pl = new(get_turf(src), list("U235" = 50, "U238" = 600))
+			var/obj/item/weapon/nuclearfuel/pellet/Pl = new(get_turf(src), list("U235" = 550, "U238" = 2250))
 			Pl.name = "Enriched uranium pellet"
 			playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
 			visible_message("<span class='notice'>[Pl] drops from the centrifuge.</span>")
