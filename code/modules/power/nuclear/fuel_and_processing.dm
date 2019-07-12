@@ -7,6 +7,10 @@
 		reactants = r
 	..(newloc)
 
+/obj/item/weapon/nuclearfuel/Process()
+	if(!reactants.len)
+		qdel(src)
+
 /obj/item/weapon/nuclearfuel/rod
 	icon_state = "assembly"
 	name = "Nuclear fuel assembly"
