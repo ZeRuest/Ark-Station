@@ -41,7 +41,7 @@ var/list/nrods = list()
 
 /obj/machinery/power/nuclear_rod/attack_hand(mob/user)   //âûíèìàåì ñòåðæåíü
 	add_fingerprint(user)
-	if(reactants && do_after(user, 30,src) && rodtemp < 1000)
+	if(reactants.len && do_after(user, 30,src) && rodtemp < 1000)
 
 		var/obj/item/weapon/nuclearfuel/rod/F = new(get_turf(src), reactants)
 		user.put_in_hands(F)
@@ -67,7 +67,7 @@ var/list/nrods = list()
 				return
 
 			else if(istype(W, /obj/item/weapon/nuclearfuel/rod))
-				if(!reactants && rodtemp < 1000)
+				if(!reactants.len && rodtemp < 1000)
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
 					src.F = W
 					message_admins("[user] loaded [src] with [W]")
