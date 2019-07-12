@@ -237,7 +237,6 @@
 /area/shuttle/castelnau/prometeus/cockpit
 	icon_state = "pro_crew"
 	name = "Prometeus - Cockpit"
-	req_access = list(access_castelnau_prometeus_helm)
 
 /area/shuttle/castelnau/prometeus/external
 	icon_state = "pro_ext"
