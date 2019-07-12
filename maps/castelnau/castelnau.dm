@@ -77,6 +77,7 @@
 //	#include "structures/signs.dm"
 	#include "structures/thrusters.dm"
 	#include "structures/atmos.dm"
+	#include "structures/doors.dm"
 	#include "structures/navlights.dm"
 
 	#include "structures/closets/command.dm"
