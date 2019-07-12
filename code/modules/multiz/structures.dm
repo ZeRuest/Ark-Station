@@ -94,7 +94,7 @@
 	instant_climb(M)
 
 /obj/structure/ladder/proc/getTargetLadder(var/mob/M)
-	if((!target_up && !target_down) || (target_up && !istype(target_up.loc, /turf/simulated/open) || (target_down && !istype(target_down.loc, /turf))))
+	if((!target_up && !target_down) || (target_up && istype(target_up.loc, /turf/simulated/open) || (target_down && !istype(target_down.loc, /turf))))
 		to_chat(M, "<span class='notice'>\The [src] is incomplete and can't be climbed.</span>")
 		return
 	if(target_down && target_up)
@@ -241,10 +241,10 @@
 /obj/structure/stairs/west
 	dir = WEST
 	bound_width = 64
-	
+
 /obj/structure/stairs/short
 	bound_height = 32
 	bound_width = 32
-	
+
 /obj/structure/stairs/short/west
 	dir = WEST
