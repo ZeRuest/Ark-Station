@@ -12,6 +12,9 @@
 	req_access = list(access_castelnau_medical)
 
 //ENGINEERING
+/obj/machinery/vending/engivend
+	req_access = list(access_castelnau_engineering)
+
 /obj/machinery/suit_storage_unit/engineering
 	req_access = list(access_castelnau_engineering)
 

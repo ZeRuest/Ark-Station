@@ -16,7 +16,7 @@
 
 	access = list(access_castelnau_prometeus_senior, access_castelnau_prometeus, access_castelnau_prometeus_helm)
 
-	minimal_access = list()
+	minimal_access = list(access_castelnau_prometeus_senior, access_castelnau_prometeus, access_castelnau_prometeus_helm)
 
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_COMPUTER    = SKILL_BASIC,
@@ -58,7 +58,9 @@
 	allowed_branches = list(/datum/mil_branch/science_personnel)
 	allowed_ranks = list(/datum/mil_rank/civ/civ)
 
-	access = list()
+	access = list(access_castelnau_prometeus)
+
+	minimal_access = list(access_castelnau_prometeus)
 
 	skill_points = 22
 
@@ -89,6 +91,8 @@
 
 	access = list(access_castelnau_prometeus)
 
+	minimal_access = list(access_castelnau_prometeus)
+
 /datum/job/scientist_assistant
 	title = "Research Assistant"
 	department = "Science"
@@ -117,6 +121,8 @@
 
 	access = list(access_castelnau_prometeus)
 
+	minimal_access = list(access_castelnau_prometeus)
+
 /datum/job/scientist_pilot
 	title = "Research Pilot"
 	department = "Science"
@@ -138,4 +144,6 @@
 	outfit_type = /decl/hierarchy/outfit/job/castelnau/crew/research/assist
 	allowed_branches = list(/datum/mil_branch/science_personnel)
 	allowed_ranks = list(/datum/mil_rank/civ/civ)
+
 	access = list(access_castelnau_prometeus, access_castelnau_prometeus_helm)
+	minimal_access = list(access_castelnau_prometeus, access_castelnau_prometeus_helm)

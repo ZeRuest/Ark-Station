@@ -23,11 +23,9 @@
 	                    SKILL_ANATOMY     = SKILL_MAX)
 	skill_points = 26
 
-	access = list()
+	access = list(access_castelnau_medical, access_castelnau_morgue, access_castelnau_maint_tunnels, access_castelnau_eva)
 
-	minimal_access = list(
-		access_castelnau_medical, access_castelnau_morgue, access_castelnau_maint_tunnels, access_castelnau_eva
-	)
+	minimal_access = list(access_castelnau_medical, access_castelnau_morgue, access_castelnau_maint_tunnels, access_castelnau_eva)
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors)
 
@@ -54,11 +52,9 @@
 
 	max_skill = list(   SKILL_MEDICAL     = SKILL_MAX,
 	                    SKILL_VIROLOGY    = SKILL_MAX)
-	access = list()
+	access = list(access_castelnau_medical, access_castelnau_morgue, access_castelnau_maint_tunnels, access_castelnau_eva)
 
-	minimal_access = list(
-		access_castelnau_medical, access_castelnau_morgue, access_castelnau_maint_tunnels, access_castelnau_eva
-	)
+	minimal_access = list(access_castelnau_medical, access_castelnau_morgue, access_castelnau_maint_tunnels, access_castelnau_eva)
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors)
 	skill_points = 22

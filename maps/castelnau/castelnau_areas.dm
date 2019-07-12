@@ -478,6 +478,7 @@ CREATE_CST_AREA(thruster/d2starboard)
 CREATE_CST_AREA(engineering/foyer)
 	name = "Engineering Foyer"
 	icon_state = "engineering_foyer"
+	req_access = list()
 
 CREATE_CST_AREA(security/equip)
 	name = "Security - Equipment"

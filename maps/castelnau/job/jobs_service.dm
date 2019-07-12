@@ -14,6 +14,9 @@
 	access = list(access_castelnau_janitor,
 			      access_castelnau_maint_tunnels)
 
+	minimal_access = list(access_castelnau_janitor,
+			              access_castelnau_maint_tunnels)
+
 /datum/job/chef
 	title = "Chef"
 	department = "Service"
@@ -34,6 +37,8 @@
 
 	access = list(access_castelnau_kitchen)
 
+	minimal_access = list(access_castelnau_kitchen)
+
 /datum/job/bartender
 	department = "Service"
 	department_flag = SRV
@@ -45,6 +50,8 @@
 	allowed_ranks = list(/datum/mil_rank/civ/civ)
 
 	access = list(access_castelnau_bar)
+
+	minimal_access = list(access_castelnau_bar)
 
 	minimal_access = list()
 	min_skill = list(	SKILL_COOKING   = SKILL_BASIC,
