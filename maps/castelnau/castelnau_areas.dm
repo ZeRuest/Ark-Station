@@ -497,6 +497,9 @@ CREATE_CST_AREA(security/brig)
 	icon_state = "security_brig"
 	req_access = list(access_castelnau_brig)
 
+/area/security/brig
+	req_access = list(access_castelnau_brig)
+
 //FIRST_DECK(Z-3)
 CREATE_CST_AREA(maintenance/firstdeck/aftstarboard)
 	name = "First Deck Aft Starboard Maintenance"
