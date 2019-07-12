@@ -123,14 +123,14 @@
 
 /obj/machinery/computer/general_air_control/large_tank_control/reactor/one
 	name = "Circulation Pumps 1 Control"
-	input_tag = "reac_chamber_in_1"
-	output_tag = "reac_chamber_out_2"
+	input_tag = "reac_in_1"
+	output_tag = "reac_out_1"
 	sensors = list("reac_chamber_1" = "Reactor Chamber")
 
 /obj/machinery/computer/general_air_control/large_tank_control/reactor/two
-	name = "Generator Hydrogen Tank Control"
-	input_tag = "reac_chamber_in_2"
-	output_tag = "reac_chamber_out_2"
+	name = "Circulation Pumps 2 Control"
+	input_tag = "reac_in_2"
+	output_tag = "reac_out_2"
 	sensors = list("reac_chamber_2" = "Reactor Chamber")
 
 //
