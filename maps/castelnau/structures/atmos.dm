@@ -25,23 +25,6 @@
 	id_tag = "h2"
 
 //
-//SENSORS FOR GENERATOR
-//
-
-/obj/machinery/air_sensor/gen
-	output = 127
-	frequency = 1441
-
-/obj/machinery/air_sensor/gen/chamber
-	id_tag = "gen_chamber"
-
-/obj/machinery/air_sensor/gen/hydrogen
-	id_tag = "gen_h2"
-
-/obj/machinery/air_sensor/gen/oxygen
-	id_tag = "gen_o2"
-
-//
 //SENSORS FOR REACTOR
 //
 
@@ -95,27 +78,6 @@
 	input_tag = "h2_in"
 	output_tag = "h2_out"
 	sensors = list("h2" = "Hydrogen Tank")
-
-//
-//COMPUTERS FOR GENERATOR
-//
-
-/obj/machinery/computer/general_air_control/large_tank_control/gen/chamber
-	name = "Generator Chamber Control"
-	input_tag = "gen_chamber_in"
-	sensors = list("gen_chamber" = "Generator Chamber")
-
-/obj/machinery/computer/general_air_control/large_tank_control/gen/hydrogen
-	name = "Generator Hydrogen Tank Control"
-	input_tag = "gen_h2_in"
-	output_tag = "gen_h2_out"
-	sensors = list("gen_h2" = "Generator Hydrogen Tank")
-
-/obj/machinery/computer/general_air_control/large_tank_control/gen/oxygen
-	name = "Generator Oxygen Tank Control"
-	input_tag = "gen_o2_in"
-	output_tag = "gen_o2_out"
-	sensors = list("gen_o2" = "Generator Oxygen Tank")
 
 //
 //COMPUTERS FOR REACTOR

@@ -157,6 +157,7 @@
 				  access_castelnau_medical,
 				  access_castelnau_morgue,
 				  access_castelnau_bar,
+				  access_castelnau_kitchen,
 				  access_castelnau_hangar,
 				  access_castelnau_idmod,
 				  access_castelnau_engineering,
