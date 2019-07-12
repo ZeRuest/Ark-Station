@@ -127,7 +127,7 @@ var/list/nrods = list()
 
 /obj/machinery/power/nuclear_rod/Process()     // îáëó÷åíèå è íàãðåâ àòìîñà (â îáîèõ ñìûñëàõ, ïðèâåò àíòàãàì) + ïðîêè
 	React()
-	if(F && !reactants)
+	if(F && !reactants.len)
 		reactants = F.reactants
 		F = null
 	var/raddecay = rand(109,121)
