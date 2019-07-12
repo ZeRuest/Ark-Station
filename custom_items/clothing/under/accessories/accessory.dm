@@ -1,5 +1,6 @@
-/obj/item/clothing/accessory/stripedred //The_Hero13
+/obj/item/clothing/accessory/hamonscarf //The_Hero13
 	name = "red striped scarf"
+	desc = "A scarf made with the yarn of the Satiporoja beetle. Perfect conductor of Hamon."
 	icon = CUSTOM_ICON_ACCESSORIES
 	icon_state = "stripedredscarf"
 	accessory_icons = list(
