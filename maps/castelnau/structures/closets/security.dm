@@ -61,3 +61,6 @@
 		/obj/item/device/radio/off,
 		/obj/item/clothing/mask/gas/half,
 	)
+
+/obj/structure/closet/crate/secure/weapon
+	req_access = list(access_castelnau_security)
