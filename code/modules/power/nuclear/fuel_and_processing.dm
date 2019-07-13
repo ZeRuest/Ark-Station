@@ -271,7 +271,7 @@
 
 /obj/item/weapon/nuclearfuel/pellet/enrichedU
 	name = "Enriched uranium pellet"
-	reactants = list("U235" = 200, "U238" = 500)
+	reactants = list("U235" = 600, "U238" = 1500)
 
 /obj/item/weapon/nuclearfuel/pellet/waste
 	name = "Waste pellet"
