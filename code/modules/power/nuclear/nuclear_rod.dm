@@ -206,7 +206,7 @@ var/list/nrods = list()
 
 			if(reactants[cur_reaction.substance] > 0.01)  //?O?????u?t?u?|?u?~?y?u ?{???|?y???u?????r?p ?r?????????p?u?}???s?? ?r ???u?p?{???y??
 				if(cur_reaction.required_rads > 0)
-					max_num_reactants = (10 + accepted_rads/cur_reaction.required_rads) * reactants[cur_reaction.substance] / 8000
+					max_num_reactants = (10 + accepted_rads/cur_reaction.required_rads) * reactants[cur_reaction.substance] / 80000
 				else
 					max_num_reactants = reactants[cur_reaction.substance] / 2000
 			else
@@ -223,8 +223,8 @@ var/list/nrods = list()
 				amount_reacting = reactants[cur_reaction.substance]
 				reactants[cur_reaction.substance] = 0
 
-			rodtemp += amount_reacting * cur_reaction.heat_production * 5
-			own_rads += amount_reacting * cur_reaction.radiation * 2
+			rodtemp += amount_reacting * cur_reaction.heat_production * 45
+			own_rads += amount_reacting * cur_reaction.radiation * 20
 
 			for(var/pr_reactant in cur_reaction.products)   //?I ?t???q?p?r?|???u?} ???????t???{???? ???u?p?{???y?y
 				var/success = 0
