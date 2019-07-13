@@ -51,7 +51,7 @@
 			circ1 = locate(/obj/machinery/atmospherics/binary/circulator) in get_step(src,NORTH)
 			circ2 = locate(/obj/machinery/atmospherics/binary/circulator) in get_step(src,SOUTH)
 
-			if(circ1 && circ2 && (circ1.dir != EAST || circ2.dir != WEST))
+			if(circ1 && circ2 && (circ1.dir != WEST || circ2.dir != EAST))
 				circ1 = null
 				circ2 = null
 
