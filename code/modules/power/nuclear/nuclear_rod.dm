@@ -113,8 +113,8 @@ var/list/nrods = list()
 
 
 /obj/machinery/power/nuclear_rod/proc/check_state()   // ×òîáû íå ïèñàòü â Ïðîöåññ
-	if (rodtemp > 6000)
-		integrity -= (rodtemp - 6000)/10
+	if (rodtemp > 5000)
+		integrity -= (rodtemp - 5000)/10
 	if (integrity <= 0 && broken == 0)
 		explosion(src, -1, -1, rodtemp/ 500, rodtemp / 200)
 		SSradiation.radiate (src, 500)
@@ -140,7 +140,7 @@ var/list/nrods = list()
 		var/chamb_temp = environment.temperature
 		if (rodtemp > chamb_temp)
 			environment.add_thermal_energy((rodtemp-chamb_temp)*ratio*400)
-			rodtemp -= (rodtemp-chamb_temp) * ratio / 10
+			rodtemp -= (rodtemp-chamb_temp) * ratio / 20
 
 
 	else
