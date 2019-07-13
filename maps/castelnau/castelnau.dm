@@ -67,6 +67,7 @@
 	#include "job/outfits/service_outfits.dm"
 	#include "job/outfits/supply_outfits.dm"
 
+	#include "machinery/generator_inverted.dm"
 	#include "machinery/eng_equip.dm"
 	#include "machinery/keycard authentication.dm"
 	#include "machinery/lighting.dm"
