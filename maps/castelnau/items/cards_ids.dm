@@ -25,7 +25,7 @@
 	desc = "An identification card issued to crewmembers of the MOTV Castelnau."
 	job_access_type = /datum/job/assistant
 
-/obj/item/weapon/card/id/scastelnau/crew/medical
+/obj/item/weapon/card/id/castelnau/crew/medical
 	desc = "An identification card issued to medical crewmembers of the MOTV Castelnau."
 	job_access_type = /datum/job/doctor
 
