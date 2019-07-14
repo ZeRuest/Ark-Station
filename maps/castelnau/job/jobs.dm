@@ -29,4 +29,5 @@
 		ACCESS_REGION_COMMAND = list(access_castelnau_idmod),
 		ACCESS_REGION_GENERAL = list(access_castelnau_idmod),
 		ACCESS_REGION_SUPPLY = list(access_castelnau_idmod),
+		ACCESS_REGION_NT = list(access_castelnau_prometeus_senior),
 	)
