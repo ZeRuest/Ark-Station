@@ -3014,6 +3014,7 @@
 #include "custom_items\clothing\masks\gasmask.dm"
 #include "custom_items\clothing\suits\misc.dm"
 #include "custom_items\clothing\under\accessories\accessory.dm"
+#include "custom_items\objects\item\weapons\cards_ids.dm"
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
 #include "maps\_map_include.dm"
