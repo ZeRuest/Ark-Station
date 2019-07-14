@@ -37,7 +37,7 @@ GLOBAL_LIST_INIT(castelnay_command, list("Captain"))
 	default_law_type = /datum/ai_laws/nanotrasen
 	use_overmap = 1
 	num_exoplanets = 2
-	planet_size = list(129,129)
+	planet_size = list(250,250)
 
 	away_site_budget = 2
 //	id_hud_icons = 'maps/sierra/icons/assignment_hud.dmi'
