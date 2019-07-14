@@ -25,8 +25,8 @@ GLOBAL_LIST_INIT(castelnay_command, list("Captain"))
 	station_name  = "MOTV Castelnau"
 	station_short = "Castelnau"
 	dock_name     = "TBD"
-	boss_name     = "Castelnau Sensors"
-	boss_short    = "Castelnau Sensors"
+	boss_name     = "Interstellar Emergency Frequency"
+	boss_short    = "Interstellar Emergency Frequency"
 	company_name  = "Castelnau Tow. Ltd."
 	company_short = "CT"
 
@@ -61,7 +61,7 @@ GLOBAL_LIST_INIT(castelnay_command, list("Captain"))
 	to_chat(victim, "Техническа&#255; информаци&#255;: если у вас не играет музыка от инструментов и проигрывателей, то вам стоит откатить версию бьенда с самой последней до 1456.") */
 
 /datum/map/castelnau/send_welcome()
-	var/welcome_text = "<center><img src = ntlogo.png /><br /><font size = 3><b>MSM Prometeus</b> Показани&#255; Сенсоров:</font><hr />"
+	var/welcome_text = "<center><br /><font size = 3><b>MSM Prometeus</b> Показани&#255; Сенсоров:</font><hr />"
 	welcome_text += "Отчет сгенерирован [stationdate2text()] в [stationtime2text()]</center><br /><br />"
 	welcome_text += "Текуща&#255; система: <b>[system_name()]</b><br />"
 	welcome_text += "Следующа&#255; система дл&#255; прыжка: <b>[generate_system_name()]</b><br />"
