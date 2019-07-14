@@ -282,6 +282,16 @@
 	icon_state = "pro_eva"
 	name = "Prometeus - EVA"
 
+/area/shuttle/castelnau/prometeus/xen
+	icon_state = "pro_xen"
+	name = "Prometeus - Xenobiology"
+
+/area/shuttle/castelnau/prometeus/gas
+	icon_state = "pro_gas"
+	name = "Prometeus - Gas Lab"
+
+
+
 //Perseus
 /area/shuttle/castelnau/perseus
 	req_access = list(access_castelnau_perseus)
