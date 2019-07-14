@@ -72,7 +72,7 @@
 "bt" = (/obj/structure/catwalk,/turf/simulated/floor/plating,/area/castelnau/maintenance/firstdeck/centralstarboard)
 "bu" = (/obj/machinery/alarm{alarm_id = "xenobio4_alarm"; dir = 2; icon_state = "alarm0"; pixel_x = 0; pixel_y = 24},/obj/structure/catwalk,/turf/simulated/floor/plating,/area/castelnau/maintenance/firstdeck/centralstarboard)
 "bv" = (/obj/machinery/firealarm{dir = 1; pixel_y = -24},/obj/structure/catwalk,/turf/simulated/floor/plating,/area/castelnau/maintenance/firstdeck/centralstarboard)
-"bw" = (/obj/structure/catwalk,/obj/structure/ladder,/turf/simulated/floor/tiled/techmaint,/area/castelnau/maintenance/firstdeck/centralstarboard)
+"bw" = (/obj/structure/catwalk,/obj/structure/ladder,/turf/simulated/floor/plating,/area/castelnau/maintenance/firstdeck/centralstarboard)
 "bx" = (/obj/effect/shuttle_landmark/merchant/out,/obj/effect/shuttle_landmark/admin/out{docking_controller = "merchant_shuttle_station_dock"},/turf/space,/area/space)
 "by" = (/turf/simulated/floor/carpet/purple,/area/castelnau/civ/bunk)
 "bz" = (/obj/machinery/firealarm{dir = 4; layer = 3.3; pixel_x = 26},/turf/simulated/floor/reinforced/hydrogen/fuel,/area/castelnau/thruster/d1starboard)
