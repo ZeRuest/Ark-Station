@@ -101,10 +101,10 @@
 		/area/shuttle/castelnau/prometeus/anomaly,
 		/area/shuttle/castelnau/prometeus/botany,
 		/area/shuttle/castelnau/prometeus/equip,
-		/area/shuttle/castelnau/prometeus/eva, /*
+		/area/shuttle/castelnau/prometeus/eva,
 		/area/shuttle/castelnau/prometeus/gas,
 		/area/shuttle/castelnau/prometeus/xen,
-		/area/shuttle/castelnau/prometeus/dorm */
+		/area/shuttle/castelnau/prometeus/dorm
 	)
 	dock_target = "prometeus_shuttle_airlock"
 	current_location = "nav_prometeus_dock"
@@ -130,7 +130,7 @@
 //bixie
 /datum/shuttle/autodock/overmap/bixie
 	name = "Bixie"
-	move_time = 90
+	move_time = 60
 	shuttle_area = list(
 		/area/shuttle/castelnau/bixie/cockpit,
 		/area/shuttle/castelnau/bixie/power,
@@ -140,7 +140,7 @@
 	current_location = "nav_bixie_dock"
 	landmark_transition = "nav_bixie_transit"
 	range = 1
-	fuel_consumption = 4
+	fuel_consumption = 1.5
 	logging_home_tag = "nav_bixie_dock"
 	//logging_access = access_hangar
 	ceiling_type = /turf/simulated/floor/shuttle_ceiling
@@ -160,7 +160,7 @@
 
 /datum/shuttle/autodock/overmap/perseus
 	name = "Perseus"
-	move_time = 90
+	move_time = 60
 	shuttle_area = list(
 		/area/shuttle/castelnau/perseus/cockpit,
 		/area/shuttle/castelnau/perseus/power,
@@ -170,7 +170,7 @@
 	current_location = "nav_perseus_dock"
 	landmark_transition = "nav_perseus_transit"
 	range = 1
-	fuel_consumption = 4
+	fuel_consumption = 1.5
 	logging_home_tag = "nav_perseus_dock"
 	//logging_access = access_hangar
 	ceiling_type = /turf/simulated/floor/shuttle_ceiling
