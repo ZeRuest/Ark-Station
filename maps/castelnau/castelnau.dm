@@ -15,6 +15,7 @@
 
 	#include "datums/programs/cardmod.dm"
 	#include "datums/programs/comm.dm"
+	#include "datums/hairs.dm"
 	#include "datums/reports.dm"
 	#include "datums/other_soft.dm"
 	#include "datums/round_end.dm"
