@@ -290,6 +290,10 @@
 	icon_state = "pro_gas"
 	name = "Prometeus - Gas Lab"
 
+/area/shuttle/castelnau/prometeus/dorm
+	icon_state = "pro_dorm"
+	name = "Prometeus - Dormitory"
+
 
 
 //Perseus
