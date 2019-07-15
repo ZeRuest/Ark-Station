@@ -32,6 +32,7 @@
 //	#include "items/manuals.dm"
 //	#include "items/uniform_vendor.dm"
 
+	#include "items/clothing/castelnau_hands.dm"
 	#include "items/clothing/castelnau_under.dm"
 	#include "items/clothing/castelnau_head.dm"
 	#include "items/clothing/castelnau_suit.dm"

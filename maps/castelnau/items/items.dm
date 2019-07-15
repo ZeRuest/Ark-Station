@@ -59,8 +59,9 @@ Weapons
 /obj/item/ammo_magazine/mc9mm/oneway
 	initial_ammo = 1
 
-/obj/effect/paint/hull
-	color = COLOR_HULL
+/*****
+OTHER
+****/
 
 /obj/item/device/boombox/anchored //for bar's private rooms
 	name = "stationary boombox"
@@ -68,3 +69,6 @@ Weapons
 
 /obj/item/device/boombox/anchored/attack_hand(var/mob/user)
 	interact(user)
+
+/obj/effect/paint/hull
+	color = COLOR_HULL
