@@ -92,6 +92,9 @@
 
 	update_eyes()
 	update_body()
+	// THE ARK PROJECT CODE
+	create_eye_blink()
+	//
 	return 1
 
 /mob/living/carbon/human/proc/change_hair_color(var/red, var/green, var/blue)

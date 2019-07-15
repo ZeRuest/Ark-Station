@@ -38,6 +38,8 @@
 
 	handle_regular_hud_updates()
 
+	eye_blink() // THE ARK PROJECT CODE
+
 	return 1
 
 /mob/living/proc/handle_breathing()
