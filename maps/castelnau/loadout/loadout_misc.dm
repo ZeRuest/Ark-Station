@@ -13,11 +13,11 @@
 	gear_tweaks += new/datum/gear_tweak/path(instrument_type)
 
 
-/* /datum/gear/rolled_towel
-	display_name = "big towel"
-	description = "Collapsed big towel - looks like you can't use it as a normal one... Use it on the beach or gym."
-	path = /obj/item/rolled_towel
-	flags = GEAR_HAS_TYPE_SELECTION */
+// /datum/gear/rolled_towel
+//	display_name = "big towel"
+//	description = "Collapsed big towel - looks like you can't use it as a normal one... Use it on the beach or gym."
+//	path = /obj/item/rolled_towel
+//	flags = GEAR_HAS_TYPE_SELECTION ///////////////////мюирх йнд/////////////////////
 
 /datum/gear/lipstick
 	sort_category = "Cosmetics"
