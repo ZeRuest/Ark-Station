@@ -24,6 +24,8 @@
 //SECURITY
 /obj/machinery/vending/security
 	req_access = list(access_castelnau_security)
+	products = list(/obj/item/weapon/handcuffs = 14,/obj/item/weapon/grenade/flashbang = 4,/obj/item/weapon/grenade/chem_grenade/teargas = 4,/obj/item/device/flash = 7,
+				/obj/item/weapon/reagent_containers/spray/pepper = 4, /obj/item/weapon/reagent_containers/food/snacks/donut/normal = 12,/obj/item/weapon/storage/box/evidence = 8)
 
 /obj/machinery/suit_storage_unit/security
 	req_access = list(access_castelnau_security)

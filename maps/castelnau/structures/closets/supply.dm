@@ -26,5 +26,23 @@
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/messenger = 75, /obj/item/weapon/storage/backpack/dufflebag = 25))
 	)
 
-/obj/structure/closet/secure_closet/miner
+/obj/structure/closet/secure_closet/miner/castelnau
 	req_access = list(access_castelnau_supply)
+
+/obj/structure/closet/secure_closet/miner/castelnau/WillContain()
+	return list(
+		new /datum/atom_creator/weighted(list(
+				/obj/item/weapon/storage/backpack/industrial,
+				/obj/item/weapon/storage/backpack/satchel/eng
+			)),
+		/obj/item/device/radio/headset/headset_mining,
+		/obj/item/clothing/under/rank/miner,
+		/obj/item/clothing/gloves/thick,
+		/obj/item/clothing/shoes/black,
+		/obj/item/device/scanner/gas,
+		/obj/item/weapon/storage/ore,
+		/obj/item/device/flashlight/lantern,
+		/obj/item/weapon/shovel,
+		/obj/item/weapon/pickaxe,
+		/obj/item/clothing/glasses/meson
+	)

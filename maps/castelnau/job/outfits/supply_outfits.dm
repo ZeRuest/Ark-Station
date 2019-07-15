@@ -16,8 +16,8 @@
 
 /decl/hierarchy/outfit/job/castelnau/crew/supply/prospector
 	name = OUTFIT_JOB_NAME("Prospector")
-	uniform = /obj/item/clothing/under/color/grey
-	shoes = /obj/item/clothing/shoes
+	uniform = /obj/item/clothing/under/frontier
+	shoes = /obj/item/clothing/shoes/workboots
 	id_type = /obj/item/weapon/card/id/castelnau/crew/supply/mining
 	l_ear = /obj/item/device/radio/headset/headset_mining
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL

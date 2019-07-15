@@ -43,7 +43,7 @@
 "aQ" = (/obj/machinery/artifact_scanpad,/turf/simulated/floor/tiled/techfloor/grid,/area/shuttle/castelnau/prometeus/anomaly)
 "aR" = (/obj/structure/lattice,/obj/structure/catwalk,/obj/structure/railing/mapped{dir = 1; icon_state = "railing0-1"},/obj/machinery/light/navigation/delay2,/turf/space,/area/space)
 "aS" = (/obj/machinery/artifact_harvester,/turf/simulated/floor/tiled/techfloor/grid,/area/shuttle/castelnau/prometeus/anomaly)
-"aT" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/anomaly_container,/obj/machinery/artifact,/turf/simulated/floor/tiled/techfloor,/area/shuttle/castelnau/prometeus/anomaly)
+"aT" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/artifact,/obj/structure/anomaly_container,/turf/simulated/floor/tiled/techfloor,/area/shuttle/castelnau/prometeus/anomaly)
 "aU" = (/obj/effect/paint_stripe/red,/turf/simulated/wall/r_titanium,/area/shuttle/castelnau/prometeus/anomaly)
 "aV" = (/obj/effect/wallframe_spawn/reinforced,/obj/effect/paint_stripe/red,/turf/simulated/floor,/area/shuttle/castelnau/perseus/power)
 "aW" = (/obj/structure/lattice,/turf/space,/area/space)
@@ -54,7 +54,6 @@
 "bb" = (/obj/machinery/atmospherics/pipe/simple/hidden/universal{icon_state = "map_universal"; dir = 4},/obj/structure/table/steel,/obj/item/weapon/storage/toolbox/mechanical,/obj/machinery/cell_charger,/turf/simulated/floor,/area/shuttle/castelnau/prometeus/power)
 "bc" = (/obj/machinery/power/port_gen/pacman{sheets = 5},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 10},/obj/machinery/atmospherics/pipe/simple/hidden,/obj/structure/cable/green{d2 = 2; icon_state = "0-2"},/obj/structure/cable/green,/turf/simulated/floor,/area/shuttle/castelnau/prometeus/power)
 "bd" = (/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/floor/tiled/techfloor,/area/shuttle/castelnau/perseus/cockpit)
-"be" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/artifact,/turf/simulated/floor/tiled/techfloor,/area/shuttle/castelnau/prometeus/anomaly)
 "bf" = (/obj/structure/catwalk,/obj/machinery/firealarm{dir = 4; layer = 3.3; pixel_x = 26},/obj/structure/cable/yellow{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor,/area/shuttle/castelnau/prometeus/power)
 "bg" = (/obj/effect/paint_stripe/red,/turf/simulated/wall/ocp_wall,/area/shuttle/castelnau/prometeus/anomaly)
 "bh" = (/obj/machinery/atmospherics/unary/engine{icon_state = "nozzle"; dir = 4},/obj/effect/paint_stripe/red,/turf/simulated/wall/r_titanium,/area/shuttle/castelnau/perseus/power)
@@ -1119,7 +1118,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaoZaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadafadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaagadadabajabadaWadadaRaEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaalalalalalalaUauauauaUaUaUaUaUaUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaGababababababacacabadaIaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaalalalaoaqapaxarasaMaQaSaUatavaTbebgqpbCqpqpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaGababababababacacabadaIaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaalalalaoaqapaxarasaMaQaSaUatavaTaTbgqpbCqpqpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababaeahaianaFaHaJacadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaalraayazaAaBaCaDaKbKducucvcHcIclcUbgdkdvdthahKaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakvaLaLaLaLaVaVaLaXaaaaaaaaaaaaaaaarggkhQabaOaPaNbnbranbpbrbsacadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaalalaYaZbabbbccsbfaUdxdyebaUawawatawbgnGnGpxpJhKpTaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabhambjblbmbuaLbwbxbibzbAbAbiabababbtababananboanbvbQbRbWbXacaWaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabBbqbDbDbDbDbDbybFbEaUdwepeoaUaUhKhKhKqpbIqCqKrceYruaaaaaaaaaaaaaaaarmaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
