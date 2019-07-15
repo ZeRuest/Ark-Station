@@ -103,6 +103,7 @@
 	jackets += /obj/item/clothing/suit/storage/mbill
 	jackets += /obj/item/clothing/suit/storage/toggle/longjacket // THE ARK PROJECT CODE
 	jackets += /obj/item/clothing/suit/storage/tgbomber // THE ARK PROJECT CODE
+	jackets += /obj/item/clothing/suit/storage/tgbomber/militaryjacket // THE ARK PROJECT CODE
 	gear_tweaks += new/datum/gear_tweak/path/specified_types_list(jackets)
 
 /datum/gear/suit/wintercoat

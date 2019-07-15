@@ -8,6 +8,11 @@
 	cold_protection = UPPER_TORSO|ARMS
 	min_cold_protection_temperature = T0C - 20
 
+/obj/item/clothing/suit/storage/tgbomber/militaryjacket
+	name = "military jacket"
+	desc = "A canvas jacket styled classical American military garb. Feels sturdy, yet comfortable."
+	icon_state = "militaryjacket"
+
 /obj/item/clothing/suit/storage/toggle/longjacket
 	name = "long jacket"
 	desc = "A long gray jacket"
