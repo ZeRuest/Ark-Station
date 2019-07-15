@@ -12,4 +12,9 @@
 	icon_state = "hair_taylor"
 	gender = FEMALE
 
+/datum/sprite_accessory/hair/infinity/baum
+	name = "Baum"
+	icon = ICONS_PATH
+	icon_state = "hair_baum"
+
 #undef ICONS_PATH
