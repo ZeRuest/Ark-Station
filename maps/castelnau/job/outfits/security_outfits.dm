@@ -12,7 +12,7 @@
 
 /decl/hierarchy/outfit/job/castelnau/crew/security/warden
 	name = OUTFIT_JOB_NAME("Warden - Castelnau")
-	id_type = /obj/item/weapon/card/id/castelnau/crew/security
+	id_type = /obj/item/weapon/card/id/castelnau/crew/security/warden
 
 /decl/hierarchy/outfit/job/castelnau/crew/security/officer
 	name = OUTFIT_JOB_NAME("Security Officer - Castelnau")
