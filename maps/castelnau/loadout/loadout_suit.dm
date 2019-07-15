@@ -29,5 +29,6 @@
 
 /datum/gear/suit/longjacket
 	path = /obj/item/clothing/suit/storage/toggle/longjacket
+	display_name = "long jacket"
 
 
