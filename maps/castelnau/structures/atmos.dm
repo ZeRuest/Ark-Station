@@ -47,10 +47,10 @@
 	frequency = 1441
 
 /obj/machinery/air_sensor/prometeus/xenobotany
-	id_tag = "pro_xenbot"
+	id_tag = "pro_xenobot"
 
 /obj/machinery/air_sensor/prometeus/xenobiology
-	id_tag = "pro_xenbio"
+	id_tag = "pro_xenobio"
 
 /obj/machinery/air_sensor/prometeus/anomaly
 	id_tag = "pro_ano"
@@ -127,7 +127,7 @@
 /obj/machinery/computer/general_air_control/large_tank_control/prometeus/xenobiology
 	name = "Isolation Chamber Atmosphere Control"
 	input_tag = "pro_xenobio_in"
-	output_tag = "pro_xenoboi_out"
+	output_tag = "pro_xenobio_out"
 	sensors = list("pro_xenobio" = "Isolation Chamber")
 
 /obj/machinery/computer/general_air_control/large_tank_control/prometeus/anomaly
