@@ -24,7 +24,7 @@
 	display_name = "Heltek Magnus revolver"
 	path = /obj/item/weapon/gun/projectile/pistol/magnum_pistol
 	allowed_roles = ARMED_ROLES
-	cost = 8
+	cost = 10
 
 /datum/gear/guns/holdout
 	display_name = "P3 Whisper concealable pistol"
@@ -35,7 +35,7 @@
 	display_name = "Magnum revolver"
 	path = /obj/item/weapon/gun/projectile/revolver
 	allowed_roles = ARMED_ROLES
-	cost = 7
+	cost = 10
 
 /datum/gear/guns/revolvermedium
 	display_name = "Solid revolver"
