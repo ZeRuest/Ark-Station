@@ -23,12 +23,3 @@
 	armors["green plate carrier"] = /obj/item/clothing/suit/armor/pcarrier/green
 	armors["tan plate carrier"] = /obj/item/clothing/suit/armor/pcarrier/tan
 	gear_tweaks += new/datum/gear_tweak/path(armors)
-
-/datum/gear/suit/tgbomber
-	path = /obj/item/clothing/suit/storage/tgbomber
-
-/datum/gear/suit/longjacket
-	path = /obj/item/clothing/suit/storage/toggle/longjacket
-	display_name = "long jacket"
-
-
