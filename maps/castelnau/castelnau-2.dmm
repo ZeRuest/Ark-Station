@@ -281,7 +281,7 @@
 "fu" = (/turf/simulated/floor/tiled,/area/castelnau/hallway/primary/seconddeck/central_stairwell)
 "fv" = (/turf/simulated/wall,/area/castelnau/supply/office)
 "fw" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/blast/shutters{dir = 2; id = "sup_office"; name = "Supply Office Shutters"},/turf/simulated/floor/plating,/area/castelnau/supply/office)
-"fx" = (/obj/structure/table/reinforced,/obj/machinery/door/window/southleft{dir = 2; name = "Supply Desk"},/obj/machinery/door/blast/shutters{dir = 2; id = "sup_office"; name = "Supply Office Shutters"},/turf/simulated/floor/plating,/area/castelnau/supply/office)
+"fx" = (/obj/structure/table/reinforced,/obj/machinery/door/window/southleft{autoset_access = 0; dir = 2; name = "Supply Desk"; req_access = list("ACCESS_CASTELNAU_SUPPLY")},/obj/machinery/door/blast/shutters{dir = 2; id = "sup_office"; name = "Supply Office Shutters"},/turf/simulated/floor/plating,/area/castelnau/supply/office)
 "fy" = (/obj/machinery/door/airlock/mining{id_tag = null; name = "Supply Office"; req_access = list("ACCESS_CARGO")},/obj/machinery/door/firedoor,/turf/simulated/floor/tiled,/area/castelnau/supply/office)
 "fz" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/structure/disposalpipe/segment,/turf/simulated/wall,/area/castelnau/supply/office)
 "fA" = (/obj/machinery/door/airlock/hatch/maintenance,/obj/machinery/door/firedoor,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/techfloor/grid,/area/castelnau/maintenance/seconddeck/port)
