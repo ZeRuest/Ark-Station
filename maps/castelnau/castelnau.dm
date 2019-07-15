@@ -73,6 +73,7 @@
 
 	#include "machinery/generator_inverted.dm"
 	#include "machinery/eng_equip.dm"
+	#include "machinery/consoles.dm"
 	#include "machinery/keycard authentication.dm"
 	#include "machinery/lighting.dm"
 	#include "machinery/vendors_storages.dm"
