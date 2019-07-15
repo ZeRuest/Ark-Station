@@ -34,6 +34,7 @@
 
 	#include "items/clothing/castelnau_under.dm"
 	#include "items/clothing/castelnau_head.dm"
+	#include "items/clothing/castelnau-suit.dm"
 	#include "items/clothing/solgov-accessory.dm"
 	#include "items/clothing/solgov-armor.dm"
 	#include "items/clothing/solgov-feet.dm"
