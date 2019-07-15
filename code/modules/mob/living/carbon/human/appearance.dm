@@ -82,7 +82,7 @@
 
 	update_hair()
 
-/mob/living/carbon/human/proc/change_eye_color(var/red, var/green, var/blue)
+/mob/living/carbon/human/proc/change_eye_color(var/red, var/green, var/blue, var/ignore_blink = 0) // THE ARK PROJECT CODE
 	if(red == r_eyes && green == g_eyes && blue == b_eyes)
 		return
 
@@ -93,7 +93,8 @@
 	update_eyes()
 	update_body()
 	// THE ARK PROJECT CODE
-	create_eye_blink()
+	if(ignore_blink == 0)
+		create_eye_blink()
 	//
 	return 1
 
