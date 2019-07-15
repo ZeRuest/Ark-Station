@@ -38,6 +38,25 @@
 /obj/machinery/air_sensor/reactor/two
 	id_tag = "reac_chamber_2"
 
+//
+//SENSORS FOR PROMETEUS
+//
+
+/obj/machinery/air_sensor/prometeus
+	output = 127
+	frequency = 1441
+
+/obj/machinery/air_sensor/prometeus/xenobotany
+	id_tag = "pro_xenbot"
+
+/obj/machinery/air_sensor/prometeus/xenobiology
+	id_tag = "pro_xenbio"
+
+/obj/machinery/air_sensor/prometeus/anomaly
+	id_tag = "pro_ano"
+
+/obj/machinery/air_sensor/prometeus/gas
+	id_tag = "pro_gas"
 
 //
 //COMPUTERS FOR ATMOSPHERICS
@@ -94,6 +113,36 @@
 	input_tag = "reac_in_2"
 	output_tag = "reac_out_2"
 	sensors = list("reac_chamber_2" = "Reactor Chamber")
+
+//
+//COMPUTERS FOR PROMETEUS
+//
+
+/obj/machinery/computer/general_air_control/large_tank_control/prometeus/xenobotany
+	name = "Isolation Chamber Atmosphere Control"
+	input_tag = "pro_xenobot_in"
+	output_tag = "pro_xenobot_out"
+	sensors = list("pro_xenobot" = "Isolation Chamber")
+
+/obj/machinery/computer/general_air_control/large_tank_control/prometeus/xenobiology
+	name = "Isolation Chamber Atmosphere Control"
+	input_tag = "pro_xenobio_in"
+	output_tag = "pro_xenoboi_out"
+	sensors = list("pro_xenobio" = "Isolation Chamber")
+
+/obj/machinery/computer/general_air_control/large_tank_control/prometeus/anomaly
+	name = "Isolation Chamber Atmosphere Control"
+	input_tag = "pro_ano_in"
+	output_tag = "pro_ano_out"
+	sensors = list("pro_ano" = "Isolation Chamber")
+
+/obj/machinery/computer/general_air_control/large_tank_control/prometeus/gas
+	name = "Combustion Chamber Atmosphere Control"
+	input_tag = "pro_gas_in"
+	output_tag = "pro_gas_out"
+	sensors = list("pro_gas" = "Combustion Chamber")
+
+
 
 //
 //GENERAL
