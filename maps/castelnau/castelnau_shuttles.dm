@@ -104,7 +104,8 @@
 		/area/shuttle/castelnau/prometeus/eva,
 		/area/shuttle/castelnau/prometeus/gas,
 		/area/shuttle/castelnau/prometeus/xen,
-		/area/shuttle/castelnau/prometeus/dorm
+		/area/shuttle/castelnau/prometeus/dorm,
+		/area/shuttle/castelnau/prometeus/tele
 	)
 	dock_target = "prometeus_shuttle_airlock"
 	current_location = "nav_prometeus_dock"
