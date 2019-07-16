@@ -104,13 +104,14 @@ var/const/NETWORK_PROMETEUS   = "Prometeus"
 
 /obj/machinery/telecomms/server/presets/science_prometeus
 	id = "Prometeus Science Server"
+	network = "tcommsat_Prometeus"
 	freq_listening = list(SCI_FREQ)
 	channel_tags = list(list(SCI_FREQ, "Science", COMMS_COLOR_SCIENCE))
 	autolinkers = list("sciencePrometeus")
 
 /obj/machinery/telecomms/broadcaster/preset_prometeus
 	id = "Prometeus Broadcaster"
-	network = "tcommsat"
+	network = "tcommsat_Prometeus"
 	autolinkers = list("broadcasterPrometeus")
 
 
