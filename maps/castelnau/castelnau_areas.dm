@@ -294,6 +294,10 @@
 	icon_state = "pro_dorm"
 	name = "Prometeus - Dormitory"
 
+/area/shuttle/castelnau/prometeus/tele
+	icon_state = "pro_tele"
+	name = "Prometeus - Telecomms"
+
 
 
 //Perseus
