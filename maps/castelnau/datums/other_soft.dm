@@ -26,11 +26,9 @@
 /datum/computer_file/program/supply
 	available_on_ntnet = 0
 
-/datum/nano_module/deck_management
-
 //SECURITY
 /datum/computer_file/program/forceauthorization
-	required_access = access_castelnau_sheriff
+	available_on_ntnet = 0
 
 /datum/computer_file/program/digitalwarrant
 	available_on_ntnet = 0
