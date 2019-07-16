@@ -17,11 +17,13 @@
 
 /obj/machinery/computer/general_air_control/engines_tanks
 	name = "Nacelles Tank Monitoring"
+	frequency = 1441
 	sensors = list("ReacEngFuel1" = "Engine 1 Fuel (H2+O2)",
 				"ReacEngFuel2" = "Engine 2 Fuel (H2+O2)")
 
 /obj/machinery/computer/general_air_control/engines_flame
 	name = "Nacelles Chamber Monitoring"
+	frequency = 1441
 	sensors = list("ReacEng1" = "Engine 1 Chamber",
  				"ReacEng2" = "Engine 2 Chamber")
 
