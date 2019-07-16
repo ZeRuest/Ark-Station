@@ -40,6 +40,10 @@
 /obj/machinery/suit_cycler/mining
 	req_access = list(access_castelnau_supply)
 
+//SCIENCE
+/obj/machinery/suit_storage_unit/science
+	req_access = list(access_castelnau_prometeus)
+
 //MISC
 /obj/machinery/vending/boozeomat
 	req_access = list(access_castelnau_bar)
