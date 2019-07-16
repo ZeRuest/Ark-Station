@@ -41,3 +41,8 @@
 	display_name = "deodorant"
 	path = /obj/item/weapon/reagent_containers/spray/cleaner/deodorant
 	sort_category = "Cosmetics"
+
+/datum/gear/ring/watch
+	display_name = "watch"
+	path = /obj/item/clothing/ring/watch
+	sort_category = "General"
