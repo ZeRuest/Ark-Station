@@ -33,6 +33,10 @@
 /datum/gear/accessory/stethoscope
 	allowed_roles = STERILE_ROLES
 
+/datum/gear/accessory/tags
+	display_name = "SolGov dog tags"
+	path = /obj/item/clothing/accessory/badge/solgov/tags
+
 /datum/gear/tactical/holster
 	allowed_roles = ARMED_ROLES
 
