@@ -57,7 +57,7 @@
 	minimal_player_age = 10
 	ideal_character_age = 25
 	alt_titles = list(
-		"PMC Unit",
+		"PMC Operative",
 		"Soldier")
 
 	skill_points = 20
