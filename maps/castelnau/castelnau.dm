@@ -15,6 +15,7 @@
 
 	#include "datums/programs/cardmod.dm"
 	#include "datums/programs/comm.dm"
+	#include "datums/programs/deck_management.dm"
 	#include "datums/hairs.dm"
 	#include "datums/reports.dm"
 	#include "datums/other_soft.dm"
