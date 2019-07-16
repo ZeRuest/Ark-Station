@@ -17,7 +17,7 @@
 						/datum/job/senior_doctor, /datum/job/doctor,
 						/datum/job/qm, /datum/job/mining,
 						/datum/job/janitor, /datum/job/chef, /datum/job/bartender,
-						/datum/job/senior_scientist, /datum/job/scientist, /datum/job/roboticist, /datum/job/scientist_assistant,
+						/datum/job/senior_scientist, /datum/job/scientist, /datum/job/roboticist, /datum/job/scientist_assistant, /datum/job/scientist_pilot,
 						/datum/job/assistant
 						)
 
