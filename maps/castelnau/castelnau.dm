@@ -13,13 +13,15 @@
 	#include "castelnau_shuttles.dm"
 //	#include "castelnau_unit_testing.dm"
 
-	#include "datums/programs/cardmod.dm"
-	#include "datums/programs/comm.dm"
-	#include "datums/programs/deck_management.dm"
 	#include "datums/hairs.dm"
 	#include "datums/reports.dm"
 	#include "datums/other_soft.dm"
 	#include "datums/round_end.dm"
+	#include "datums/preset_console.dm"
+	#include "datums/programs/cardmod.dm"
+	#include "datums/programs/comm.dm"
+	#include "datums/programs/deck_management.dm"
+	#include "datums/programs/records.dm"
 
 	#include "items/cards_ids.dm"
 	#include "items/encryption_keys.dm"
