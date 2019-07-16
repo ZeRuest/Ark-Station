@@ -91,10 +91,27 @@ var/const/NETWORK_PROMETEUS   = "Prometeus"
 // T-Coms
 //
 
-/obj/machinery/telecomms/relay/preset/prometeus
-	id = "Charon Relay"
-	toggled = 0
-	autolinkers = list("s_relay")
+/obj/machinery/telecomms/receiver/preset_prometeus
+	id = "Prometeus Receiver"
+	network = "tcommsat_Prometeus"
+	autolinkers = list("receiverPrometeus")
+	freq_listening = list(SCI_FREQ)
+
+/obj/machinery/telecomms/processor/preset_prometeus
+	id = "CentComm Processor"
+	network = "tcommsat_Prometeus"
+	autolinkers = list("processorCent", "broadcasterPrometeus", "receiverPrometeus", "sciencePrometeus")
+
+/obj/machinery/telecomms/server/presets/science_prometeus
+	id = "Prometeus Science Server"
+	freq_listening = list(SCI_FREQ)
+	channel_tags = list(list(SCI_FREQ, "Science", COMMS_COLOR_SCIENCE))
+	autolinkers = list("sciencePrometeus")
+
+/obj/machinery/telecomms/broadcaster/preset_prometeus
+	id = "Prometeus Broadcaster"
+	network = "tcommsat"
+	autolinkers = list("broadcasterPrometeus")
 
 
 //
