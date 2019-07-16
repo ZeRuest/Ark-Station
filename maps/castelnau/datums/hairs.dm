@@ -120,7 +120,6 @@
 	icon = ICONS_PATH
 	icon_state = "hair_long"
 
-//[MODED_VG]__________________________________________________________
 /datum/sprite_accessory/hair/bedhead_4
 	name = "Bedhead 4"
 	icon = ICONS_PATH
@@ -246,4 +245,5 @@
 	name = "Country"
 	icon = ICONS_PATH
 	icon_state = "hair_country"
-//[/MODED_VG]_________________________________________________________
+
+#undef ICONS_PATH
