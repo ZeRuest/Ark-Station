@@ -27,7 +27,7 @@
 	icon = ICONS_PATH
 	icon_state = "hair_ponytail"
 
-/datum/sprite_accessory/hair
+/datum/sprite_accessory/hair/angel
 	name = "Angel"
 	icon = ICONS_PATH
 	icon_state = "hair_angel"
