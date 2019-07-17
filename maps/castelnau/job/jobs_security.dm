@@ -50,8 +50,8 @@
 	title = "Security Officer"
 	department = "Security"
 	department_flag = SEC
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "the Sheriff"
 	economic_power = 6
 	minimal_player_age = 10
