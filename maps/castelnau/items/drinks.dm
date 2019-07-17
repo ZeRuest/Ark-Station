@@ -13,7 +13,7 @@
 	name = "\improper Cyber Fox Cider"
 	desc = "A can of Cyber Fox brand cider."
 	icon = 'maps/castelnau/icons/obj/drinks.dmi'
-	icon_state = "cola"
+	icon_state = "cider"
 	center_of_mass = "x=16;y=10"
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/cider/New()
