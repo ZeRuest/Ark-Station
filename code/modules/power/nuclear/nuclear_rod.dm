@@ -157,7 +157,7 @@ var/list/nrods = list()
 
 	else
 		if (sealed == 0)
-			if(!reactants)
+			if(!reactants.len)
 				icon_state = "nofuel_rod"
 			else
 				switch(rodtemp)
