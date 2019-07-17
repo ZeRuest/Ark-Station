@@ -39,7 +39,7 @@ GLOBAL_LIST_INIT(castelnay_command, list("Captain"))
 	num_exoplanets = 2
 	planet_size = list(200,200)
 
-	away_site_budget = 2
+	away_site_budget = 4
 //	id_hud_icons = 'maps/sierra/icons/assignment_hud.dmi'
 
 /datum/map/castelnau/setup_map()
