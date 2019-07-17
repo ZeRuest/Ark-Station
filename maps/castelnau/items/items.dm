@@ -72,3 +72,6 @@ OTHER
 
 /obj/effect/paint/hull
 	color = COLOR_HULL
+
+/obj/item/weapon/disk/survey
+	w_class = ITEM_SIZE_TINY
