@@ -102,6 +102,7 @@ var/list/control_rods = list()
 		len = 0
 	if(health <= 0)
 		icon_state = "cr_broken"
+		len = 0
 	else
 		switch(len)
 			if (-1 to 0.1)
