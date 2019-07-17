@@ -34,7 +34,7 @@
 	)
 
 /obj/structure/closet/secure_closet/security/castenlau
-	name = "security officer's locker"
+	name = "deputy sheriff's locker"
 	req_access = list(access_castelnau_security)
 
 

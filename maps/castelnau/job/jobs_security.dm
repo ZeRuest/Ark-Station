@@ -47,7 +47,7 @@
 
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant)
 /datum/job/officer
-	title = "Security Officer"
+	title = "Deputy Sheriff"
 	department = "Security"
 	department_flag = SEC
 	total_positions = 1
