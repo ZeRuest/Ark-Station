@@ -428,7 +428,7 @@
 "il" = (/obj/machinery/light/small{dir = 1},/turf/simulated/floor/carpet/red,/area/castelnau/civ/lounge)
 "im" = (/obj/structure/sign/warning/pods/east{pixel_y = 24},/turf/simulated/floor/carpet/red,/area/castelnau/civ/lounge)
 "in" = (/obj/machinery/alarm{alarm_id = "xenobio4_alarm"; dir = 2; icon_state = "alarm0"; pixel_x = 0; pixel_y = 24},/turf/simulated/floor/carpet/red,/area/castelnau/civ/lounge)
-"io" = (/turf/simulated/floor/tiled/techfloor/grid,/area/castelnau/command/bridge)
+"io" = (/obj/structure/table/glass,/turf/simulated/floor/tiled/techfloor/grid,/area/castelnau/command/bridge)
 "ip" = (/turf/simulated/floor/tiled/techfloor,/area/castelnau/command/bridge)
 "iq" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/effect/floor_decal/corner_techfloor_grid{icon_state = "corner_techfloor_grid"; dir = 6},/turf/simulated/floor/tiled/techfloor,/area/castelnau/command/bridge)
 "ir" = (/obj/effect/wallframe_spawn/reinforced,/turf/simulated/floor/plating,/area/castelnau/command/bridge)
