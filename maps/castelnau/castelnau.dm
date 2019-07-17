@@ -24,6 +24,7 @@
 	#include "datums/programs/records.dm"
 
 	#include "items/cards_ids.dm"
+	#include "items/drinks.dm"
 	#include "items/encryption_keys.dm"
 	#include "items/headsets.dm"
 	#include "items/items.dm"
