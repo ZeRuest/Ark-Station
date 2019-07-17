@@ -26,6 +26,9 @@
 /datum/computer_file/program/supply
 	available_on_ntnet = 0
 
+/datum/computer_file/program/merchant
+	req_access = access_castelnau_supply
+
 //SECURITY
 /datum/computer_file/program/forceauthorization
 	available_on_ntnet = 0

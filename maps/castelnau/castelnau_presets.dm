@@ -197,9 +197,3 @@ var/const/NETWORK_ENGINEERING_OUTPOST = "Engineering Outpost"
 		num2text(SRV_FREQ)   = list(access_janitor, access_hydroponics),
 		num2text(EXP_FREQ)   = list() //DEBUG
 	)
-
-/datum/computer_file/program/merchant
-	required_access = list("ACCESS_CASTELNAU_SUPPLY")
-
-/obj/machinery/computer/shuttle_control/merchant
-	req_access = list(null)
