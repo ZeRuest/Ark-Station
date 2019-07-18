@@ -75,3 +75,18 @@ OTHER
 
 /obj/item/weapon/disk/survey
 	w_class = ITEM_SIZE_TINY
+
+/obj/item/tape/police
+	req_access = list(access_castelnau_security)
+
+/obj/item/tape/engineering
+	req_access = list(access_castelnau_engineering)
+
+/obj/item/tape/atmos
+	req_access = list(access_castelnau_atmospherics)
+
+/obj/item/tape/research
+	req_access = list(access_castelnau_prometeus)
+
+/obj/item/tape/medical
+	req_access = list(access_castelnau_medical)
