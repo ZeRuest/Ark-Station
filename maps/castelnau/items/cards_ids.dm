@@ -78,3 +78,6 @@
 
 /obj/item/weapon/card/id/castelnau/crew/research/roboticist
 	job_access_type = /datum/job/roboticist
+
+/obj/item/weapon/card/id/castelnau/crew/research/scientist_pilot
+	job_access_type = /datum/job/scientist_pilot

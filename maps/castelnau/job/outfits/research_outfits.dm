@@ -40,6 +40,11 @@
 	shoes = /obj/item/clothing/shoes/white
 	id_type = /obj/item/weapon/card/id/castelnau/crew/research
 
+/decl/hierarchy/outfit/job/castelnau/crew/research/scientist_pilot
+	name = OUTFIT_JOB_NAME("Research Pilot - Castelnau")
+	shoes = /obj/item/clothing/shoes/white
+	id_type = /obj/item/weapon/card/id/castelnau/crew/research/scientist_pilot
+
 /decl/hierarchy/outfit/job/castelnau/crew/research/assist/testsubject
 	name = OUTFIT_JOB_NAME("Testing Assistant")
 	uniform = /obj/item/clothing/under/color/white

@@ -141,7 +141,7 @@
 
 	max_skill = list(   SKILL_PILOT     = SKILL_MAX)
 
-	outfit_type = /decl/hierarchy/outfit/job/castelnau/crew/research/assist
+	outfit_type = /decl/hierarchy/outfit/job/castelnau/crew/research/scientist_pilot
 	allowed_branches = list(/datum/mil_branch/science_personnel)
 	allowed_ranks = list(/datum/mil_rank/civ/civ)
 
