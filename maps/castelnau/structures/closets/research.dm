@@ -82,3 +82,6 @@
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/toxins, /obj/item/weapon/storage/backpack/satchel/tox)),
 		new /datum/atom_creator/simple(/obj/item/weapon/storage/backpack/messenger/tox, 50)
 	)
+
+/obj/structure/closet/crate/secure/biohazard
+	req_access = list(access_castelnau_prometeus)
