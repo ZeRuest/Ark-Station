@@ -197,3 +197,6 @@ var/const/NETWORK_ENGINEERING_OUTPOST = "Engineering Outpost"
 		num2text(SRV_FREQ)   = list(access_janitor, access_hydroponics),
 		num2text(EXP_FREQ)   = list() //DEBUG
 	)
+
+/obj/machinery/shield_diffuser
+	enabled = 0
