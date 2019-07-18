@@ -35,7 +35,5 @@
 /datum/gear/tactical/balaclava
 	allowed_roles = ARMORED_ROLES
 
-/datum/gear/head/beret/sec/saare
-	display_name = "SAARE beret"
-	path = /obj/item/clothing/head/beret/sec/saare
+/datum/gear/head/beretselection
 	allowed_roles = ARMORED_ROLES

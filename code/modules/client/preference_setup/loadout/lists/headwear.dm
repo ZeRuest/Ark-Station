@@ -9,9 +9,15 @@
 	flags = GEAR_HAS_COLOR_SELECTION
 	description = "A simple, solid color beret. This one has no emblems or insignia on it."
 
-/datum/gear/head/whitentberet
-	display_name = "beret, corporate security"
-	path = /obj/item/clothing/head/beret/guard
+/datum/gear/head/beretselection // THE ARK PROJECT CODE
+	display_name = "contractor beret selection"
+	path = /obj/item/clothing/head/beret
+
+/datum/gear/head/beretselection/New()
+	..()
+	var/contractor_berets = list()
+	contractor_berets["corporight security beret"] = /obj/item/clothing/head/beret/guard
+	contractor_berets["SAARE beret"] = /obj/item/clothing/head/beret/sec/saare
 
 /datum/gear/head/bandana
 	display_name = "bandana selection"
