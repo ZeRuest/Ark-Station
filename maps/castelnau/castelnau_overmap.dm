@@ -1,7 +1,7 @@
 /obj/effect/overmap/ship/castelnau
 	name = "MOTV Castelnau"
 	fore_dir = WEST
-	vessel_mass = 28000
+	vessel_mass = 15000
 	start_x = 4
 	start_y = 5
 	base = TRUE
@@ -28,17 +28,20 @@
 /obj/effect/overmap/ship/landable/prometeus
 	name = "Prometeus"
 	shuttle = "Prometeus"
-	fore_dir = NORTH
+	vessel_mass = 7500
+	fore_dir = WEST
 
 /obj/effect/overmap/ship/landable/perseus
 	name = "Perseus"
 	shuttle = "Perseus"
-	fore_dir = NORTH
+	vessel_mass = 1000
+	fore_dir = EAST
 
 /obj/effect/overmap/ship/landable/bixie
 	name = "Bixie"
 	shuttle = "Bixie"
-	fore_dir = NORTH
+	vessel_mass = 1000
+	fore_dir = EAST
 
 /obj/machinery/computer/shuttle_control/explore/prometeus
 	name = "prometeus control console"
