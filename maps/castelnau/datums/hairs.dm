@@ -55,6 +55,7 @@
 
 /datum/sprite_accessory/hair/shortflip
 	name = "Flippy Punk"
+	icon = ICONS_PATH
 	icon_state = "hair_shortflip"
 
 /datum/sprite_accessory/hair/longemo_new
