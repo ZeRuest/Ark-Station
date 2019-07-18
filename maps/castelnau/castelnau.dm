@@ -13,7 +13,7 @@
 	#include "castelnau_shuttles.dm"
 //	#include "castelnau_unit_testing.dm"
 
-//	#include "code/who.dm"
+	#include "code/who.dm"
 	#include "code/emote/emote_buttons.dm"
 	#include "code/emote/emotions_define.dm"
 	#include "code/emote/audible.dm"
