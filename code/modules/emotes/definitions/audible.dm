@@ -2,7 +2,7 @@
 	key = "burp"
 	emote_message_3p = "USER burps."
 	message_type = AUDIBLE_MESSAGE
-	var/emote_sound
+//	var/emote_sound // THE ARK PROJECT CODE
 
 /decl/emote/audible/do_extra(var/atom/user)
 	if(emote_sound)
