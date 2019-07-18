@@ -6,7 +6,7 @@
 	name = "senior scientist's locker"
 	req_access = list(access_castelnau_prometeus_senior)
 
-/obj/structure/closet/secure_closet/RD_sierra/WillContain()
+/obj/structure/closet/secure_closet/scientist/senior_scientist_castelnau/WillContain()
 	return list(
 		/obj/item/clothing/suit/bio_suit/scientist,
 		/obj/item/clothing/head/bio_hood/scientist,
@@ -17,10 +17,8 @@
 		/obj/item/clothing/shoes/white,
 		/obj/item/clothing/gloves/latex,
 		/obj/item/clothing/glasses/science,
-		/obj/item/device/radio/headset/heads/rd,
 		/obj/item/weapon/tank/emergency/oxygen/engi,
 		/obj/item/clothing/mask/gas,
-		/obj/item/device/flash,
 		/obj/item/device/megaphone,
 		/obj/item/weapon/storage/belt/general,
 		/obj/item/weapon/folder,
@@ -30,6 +28,7 @@
 		/obj/item/taperoll/research,
 		/obj/item/clothing/glasses/welding/superior,
 		/obj/item/weapon/storage/box/secret_project_disks/science,
+		/obj/prefab/hand_teleporter,
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/toxins, /obj/item/weapon/storage/backpack/satchel/tox)),
 		new /datum/atom_creator/simple(/obj/item/weapon/storage/backpack/messenger/tox, 50)
 	)
