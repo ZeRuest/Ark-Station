@@ -9,8 +9,8 @@
 	minimal_player_age = 14
 	ideal_character_age = 35
 	alt_titles = list(
-		"Security Specialist",
-		"Sergeant"
+		"PMC Ranger",
+		"Security Pointman"
 		)
 	outfit_type = /decl/hierarchy/outfit/job/castelnau/crew/security/warden
 	allowed_branches = list(/datum/mil_branch/ship_personnel)
@@ -57,8 +57,8 @@
 	minimal_player_age = 10
 	ideal_character_age = 25
 	alt_titles = list(
-		"PMC Operative",
-		"Soldier")
+		"PMC Junior Ranger",
+		"Security Operative")
 
 	skill_points = 20
 
