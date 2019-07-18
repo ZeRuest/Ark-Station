@@ -69,12 +69,12 @@
 	path = /obj/item/weapon/gun/projectile/automatic/merc_smg
 	antag_roles = list(MODE_MERCENARY)
 
-/datum/uplink_item/item/visible_weapons/assaultrifle
+/* /datum/uplink_item/item/visible_weapons/assaultrifle // DISABLED BY THE ARK PROJECT
 	name = "Assault Rifle"
 	desc = "A common rifle with three togglable fire modes."
 	item_cost = 60
 	path = /obj/item/weapon/gun/projectile/automatic/assault_rifle
-	antag_roles = list(MODE_MERCENARY)
+	antag_roles = list(MODE_MERCENARY) */
 
 /datum/uplink_item/item/visible_weapons/advanced_energy_gun
 	name = "Advanced Energy Gun"
@@ -134,12 +134,12 @@
 	item_cost = 24
 	path = /obj/item/weapon/gun/projectile/revolver/holdout
 
-/datum/uplink_item/item/visible_weapons/pulserifle
+/* /datum/uplink_item/item/visible_weapons/pulserifle // DISABLED BY THE ARK PROJECT
 	name = "Pulse Rifle"
 	desc = "A triple burst, heavy laser rifle, with a large battery compacity."
 	item_cost = 68
 	path = /obj/item/weapon/gun/energy/pulse_rifle
-	antag_roles = list(MODE_MERCENARY)
+	antag_roles = list(MODE_MERCENARY) */
 
 /datum/uplink_item/item/visible_weapons/flechetterifle
 	name = "Flechette Rifle"
