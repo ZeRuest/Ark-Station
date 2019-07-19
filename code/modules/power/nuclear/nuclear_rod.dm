@@ -140,7 +140,7 @@ var/list/nrods = list()
 		var/chamb_temp = environment.temperature
 		if (rodtemp > chamb_temp)
 			environment.add_thermal_energy((rodtemp-chamb_temp)*ratio*1200)
-			rodtemp -= (rodtemp-chamb_temp) * ratio / 20
+			rodtemp -= (rodtemp-chamb_temp) * ratio / 10
 
 
 	else
