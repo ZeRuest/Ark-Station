@@ -44,6 +44,9 @@
 /obj/machinery/suit_storage_unit/science
 	req_access = list(access_castelnau_prometeus)
 
+/obj/machinery/vending/robotics
+	req_access = list(access_castelnau_prometeus)
+
 //MISC
 /obj/machinery/vending/boozeomat
 	req_access = list(access_castelnau_bar)
