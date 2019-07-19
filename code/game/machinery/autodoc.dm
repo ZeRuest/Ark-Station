@@ -99,17 +99,14 @@ var/list/autodocs = list()
 	for(var/obj/item/organ/N in organs)
 		if(N.name == name)
 			Org = N
-			visible_message("<span class='notice'>[Org.name]selected</span>")
 			break
 
 	visible_message("<span class='notice'>[src] beeps.</span>")
 	operating = 1
 	if(Org in organs_ext)
 		var/obj/item/organ/external/O = Org
-		visible_message("<span class='notice'>external.</span>")
 		switch(opname)
 			if("Heal")
-				visible_message("<span class='notice'>[src] mends tissue on [O.name].</span>")
 				while (O.damage > 0)
 					sleep(30)
 					O.damage -= rand(3,6)
