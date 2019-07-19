@@ -139,7 +139,7 @@ var/list/nrods = list()
 		var/ratio = min(environment.return_pressure()/ONE_ATMOSPHERE, 1)
 		var/chamb_temp = environment.temperature
 		if (rodtemp > chamb_temp)
-			environment.add_thermal_energy((rodtemp-chamb_temp)*ratio*400)
+			environment.add_thermal_energy((rodtemp-chamb_temp)*ratio*1200)
 			rodtemp -= (rodtemp-chamb_temp) * ratio / 20
 
 
@@ -224,7 +224,7 @@ var/list/nrods = list()
 				reactants[cur_reaction.substance] = 0
 
 			rodtemp += amount_reacting * cur_reaction.heat_production * 45
-			own_rads += amount_reacting * cur_reaction.radiation * 20
+			own_rads += amount_reacting * cur_reaction.radiation * 30
 
 			for(var/pr_reactant in cur_reaction.products)   //?I ?t???q?p?r?|???u?} ???????t???{???? ???u?p?{???y?y
 				var/success = 0
