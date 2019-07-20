@@ -8,7 +8,7 @@
 	question = "End the game?"
 
 /datum/vote/end_game/can_run(mob/creator, automatic)
-	if( !(automatic || (config.allow_vote_restart || is_admin(creator))))
+	if( !(automatic || config.allow_vote_restart || is_admin(creator)))
 		return FALSE // Admins and autovotes bypass the config setting.
 	var/decl/security_state/security_state = decls_repository.get_decl(GLOB.using_map.security_state)
 	if (!automatic && security_state.current_security_level_is_same_or_higher_than(security_state.high_security_level))
