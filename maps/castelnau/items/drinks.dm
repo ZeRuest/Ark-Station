@@ -3,7 +3,7 @@
 	description = "A refreshing beverage."
 	taste_description = "cider"
 	reagent_state = LIQUID
-	color = "#FFEA73"
+	color = "#ffea73"
 	strength = 50
 
 	glass_name = "Cider"

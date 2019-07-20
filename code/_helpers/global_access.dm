@@ -265,6 +265,8 @@
 			return global.atmosphere_alarm;
 		if("attack_log_repository")
 			return global.attack_log_repository;
+		if("autodocs")
+			return global.autodocs;
 		if("autolathe_categories")
 			return global.autolathe_categories;
 		if("autolathe_recipes")
@@ -329,6 +331,8 @@
 			return global.config;
 		if("contamination_overlay")
 			return global.contamination_overlay;
+		if("control_rods")
+			return global.control_rods;
 		if("create_mob_html")
 			return global.create_mob_html;
 		if("create_object_html")
@@ -345,6 +349,8 @@
 			return global.custom_event_msg;
 		if("custom_items")
 			return global.custom_items;
+		if("cyrillic_unicode_keys")
+			return global.cyrillic_unicode_keys;
 		if("damage_icon_parts")
 			return global.damage_icon_parts;
 		if("dbcon")
@@ -623,6 +629,8 @@
 			return global.next_station_date_change;
 		if("ninjastart")
 			return global.ninjastart;
+		if("nrods")
+			return global.nrods;
 		if("ntnet_card_uid")
 			return global.ntnet_card_uid;
 		if("ntnet_global")
@@ -631,6 +639,8 @@
 			return global.ntnrc_uid;
 		if("nttransfer_uid")
 			return global.nttransfer_uid;
+		if("nuclear_reactions")
+			return global.nuclear_reactions;
 		if("nuke_disks")
 			return global.nuke_disks;
 		if("num_financial_terminals")
@@ -725,6 +735,8 @@
 			return global.restricted_camera_networks;
 		if("revdata")
 			return global.revdata;
+		if("rkeys")
+			return global.rkeys;
 		if("robot_custom_icons")
 			return global.robot_custom_icons;
 		if("robot_hud_colours")
@@ -1180,6 +1192,8 @@
 			global.atmosphere_alarm=newval;
 		if("attack_log_repository")
 			global.attack_log_repository=newval;
+		if("autodocs")
+			global.autodocs=newval;
 		if("autolathe_categories")
 			global.autolathe_categories=newval;
 		if("autolathe_recipes")
@@ -1244,6 +1258,8 @@
 			global.config=newval;
 		if("contamination_overlay")
 			global.contamination_overlay=newval;
+		if("control_rods")
+			global.control_rods=newval;
 		if("create_mob_html")
 			global.create_mob_html=newval;
 		if("create_object_html")
@@ -1260,6 +1276,8 @@
 			global.custom_event_msg=newval;
 		if("custom_items")
 			global.custom_items=newval;
+		if("cyrillic_unicode_keys")
+			global.cyrillic_unicode_keys=newval;
 		if("damage_icon_parts")
 			global.damage_icon_parts=newval;
 		if("dbcon")
@@ -1538,6 +1556,8 @@
 			global.next_station_date_change=newval;
 		if("ninjastart")
 			global.ninjastart=newval;
+		if("nrods")
+			global.nrods=newval;
 		if("ntnet_card_uid")
 			global.ntnet_card_uid=newval;
 		if("ntnet_global")
@@ -1546,6 +1566,8 @@
 			global.ntnrc_uid=newval;
 		if("nttransfer_uid")
 			global.nttransfer_uid=newval;
+		if("nuclear_reactions")
+			global.nuclear_reactions=newval;
 		if("nuke_disks")
 			global.nuke_disks=newval;
 		if("num_financial_terminals")
@@ -1640,6 +1662,8 @@
 			global.restricted_camera_networks=newval;
 		if("revdata")
 			global.revdata=newval;
+		if("rkeys")
+			global.rkeys=newval;
 		if("robot_custom_icons")
 			global.robot_custom_icons=newval;
 		if("robot_hud_colours")
@@ -1962,6 +1986,7 @@
 	"assigned_blocks",
 	"atmosphere_alarm",
 	"attack_log_repository",
+	"autodocs",
 	"autolathe_categories",
 	"autolathe_recipes",
 	"base_miss_chance",
@@ -1994,6 +2019,7 @@
 	"common_tools",
 	"config",
 	"contamination_overlay",
+	"control_rods",
 	"create_mob_html",
 	"create_object_html",
 	"create_turf_html",
@@ -2002,6 +2028,7 @@
 	"csrfz_check",
 	"custom_event_msg",
 	"custom_items",
+	"cyrillic_unicode_keys",
 	"damage_icon_parts",
 	"dbcon",
 	"dbcon_old",
@@ -2141,10 +2168,12 @@
 	"next_duration_update",
 	"next_station_date_change",
 	"ninjastart",
+	"nrods",
 	"ntnet_card_uid",
 	"ntnet_global",
 	"ntnrc_uid",
 	"nttransfer_uid",
+	"nuclear_reactions",
 	"nuke_disks",
 	"num_financial_terminals",
 	"organ_cache",
@@ -2192,6 +2221,7 @@
 	"responsive_carriers",
 	"restricted_camera_networks",
 	"revdata",
+	"rkeys",
 	"robot_custom_icons",
 	"robot_hud_colours",
 	"robot_inventory",

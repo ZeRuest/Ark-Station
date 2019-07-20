@@ -14,13 +14,13 @@
 	light_type = /obj/item/weapon/light/bulb/green
 
 /obj/machinery/floor_light/prebuilt/bar/violet
-    icon = 'icons/turf/flooring/circuit.dmi'
-    light_outer_range = 3
-    icon_state = "vcircuit"
-    light_max_bright = 1
-    light_color = "#9400D3"
-    default_light_colour = "#9400D3"
-    on = 1
+	icon = 'icons/turf/flooring/circuit.dmi'
+	light_outer_range = 3
+	icon_state = "vcircuit"
+	light_max_bright = 1
+	light_color = "#9400d3"
+	default_light_colour = "#9400d3"
+	on = 1
 
 /obj/machinery/floor_light/prebuilt/bar/red
 	icon = 'icons/turf/flooring/circuit.dmi'
@@ -35,5 +35,5 @@
 	light_outer_range = 3
 	icon_state = "base"
 	light_max_bright = 0.75
-	light_color = "#1E90FF"
-	default_light_colour = "#1E90FF"
+	light_color = "#1e90ff"
+	default_light_colour = "#1e90ff"

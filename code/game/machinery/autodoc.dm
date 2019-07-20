@@ -51,7 +51,7 @@ var/list/autodocs = list()
 /obj/machinery/autodoc/attack_hand(mob/user)
 	move_inside()
 
-/obj/machinery/autodoc/update_icon()
+/obj/machinery/autodoc/on_update_icon()
 	if(stat & NOPOWER)
 		icon_state = "autodoc_off"
 	else if(operating)
@@ -688,5 +688,3 @@ var/list/autodocs = list()
 
 	if(href_list["switch"])
 		connected.automaticmode = !connected.automaticmode
-
-
