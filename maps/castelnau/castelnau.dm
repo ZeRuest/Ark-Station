@@ -39,7 +39,7 @@
 	#include "items/random.dm"
 	#include "items/mobile_ladders.dm"
 	#include "items/exploration_suit.dm"
-//	#include "items/manuals.dm"
+	#include "items/manuals.dm"
 //	#include "items/uniform_vendor.dm"
 
 	#include "items/clothing/castelnau_hands.dm"
