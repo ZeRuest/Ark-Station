@@ -89,7 +89,7 @@
 		var/new_overall = input("Enter new overall length", "Setting new length", 0) as num
 		for(var/obj/machinery/control_rod/C in control_rods)
 			if(C.target != new_overall)
-				C.target = new_overall
+				C.target = Clamp(new_overall, 0, 4)
 		return TOPIC_REFRESH
 
 	return TOPIC_REFRESH

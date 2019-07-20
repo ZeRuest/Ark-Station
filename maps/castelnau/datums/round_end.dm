@@ -8,14 +8,8 @@
 	question = "End the game?"
 
 /datum/vote/end_game/can_run(mob/creator, automatic)
-	if(!(. = ..()))
-		return
-	if(!evacuation_controller || !evacuation_controller.should_call_autotransfer_vote())
-		return FALSE
-	if(!automatic && (!config.allow_vote_restart || !is_admin(creator)))
+	if( !(automatic || config.allow_vote_restart || is_admin(creator)))
 		return FALSE // Admins and autovotes bypass the config setting.
-	if(check_rights(R_INVESTIGATE, 0, creator))
-		return //Mods bypass further checks.
 	var/decl/security_state/security_state = decls_repository.get_decl(GLOB.using_map.security_state)
 	if (!automatic && security_state.current_security_level_is_same_or_higher_than(security_state.high_security_level))
 		to_chat(creator, "The current alert status is too high to call for a game!")
@@ -23,6 +17,7 @@
 	if(GAME_STATE <= RUNLEVEL_SETUP)
 		to_chat(creator, "The end game button has been disabled!")
 		return FALSE
+	return TRUE
 
 /datum/vote/end_game/setup_vote(mob/creator, automatic)
 	choices = list("End game", "Extend the Round ([config.vote_autotransfer_interval / 600] minutes)")

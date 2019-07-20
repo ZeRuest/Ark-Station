@@ -139,8 +139,8 @@ var/list/nrods = list()
 		var/ratio = min(environment.return_pressure()/ONE_ATMOSPHERE, 1)
 		var/chamb_temp = environment.temperature
 		if (rodtemp > chamb_temp)
-			environment.add_thermal_energy((rodtemp-chamb_temp)*ratio*400)
-			rodtemp -= (rodtemp-chamb_temp) * ratio / 20
+			environment.add_thermal_energy((rodtemp-chamb_temp)*ratio*1200)
+			rodtemp -= (rodtemp-chamb_temp) * ratio / 10
 
 
 	else
