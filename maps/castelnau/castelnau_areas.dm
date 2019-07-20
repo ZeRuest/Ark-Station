@@ -501,19 +501,40 @@ CREATE_CST_AREA(engineering/foyer)
 CREATE_CST_AREA(security/equip)
 	name = "Security - Equipment"
 	icon_state = "security_equip"
+	req_access = list(access_castelnau_brig)
 
 CREATE_CST_AREA(security/processing)
 	name = "Security - Processing"
 	icon_state = "security_processing"
+	req_access = list(access_castelnau_brig)
 
 CREATE_CST_AREA(security/hall)
 	name = "Security - Hall"
 	icon_state = "security"
+	req_access = list(access_castelnau_brig)
 
 CREATE_CST_AREA(security/brig)
 	name = "Security - Brig"
 	icon_state = "security_brig"
 	req_access = list(access_castelnau_brig)
+
+CREATE_CST_AREA(security/recreation)
+	name = "Security - Recreation"
+	icon_state = "security_brig"
+	req_access = list(access_castelnau_brig)
+
+CREATE_CST_AREA(security/aux)
+	name = "Security - Auxiliary Equipment"
+	icon_state = "security_brig"
+	req_access = list(access_castelnau_brig)
+
+CREATE_CST_AREA(command/fo)
+	name = "Command - First Officer's Quarters"
+	icon_state = "captain"
+	sound_env = MEDIUM_SOFTFLOOR
+	req_access = list(access_castelnau_comoffice)
+
+
 
 //FIRST_DECK(Z-3)
 CREATE_CST_AREA(maintenance/firstdeck/aftstarboard)
@@ -641,6 +662,12 @@ CREATE_CST_AREA(command/captain)
 	icon_state = "captain"
 	sound_env = MEDIUM_SOFTFLOOR
 	req_access = list(access_castelnau_comoffice)
+
+CREATE_CST_AREA(command/captainquarts)
+	name = "Command - Captain's Quarters"
+	icon_state = "captain"
+	sound_env = MEDIUM_SOFTFLOOR
+	req_access = list(access_castelnau_captain)
 
 CREATE_CST_AREA(command/eva)
 	name = "EVA Storage"
