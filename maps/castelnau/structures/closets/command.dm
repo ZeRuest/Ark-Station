@@ -7,7 +7,7 @@
 /obj/structure/closet/secure_closet/captains/castelnau/WillContain()
 	return list(
 		/obj/item/clothing/glasses/sunglasses,
-		/obj/item/weapon/gun/energy/gun/secure,
+		/obj/item/weapon/gun/energy/gun,
 		/obj/item/clothing/accessory/storage/holster/thigh,
 		/obj/item/device/radio/headset/heads/castelnau_captain,
 		/obj/item/device/radio/headset/heads/castelnau_captain/alt,
@@ -33,7 +33,7 @@
 		/obj/item/device/radio/headset/heads/hop,
 		/obj/item/device/radio/headset/heads/hop/alt,
 		/obj/item/clothing/accessory/storage/holster/thigh,
-		/obj/item/weapon/gun/energy/gun/secure,
+		/obj/item/weapon/gun/energy/gun,
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/weapon/material/clipboard,
 		/obj/item/device/flash,
