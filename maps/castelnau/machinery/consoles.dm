@@ -3,9 +3,3 @@
 
 /obj/machinery/computer/rdconsole/robotics
 	req_access = list("ACCESS_PROMETEUS")
-
-/obj/machinery/mecha_part_fabricator
-	req_access = list("ACCESS_PROMETEUS")
-
-/obj/machinery/robotic_fabricator
-	req_access = list("ACCESS_PROMETEUS")

@@ -88,6 +88,7 @@
 	#include "machinery/keycard authentication.dm"
 	#include "machinery/lighting.dm"
 	#include "machinery/vendors_storages.dm"
+	#include "machinery/other.dm"
 
 	#include "structures/closets/command.dm"
 	#include "structures/sofa.dm"
