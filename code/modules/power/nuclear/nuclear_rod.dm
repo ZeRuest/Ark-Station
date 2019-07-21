@@ -228,8 +228,8 @@ var/list/nrods = list()
 				amount_reacting = reactants[cur_reaction.substance]
 				reactants[cur_reaction.substance] = 0
 
-			rodtemp += amount_reacting * cur_reaction.heat_production * 70
-			own_rads += amount_reacting * cur_reaction.radiation * 25
+			rodtemp += amount_reacting * cur_reaction.heat_production * 320
+			own_rads += amount_reacting * cur_reaction.radiation * 65
 
 			for(var/pr_reactant in cur_reaction.products)   //?I ?t???q?p?r?|???u?} ???????t???{???? ???u?p?{???y?y
 				var/success = 0
