@@ -18,6 +18,9 @@
 /obj/machinery/suit_storage_unit/engineering
 	req_access = list(access_castelnau_engineering)
 
+/obj/machinery/suit_storage_unit/atmos
+	req_access = list(access_castelnau_engineering)
+
 /obj/machinery/suit_cycler/engineering
 	req_access = list(access_castelnau_engineering)
 
