@@ -13,7 +13,7 @@
 "am" = (/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/manifold/visible/fuel{dir = 1},/turf/simulated/floor/airless,/area/castelnau/thruster/d2starboard)
 "an" = (/obj/machinery/atmospherics/unary/engine{icon_state = "nozzle"; dir = 8},/turf/simulated/wall/r_wall/hull,/area/castelnau/thruster/d2starboard)
 "ao" = (/obj/structure/ladder/up,/obj/structure/catwalk,/turf/simulated/floor/plating,/area/castelnau/thruster/d2starboard)
-"ap" = (/obj/structure/catwalk,/obj/structure/ladder/updown,/obj/structure/lattice,/turf/space,/area/space)
+"ap" = (/obj/structure/catwalk,/obj/structure/ladder/updown,/turf/space,/area/space)
 "aq" = (/obj/structure/catwalk,/obj/machinery/firealarm{pixel_y = 24},/turf/simulated/floor/plating,/area/castelnau/thruster/d2starboard)
 "ar" = (/obj/structure/catwalk,/obj/structure/railing/mapped{icon_state = "railing0-1"; dir = 1},/obj/structure/railing/mapped,/turf/simulated/floor/plating,/area/castelnau/thruster/d2starboard)
 "as" = (/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/simple/visible/cyan{icon_state = "intact"; dir = 5},/turf/simulated/floor/plating,/area/castelnau/thruster/d2starboard)
