@@ -169,9 +169,6 @@
 	corps += /obj/item/clothing/under/morpheus
 	corps += /obj/item/clothing/under/skinner
 	corps += /obj/item/clothing/under/dais
-	corps += /obj/item/clothing/under/avalon // THE ARK PROJECT CODE
-	corps += /obj/item/clothing/under/avalon1 // THE ARK PROJECT CODE
-	corps += /obj/item/clothing/under/avalon2 // THE ARK PROJECT CODE
 	gear_tweaks += new/datum/gear_tweak/path/specified_types_list(corps)
 
 /datum/gear/uniform/corp_exec
