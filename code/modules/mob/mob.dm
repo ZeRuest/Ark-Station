@@ -320,7 +320,9 @@
 	var/tile = get_turf(A)
 	if (!tile)
 		return 0
-
+	if(isghost(src))
+		src.me_verb("point to [A.name] on coordinate x=[A.x], y=[A.y], z=[A.z]")
+		return 0
 	var/obj/P = new /obj/effect/decal/point(tile)
 	P.set_invisibility(invisibility)
 	spawn (20)
