@@ -43,6 +43,8 @@
 	#include "items/manuals.dm"
 //	#include "items/uniform_vendor.dm"
 
+	#include "items/custom_items/card_readers.dm"
+
 	#include "items/clothing/castelnau_hands.dm"
 	#include "items/clothing/castelnau_under.dm"
 	#include "items/clothing/castelnau_head.dm"
