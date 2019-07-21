@@ -409,28 +409,24 @@ datum/objective/steal
 	var/global/possible_items[] = list(
 		"the captain's antique laser gun" = /obj/item/weapon/gun/energy/captain,
 		"a bluespace rift generator" = /obj/item/integrated_circuit/manipulation/bluespace_rift,
-//		"an RCD" = /obj/item/weapon/rcd, // THE ARK PROJECT CODE
+		"an RCD" = /obj/item/weapon/rcd, 
 		"a jetpack" = /obj/item/weapon/tank/jetpack,
-//		"a captain's jumpsuit" = /obj/item/clothing/under/rank/captain,  // THE ARK PROJECT CODE
-//		"a functional AI" = /obj/item/weapon/aicard,  // THE ARK PROJECT CODE
+		"a captain's jumpsuit" = /obj/item/clothing/under/rank/captain,
+		"a functional AI" = /obj/item/weapon/aicard,
 		"a pair of magboots" = /obj/item/clothing/shoes/magboots,
 		"the [station_name()] blueprints" = /obj/item/blueprints,
-//		"a nasa voidsuit" = /obj/item/clothing/suit/space/void,  // THE ARK PROJECT CODE
+		"a nasa voidsuit" = /obj/item/clothing/suit/space/void,
 		"28 moles of phoron (full tank)" = /obj/item/weapon/tank,
 		"a sample of slime extract" = /obj/item/slime_extract,
-//		"a piece of corgi meat" = /obj/item/weapon/reagent_containers/food/snacks/meat/corgi,  // THE ARK PROJECT CODE
-//		"a chief science officer's jumpsuit" = /obj/item/clothing/under/rank/research_director,  // THE ARK PROJECT CODE
-//		"a chief engineer's jumpsuit" = /obj/item/clothing/under/rank/chief_engineer,  // THE ARK PROJECT CODE
-//		"a chief medical officer's jumpsuit" = /obj/item/clothing/under/rank/chief_medical_officer,  // THE ARK PROJECT CODE
-//		"a head of security's jumpsuit" = /obj/item/clothing/under/rank/head_of_security,  // THE ARK PROJECT CODE
-//		"a head of personnel's jumpsuit" = /obj/item/clothing/under/rank/head_of_personnel,  // THE ARK PROJECT CODE
+		"a piece of corgi meat" = /obj/item/weapon/reagent_containers/food/snacks/meat/corgi,
+		"a chief science officer's jumpsuit" = /obj/item/clothing/under/rank/research_director,
+		"a chief engineer's jumpsuit" = /obj/item/clothing/under/rank/chief_engineer,
+		"a chief medical officer's jumpsuit" = /obj/item/clothing/under/rank/chief_medical_officer,
+		"a head of security's jumpsuit" = /obj/item/clothing/under/rank/head_of_security,
+		"a head of personnel's jumpsuit" = /obj/item/clothing/under/rank/head_of_personnel,
 		"the hypospray" = /obj/item/weapon/reagent_containers/hypospray,
-//		"the captain's pinpointer" = /obj/item/weapon/pinpointer,  // THE ARK PROJECT CODE
-//		"an ablative armor vest" = /obj/item/clothing/suit/armor/laserproof,  // THE ARK PROJECT CODE
-		"a secret science project disk" = /obj/item/weapon/disk/secret_project/science,  // THE ARK PROJECT CODE
-		"the core of the RnD server" = /obj/item/weapon/circuitboard/rdserver,  // THE ARK PROJECT CODE
-		"the core of the robotics server" = /obj/machinery/r_n_d/server/robotics,  // THE ARK PROJECT CODE
-		"the senior scientist's ID card" = /obj/item/weapon/card/id/castelnau/crew/research/senior_scientist  // THE ARK PROJECT CODE
+		"the captain's pinpointer" = /obj/item/weapon/pinpointer,
+		"an ablative armor vest" = /obj/item/clothing/suit/armor/laserproof,
 	)
 
 	var/global/possible_items_special[] = list(
@@ -868,4 +864,3 @@ datum/objective/heist/salvage
 			rval = 2
 		return 0
 	return rval
-

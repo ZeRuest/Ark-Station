@@ -14,6 +14,7 @@
 //	#include "castelnau_unit_testing.dm"
 
 	#include "code/who.dm"
+	#include "code/gamemodes/objectives.dm"
 	#include "code/emote/emote_buttons.dm"
 	#include "code/emote/emotions_define.dm"
 	#include "code/emote/audible.dm"
