@@ -62,5 +62,10 @@
 		/obj/item/clothing/mask/gas/half,
 	)
 
+/obj/structure/closet/secure_closet/security/castenlau/specialist
+	name = "security specialist's locker"
+	req_access = list(access_castelnau_security)
+
+
 /obj/structure/closet/crate/secure/weapon
 	req_access = list(access_castelnau_security)
