@@ -128,6 +128,8 @@ var/list/nrods = list()
 
 /obj/machinery/power/nuclear_rod/Process()     // îáëó÷åíèå è íàãðåâ àòìîñà (â îáîèõ ñìûñëàõ, ïðèâåò àíòàãàì) + ïðîêè
 	React()
+	if(rodtemp < 0)
+		rodtemp = 0
 	if(F && !reactants.len)
 		reactants = F.reactants
 		F = null
@@ -148,6 +150,8 @@ var/list/nrods = list()
 	else
 		SSradiation.radiate(src, round (own_rads * sealcoeff))    // â ïðèíöèïå, ìîæíî ñòàâèòü ëþáîé
 	own_rads = own_rads/raddecay*100
+	if(own_rads > 2500)
+		own_rads += own_rads/raddecay*10
 	if(reaction_rads > 5)
 		reaction_rads = reaction_rads/(rand(191,211))/(rodtemp + 500)*10000
 	check_state()
@@ -227,14 +231,22 @@ var/list/nrods = list()
 			else
 				amount_reacting = reactants[cur_reaction.substance]
 				reactants[cur_reaction.substance] = 0
-			if(((rodtemp + amount_reacting * cur_reaction.heat_production * 320) < 3000) || ((amount_reacting * cur_reaction.heat_production * 320) < 250))
-				rodtemp += amount_reacting * cur_reaction.heat_production * 320
-			else
-				if(((rodtemp + amount_reacting * cur_reaction.heat_production * 100) < 4000) || ((amount_reacting * cur_reaction.heat_production * 100) < 200))
-					rodtemp += amount_reacting * cur_reaction.heat_production * 100
+
+			if((amount_reacting * cur_reaction.heat_production * 100) < 4000)
+				if(((rodtemp + amount_reacting * cur_reaction.heat_production * 320) < 3000) || ((amount_reacting * cur_reaction.heat_production * 320) < 250))
+					rodtemp += amount_reacting * cur_reaction.heat_production * 320
 				else
-					rodtemp += amount_reacting * cur_reaction.heat_production * 40
-			own_rads += amount_reacting * cur_reaction.radiation * 65
+					if(((rodtemp + amount_reacting * cur_reaction.heat_production * 100) < 4000) || ((amount_reacting * cur_reaction.heat_production * 100) < 200))
+						rodtemp += amount_reacting * cur_reaction.heat_production * 100
+					else
+						rodtemp += amount_reacting * cur_reaction.heat_production * 40
+
+			if(own_rads < 300)
+				own_rads += amount_reacting * cur_reaction.radiation * 65
+			else if(own_rads < 1000)
+				own_rads += amount_reacting * cur_reaction.radiation * 30
+			else if(own_rads < 5000)
+				own_rads += amount_reacting * cur_reaction.radiation * 10
 
 			for(var/pr_reactant in cur_reaction.products)   //?I ?t???q?p?r?|???u?} ???????t???{???? ???u?p?{???y?y
 				var/success = 0
