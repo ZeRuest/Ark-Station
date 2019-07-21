@@ -62,7 +62,7 @@
 
 	minimal_access = list(access_castelnau_prometeus)
 
-	skill_points = 22
+	skill_points = 25
 
 /datum/job/roboticist
 	title = "Roboticist"
@@ -81,17 +81,20 @@
 	allowed_ranks = list(/datum/mil_rank/civ/civ)
 	min_skill = list(   SKILL_COMPUTER		= SKILL_ADEPT,
 	                    SKILL_MECH          = SKILL_ADEPT,
-	                    SKILL_DEVICES		= SKILL_ADEPT)
+	                    SKILL_DEVICES		= SKILL_ADEPT,
+	                    SKILL_ANATOMY       = SKILL_BASIC)
 
 	max_skill = list(   SKILL_CONSTRUCTION = SKILL_MAX,
 						SKILL_COMPUTER	   = SKILL_MAX,
 						SKILL_MECH		   = SKILL_MAX,
 	                    SKILL_DEVICES      = SKILL_MAX,
-	                    SKILL_MEDICAL      = SKILL_MAX)
+	                    SKILL_ANATOMY      = SKILL_EXPERT)
 
 	access = list(access_castelnau_prometeus)
 
 	minimal_access = list(access_castelnau_prometeus)
+
+	skill_points = 20
 
 /datum/job/scientist_assistant
 	title = "Research Assistant"
