@@ -7,12 +7,13 @@ var/list/nrods = list()
 	desc = "A nuclear rod, that generates radiation, thermal energy and some problems ."
 	icon = 'icons/obj/machines/nuclearcore.dmi'
 	icon_state = "base_rod"
-	anchored = 0
+	anchored = 1
 	density = 1
 	var/sealed = 0
 	use_power = 0
 	var/accepted_rads = 0
 	var/own_rads = 0
+	var/reaction_rads
 	var/rodtemp = 293
 	var/sealcoeff = 0
 	var/raddecay = 0.003
@@ -134,8 +135,9 @@ var/list/nrods = list()
 	var/datum/gas_mixture/environment = loc.return_air()
 	if(sealed == 0)
 		if(rodtemp > 500)
-			set_light((rodtemp-400)/10, 20, 1, 2, 1)
-		SSradiation.radiate(src, own_rads)
+			set_light(0.9, 20, 1, 2, 1)
+		var/emitted = own_rads/(rodtemp+1)*(rodtemp+300)
+		SSradiation.radiate(src, emitted)
 		var/ratio = min(environment.return_pressure()/ONE_ATMOSPHERE, 1)
 		var/chamb_temp = environment.temperature
 		if (rodtemp > chamb_temp)
@@ -146,6 +148,8 @@ var/list/nrods = list()
 	else
 		SSradiation.radiate(src, round (own_rads * sealcoeff))    // â ïðèíöèïå, ìîæíî ñòàâèòü ëþáîé
 	own_rads = own_rads/raddecay*100
+	if(reaction_rads > 5)
+		reaction_rads = reaction_rads/(rand(191,211))/(rodtemp + 500)*10000
 	check_state()
 	on_update_icon()
 	update_icon()
@@ -182,10 +186,11 @@ var/list/nrods = list()
 		reactants[name] = quantity
 
 
-/obj/machinery/power/nuclear_rod/proc/React()  // ??? ????? ???????????? ????, ??-??
-	var/accepted_rads = SSradiation.get_rads_at_turf(get_turf(src)) - own_rads
-	if (accepted_rads < 0)
-		accepted_rads = 0
+/obj/machinery/power/nuclear_rod/proc/React()
+	if((SSradiation.get_rads_at_turf(get_turf(src)) - own_rads) > 0)
+		reaction_rads += SSradiation.get_rads_at_turf(get_turf(src)) - own_rads
+	if (reaction_rads < 0)
+		reaction_rads = 0
 
 	if(reactants.len)
 		var/list/produced_reactants = new /list(0)
@@ -193,20 +198,20 @@ var/list/nrods = list()
 			var/decl/nuclear_reaction/p_reaction = new p_reaction_type
 			if(!p_reaction.substance || (p_reaction.type in possible_reactions))
 				continue
-			if(reactants[p_reaction.substance] && accepted_rads >= p_reaction.required_rads)
+			if(reactants[p_reaction.substance] && reaction_rads >= p_reaction.required_rads)
 				possible_reactions += p_reaction.type
 
 		while(possible_reactions.len)                 //? ?????? ??? ??????? ??????
 			var/cur_reaction_type = pick(possible_reactions)
 			var/decl/nuclear_reaction/cur_reaction = new cur_reaction_type
 			var/max_num_reactants = 0
-			if(accepted_rads < cur_reaction.required_rads)
+			if(reaction_rads < cur_reaction.required_rads)
 				possible_reactions -= cur_reaction.type
 				continue
 
 			if(reactants[cur_reaction.substance] > 0.01)  //?O?????u?t?u?|?u?~?y?u ?{???|?y???u?????r?p ?r?????????p?u?}???s?? ?r ???u?p?{???y??
 				if(cur_reaction.required_rads > 0)
-					max_num_reactants = (10 + accepted_rads/cur_reaction.required_rads) * reactants[cur_reaction.substance] / 80000
+					max_num_reactants = (1 + reaction_rads/cur_reaction.required_rads) * reactants[cur_reaction.substance] / 80000
 				else
 					max_num_reactants = reactants[cur_reaction.substance] / 2000
 			else
@@ -223,8 +228,8 @@ var/list/nrods = list()
 				amount_reacting = reactants[cur_reaction.substance]
 				reactants[cur_reaction.substance] = 0
 
-			rodtemp += amount_reacting * cur_reaction.heat_production * 45
-			own_rads += amount_reacting * cur_reaction.radiation * 20
+			rodtemp += amount_reacting * cur_reaction.heat_production * 320
+			own_rads += amount_reacting * cur_reaction.radiation * 65
 
 			for(var/pr_reactant in cur_reaction.products)   //?I ?t???q?p?r?|???u?} ???????t???{???? ???u?p?{???y?y
 				var/success = 0
