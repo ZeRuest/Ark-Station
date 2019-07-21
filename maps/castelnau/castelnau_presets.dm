@@ -200,3 +200,4 @@ var/const/NETWORK_ENGINEERING_OUTPOST = "Engineering Outpost"
 
 /obj/machinery/shield_diffuser
 	enabled = 0
+	icon_state = "fdiffuser_on"
