@@ -960,7 +960,7 @@
 "sx" = (/obj/random/closet,/obj/random/toolbox,/turf/simulated/floor/plating,/area/castelnau/maintenance/seconddeck/port)
 "sy" = (/obj/random/obstruction,/turf/simulated/floor/plating,/area/castelnau/maintenance/seconddeck/port)
 "sz" = (/obj/structure/catwalk,/obj/machinery/alarm{dir = 1; pixel_y = -24},/turf/simulated/floor/plating,/area/castelnau/maintenance/seconddeck/port)
-"sA" = (/obj/machinery/firealarm{dir = 1; pixel_y = -26},/obj/effect/floor_decal/industrial/outline/red,/obj/structure/closet/secure_closet/detective,/turf/simulated/floor/tiled/monotile,/area/castelnau/security/equip)
+"sA" = (/obj/machinery/firealarm{dir = 1; pixel_y = -26},/obj/effect/floor_decal/industrial/outline/red,/obj/structure/closet/secure_closet/security/castenlau/specialist,/turf/simulated/floor/tiled/monotile,/area/castelnau/security/equip)
 "sB" = (/obj/structure/closet/secure_closet/security/castenlau,/obj/effect/floor_decal/industrial/outline/red,/turf/simulated/floor/tiled/monotile,/area/castelnau/security/equip)
 "sG" = (/obj/machinery/atmospherics/omni/filter{tag_east = 1; tag_north = 4; tag_south = 7; tag_west = 2},/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled/techfloor/grid,/area/castelnau/engineering/atmos)
 "sO" = (/obj/effect/catwalk_plated,/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 5},/turf/simulated/floor/plating,/area/castelnau/engineering/storage)
