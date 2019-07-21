@@ -55,6 +55,7 @@
 		/obj/item/clothing/glasses/meson,
 		/obj/item/device/radio,
 		/obj/item/device/flashlight/lantern,
+		/obj/item/weapon/storage/belt/archaeology,
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/toxins, /obj/item/weapon/storage/backpack/satchel/tox)),
 		new /datum/atom_creator/simple(/obj/item/weapon/storage/backpack/dufflebag, 50)
 	)
@@ -79,6 +80,7 @@
 		/obj/item/taperoll/research,
 		/obj/item/clothing/gloves/latex,
 		/obj/item/clothing/glasses/science,
+		/obj/item/weapon/storage/belt/general,
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/toxins, /obj/item/weapon/storage/backpack/satchel/tox)),
 		new /datum/atom_creator/simple(/obj/item/weapon/storage/backpack/messenger/tox, 50)
 	)
