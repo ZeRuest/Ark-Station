@@ -42,6 +42,8 @@ GLOBAL_LIST_INIT(castelnay_command, list("Captain"))
 	away_site_budget = 4
 //	id_hud_icons = 'maps/sierra/icons/assignment_hud.dmi'
 
+	starting_money = 30000
+
 /datum/map/castelnau/setup_map()
 	..()
 	system_name = generate_system_name()
