@@ -11,13 +11,15 @@
 
 /datum/gear/head/beretselection // THE ARK PROJECT CODE
 	display_name = "contractor beret selection"
+	description = "a list of berets used by various organizations and corporights"
 	path = /obj/item/clothing/head/beret
 
 /datum/gear/head/beretselection/New()
 	..()
-	var/contractor_berets = list()
-	contractor_berets["corporight security beret"] = /obj/item/clothing/head/beret/guard
-	contractor_berets["SAARE beret"] = /obj/item/clothing/head/beret/sec/saare
+	var/beretselection_type = list()
+	beretselection_type["corporight security beret"] = /obj/item/clothing/head/beret/guard
+	beretselection_type["SAARE beret"] = /obj/item/clothing/head/beret/sec/saare
+	gear_tweaks += new/datum/gear_tweak/path(beretselection_type)
 
 /datum/gear/head/bandana
 	display_name = "bandana selection"
