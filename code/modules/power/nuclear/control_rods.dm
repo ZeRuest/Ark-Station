@@ -8,7 +8,7 @@ var/list/control_rods = list()
 	anchored = 1
 	density = 0
 	use_power = 0
-	var/base_accp = 60
+	var/base_accp = 100
 	var/len = 0
 	var/target = 0
 	var/speed = 0.1
@@ -17,11 +17,13 @@ var/list/control_rods = list()
 	var/id_tag
 	var/load = 0
 	var/nocontrol = 0
+	var/console_tag
 
 
 
 /obj/machinery/control_rod/New()
 	..()
+	console_tag = control_rods.len + 1
 	control_rods += src
 
 
@@ -126,7 +128,7 @@ var/list/control_rods = list()
 	var/datum/gas_mixture/environment = loc.return_air()
 	if(environment.temperature > 3000)
 		health -= (environment.temperature - 3000)/10
-	if(try_power(load) && health > 0)
+	if(try_power(load) || health > 0)
 		nocontrol = 0
 
 	else

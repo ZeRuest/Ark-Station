@@ -5,80 +5,30 @@
 	light_color = COLOR_BLUE
 	idle_power_usage = 250
 	active_power_usage = 500
-
+	var/datum/nano_module/rmon/mon
 	var/id_tag
-	var/scan_range = 50
+
+
+/obj/machinery/computer/reactor_control/New()
+	..()
+	mon = new(src)
+	mon.id_tag = id_tag
+
+/obj/machinery/computer/reactor_control/Destroy()
+	qdel(mon)
+	mon = null
+	..()
 
 /obj/machinery/computer/reactor_control/attack_ai(mob/user)
-	attack_hand(user)
+	ui_interact(user)
 
 /obj/machinery/computer/reactor_control/attack_hand(mob/user)
 	add_fingerprint(user)
-	interact(user)
+	ui_interact(user)
 
-/obj/machinery/computer/reactor_control/Process()
-	updateDialog()
+/obj/machinery/computer/reactor_control/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1, var/datum/topic_state/state = GLOB.default_state)
+	mon.ui_interact(user, ui_key, ui, force_open, state)
 
-/obj/machinery/computer/reactor_control/interact(var/mob/user)
-
-	if(stat & (BROKEN|NOPOWER))
-		user.unset_machine()
-		user << browse(null, "window=fuel_control")
-		return
-
-	if (!istype(user, /mob/living/silicon) && get_dist(src, user) > 1)
-		user.unset_machine()
-		user << browse(null, "window=fuel_control")
-		return
-
-	if(!id_tag)
-		to_chat(user, "<span class='warning'>This console has not been assigned to any reactor. Please, input console id with a multitool.</span>")
-		return
-
-	var/dat = "<B>Reactor Control #[id_tag]</B><BR>"
-	dat += {"
-		<hr>
-		<table border=1 width='100%'>
-		<tr>
-		<td><b>Rod</b></td>
-		<td><b>Neutron Emission Rate</b></td>
-		<td><b>Temperature</b></td>
-		</tr>"}
-
-	for(var/obj/machinery/power/nuclear_rod/I in nrods)
-		if(!id_tag || !I.id_tag || I.id_tag != id_tag || get_dist(src, I) > scan_range)
-			continue
-
-		dat += "<tr>"
-		dat += "<td>[I.name]</td>"
-
-		if(I.broken == 1)
-			dat += "<td><span class='danger'>ERROR</span></td>"
-			dat += "<td><span class='danger'>ERROR</span></td>"
-		else
-			dat += "<td>[I.own_rads]</td>"
-			dat += "<td>[I.rodtemp] K </td>"
-
-		dat += "</tr>"
-
-	dat += {"</table><hr>
-		<A href='?src=\ref[src];close=1'>Close</A><BR>"}
-
-	var/datum/browser/popup = new(user, "rod_control", "Reactor Control Console", 800, 400, src)
-	popup.set_content(dat)
-	popup.open()
-	add_fingerprint(user)
-	user.set_machine(src)
-
-/obj/machinery/computer/reactor_control/OnTopic(var/mob/user, var/href_list, var/datum/topic_state/state)
-
-
-
-	if( href_list["close"] )
-		user << browse(null, "window=rod_control")
-		user.unset_machine()
-
-	return TOPIC_REFRESH
 
 
 /obj/machinery/computer/reactor_control/attackby(var/obj/item/W, var/mob/user)
@@ -86,9 +36,49 @@
 		var/new_ident = input("Enter a new ID.", "Rod Control", id_tag) as null|text
 		if(new_ident && user.Adjacent(src))
 			id_tag = new_ident
+			mon.id_tag = new_ident
 		return
 	return ..()
 
 
 /obj/machinery/computer/reactor_control/setupexample
 	id_tag = "pripyat"
+
+
+/datum/nano_module/rmon
+	name = "Reactor monitor"
+	var/list/known_rods = list()
+	var/id_tag
+
+/datum/nano_module/rmon/ui_interact(mob/user, ui_key = "rcon", datum/nanoui/ui=null, force_open=1, var/datum/topic_state/state = GLOB.default_state)
+	FindDevices() // Update our devices list
+	var/overtemp = 0
+	var/list/data = host.initial_data()
+	var/list/rodlist = new /list()
+	for(var/obj/machinery/power/nuclear_rod/R in known_rods)
+		overtemp += R.rodtemp
+		rodlist.Add(list(list(
+		"name" = R.name,
+		"temp" = R.rodtemp,
+		"rads" = R.own_rads,
+		"broken" = R.broken
+		)))
+
+	data["rods"] = sortByKey(rodlist, "name")
+	data["id"] = id_tag
+	data["summarytemp"] = overtemp/(known_rods.len)
+	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
+	if (!ui)
+		ui = new(user, src, ui_key, "rmonitor.tmpl", "Reactor monitoring Console", 600, 400, state = state)
+		if(host.update_layout()) // This is necessary to ensure the status bar remains updated along with rest of the UI.
+			ui.auto_update_layout = 1
+		ui.set_initial_data(data)
+		ui.open()
+		ui.set_auto_update(1)
+
+
+/datum/nano_module/rmon/proc/FindDevices()
+	known_rods = list()
+	for(var/obj/machinery/power/nuclear_rod/I in nrods)
+		if(I.id_tag && (I.id_tag == id_tag)) //&& (get_dist(src, I) < 50))
+			known_rods += I

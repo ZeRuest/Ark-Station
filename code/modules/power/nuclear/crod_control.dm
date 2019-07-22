@@ -5,94 +5,88 @@
 	light_color = COLOR_BLUE
 	idle_power_usage = 250
 	active_power_usage = 500
-
+	var/datum/nano_module/rcontrol/C
 	var/id_tag
-	var/scan_range = 50
+
+
+/obj/machinery/computer/rod_control/New()
+	..()
+	C =  new(src)
+	C.id_tag = id_tag
+
+/obj/machinery/computer/rod_control/Destroy()
+	qdel(C)
+	C = null
+	..()
 
 /obj/machinery/computer/rod_control/attack_ai(mob/user)
-	attack_hand(user)
+	ui_interact(user)
 
 /obj/machinery/computer/rod_control/attack_hand(mob/user)
 	add_fingerprint(user)
-	interact(user)
+	ui_interact(user)
 
-/obj/machinery/computer/rod_control/Process()
-	updateDialog()
+/obj/machinery/computer/rod_control/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1, var/datum/topic_state/state = GLOB.default_state)
+	C.ui_interact(user, ui_key, ui, force_open, state)
 
 
-/obj/machinery/computer/rod_control/interact(var/mob/user)
 
-	if(stat & (BROKEN|NOPOWER))
-		user.unset_machine()
-		user << browse(null, "window=fuel_control")
-		return
 
-	if (!istype(user, /mob/living/silicon) && get_dist(src, user) > 1)
-		user.unset_machine()
-		user << browse(null, "window=fuel_control")
-		return
 
-	if(!id_tag)
-		to_chat(user, "<span class='warning'>This console has not been assigned to any reactor. Please, input console id with a multitool.</span>")
-		return
 
-	var/dat = "<B>Reactor Control #[id_tag]</B>"
-	dat += "<hr><b><A href='?src=\ref[src];setall=1'>Set overall target length</b>"
-	dat += {"
-		<hr>
-		<table border=1 width='100%'>
-		<tr>
-		<td><b>Target Length</b></td>
-		<td><b>Current Length</b></td>
-		</tr>"}
+/datum/nano_module/rcontrol
+	name = "Reactor monitor"
+	var/list/known_c_rods = list()
+	var/id_tag
 
+/datum/nano_module/rcontrol/ui_interact(mob/user, ui_key = "rcon", datum/nanoui/ui=null, force_open=1, var/datum/topic_state/state = GLOB.default_state)
+	FindDevices() // Update our devices list
+	var/list/data = host.initial_data()
+	var/list/rodlist = new /list()
+	for(var/obj/machinery/control_rod/R in known_c_rods)
+		rodlist.Add(list(list(
+		"name" = R.name,
+		"len" = R.len,
+		"targ" = R.target,
+		"broken" = R.nocontrol,
+		"tag" = R.console_tag
+		)))
+
+	data["rods"] = sortByKey(rodlist, "name")
+	data["id"] = id_tag
+
+	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
+	if (!ui)
+		ui = new(user, src, ui_key, "rcontrol.tmpl", "Reactor control Console", 600, 400, state = state)
+		if(host.update_layout()) // This is necessary to ensure the status bar remains updated along with rest of the UI.
+			ui.auto_update_layout = 1
+		ui.set_initial_data(data)
+		ui.open()
+		ui.set_auto_update(1)
+
+
+/datum/nano_module/rcontrol/proc/FindDevices()
+	known_c_rods = list()
 	for(var/obj/machinery/control_rod/I in control_rods)
-		if(!id_tag || !I.id_tag || I.id_tag != id_tag || get_dist(src, I) > scan_range)
-			continue
+		if(I.id_tag && (I.id_tag == id_tag)) //&& (get_dist(src, I) < 50))
+			known_c_rods += I
 
-		dat += "<tr>"
-
-		if(I.nocontrol)
-			dat += "<td><span class='danger'>ERROR</span></td>"
-			dat += "<td><span class='danger'>ERROR</span></td>"
-		else
-			dat += "<td><a href='?src=\ref[src];machine=\ref[I];set_targ=1'>\[[I.target] meters\]</a></td>"
-			dat += "<td>[I.len] meters </td>"
-
-		dat += "</tr>"
-
-	dat += {"</table><hr>
-		<A href='?src=\ref[src];close=1'>Close</A>"}
-
-	var/datum/browser/popup = new(user, "rod_control", "Reactor Control Console", 800, 400, src)
-	popup.set_content(dat)
-	popup.open()
-	add_fingerprint(user)
-	user.set_machine(src)
-
-/obj/machinery/computer/rod_control/OnTopic(var/mob/user, var/href_list, var/datum/topic_state/state)
-	var/obj/machinery/control_rod/I = locate(href_list["machine"])
-	if(href_list["set_targ"])
-		var/new_val = input("Enter new target length", "Setting new length", I.target) as num
-		if(!new_val)
-			to_chat(user, "<span class='warning'>That's not a valid number.</span>")
-			return TOPIC_REFRESH
-		I.target = Clamp(new_val, 0, 4)
-		updateUsrDialog()
-		return TOPIC_REFRESH
-
-	if( href_list["close"] )
-		user << browse(null, "window=rod_control")
-		user.unset_machine()
+/datum/nano_module/rcontrol/Topic(href, href_list)
+	if(href_list["settarg"])
+		var/ctag = 0
+		ctag = (href_list["settarg"])
+		var/new_val = (input("Enter new target length", "Setting new length", 0) as num)
+		for(var/obj/machinery/control_rod/Rd in control_rods)
+			if(Rd.console_tag == ctag)
+				Rd.target = Clamp(1, 0, 4)
+				break
 
 	if( href_list["setall"] )
-		var/new_overall = input("Enter new overall length", "Setting new length", 0) as num
-		for(var/obj/machinery/control_rod/C in control_rods)
+		var/new_overall = (input("Enter new overall length", "Setting new length", 0) as num)
+		for(var/obj/machinery/control_rod/C in known_c_rods)
 			if(C.target != new_overall)
 				C.target = Clamp(new_overall, 0, 4)
-		return TOPIC_REFRESH
 
-	return TOPIC_REFRESH
 
 
 /obj/machinery/computer/rod_control/attackby(var/obj/item/W, var/mob/user)
@@ -100,6 +94,7 @@
 		var/new_ident = input("Enter a new ID.", "Rod Control", id_tag) as null|text
 		if(new_ident && user.Adjacent(src))
 			id_tag = new_ident
+			C.id_tag = new_ident
 		return
 	return ..()
 
