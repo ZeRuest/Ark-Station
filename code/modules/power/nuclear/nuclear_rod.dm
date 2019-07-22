@@ -140,11 +140,11 @@ var/list/nrods = list()
 			set_light(0.9, 20, 1, 2, 1)
 		var/emitted = own_rads/(rodtemp+1)*(rodtemp+300)
 		SSradiation.radiate(src, emitted)
-		var/ratio = environment.return_pressure()/ONE_ATMOSPHERE
+		var/ratio = min(environment.return_pressure()/ONE_ATMOSPHERE, 1)
 		var/chamb_temp = environment.temperature
 		if (rodtemp > chamb_temp)
 			environment.add_thermal_energy((rodtemp-chamb_temp)*ratio*1200)
-			rodtemp -= (rodtemp-chamb_temp) * ratio / 8
+			rodtemp -= (rodtemp-chamb_temp) * ratio / 10
 
 
 	else
@@ -232,14 +232,8 @@ var/list/nrods = list()
 				amount_reacting = reactants[cur_reaction.substance]
 				reactants[cur_reaction.substance] = 0
 
-			if((amount_reacting * cur_reaction.heat_production * 100) < 4000)
-				if(((rodtemp + amount_reacting * cur_reaction.heat_production * 320) < 3000) || ((amount_reacting * cur_reaction.heat_production * 320) < 250))
-					rodtemp += amount_reacting * cur_reaction.heat_production * 320
-				else
-					if(((rodtemp + amount_reacting * cur_reaction.heat_production * 100) < 4000) || ((amount_reacting * cur_reaction.heat_production * 100) < 200))
-						rodtemp += amount_reacting * cur_reaction.heat_production * 100
-					else
-						rodtemp += amount_reacting * cur_reaction.heat_production * 40
+			rodtemp += amount_reacting * cur_reaction.heat_production * 320
+			own_rads += amount_reacting * cur_reaction.radiation * 65
 
 			if(own_rads < 300)
 				own_rads += amount_reacting * cur_reaction.radiation * 65
