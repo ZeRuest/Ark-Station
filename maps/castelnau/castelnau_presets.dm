@@ -94,13 +94,19 @@ var/const/NETWORK_PROMETEUS   = "Prometeus"
 /obj/machinery/telecomms/receiver/preset_prometeus
 	id = "Prometeus Receiver"
 	network = "prometeus"
-	autolinkers = list("processorPrometeus")
+	autolinkers = list("recieverPrometeus")
+	freq_listening = list(SCI_FREQ)
+
+/obj/machinery/telecomms/bus/preset_prometeus
+	id = "Prometeus Mainframe"
+	network = "prometeus"
+	autolinkers = list("receiverPrometeus", "processorPrometeus", "sciencePrometeus")
 	freq_listening = list(SCI_FREQ)
 
 /obj/machinery/telecomms/processor/preset_prometeus
 	id = "Prometeus Processor"
 	network = "prometeus"
-	autolinkers = list("processorPrometeus", "sciencePrometeus")
+	autolinkers = list("processorPrometeus")
 	freq_listening = list(SCI_FREQ)
 
 /obj/machinery/telecomms/server/presets/science_prometeus
