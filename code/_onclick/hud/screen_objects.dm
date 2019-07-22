@@ -302,6 +302,30 @@
 		if("act_intent")
 			usr.a_intent_change("right")
 
+		if("fixeye")
+			usr.face_direction()
+			if(usr.facing_dir)
+				usr.fixeye.icon_state = "fixeye_on"
+			else
+				usr.fixeye.icon_state = "fixeye"
+
+		if("holster")
+			if(ishuman(usr))
+				var/mob/living/carbon/human/H = usr
+				var/obj/item/clothing/under/U = H.w_uniform
+				for(var/obj/S in U.accessories)
+					if(istype(S, /obj/item/clothing/accessory/storage/holster) || istype(S, /obj/item/weapon/storage/belt/holster))
+						var/datum/extension/holster/E = get_extension(S, /datum/extension/holster)
+						if(!E.holstered)
+							if(!usr.get_active_hand())
+								to_chat(usr, "<span class='warning'>You're not holding anything to holster.</span>")
+								return
+							E.holster(usr.get_active_hand(), usr)
+							return
+						else
+							E.unholster(usr, TRUE)
+							return
+
 		if("pull")
 			usr.stop_pulling()
 		if("throw")
