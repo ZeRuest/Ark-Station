@@ -46,7 +46,7 @@
 		/datum/mil_rank/civ/merc
 	)
 
-	assistant_job = "Seaman"
+	assistant_job = "Crewman"
 
 
 /datum/mil_branch/science_personnel

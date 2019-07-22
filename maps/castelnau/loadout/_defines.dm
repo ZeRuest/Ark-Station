@@ -25,7 +25,7 @@
 #define TECHNICAL_ROLES list(/datum/job/senior_engineer, /datum/job/engineer, /datum/job/roboticist, /datum/job/qm, /datum/job/mining, /datum/job/scientist_assistant, /datum/job/senior_scientist, /datum/job/scientist, /datum/job/janitor)
 
 //For members of the security department
-#define SECURITY_ROLES list(/datum/job/warden, /datum/job/officer)
+#define SECURITY_ROLES list(/datum/job/warden, /datum/job/specialist, /datum/job/officer)
 
 //For members of the supply department
 #define SUPPLY_ROLES list(/datum/job/qm)
@@ -40,7 +40,7 @@
 #define ARMED_ROLES list(/datum/job/captain, /datum/job/hop, /datum/job/officer, /datum/job/warden)
 
 //For jobs that spawn with armor in their lockers
-#define ARMORED_ROLES list(/datum/job/captain, /datum/job/hop, /datum/job/hos, /datum/job/officer, /datum/job/warden, /datum/job/submap/skrellscoutship_crew, /datum/job/submap/skrellscoutship_crew/leader)
+#define ARMORED_ROLES list(/datum/job/captain, /datum/job/hop, /datum/job/officer, /datum/job/specialist, /datum/job/warden, /datum/job/submap/skrellscoutship_crew, /datum/job/submap/skrellscoutship_crew/leader)
 
 #define UNIFORMED_BRANCHES list(/datum/mil_branch/science_personnel, /datum/mil_rank/civ/civ, /datum/mil_branch/ship_personnel, /datum/mil_rank/civ/merc)
 
