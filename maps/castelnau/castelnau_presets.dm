@@ -94,7 +94,7 @@ var/const/NETWORK_PROMETEUS   = "Prometeus"
 /obj/machinery/telecomms/receiver/preset_prometeus
 	id = "Prometeus Receiver"
 	network = "prometeus"
-	autolinkers = list("recieverPrometeus")
+	autolinkers = list("receiverPrometeus")
 	freq_listening = list(SCI_FREQ)
 
 /obj/machinery/telecomms/bus/preset_prometeus
@@ -206,4 +206,4 @@ var/const/NETWORK_ENGINEERING_OUTPOST = "Engineering Outpost"
 
 /obj/machinery/shield_diffuser
 	enabled = 0
-	icon_state = "fdiffuser_on"
+	icon_state = "fdiffuser_off"
