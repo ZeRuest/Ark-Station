@@ -136,7 +136,7 @@
 	#include "../away/magshield/magshield.dm"
 	#include "../away/mining/mining.dm"
 	#include "../away/mobius_rift/mobius_rift.dm"
-//	#include "../away/skrellscoutship/skrellscoutship.dm"
+	#include "../away/skrellscoutship/skrellscoutship.dm"
 	#include "../away/slavers/slavers_base.dm"
 	#include "../away/smugglers/smugglers.dm"
 	#include "../away/unishi/unishi.dm"
