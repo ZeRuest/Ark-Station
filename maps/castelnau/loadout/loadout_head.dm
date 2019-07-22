@@ -43,6 +43,9 @@
 /datum/gear/head/beretselection/New()
 	..()
 	var/beretselection_type = list()
-	beretselection_type["corporight security beret"] = /obj/item/clothing/head/beret/guard
+	beretselection_type["white-blue corporight security beret"] = /obj/item/clothing/head/beret/guard
+	beretselection_type["white-red corporight security beret"] = /obj/item/clothing/head/beret/sec/corporate_whitered
+	beretselection_type["red corporight security beret"] = /obj/item/clothing/head/beret/sec/corporate_red
 	beretselection_type["SAARE beret"] = /obj/item/clothing/head/beret/sec/saare
+	beretselection_type["PCRC beret"] = /obj/item/clothing/head/beret/sec/pcrc
 	gear_tweaks += new/datum/gear_tweak/path(beretselection_type)
