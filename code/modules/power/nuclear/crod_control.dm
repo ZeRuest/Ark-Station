@@ -78,7 +78,7 @@
 		var/new_val = (input("Enter new target length", "Setting new length", 0) as num)
 		for(var/obj/machinery/control_rod/Rd in control_rods)
 			if(Rd.console_tag == ctag)
-				Rd.target = Clamp(1, 0, 4)
+				Rd.target = Clamp(new_val, 0, 4)
 				break
 
 	if( href_list["setall"] )
