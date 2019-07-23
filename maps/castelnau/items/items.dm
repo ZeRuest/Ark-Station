@@ -90,3 +90,6 @@ OTHER
 
 /obj/item/tape/medical
 	req_access = list(access_castelnau_medical)
+
+/obj/item/weapon/rig/eva
+	req_access = list(access_castelnau_engineering)
