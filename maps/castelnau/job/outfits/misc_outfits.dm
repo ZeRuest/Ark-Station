@@ -1,4 +1,4 @@
-/decl/hierarchy/outfit/job/castelnau/passenger/crewman
+/decl/hierarchy/outfit/job/castelnau/crewman
 	name = OUTFIT_JOB_NAME("Crewman - Castelnau")
 	uniform = /obj/item/clothing/under/color/grey
 	l_ear = /obj/item/device/radio/headset
