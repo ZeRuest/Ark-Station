@@ -1,9 +1,8 @@
 //
-//SENSORS FOR ATMOSPHERICS
+//sensor_info FOR ATMOSPHERICS
 //
 
 /obj/machinery/air_sensor/atmos
-	output = 127
 	frequency = 1441
 
 /obj/machinery/air_sensor/atmos/air
@@ -25,11 +24,10 @@
 	id_tag = "h2"
 
 //
-//SENSORS FOR REACTOR
+//sensor_info FOR REACTOR
 //
 
 /obj/machinery/air_sensor/reactor
-	output = 127
 	frequency = 1441
 
 /obj/machinery/air_sensor/reactor/one
@@ -39,11 +37,10 @@
 	id_tag = "reac_chamber_2"
 
 //
-//SENSORS FOR PROMETEUS
+//sensor_info FOR PROMETEUS
 //
 
 /obj/machinery/air_sensor/prometeus
-	output = 127
 	frequency = 1441
 
 /obj/machinery/air_sensor/prometeus/xenobotany
@@ -62,85 +59,85 @@
 //COMPUTERS FOR ATMOSPHERICS
 //
 
-/obj/machinery/computer/general_air_control/large_tank_control/atmos/air
+/obj/machinery/computer/air_control/large_tank_control/atmos/air
 	name = "Air Tank Control"
 	input_tag = "air_in"
 	output_tag = "air_out"
-	sensors = list("air" = "Air Tank")
+	sensor_info = list("air" = "Air Tank")
 
-/obj/machinery/computer/general_air_control/large_tank_control/atmos/nitrogen
+/obj/machinery/computer/air_control/large_tank_control/atmos/nitrogen
 	name = "Nitrogen Tank Control"
 	input_tag = "n2_in"
 	output_tag = "n2_out"
-	sensors = list("n2" = "Nitrogen Tank")
+	sensor_info = list("n2" = "Nitrogen Tank")
 
-/obj/machinery/computer/general_air_control/large_tank_control/atmos/oxygen
+/obj/machinery/computer/air_control/large_tank_control/atmos/oxygen
 	name = "Oxygen Tank Control"
 	input_tag = "o2_in"
 	output_tag = "o2_out"
-	sensors = list("o2" = "Oxygen Tank")
+	sensor_info = list("o2" = "Oxygen Tank")
 
-/obj/machinery/computer/general_air_control/large_tank_control/atmos/carbon_dioxide
+/obj/machinery/computer/air_control/large_tank_control/atmos/carbon_dioxide
 	name = "Carbon Dioxide Tank Control"
 	input_tag = "co2_in"
 	output_tag = "co2_out"
-	sensors = list("co2" = "Carbon Dioxide Tank")
+	sensor_info = list("co2" = "Carbon Dioxide Tank")
 
-/obj/machinery/computer/general_air_control/large_tank_control/atmos/nitrous_oxide
+/obj/machinery/computer/air_control/large_tank_control/atmos/nitrous_oxide
 	name = "Nitrous Oxide Tank Control"
 	input_tag = "n2o_in"
 	output_tag = "n2o_out"
-	sensors = list("n2o" = "Nitrous Oxide Tank")
+	sensor_info = list("n2o" = "Nitrous Oxide Tank")
 
-/obj/machinery/computer/general_air_control/large_tank_control/atmos/hydrogen
+/obj/machinery/computer/air_control/large_tank_control/atmos/hydrogen
 	name = "Hydrogen Tank Control"
 	input_tag = "h2_in"
 	output_tag = "h2_out"
-	sensors = list("h2" = "Hydrogen Tank")
+	sensor_info = list("h2" = "Hydrogen Tank")
 
 //
 //COMPUTERS FOR REACTOR
 //
 
-/obj/machinery/computer/general_air_control/large_tank_control/reactor/one
+/obj/machinery/computer/air_control/large_tank_control/reactor/one
 	name = "Circulation Pumps 1 Control"
 	input_tag = "reac_in_1"
 	output_tag = "reac_out_1"
-	sensors = list("reac_chamber_1" = "Reactor Chamber")
+	sensor_info = list("reac_chamber_1" = "Reactor Chamber")
 
-/obj/machinery/computer/general_air_control/large_tank_control/reactor/two
+/obj/machinery/computer/air_control/large_tank_control/reactor/two
 	name = "Circulation Pumps 2 Control"
 	input_tag = "reac_in_2"
 	output_tag = "reac_out_2"
-	sensors = list("reac_chamber_2" = "Reactor Chamber")
+	sensor_info = list("reac_chamber_2" = "Reactor Chamber")
 
 //
 //COMPUTERS FOR PROMETEUS
 //
 
-/obj/machinery/computer/general_air_control/large_tank_control/prometeus/xenobotany
+/obj/machinery/computer/air_control/large_tank_control/prometeus/xenobotany
 	name = "Isolation Chamber Atmosphere Control"
 	input_tag = "pro_xenobot_in"
 	output_tag = "pro_xenobot_out"
-	sensors = list("pro_xenobot" = "Isolation Chamber")
+	sensor_info = list("pro_xenobot" = "Isolation Chamber")
 
-/obj/machinery/computer/general_air_control/large_tank_control/prometeus/xenobiology
+/obj/machinery/computer/air_control/large_tank_control/prometeus/xenobiology
 	name = "Isolation Chamber Atmosphere Control"
 	input_tag = "pro_xenobio_in"
 	output_tag = "pro_xenobio_out"
-	sensors = list("pro_xenobio" = "Isolation Chamber")
+	sensor_info = list("pro_xenobio" = "Isolation Chamber")
 
-/obj/machinery/computer/general_air_control/large_tank_control/prometeus/anomaly
+/obj/machinery/computer/air_control/large_tank_control/prometeus/anomaly
 	name = "Isolation Chamber Atmosphere Control"
 	input_tag = "pro_ano_in"
 	output_tag = "pro_ano_out"
-	sensors = list("pro_ano" = "Isolation Chamber")
+	sensor_info = list("pro_ano" = "Isolation Chamber")
 
-/obj/machinery/computer/general_air_control/large_tank_control/prometeus/gas
+/obj/machinery/computer/air_control/large_tank_control/prometeus/gas
 	name = "Combustion Chamber Atmosphere Control"
 	input_tag = "pro_gas_in"
 	output_tag = "pro_gas_out"
-	sensors = list("pro_gas" = "Combustion Chamber")
+	sensor_info = list("pro_gas" = "Combustion Chamber")
 
 
 

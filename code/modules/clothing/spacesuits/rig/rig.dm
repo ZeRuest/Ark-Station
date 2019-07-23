@@ -83,6 +83,7 @@
 	var/offline_vision_restriction = TINT_HEAVY               // tint value given to helmet
 	var/airtight = 1 //If set, will adjust ITEM_FLAG_AIRTIGHT flags on components. Otherwise it should leave them untouched.
 	var/visible_name
+	var/update_visible_name = FALSE
 
 	var/emp_protection = 0
 
@@ -91,6 +92,9 @@
 	var/datum/effect/effect/system/spark_spread/spark_system
 
 	var/banned_modules = list()
+
+/obj/item/weapon/rig/get_cell()
+	return cell
 
 /obj/item/weapon/rig/examine()
 	. = ..()
@@ -320,6 +324,8 @@
 	// Success!
 	canremove = seal_target
 	to_chat(wearer, "<font color='blue'><b>Your entire suit [canremove ? "loosens as the components relax" : "tightens around you as the components lock into place"].</b></font>")
+	if(!canremove && update_visible_name)
+		visible_name = wearer.real_name
 
 	if(wearer != initiator)
 		to_chat(initiator, "<font color='blue'>Suit adjustment complete. Suit is now [canremove ? "unsealed" : "sealed"].</font>")
@@ -402,7 +408,8 @@
 			malfunction()
 
 		for(var/obj/item/rig_module/module in installed_modules)
-			cell.use(module.Process() * CELLRATE)
+			if(!cell.checked_use(module.Process() * CELLRATE))
+				module.deactivate()//turns off modules when your cell is dry
 
 //offline should not change outside this proc
 /obj/item/weapon/rig/proc/update_offline()
@@ -573,6 +580,11 @@
 				ret.overlays += image("icon" = equipment_overlay_icon, "icon_state" = "[module.suit_overlay]")
 	return ret
 
+/obj/item/weapon/rig/get_req_access()
+	if(!security_check_enabled)
+		return list()
+	return ..()
+
 /obj/item/weapon/rig/proc/check_suit_access(var/mob/living/carbon/human/user)
 
 	if(!security_check_enabled)
@@ -620,7 +632,10 @@
 				if("engage")
 					module.engage()
 				if("select")
-					module.select()
+					if(selected_module == module)
+						deselect_module()
+					else
+						module.select()
 				if("select_charge_type")
 					module.charge_selected = href_list["charge_type"]
 		return 1
@@ -764,6 +779,14 @@
 	if(wearer)
 		wearer.wearing_rig = null
 		wearer = null
+
+/obj/item/weapon/rig/proc/deselect_module()
+	if(selected_module.suit_overlay_inactive)
+		selected_module.suit_overlay = selected_module.suit_overlay_inactive
+	else
+		selected_module.suit_overlay = null
+	selected_module = null
+	update_icon()
 
 //Todo
 /obj/item/weapon/rig/proc/malfunction()

@@ -17,6 +17,7 @@
 
 	var/damage = 0
 	var/obj/item/weapon/rig/holder
+	var/list/banned_modules = list()
 
 	var/module_cooldown = 10
 	var/next_use = 0
@@ -223,13 +224,11 @@
 	if(!check())
 		return 0
 
-	for (var/obj/item/rig_module/M in holder.installed_modules)
-		if(M.selectable)
-			if(M.suit_overlay_inactive)
-				M.suit_overlay = M.suit_overlay_inactive
-			else
-				M.suit_overlay = null
-			holder.update_icon()
+	if(holder.selected_module)
+		if(holder.selected_module.suit_overlay_inactive)
+			holder.selected_module.suit_overlay = holder.selected_module.suit_overlay_inactive
+		else
+			holder.selected_module.suit_overlay = null
 
 	holder.selected_module = src
 	if(suit_overlay_active)
@@ -244,6 +243,9 @@
 	deactivate()
 	holder = null
 	return
+
+/obj/item/rig_module/get_cell()
+	return holder && holder.get_cell()
 
 // Called by the hardsuit each rig process tick.
 /obj/item/rig_module/Process()

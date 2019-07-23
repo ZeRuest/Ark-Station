@@ -7,7 +7,7 @@
 	var/totalPlayersReady = 0
 	var/datum/browser/panel
 	var/show_invalid_jobs = 0
-	universal_speak = 1
+	universal_speak = TRUE
 
 	invisibility = 101
 
@@ -28,7 +28,7 @@
 		return // Not ready yet.
 	var/output = list()
 	output += "<div align='center'>"
-	output += "<i>[rhtml_decode(GLOB.using_map.get_map_info())]</i>"
+	output += "<i>[GLOB.using_map.get_map_info()]</i>" 
 	output +="<hr>"
 	output += "<a href='byond://?src=\ref[src];show_preferences=1'>Setup Character</A> "
 
@@ -63,10 +63,10 @@
 			output += "<a href='byond://?src=\ref[src];ready=1'>Ready Up</a>"
 	else
 		output += "<a href='byond://?src=\ref[src];late_join=1'>Join Game!</A>"
-
+	
 	output += "</div>"
 
-	panel = new(src, "Welcome","Welcome, [client.prefs.real_name]", 560, 305, src)
+	panel = new(src, "Welcome","Welcome, [client.prefs.real_name]", 560, 280, src)
 	panel.set_window_options("can_close=0")
 	panel.set_content(JOINTEXT(output))
 	panel.open()

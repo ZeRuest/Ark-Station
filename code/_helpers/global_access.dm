@@ -41,6 +41,8 @@
 			return global.SSalarm;
 		if("SSantags")
 			return global.SSantags;
+		if("SSao")
+			return global.SSao;
 		if("SSatoms")
 			return global.SSatoms;
 		if("SScharacter_setup")
@@ -53,6 +55,8 @@
 			return global.SScircuit_components;
 		if("SScodex")
 			return global.SScodex;
+		if("SScuisine")
+			return global.SScuisine;
 		if("SSculture")
 			return global.SSculture;
 		if("SSdisposals")
@@ -131,8 +135,8 @@
 			return global.SSvines;
 		if("SSvote")
 			return global.SSvote;
-		if("SSwireless")
-			return global.SSwireless;
+		if("SSwebhooks")
+			return global.SSwebhooks;
 		if("SSxenoarch")
 			return global.SSxenoarch;
 		if("Tier1Runes")
@@ -925,7 +929,7 @@
 			return global.z_levels;
 		if("zone_blocked")
 			return global.zone_blocked;
-		
+
 /proc/writeglobal(which, newval)
 	switch(which)
 		if("ALL_ANTIGENS")
@@ -968,6 +972,8 @@
 			global.SSalarm=newval;
 		if("SSantags")
 			global.SSantags=newval;
+		if("SSao")
+			global.SSao=newval;
 		if("SSatoms")
 			global.SSatoms=newval;
 		if("SScharacter_setup")
@@ -980,6 +986,8 @@
 			global.SScircuit_components=newval;
 		if("SScodex")
 			global.SScodex=newval;
+		if("SScuisine")
+			global.SScuisine=newval;
 		if("SSculture")
 			global.SSculture=newval;
 		if("SSdisposals")
@@ -1058,8 +1066,8 @@
 			global.SSvines=newval;
 		if("SSvote")
 			global.SSvote=newval;
-		if("SSwireless")
-			global.SSwireless=newval;
+		if("SSwebhooks")
+			global.SSwebhooks=newval;
 		if("SSxenoarch")
 			global.SSxenoarch=newval;
 		if("Tier1Runes")
@@ -1852,7 +1860,7 @@
 			global.z_levels=newval;
 		if("zone_blocked")
 			global.zone_blocked=newval;
-		
+
 /var/list/_all_globals=list(
 	"ALL_ANTIGENS",
 	"ANTAG_FREQS",
@@ -1874,12 +1882,14 @@
 	"SSairflow",
 	"SSalarm",
 	"SSantags",
+	"SSao",
 	"SSatoms",
 	"SScharacter_setup",
 	"SSchemistry",
 	"SScircuit",
 	"SScircuit_components",
 	"SScodex",
+	"SScuisine",
 	"SSculture",
 	"SSdisposals",
 	"SSevac",
@@ -1919,7 +1929,7 @@
 	"SSturf",
 	"SSvines",
 	"SSvote",
-	"SSwireless",
+	"SSwebhooks",
 	"SSxenoarch",
 	"Tier1Runes",
 	"Tier2Runes",

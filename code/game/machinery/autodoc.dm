@@ -404,7 +404,6 @@ var/list/autodocs = list()
 	name = "\improper autodoc console"
 	desc = "Console used to control autodoc."
 	icon_keyboard = "power_key"
-	circuit = null
 	icon_screen = "crew"
 	light_color = "#315ab4"
 	idle_power_usage = 250

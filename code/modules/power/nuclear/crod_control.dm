@@ -6,7 +6,6 @@
 	idle_power_usage = 250
 	active_power_usage = 500
 	var/datum/nano_module/rcontrol/C
-	var/id_tag
 
 
 /obj/machinery/computer/rod_control/New()

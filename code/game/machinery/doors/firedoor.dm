@@ -125,13 +125,6 @@
 		return
 	if(!density)
 		return ..()
-	if(istype(AM, /obj/mecha))
-		var/obj/mecha/mecha = AM
-		if(mecha.occupant)
-			var/mob/M = mecha.occupant
-			if(world.time - M.last_bumped <= 10) return //Can bump-open one airlock per second. This is to prevent popup message spam.
-			M.last_bumped = world.time
-			attack_hand(M)
 	return 0
 
 /obj/machinery/door/firedoor/attack_hand(mob/user as mob)
@@ -272,7 +265,7 @@
 
 /obj/machinery/door/firedoor/deconstruct(mob/user, var/moved = FALSE)
 	if (stat & BROKEN)
-		new /obj/item/weapon/circuitboard/broken(src.loc)
+		new /obj/item/weapon/stock_parts/circuitboard/broken(src.loc)
 	else
 		new/obj/item/weapon/airalarm_electronics(src.loc)
 
@@ -287,8 +280,6 @@
 
 // CHECK PRESSURE
 /obj/machinery/door/firedoor/Process()
-	..()
-
 	if(density && next_process_time <= world.time)
 		next_process_time = world.time + 100		// 10 second delays between process updates
 		var/changed = 0

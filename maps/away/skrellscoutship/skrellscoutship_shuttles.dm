@@ -54,7 +54,7 @@
 	knockdown = FALSE
 	flags = SHUTTLE_FLAGS_PROCESS
 	skill_needed = SKILL_NONE
-	ceiling_type = /turf/simulated/floor/shuttle_ceiling
+	ceiling_type = /turf/simulated/floor/shuttle_ceiling/skrell
 
 /obj/effect/shuttle_landmark/skrellscoutship/start
 	name = "Uncharted Space"
@@ -70,7 +70,7 @@
 	defer_initialisation = TRUE
 	flags = SHUTTLE_FLAGS_PROCESS
 	skill_needed = SKILL_NONE
-	ceiling_type = /turf/simulated/floor/shuttle_ceiling
+	ceiling_type = /turf/simulated/floor/shuttle_ceiling/skrell
 	mothershuttle = "Skrellian Scout"
 
 /obj/effect/shuttle_landmark/skrellscoutshuttle/start
@@ -84,3 +84,10 @@
 /obj/effect/shuttle_landmark/skrellscoutshuttle/altdock
 	name = "Docking Port"
 	landmark_tag = "nav_skrellscoutsh_altdock"
+
+
+/turf/simulated/floor/shuttle_ceiling/skrell
+	color = COLOR_HULL
+
+/turf/simulated/floor/shuttle_ceiling/skrell/air
+	initial_gas = list("oxygen" = MOLES_O2STANDARD, "nitrogen" = MOLES_N2STANDARD)

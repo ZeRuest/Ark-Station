@@ -38,8 +38,7 @@
 
 /datum/uplink_item/item/tools/encryptionkey_radio
 	name = "Encrypted Radio Channel Key"
-	desc = "This headset encryption key will allow you to eavesdrop on all available department channels, \
-	as well as speak on a hidden, encrypted radio channel. Use a screwdriver on your headset to exchange keys."
+	desc = "This headset encryption key will allow you to speak on a hidden, encrypted radio channel. Use a screwdriver on your headset to exchange keys."
 	item_cost = 1
 	path = /obj/item/device/encryptionkey/syndicate
 
@@ -114,7 +113,7 @@
 	desc = "A circuit board that can be used to create a teleporter console, able to lock onto detected \
 	teleportation beacons. Requires a projector and teleporter hub nearby to work."
 	item_cost = 40
-	path = /obj/item/weapon/circuitboard/teleporter
+	path = /obj/item/weapon/stock_parts/circuitboard/teleporter
 
 /datum/uplink_item/item/tools/teleporter/New()
 	..()
@@ -146,7 +145,7 @@
 	name = "Radio Interceptor"
 	item_cost = 30
 	path = /obj/item/device/radio/intercept
-	desc = "A reciever-like device that can intercept secure radio channels. This item is too big to fit into your pockets."
+	desc = "A receiver-like device that can intercept secure radio channels. This item is too big to fit into your pockets."
 
 /datum/uplink_item/item/tools/ttv
 	name = "Binary Gas Bomb"

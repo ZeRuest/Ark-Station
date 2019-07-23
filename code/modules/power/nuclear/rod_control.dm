@@ -6,7 +6,6 @@
 	idle_power_usage = 250
 	active_power_usage = 500
 	var/datum/nano_module/rmon/mon
-	var/id_tag
 
 
 /obj/machinery/computer/reactor_control/New()

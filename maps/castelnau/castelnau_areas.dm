@@ -218,6 +218,22 @@
 	icon_state = "brig"
 	req_access = list(access_brig)
 
+/area/alien
+	name = "\improper Alien base"
+	icon_state = "yellow"
+	requires_power = 0
+
+/area/shuttle/alien/base
+	icon_state = "shuttle"
+	name = "\improper Alien Shuttle Base"
+	requires_power = 1
+
+/area/deity_spawn
+	name = "\improper Deity Spawn"
+	icon_state = "yellow"
+	requires_power = 0
+	dynamic_lighting = 0
+
 /////////////////
 //  CASTELNAU  //
 /////////////////

@@ -20,7 +20,6 @@
 	light_max_bright = 1
 	light_color = "#9400d3"
 	default_light_colour = "#9400d3"
-	on = 1
 
 /obj/machinery/floor_light/prebuilt/bar/red
 	icon = 'icons/turf/flooring/circuit.dmi'
@@ -29,7 +28,6 @@
 	light_max_bright = 1
 	light_color = "#ee0000"
 	default_light_colour = "#ee0000"
-	on = 1
 
 /obj/machinery/floor_light/prebuilt/bar/blue
 	light_outer_range = 3

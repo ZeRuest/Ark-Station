@@ -20,7 +20,6 @@ var/list/nrods = list()
 	var/list/reactants = list()
 	var/integrity = 100
 	var/broken = 0
-	var/id_tag
 	var/obj/item/weapon/nuclearfuel/rod/F = null
 	var/list/possible_reactions = new /list(0)
 
@@ -305,6 +304,3 @@ var/list/nrods = list()
 	accepted_rads = 200
 	reactants = list("U235" = 1000, "U238" = 2000)
 	id_tag = "pripyat"
-
-
-

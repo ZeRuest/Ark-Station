@@ -1,7 +1,7 @@
 SUBSYSTEM_DEF(codex)
 	name = "Codex"
 	flags = SS_NO_FIRE
-	init_order = SS_INIT_MISC_LATE
+	init_order = SS_INIT_MISC_CODEX
 	var/regex/linkRegex
 
 	var/list/entries_by_path =   list()
@@ -10,8 +10,8 @@ SUBSYSTEM_DEF(codex)
 	var/list/search_cache =      list()
 
 /datum/controller/subsystem/codex/Initialize()
-	// Codex link syntax is such: 
-	// <l>keyword</l> when keyword is mentioned verbatim, 
+	// Codex link syntax is such:
+	// <l>keyword</l> when keyword is mentioned verbatim,
 	// <span codexlink='keyword'>whatever</span> when shit gets tricky
 	linkRegex = regex(@"<(span|l)(\s+codexlink='([^>]*)'|)>([^<]+)</(span|l)>","g")
 
@@ -78,13 +78,13 @@ SUBSYSTEM_DEF(codex)
 	if(entry && istype(presenting_to) && presenting_to.client)
 		var/list/dat = list()
 		if(entry.lore_text)
-			dat += "<font color='#abdb9b'>[parse_links(entry.lore_text, presenting_to)]</font>"
+			dat += "<font color = '[CODEX_COLOR_LORE]'>[parse_links(entry.lore_text, presenting_to)]</font>"
 		if(entry.mechanics_text)
 			dat += "<h3>OOC Information</h3>"
-			dat += "<font color='#9ebcd8'>[parse_links(entry.mechanics_text, presenting_to)]</font>"
+			dat += "<font color = '[CODEX_COLOR_MECHANICS]'>[parse_links(entry.mechanics_text, presenting_to)]</font>"
 		if(entry.antag_text && presenting_to.mind && player_is_antag(presenting_to.mind))
 			dat += "<h3>Antagonist Information</h3>"
-			dat += "<font color='#e5a2a2'>[parse_links(entry.antag_text, presenting_to)]</font>"
+			dat += "<font color='[CODEX_COLOR_ANTAG]'>[parse_links(entry.antag_text, presenting_to)]</font>"
 		var/datum/browser/popup = new(presenting_to, "codex", "Codex - [entry.display_name]")
 		popup.set_content(jointext(dat, null))
 		popup.open()
@@ -118,7 +118,7 @@ SUBSYSTEM_DEF(codex)
 	if(!. && href_list["show_examined_info"] && href_list["show_to"])
 		var/mob/showing_mob =   locate(href_list["show_to"])
 		if(!istype(showing_mob) || !showing_mob.can_use_codex())
-			return 
+			return
 		var/atom/showing_atom = locate(href_list["show_examined_info"])
 		var/entry
 		if(istype(showing_atom, /datum/codex_entry))

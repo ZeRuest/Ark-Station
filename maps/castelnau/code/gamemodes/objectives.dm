@@ -10,6 +10,5 @@ datum/objective/steal/New()
 			"a sample of slime extract" = /obj/item/slime_extract,
 			"the hypospray" = /obj/item/weapon/reagent_containers/hypospray,
 			"a secret science project disk" = /obj/item/weapon/disk/secret_project/science,
-			"the core of the RnD server" = /obj/item/weapon/circuitboard/rdserver,
 			"the core of the robotics server" = /obj/machinery/r_n_d/server/robotics,
 		)

@@ -64,7 +64,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 		/mob/living/carbon/human/proc/shapeshifter_select_gender
 		)
 
-	valid_transform_species = list(SPECIES_HUMAN, SPECIES_UNATHI, SPECIES_SKRELL, SPECIES_DIONA, "Monkey")
+	valid_transform_species = list(SPECIES_HUMAN, SPECIES_UNATHI, SPECIES_SKRELL, SPECIES_DIONA, SPECIES_MANTID_ALATE, "Monkey")
 	monochromatic = 1
 
 	var/heal_rate = 5 // Temp. Regen per tick.
@@ -109,8 +109,8 @@ var/datum/species/shapeshifter/promethean/prometheans
 		var/obj/item/organ/external/E = H.organs_by_name[limb_type]
 		if(E && !E.is_usable() && !(E.limb_flags & ORGAN_FLAG_HEALS_OVERKILL))
 			E.removed()
-			qdel(E)
-			E = null
+			if(!QDELETED(E))
+				QDEL_NULL(E)
 		if(!E)
 			var/list/organ_data = has_limbs[limb_type]
 			var/limb_path = organ_data["path"]

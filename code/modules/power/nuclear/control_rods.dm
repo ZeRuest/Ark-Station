@@ -14,7 +14,6 @@ var/list/control_rods = list()
 	var/speed = 0.1
 	rad_resistance = 0
 	var/health = 200
-	var/id_tag
 	var/load = 0
 	var/nocontrol = 0
 	var/console_tag
