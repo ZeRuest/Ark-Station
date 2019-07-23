@@ -97,6 +97,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Sheriff"
+	selection_color = "#601c1c"
 	economic_power = 6
 	minimal_player_age = 10
 	ideal_character_age = 25
