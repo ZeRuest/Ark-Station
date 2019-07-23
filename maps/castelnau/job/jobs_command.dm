@@ -51,6 +51,7 @@
 				  access_castelnau_engineering,
 				  access_castelnau_engine,
 				  access_castelnau_atmospherics,
+				  access_castelnau_seneng,
 				  access_castelnau_thrusters)
 
 	software_on_spawn = list(/datum/computer_file/program/comm,
@@ -105,6 +106,7 @@
 				  access_castelnau_hangar,
 				  access_castelnau_idmod,
 				  access_castelnau_engineering,
+				  access_castelnau_seneng,
 				  access_castelnau_atmospherics)
 
 	minimal_access = list()
