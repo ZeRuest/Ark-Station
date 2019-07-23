@@ -162,7 +162,7 @@ var/const/access_castelnau_sheriff = "ACCESS_CASTELNAU_SHERIFF"
 
 /var/const/access_castelnau_kitchen = "ACCESS_CASTELNAU_KITCHEN"
 /datum/access/castelnau/kitchen
-	id = access_castelnau_bar
+	id = access_castelnau_kitchen
 	desc = "Kitchen"
 	region = ACCESS_REGION_GENERAL
 
