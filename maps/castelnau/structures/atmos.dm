@@ -56,46 +56,6 @@
 	id_tag = "pro_gas"
 
 //
-//COMPUTERS FOR ATMOSPHERICS
-//
-
-/obj/machinery/computer/air_control/large_tank_control/atmos/air
-	name = "Air Tank Control"
-	input_tag = "air_in"
-	output_tag = "air_out"
-	sensor_info = list("air" = "Air Tank")
-
-/obj/machinery/computer/air_control/large_tank_control/atmos/nitrogen
-	name = "Nitrogen Tank Control"
-	input_tag = "n2_in"
-	output_tag = "n2_out"
-	sensor_info = list("n2" = "Nitrogen Tank")
-
-/obj/machinery/computer/air_control/large_tank_control/atmos/oxygen
-	name = "Oxygen Tank Control"
-	input_tag = "o2_in"
-	output_tag = "o2_out"
-	sensor_info = list("o2" = "Oxygen Tank")
-
-/obj/machinery/computer/air_control/large_tank_control/atmos/carbon_dioxide
-	name = "Carbon Dioxide Tank Control"
-	input_tag = "co2_in"
-	output_tag = "co2_out"
-	sensor_info = list("co2" = "Carbon Dioxide Tank")
-
-/obj/machinery/computer/air_control/large_tank_control/atmos/nitrous_oxide
-	name = "Nitrous Oxide Tank Control"
-	input_tag = "n2o_in"
-	output_tag = "n2o_out"
-	sensor_info = list("n2o" = "Nitrous Oxide Tank")
-
-/obj/machinery/computer/air_control/large_tank_control/atmos/hydrogen
-	name = "Hydrogen Tank Control"
-	input_tag = "h2_in"
-	output_tag = "h2_out"
-	sensor_info = list("h2" = "Hydrogen Tank")
-
-//
 //COMPUTERS FOR REACTOR
 //
 
@@ -110,36 +70,6 @@
 	input_tag = "reac_in_2"
 	output_tag = "reac_out_2"
 	sensor_info = list("reac_chamber_2" = "Reactor Chamber")
-
-//
-//COMPUTERS FOR PROMETEUS
-//
-
-/obj/machinery/computer/air_control/large_tank_control/prometeus/xenobotany
-	name = "Isolation Chamber Atmosphere Control"
-	input_tag = "pro_xenobot_in"
-	output_tag = "pro_xenobot_out"
-	sensor_info = list("pro_xenobot" = "Isolation Chamber")
-
-/obj/machinery/computer/air_control/large_tank_control/prometeus/xenobiology
-	name = "Isolation Chamber Atmosphere Control"
-	input_tag = "pro_xenobio_in"
-	output_tag = "pro_xenobio_out"
-	sensor_info = list("pro_xenobio" = "Isolation Chamber")
-
-/obj/machinery/computer/air_control/large_tank_control/prometeus/anomaly
-	name = "Isolation Chamber Atmosphere Control"
-	input_tag = "pro_ano_in"
-	output_tag = "pro_ano_out"
-	sensor_info = list("pro_ano" = "Isolation Chamber")
-
-/obj/machinery/computer/air_control/large_tank_control/prometeus/gas
-	name = "Combustion Chamber Atmosphere Control"
-	input_tag = "pro_gas_in"
-	output_tag = "pro_gas_out"
-	sensor_info = list("pro_gas" = "Combustion Chamber")
-
-
 
 //
 //GENERAL
