@@ -833,7 +833,7 @@
 "qa" = (/obj/structure/closet/crate/radiation_gear,/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/sign/warning/nosmoking_1{pixel_y = 24},/turf/simulated/floor,/area/castelnau/supply/storage)
 "qb" = (/obj/structure/closet/firecloset,/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor,/area/castelnau/supply/storage)
 "qc" = (/obj/machinery/power/port_gen/pacman,/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 4},/turf/simulated/floor,/area/castelnau/supply/storage)
-"qd" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/power/apc{dir = 4; name = "east bump"; pixel_x = 24},/obj/structure/cable/green,/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/simple/hidden/black{dir = 6},/turf/simulated/floor/plating,/area/castelnau/maintenance/seconddeck/port)
+"qd" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/structure/cable/green,/obj/structure/catwalk,/obj/machinery/atmospherics/pipe/simple/hidden/black{dir = 6},/turf/simulated/floor/plating,/area/castelnau/maintenance/seconddeck/port)
 "qe" = (/obj/machinery/atmospherics/pipe/simple/hidden/black{dir = 4},/turf/simulated/wall/r_wall,/area/castelnau/engineering/atmos)
 "qf" = (/obj/machinery/atmospherics/omni/filter{tag_east = 1; tag_north = 3; tag_south = 8; tag_west = 2},/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled/techfloor/grid,/area/castelnau/engineering/atmos)
 "qg" = (/obj/machinery/atmospherics/pipe/simple/visible/red{dir = 4; icon_state = "intact"},/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 1},/obj/effect/floor_decal/industrial/warning,/turf/simulated/floor/tiled/techfloor/grid,/area/castelnau/engineering/atmos)
