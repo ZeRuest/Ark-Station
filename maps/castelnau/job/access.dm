@@ -51,14 +51,14 @@
 /var/const/access_castelnau_qm = "ACCESS_CASTELNAU_QM"
 /datum/access/castelnau/qm
 	id = access_castelnau_qm
-	desc = "Castelnau Quartermaster"
+	desc = "Quartermaster"
 	region = ACCESS_REGION_SUPPLY
 
 //Security
 var/const/access_castelnau_security = "ACCESS_CASTELNAU_SECURITY"
 /datum/access/castelnau/security
 	id = access_castelnau_security
-	desc = "Castelnau Security Equipment"
+	desc = "Security Equipment"
 	region = ACCESS_REGION_SECURITY
 
 /var/const/access_castelnau_brig = "ACCESS_CASTELNAU_BRIG"
@@ -70,7 +70,7 @@ var/const/access_castelnau_security = "ACCESS_CASTELNAU_SECURITY"
 /var/const/access_castelnau_armory = "ACCESS_CASTELNAU_ARMORY"
 /datum/access/castelnau/armory
 	id = access_castelnau_armory
-	desc = "Castelnau Armory"
+	desc = "Armory"
 	region = ACCESS_REGION_SECURITY
 
 var/const/access_castelnau_sheriff = "ACCESS_CASTELNAU_SHERIFF"
@@ -83,27 +83,27 @@ var/const/access_castelnau_sheriff = "ACCESS_CASTELNAU_SHERIFF"
 /var/const/access_castelnau_maint_tunnels = "ACCESS_CASTELNAU_MAINT"
 /datum/access/castelnau/maint_tunnels
 	id = access_castelnau_maint_tunnels
-	desc = "Castelnau Maintenance"
+	desc = "Maintenance"
 	region = ACCESS_REGION_ENGINEERING
 
 //Civilian
 /var/const/access_castelnau_janitor = "ACCESS_CASTELNAU_JANIATOR"
 /datum/access/castelnau/janitor
 	id = access_castelnau_janitor
-	desc = "Castelnau Custodial Closet"
+	desc = "Custodial Closet"
 	region = ACCESS_REGION_GENERAL
 
 /var/const/access_castelnau_external_airlocks = "ACCESS_CASTELNAU_EXT_AL"
 /datum/access/castelnau/external_airlocks
 	id = access_castelnau_external_airlocks
-	desc = "Castelnau External Airlocks"
+	desc = "External Airlocks"
 	region = ACCESS_REGION_ENGINEERING
 
 //Command
 /var/const/access_castelnau_tcoms = "ACCESS_CASTELNAU_TCOMMS"
 /datum/access/castelnau/tcoms
 	id = access_castelnau_tcoms
-	desc = "Castelnau Telecommunications"
+	desc = "Telecommunications"
 	region = ACCESS_REGION_COMMAND
 
 /var/const/access_castelnau_netdiag = "ACCESS_CASTELNAU_NTDIAG"
@@ -115,19 +115,19 @@ var/const/access_castelnau_sheriff = "ACCESS_CASTELNAU_SHERIFF"
 /var/const/access_castelnau_eva = "ACCESS_CASTELNAU_EVA"
 /datum/access/castelnau/eva
 	id = access_castelnau_eva
-	desc = "Castelnau EVA"
+	desc = "EVA"
 	region = ACCESS_REGION_COMMAND
 
 /var/const/access_castelnau_bridge = "ACCESS_CASTELNAU_BRIDGE"
 /datum/access/castelnau/bridge
 	id = access_castelnau_bridge
-	desc = "Castelnau Bridge"
+	desc = "Bridge"
 	region = ACCESS_REGION_COMMAND
 
 /var/const/access_castelnau_captain = "ACCESS_CASTELNAU_CAPTAIN"
 /datum/access/castelnau/captain
 	id = access_castelnau_captain
-	desc = "Castelnau Captain"
+	desc = "Captain"
 	region = ACCESS_REGION_NONE
 
 /var/const/access_castelnau_comoffice = "ACCESS_CASTELNAU_COM_OFFICE"
@@ -145,25 +145,25 @@ var/const/access_castelnau_sheriff = "ACCESS_CASTELNAU_SHERIFF"
 /var/const/access_castelnau_medical = "ACCESS_CASTELNAU_MED"
 /datum/access/castelnau/medical
 	id = access_castelnau_medical
-	desc = "Castelnau Medical"
+	desc = "Medical"
 	region = ACCESS_REGION_MEDBAY
 
 /var/const/access_castelnau_morgue = "ACCESS_CASTELNAU_MORGUE"
 /datum/access/castelnau/morgue
 	id = access_castelnau_morgue
-	desc = "Castelnau Morgue"
+	desc = "Morgue"
 	region = ACCESS_REGION_MEDBAY
 
 /var/const/access_castelnau_bar = "ACCESS_CASTELNAU_BAR"
 /datum/access/castelnau/bar
 	id = access_castelnau_bar
-	desc = "Castelnau Bar"
+	desc = "Bar"
 	region = ACCESS_REGION_GENERAL
 
 /var/const/access_castelnau_kitchen = "ACCESS_CASTELNAU_KITCHEN"
 /datum/access/castelnau/kitchen
 	id = access_castelnau_kitchen
-	desc = "Castelnau Kitchen"
+	desc = "Kitchen"
 	region = ACCESS_REGION_GENERAL
 
 /var/const/access_castelnau_hangar = "ACCESS_CASTELNAU_HANGAR"
@@ -187,7 +187,7 @@ var/const/access_castelnau_sheriff = "ACCESS_CASTELNAU_SHERIFF"
 /var/const/access_castelnau_engineering = "ACCESS_CASTELNAU_ENGINEERING"
 /datum/access/castelnau/engineering
 	id = access_castelnau_engineering
-	desc = "Castelnau Engineering"
+	desc = "Engineering"
 	region = ACCESS_REGION_ENGINEERING
 
 /var/const/access_castelnau_engine= "ACCESS_CASTELNAU_ENGINE"
@@ -199,7 +199,7 @@ var/const/access_castelnau_sheriff = "ACCESS_CASTELNAU_SHERIFF"
 /var/const/access_castelnau_atmospherics = "ACCESS_CASTELNAU_ATMOS"
 /datum/access/castelnau/atmospherics
 	id = access_castelnau_atmospherics
-	desc = "Castelnau Atmospherics"
+	desc = "Atmospherics"
 	region = ACCESS_REGION_ENGINEERING
 
 /var/const/access_castelnau_thrusters = "ACCESS_CASTELNAU_THRUSTERS"
