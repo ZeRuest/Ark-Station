@@ -68,7 +68,7 @@
 				for(var/access in get_region_accesses(i))
 					if (access && (access in valid_ids))
 						accesses.Add(list(list(
-							"desc" = replacetext(get_access_desc(access), " ", "&nbsp"),
+							"desc" = replacetext(replacetext(get_access_desc(access), " ", "&nbsp"), "Castelnau", ""),
 							"ref" = access,
 							"allowed" = (access in id_card.access) ? 1 : 0 )))
 				if (accesses.len > 0)
