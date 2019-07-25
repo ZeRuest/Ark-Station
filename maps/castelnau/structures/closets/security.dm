@@ -92,3 +92,6 @@
 
 /obj/structure/closet/crate/secure/weapon
 	req_access = list(access_castelnau_security)
+
+/obj/structure/closet/secure_closet/brig
+	req_access = list(access_castelnau_security)
