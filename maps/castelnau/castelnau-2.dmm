@@ -580,9 +580,9 @@
 "lh" = (/obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{id_tag = "air_out"},/obj/machinery/air_sensor/atmos/air,/turf/simulated/floor/reinforced/airmix,/area/castelnau/engineering/atmos)
 "li" = (/obj/machinery/atmospherics/unary/heater,/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
 "lj" = (/obj/machinery/atmospherics/unary/freezer,/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
-"lk" = (/obj/machinery/power/apc{dir = 1; name = "north bump"; pixel_y = 24},/obj/structure/cable/green{d2 = 4; icon_state = "0-4"},/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
-"ll" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 6},/obj/structure/cable/green{d1 = 1; d2 = 8; icon_state = "1-8"},/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
-"lm" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 9; pixel_y = 0},/obj/machinery/light_switch{dir = 8; pixel_x = 23},/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
+"lk" = (/obj/machinery/power/apc{dir = 1; name = "north bump"; pixel_y = 24},/obj/structure/cable/green{d2 = 4; icon_state = "0-4"},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 6},/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
+"ll" = (/obj/structure/cable/green{d1 = 1; d2 = 8; icon_state = "1-8"},/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
+"lm" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 9; pixel_y = 0},/obj/machinery/light_switch{dir = 8; pixel_x = 23},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{icon_state = "map-scrubbers"; dir = 4},/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
 "ln" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 6},/obj/machinery/light/small/green{icon_state = "bulb_map"; dir = 1},/turf/simulated/floor/tiled/dark,/area/castelnau/engineering/engine_smes)
 "lo" = (/obj/machinery/alarm{alarm_id = null; dir = 2; icon_state = "alarm0"; pixel_x = 0; pixel_y = 24},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4},/turf/simulated/floor/tiled/dark,/area/castelnau/engineering/engine_smes)
 "lp" = (/obj/machinery/atmospherics/pipe/simple/visible/cyan{icon_state = "intact"; dir = 6},/obj/effect/catwalk_plated/dark,/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,/obj/structure/cable/yellow{d1 = 2; d2 = 4; icon_state = "2-4"},/turf/simulated/floor/plating,/area/castelnau/engineering/engine_smes)
@@ -634,7 +634,7 @@
 "mj" = (/obj/machinery/atmospherics/pipe/simple/hidden/blue{icon_state = "intact"; dir = 10},/turf/simulated/wall/r_wall,/area/castelnau/engineering/atmos)
 "mk" = (/obj/machinery/atmospherics/pipe/manifold/visible{dir = 8},/obj/structure/sign/warning/compressed_gas{dir = 4; icon_state = "hikpa"; pixel_x = -32},/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
 "ml" = (/obj/machinery/atmospherics/pipe/manifold/visible{dir = 4},/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
-"mm" = (/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
+"mm" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
 "mn" = (/obj/machinery/atmospherics/pipe/simple/hidden/universal,/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
 "mo" = (/obj/machinery/atmospherics/pipe/simple/hidden/universal,/obj/structure/sign/warning/nosmoking_2{pixel_x = 28},/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
 "mp" = (/obj/structure/closet/radiation,/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 1},/turf/simulated/floor/tiled/dark,/area/castelnau/engineering/engine_smes)
@@ -788,7 +788,7 @@
 "ph" = (/obj/machinery/atmospherics/pipe/simple/hidden/universal,/obj/structure/catwalk,/turf/simulated/floor/plating,/area/castelnau/engineering/atmos)
 "pi" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 6},/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
 "pj" = (/obj/machinery/atmospherics/pipe/simple/hidden/universal{icon_state = "map_universal"; dir = 4},/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
-"pk" = (/obj/machinery/atmospherics/pipe/manifold/hidden/blue{icon_state = "map"; dir = 1},/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
+"pk" = (/obj/machinery/atmospherics/pipe/manifold/hidden/blue{icon_state = "map"; dir = 1},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
 "pl" = (/obj/machinery/atmospherics/pipe/simple/hidden/blue{icon_state = "intact"; dir = 9},/obj/machinery/atmospherics/pipe/simple/hidden/red{icon_state = "intact"; dir = 6},/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
 "pm" = (/obj/machinery/atmospherics/pipe/manifold/hidden/red{icon_state = "map"; dir = 4},/obj/machinery/alarm{dir = 8; pixel_x = 23},/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
 "pn" = (/obj/machinery/power/terminal,/obj/structure/cable/green,/obj/structure/cable/green{d1 = 1; d2 = 4; icon_state = "1-4"},/obj/structure/sign/warning/high_voltage{dir = 4; icon_state = "shock"; pixel_x = -32; pixel_y = 0},/turf/simulated/floor/plating,/area/castelnau/engineering/engine_smes)
@@ -843,7 +843,7 @@
 "qk" = (/obj/machinery/atmospherics/pipe/simple/visible/red{dir = 4; icon_state = "intact"},/obj/machinery/atmospherics/pipe/simple/visible/supply{dir = 4; icon_state = "intact-supply"},/obj/machinery/portable_atmospherics/powered/pump/filled,/obj/effect/floor_decal/industrial/warning,/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 1},/turf/simulated/floor/tiled/techfloor/grid,/area/castelnau/engineering/atmos)
 "ql" = (/obj/machinery/atmospherics/pipe/simple/hidden/red{icon_state = "intact"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 9},/obj/machinery/pipedispenser/disposal,/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
 "qm" = (/obj/machinery/atmospherics/pipe/simple/hidden/red{icon_state = "intact"; dir = 4},/obj/machinery/pipedispenser,/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
-"qn" = (/obj/machinery/atmospherics/pipe/simple/hidden/red{icon_state = "intact"; dir = 4},/obj/machinery/atmospherics/binary/pump{dir = 1},/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
+"qn" = (/obj/machinery/atmospherics/pipe/simple/hidden/red{icon_state = "intact"; dir = 4},/obj/machinery/atmospherics/binary/pump{dir = 1},/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
 "qo" = (/obj/machinery/atmospherics/pipe/simple/hidden/red{icon_state = "intact"; dir = 9},/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
 "qp" = (/obj/machinery/atmospherics/binary/pump{dir = 1},/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/firealarm{dir = 4; layer = 3.3; pixel_x = 26},/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
 "qq" = (/obj/structure/cable/cyan{d2 = 4; icon_state = "0-4"},/obj/machinery/power/smes/buildable/preset/castelnau/substation_full,/turf/simulated/floor/plating,/area/castelnau/engineering/engine_smes)
@@ -1088,6 +1088,7 @@
 "uV" = (/obj/machinery/atmospherics/pipe/simple/visible/cyan{icon_state = "intact"; dir = 6},/obj/structure/catwalk,/turf/simulated/floor/plating,/area/castelnau/thruster/d2port)
 "uW" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/atmospherics/binary/pump/on{dir = 4; name = "Fuel to Thrusters"; target_pressure = 1000},/turf/simulated/floor/plating,/area/castelnau/thruster/d2port)
 "uX" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/atmospherics/binary/pump/on{dir = 4; name = "Fuel to Chamber"; target_pressure = 20},/obj/machinery/button/blast_door{dir = 1; id_tag = "eng_1_prot"; name = "Combustion Chamber Protective Shutters"; pixel_x = 0; pixel_y = -24; req_access = list("ACCESS_CASTELNAU_THRUSTERS")},/turf/simulated/floor/plating,/area/castelnau/thruster/d2port)
+"uY" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4; layer = 2.4; level = 2},/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
 "uZ" = (/obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction{icon_state = "intact"; dir = 8},/turf/simulated/floor/reinforced/airless,/area/castelnau/thruster/d2port)
 "va" = (/obj/machinery/atmospherics/pipe/manifold/hidden/fuel,/turf/simulated/wall/ocp_wall,/area/castelnau/thruster/d2port)
 "vb" = (/obj/machinery/atmospherics/pipe/simple/visible/fuel{dir = 4},/obj/structure/ladder/up,/obj/structure/catwalk,/turf/simulated/floor/airless,/area/castelnau/thruster/d2port)
@@ -1101,9 +1102,12 @@
 "vj" = (/obj/machinery/atmospherics/pipe/simple/hidden/yellow{dir = 4; icon_state = "intact"},/turf/simulated/wall/ocp_wall,/area/castelnau/thruster/d2port)
 "vk" = (/obj/machinery/atmospherics/pipe/manifold/visible/fuel,/obj/structure/catwalk,/turf/simulated/floor/airless,/area/castelnau/thruster/d2port)
 "vl" = (/turf/simulated/wall/ocp_wall,/area/castelnau/thruster/d2port)
+"vm" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
 "vn" = (/obj/structure/sign/warning/hot_exhaust{pixel_y = 24},/turf/space,/area/space)
 "vo" = (/obj/effect/shuttle_landmark/skipjack/deck2,/turf/space,/area/space)
 "vp" = (/obj/effect/shuttle_landmark/merc/deck2,/turf/space,/area/space)
+"vq" = (/obj/machinery/atmospherics/portables_connector{icon_state = "map_connector"; dir = 1},/obj/effect/floor_decal/industrial/outline,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 5},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 9},/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
+"vr" = (/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 8},/turf/simulated/floor/tiled/techfloor,/area/castelnau/engineering/atmos)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -1184,7 +1188,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabzmG
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaamGnBnCnDnEnFnGnHnInJnKnLkJnMnNnOnPnQnRnSnTnUlSnVnWmZnXnYnbncnZoaobldhCkqocodoeofogohoiojokolomommmonooktopoqorosnrotouovowoxoyoyoynvozoAoBoCoDoEefdjdkdkegaibTaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaoFoGoHoIoJoKoLoMkJoNoOoPkJoQoRlRoSoToUoVoWoXlSoYoZpapbpcpdpeldldldldhCkqpfpgpgpgpfpgpgpgphpgpipjpkplpmktpnpopppqprpsptpupvoxpwpxpynvozoApzpApBkzefdjdkdkdlaabSaaaaaaaaaapCaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaoFpDpEpFpGpHpIpJpKpLpMpNpOpPpQpRpRpSpRpRpRpRpRpTpUpVpWpXpYpZqaqbqcldqdqeqfqgqgqgqhqgqgqiqjqkqlqmqnqoqpktqqqrqsqtnrquqvqwqxnrqyqzqAqBqCkwqDqEqFkzefdjdkdkegaibSaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaoFqGqHqIqJqKqLqMqNqOqPqQqRqSqTpRqUqVqWqXpRqYpRqZrarbpWpXrcpZrdrdreldrfkqpfpgpgpgpfpgpgpfpgpgmmmmommmomktktktrgrhnrrirjrkrloxrmrnrorpozoArqrrrskzefdjdkdkdlaabSaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaoFqGqHqIqJqKqLqMqNqOqPqQqRqSqTpRqUqVqWqXpRqYpRqZrarbpWpXrcpZrdrdreldrfkqpfpgpgpgpfpgpgpfpgpguYvmvqvromktktktrgrhnrrirjrkrloxrmrnrorpozoArqrrrskzefdjdkdkdlaabSaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaartrurumGrvrwqIrxqIryrzqIkHrArBpRrCrDrErFrGrHpRrIpUpZpWpXpZpZpZpZrJldrfkqrKododrLrModrNrOodrPrQrQrQrQrQktrRrSrTrUnrrVrWrXrYoxrZsasbscozoAsdsesfoEefdjdkdkegaibSaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasgaomGmGmGmGshsisjskkHkHczslpRsmsnsosppRsqpRsrsspZstsusvswsxsyszldrfkqnfngngsAnfngsAnfngsAsBsCsDsEsFktsGsHsIsJnrnrnrnrnrnrsKsKkwrpsLkwsMsNsOkznAdjdkdkdlaabSaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajsPajajmGmGmGsQsRkHsSsTsUpRpRpRpRpRpRpRpRldsVsVsVldldsVsVsVldldrfkqsWsXsYsZtatbsZtctdsZtetftgthtitjtktltmtntotptqtrtsktttttkwtumumutvtwkzkztxdjdkdkegaibSaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
