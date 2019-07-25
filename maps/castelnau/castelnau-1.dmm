@@ -6,7 +6,7 @@
 "af" = (/obj/structure/lattice,/obj/structure/catwalk,/obj/structure/railing/mapped{dir = 1; icon_state = "railing0-1"},/obj/random/maintenance,/turf/space,/area/space)
 "ag" = (/obj/structure/lattice,/obj/structure/catwalk,/obj/structure/railing/mapped{dir = 8; icon_state = "railing0-1"},/turf/space,/area/space)
 "ah" = (/obj/structure/disposalpipe/up,/obj/machinery/alarm{alarm_id = "xenobio4_alarm"; dir = 2; icon_state = "alarm0"; pixel_x = 0; pixel_y = 24},/obj/effect/floor_decal/industrial/warning/full,/obj/structure/railing/mapped,/obj/structure/railing/mapped{dir = 4; icon_state = "railing0-1"},/turf/simulated/floor/plating,/area/castelnau/maintenance/thirddeck/starboard)
-"ai" = (/obj/structure/ladder/up,/turf/simulated/floor/plating,/area/castelnau/maintenance/thirddeck/starboard)
+"ai" = (/obj/structure/ladder/up,/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/plating,/area/castelnau/maintenance/thirddeck/starboard)
 "aj" = (/obj/structure/lattice,/obj/structure/catwalk,/obj/structure/table/rack,/obj/random/tech_supply,/obj/random/maintenance,/turf/space,/area/space)
 "ak" = (/obj/structure/lattice,/obj/structure/catwalk,/obj/structure/railing/mapped{dir = 1; icon_state = "railing0-1"},/turf/space,/area/space)
 "al" = (/obj/effect/paint_stripe/red,/turf/simulated/wall/r_titanium,/area/shuttle/castelnau/prometeus/power)
