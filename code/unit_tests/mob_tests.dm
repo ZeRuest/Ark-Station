@@ -70,10 +70,13 @@ proc/create_test_mob_with_mind(var/turf/mobloc = null, var/mobtype = /mob/living
 	if(isnull(mobloc))
 		if(!default_mobloc)
 			for(var/turf/simulated/floor/tiled/T in world)
-				var/pressure = T.zone.air.return_pressure()
-				if(90 < pressure && pressure < 120) // Find a turf between 90 and 120
-					default_mobloc = T
-					break
+				if(T.zone)
+					var/pressure = T.zone.air.return_pressure()
+					if(90 < pressure && pressure < 120) // Find a turf between 90 and 120
+						default_mobloc = T
+						break
+				else
+					continue
 		mobloc = default_mobloc
 	if(!mobloc)
 		test_result["msg"] = "Unable to find a location to create test mob"
@@ -327,6 +330,41 @@ datum/unit_test/mob_damage/halloss
 
 /datum/unit_test/mob_damage/skrell/halloss
 	name = "MOB: Skrell Halloss Damage Check"
+	damagetype = PAIN
+
+// =================================================================
+// Resomi
+// =================================================================
+
+datum/unit_test/mob_damage/resomi
+	name = "MOB: Resomi damage check template"
+	template = /datum/unit_test/mob_damage/resomi
+	mob_type = /mob/living/carbon/human/resomi
+
+datum/unit_test/mob_damage/resomi/brute
+	name = "MOB: Resomi Brute Damage Check"
+	damagetype = BRUTE
+	expected_vulnerability = EXTRA_VULNERABLE
+
+datum/unit_test/mob_damage/resomi/fire
+	name = "MOB: Resomi Fire Damage Check"
+	damagetype = BURN
+	expected_vulnerability = EXTRA_VULNERABLE
+
+datum/unit_test/mob_damage/resomi/tox
+	name = "MOB: Resomi Toxins Damage Check"
+	damagetype = TOX
+
+datum/unit_test/mob_damage/resomi/oxy
+	name = "MOB: Resomi Oxygen Damage Check"
+	damagetype = OXY
+
+datum/unit_test/mob_damage/resomi/clone
+	name = "MOB: Resomi Clone Damage Check"
+	damagetype = CLONE
+
+datum/unit_test/mob_damage/resomi/halloss
+	name = "MOB: Resomi Halloss Damage Check"
 	damagetype = PAIN
 
 // =================================================================

@@ -120,7 +120,7 @@ var/list/nrods = list()
 		SSradiation.radiate (src, 500)
 		sealed = 0
 		broken = 1
-		reactants = null
+		reactants = list()
 		message_admins("[src] just molten down!")
 		own_rads = 2000
 
@@ -215,6 +215,8 @@ var/list/nrods = list()
 			var/cur_reaction_type = pick(possible_reactions)
 			var/decl/nuclear_reaction/cur_reaction = new cur_reaction_type
 			var/max_num_reactants = 0
+			if((cur_reaction.required_rads > 0) && (cur_reaction.radiation > 10) && (own_rads < 20))
+				own_rads = (rand(1899, 2101) / 100)
 			if(reaction_rads < cur_reaction.required_rads)
 				possible_reactions -= cur_reaction.type
 				continue
