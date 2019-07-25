@@ -22,6 +22,10 @@
 	max_pressure_protection = RIG_MAX_PRESSURE
 	min_pressure_protection = 0
 
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_rig_back_resomi.dmi'
+		)
+
 	siemens_coefficient = 0.2
 	permeability_coefficient = 0.1
 	unacidable = 1
