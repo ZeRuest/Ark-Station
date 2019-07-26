@@ -83,3 +83,6 @@
 		ui.auto_update_layout = 1
 		ui.set_initial_data(data)
 		ui.open()
+
+/datum/computer_file/program/card_mod/proc/authorized(var/obj/item/weapon/card/id/id_card)
+	return id_card && (access_castelnau_idmod in id_card.access)

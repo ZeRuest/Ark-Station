@@ -259,5 +259,5 @@
 /datum/computer_file/program/card_mod/proc/apply_access(var/obj/item/weapon/card/id/id_card, var/list/accesses)
 	id_card.access |= accesses
 
-/datum/computer_file/program/card_mod/proc/authorized(var/obj/item/weapon/card/id/id_card)
-	return id_card && (access_change_ids in id_card.access)
+///datum/computer_file/program/card_mod/proc/authorized(var/obj/item/weapon/card/id/id_card) // THE ARK PROJECT CODE
+//	return id_card && (access_change_ids in id_card.access)
