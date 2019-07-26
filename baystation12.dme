@@ -3113,6 +3113,7 @@
 #include "code_ark\code\modules\modular_computers\laptop.dm"
 #include "code_ark\code\modules\objects\items\weapons\storage\storage.dm"
 #include "code_ark\code\modules\organs\resomi_robolimbs.dm"
+#include "code_ark\code\modules\organs\external\robolimbs.dm"
 #include "code_ark\code\modules\organs\external\species\resomi.dm"
 #include "code_ark\code\modules\organs\internal\species\resomi.dm"
 #include "code_ark\code\modules\species\species.dm"
