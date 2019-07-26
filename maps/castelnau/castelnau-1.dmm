@@ -26,7 +26,7 @@
 "az" = (/obj/structure/ladder/up,/obj/structure/lattice,/obj/structure/catwalk,/obj/structure/railing/mapped{dir = 1; icon_state = "railing0-1"},/obj/structure/railing/mapped{dir = 4; icon_state = "railing0-1"},/turf/space,/area/space)
 "aA" = (/obj/effect/paint_stripe/red,/turf/simulated/wall/r_titanium,/area/shuttle/castelnau/prometeus/anomaly)
 "aB" = (/obj/effect/floor_decal/industrial/hatch/yellow,/obj/machinery/door/blast/regular{id_tag = "perseus_isolation_room_external"; name = "Perseus Isolation Room External Blast Door"},/turf/simulated/floor/airless,/area/shuttle/castelnau/prometeus/anomaly)
-"aC" = (/obj/effect/floor_decal/industrial/warning{dir = 5},/obj/machinery/light/navigation/delay2,/turf/simulated/floor/airless,/area/space)
+"aC" = (/obj/effect/floor_decal/industrial/warning{dir = 5},/obj/machinery/light/navigation/delay2,/turf/simulated/floor/airless,/area/shuttle/castelnau/prometeus/gas)
 "aD" = (/obj/structure/lattice,/obj/structure/catwalk,/obj/random/trash/space,/turf/space,/area/space)
 "aE" = (/obj/structure/lattice,/obj/structure/catwalk,/obj/structure/railing/mapped{dir = 4; icon_state = "railing0-1"},/obj/structure/railing/mapped,/turf/space,/area/space)
 "aF" = (/obj/machinery/atmospherics/portables_connector,/obj/machinery/portable_atmospherics/canister/carbon_dioxide/engine_setup,/obj/effect/floor_decal/industrial/outline/grey,/obj/structure/cable/yellow{d1 = 2; d2 = 8; icon_state = "2-8"},/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 1},/turf/simulated/floor,/area/shuttle/castelnau/prometeus/power)
