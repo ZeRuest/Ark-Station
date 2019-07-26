@@ -27,6 +27,8 @@
 	if(pixel_x || pixel_y)
 		A.pixel_x = pixel_x
 		A.pixel_y = pixel_y
+	for(var/obj/structure/closet/C in src.loc)
+		C.store_contents()
 
 // Returns an associative list in format path:weight
 /obj/random/proc/spawn_choices()
