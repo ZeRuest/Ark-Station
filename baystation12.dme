@@ -3120,6 +3120,7 @@
 #include "code_ark\code\modules\species\station\resomi.dm"
 #include "code_ark\code\modules\sprite_accessories\accessory_resomi.dm"
 #include "custom_items\clothing\_defines.dm"
+#include "custom_items\clothing\head\wig_longbraided.dm"
 #include "custom_items\clothing\masks\gasmask.dm"
 #include "custom_items\clothing\suits\misc.dm"
 #include "custom_items\clothing\under\accessories\accessory.dm"
