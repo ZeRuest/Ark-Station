@@ -206,3 +206,12 @@ var/const/NETWORK_ENGINEERING_OUTPOST = "Engineering Outpost"
 /obj/machinery/shield_diffuser/preset/castelnau
 	enabled = 0
 	icon_state = "fdiffuser_off"
+
+/obj/machinery/door/airlock/glass/research
+	stripe_color = COLOR_NT_RED
+
+/obj/machinery/door/airlock/research
+	stripe_color = COLOR_NT_RED
+
+/obj/machinery/door/airlock/multi_tile/research
+	stripe_color = COLOR_NT_RED
