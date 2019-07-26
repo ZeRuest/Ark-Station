@@ -1,4 +1,4 @@
-/mob/living/var/emoteCooldown = 3 SECONDS
+/mob/living/var/emoteCooldown = 1.5 SECONDS
 /mob/living/var/emoteLastUse = -1000
 
 /mob/living/proc/emoteCooldownCheck()
