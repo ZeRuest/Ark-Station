@@ -1,4 +1,5 @@
 /datum/gear/guns
+	allowed_client_age = 2
 	sort_category = "Weaponry"
 	category = /datum/gear/guns
 
