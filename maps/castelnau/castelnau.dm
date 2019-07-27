@@ -125,6 +125,7 @@
 	#include "z2-transit.dmm"
 	#include "../away/empty.dmm"
 
+	#include "../away/ascent/ascent.dm"
 	#include "../away/bearcat/bearcat.dm"
 	#include "../away/blueriver/blueriver.dm"
 	#include "../away/casino/casino.dm"
