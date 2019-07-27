@@ -87,8 +87,7 @@
 	#include "machinery/lighting.dm"
 	#include "machinery/vendors_storages.dm"
 	#include "machinery/other.dm"
-
-	#include "structures/closets/command.dm"
+	
 	#include "structures/sofa.dm"
 //	#include "structures/signs.dm"
 	#include "structures/thrusters.dm"

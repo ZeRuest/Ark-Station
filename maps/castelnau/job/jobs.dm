@@ -15,7 +15,7 @@
 		/datum/species/vox = list(HUMAN_NOVOX_JOBS),
 		/datum/species/vox/armalis = list(HUMAN_NOVOX_JOBS),
 	)
-#undef HUMAN_ONLY_JOBS
+	
 #undef HUMAN_NOVOX_JOBS
 
 	allowed_jobs = list(/datum/job/captain, /datum/job/hop, /datum/job/adjutant,
