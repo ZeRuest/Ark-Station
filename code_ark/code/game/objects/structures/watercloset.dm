@@ -8,11 +8,6 @@
 	. = ..()
 	sound_id = "[type]_[sequential_id(type)]"
 
-/obj/structure/hygiene/shower/New()
-	..()
-	create_reagents(50)
-	START_PROCESSING(SSprocessing, src)
-
 /obj/structure/hygiene/shower/Destroy()
 	QDEL_NULL(sound_token)
 	return ..()
