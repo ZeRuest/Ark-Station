@@ -8,6 +8,9 @@
 /obj/machinery/door/firedoor
 	req_access = list(list(access_castelnau_engineering, access_castelnau_security, access_castelnau_command))
 
+/obj/item/weapon/airlock_electronics
+	req_access = list(access_castelnau_engineering)
+
 //PROMETEUS
 /obj/machinery/alarm/prometeus
 	req_access = list(access_castelnau_prometeus)
