@@ -90,7 +90,7 @@
 				  	 access_castelnau_hangar,
 				  	 access_castelnau_eva)
 
-/datum/job/specialist
+/*/datum/job/specialist
 	title = "Security Specialist"
 	department = "Security"
 	department_flag = SEC
@@ -135,4 +135,4 @@
 					 access_castelnau_maint_tunnels,
 				 	 access_castelnau_external_airlocks,
 				  	 access_castelnau_hangar,
-				  	 access_castelnau_eva)
+				  	 access_castelnau_eva) */
