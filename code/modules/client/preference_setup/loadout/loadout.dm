@@ -67,6 +67,10 @@ var/list/gear_datums = list()
 				if(is_species_whitelisted(preference_mob, species))
 					okay = 1
 					break
+		if(pref.client.player_age && (pref.client.player_age != "Requires database"))//ark code
+			if(okay && G.allowed_client_age)
+				if(pref.client.player_age < G.allowed_client_age)
+					okay = 0//end ark code
 		if(!okay)
 			continue
 		if(max_cost && G.cost > max_cost)
@@ -352,6 +356,8 @@ var/list/gear_datums = list()
 	var/flags              //Special tweaks in new
 	var/category
 	var/list/gear_tweaks = list() //List of datums which will alter the item after it has been spawned.
+
+	var/allowed_client_age = 0 // ark code
 
 /datum/gear/New()
 	if(FLAGS_EQUALS(flags, GEAR_HAS_TYPE_SELECTION|GEAR_HAS_SUBTYPE_SELECTION))
