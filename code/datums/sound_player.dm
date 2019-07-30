@@ -23,11 +23,11 @@ GLOBAL_DATUM_INIT(sound_player, /decl/sound_player, new)
 
 
 //This can be called if either we're doing whole sound setup ourselves or it will be as part of from-file sound setup
-/decl/sound_player/proc/PlaySoundDatum(var/atom/source, var/sound_id, var/sound/sound, var/range, var/prefer_mute)
+/decl/sound_player/proc/PlaySoundDatum(var/atom/source, var/sound_id, var/sound/sound, var/range, var/prefer_mute, var/datum/client_preference/preference)
 	var/token_type = isnum(sound.environment) ? /datum/sound_token : /datum/sound_token/static_environment
-	return new token_type(source, sound_id, sound, range, prefer_mute)
+	return new token_type(source, sound_id, sound, range, prefer_mute, preference)
 
-/decl/sound_player/proc/PlayLoopingSound(var/atom/source, var/sound_id, var/sound, var/volume, var/range, var/falloff = 1, var/echo, var/frequency, var/prefer_mute)
+/decl/sound_player/proc/PlayLoopingSound(var/atom/source, var/sound_id, var/sound, var/volume, var/range, var/falloff = 1, var/echo, var/frequency, var/prefer_mute, var/datum/client_preference/preference)
 	var/sound/S = istype(sound, /sound) ? sound : new(sound)
 	S.environment = 0 // Ensures a 3D effect even if x/y offset happens to be 0 the first time it's played
 	S.volume  = volume
@@ -36,7 +36,7 @@ GLOBAL_DATUM_INIT(sound_player, /decl/sound_player, new)
 	S.frequency = frequency
 	S.repeat = TRUE
 
-	return PlaySoundDatum(source, sound_id, S, range, prefer_mute)
+	return PlaySoundDatum(source, sound_id, S, range, prefer_mute, preference) //ark modder
 
 /decl/sound_player/proc/PrivStopSound(var/datum/sound_token/sound_token)
 	var/channel = sound_token.sound.channel
