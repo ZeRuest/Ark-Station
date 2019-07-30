@@ -9,6 +9,7 @@ var/list/control_rods = list()
 	density = 0
 	use_power = 0
 	var/base_accp = 100
+	var/max_temp = 5000 //melting point
 	var/len = 0
 	var/target = 0
 	var/speed = 0.1
@@ -123,8 +124,8 @@ var/list/control_rods = list()
 
 /obj/machinery/control_rod/proc/check()
 	var/datum/gas_mixture/environment = loc.return_air()
-	if(environment.temperature > 3000)
-		health -= (environment.temperature - 3000)/10
+	if(environment.temperature > max_temp)
+		health -= (environment.temperature - max_temp)/50
 	if(try_power(load) || health > 0)
 		nocontrol = 0
 

@@ -241,8 +241,8 @@ var/list/nrods = list()
 				reactants[cur_reaction.substance] = 0
 
 			if((amount_reacting * cur_reaction.heat_production * 40) < 5000)
-				if(((rodtemp + amount_reacting * cur_reaction.heat_production * 320) < 3000) || ((amount_reacting * cur_reaction.heat_production * 320) < 250))
-					rodtemp += amount_reacting * cur_reaction.heat_production * 320
+				if(((rodtemp + amount_reacting * cur_reaction.heat_production * REACT_HEAT) < 3000) || ((amount_reacting * cur_reaction.heat_production * 320) < 250))
+					rodtemp += amount_reacting * cur_reaction.heat_production * REACT_HEAT
 				else
 					if(((rodtemp + amount_reacting * cur_reaction.heat_production * 100) < 4000) || ((amount_reacting * cur_reaction.heat_production * 100) < 200))
 						rodtemp += amount_reacting * cur_reaction.heat_production * 100

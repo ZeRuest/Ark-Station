@@ -1,6 +1,6 @@
 //Makes sure we don't get any merchant antags as a balance concern. Can also be used for future castelnau specific antag restrictions.
 /datum/antagonist/changeling
-	blacklisted_jobs = list(/datum/job/captain, /datum/job/hop)
+	blacklisted_jobs = list(/datum/job/captain, /datum/job/hop, /datum/job/warden, /datum/job/officer)
 
 /datum/antagonist/godcultist
 	blacklisted_jobs = list(/datum/job/captain, /datum/job/hop)
@@ -15,7 +15,7 @@
 	blacklisted_jobs = list()
 
 /datum/antagonist/traitor
-	blacklisted_jobs = list(/datum/job/captain)
+	blacklisted_jobs = list(/datum/job/captain, /datum/job/warden, /datum/job/officer)
 
 /datum/antagonist/ert/equip(var/mob/living/carbon/human/player)
 	if(!..())
