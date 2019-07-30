@@ -46,3 +46,7 @@
 	display_name = "watch"
 	path = /obj/item/clothing/ring/watch
 	sort_category = "General"
+
+/datum/gear/music_tape
+	display_name = "custom music tape"
+	path = /obj/item/music_tape/custom
