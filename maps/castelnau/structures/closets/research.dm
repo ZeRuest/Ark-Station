@@ -85,5 +85,22 @@
 		new /datum/atom_creator/simple(/obj/item/weapon/storage/backpack/messenger/tox, 50)
 	)
 
+/obj/structure/closet/secure_closet/scientist/castenlau/pilot
+	name = "pilot's locker"
+	req_access = list(access_castelnau_prometeus_helm)
+
+/obj/structure/closet/secure_closet/scientist/castenlau/pilot/WillContain()
+	return list(
+		/obj/item/clothing/under/rank/ntpilot/nanotrasen,
+		/obj/item/clothing/under/rank/ntpilot/heph,
+		/obj/item/clothing/under/rank/ntpilot,
+		/obj/item/clothing/head/helmet/solgov/pilot,
+		/obj/item/clothing/head/helmet/nt/pilot,
+		/obj/item/device/spaceflare,
+		/obj/item/device/flashlight/flare,
+		/obj/item/weapon/storage/belt/utility/full,
+		/obj/item/weapon/storage/backpack/dufflebag/eng
+	)
+
 /obj/structure/closet/crate/secure/biohazard
 	req_access = list(access_castelnau_prometeus)
