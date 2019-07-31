@@ -933,7 +933,7 @@
 "rW" = (/obj/structure/table/rack,/obj/item/stack/material/aluminium/fifty,/obj/item/stack/material/plastic/fifty,/turf/simulated/floor/tiled/techfloor/grid,/area/shuttle/castelnau/prometeus/robotic)
 "rX" = (/obj/machinery/computer/rdconsole/robotics{icon_state = "computer"; dir = 1},/turf/simulated/floor/tiled/techfloor/grid,/area/shuttle/castelnau/prometeus/robotic)
 "rY" = (/turf/simulated/floor/tiled/techfloor/grid,/area/shuttle/castelnau/prometeus/robotic)
-"rZ" = (/obj/effect/floor_decal/industrial/hatch/yellow,/obj/machinery/mecha_part_fabricator,/turf/simulated/floor/tiled/techfloor/grid,/area/shuttle/castelnau/prometeus/robotic)
+"rZ" = (/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/tiled/techfloor/grid,/area/shuttle/castelnau/prometeus/robotic)
 "sa" = (/obj/effect/paint_stripe/red,/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/blast/regular/open{density = 0; dir = 1; icon_state = "pdoor0"; id_tag = "perseus_blast_door"; name = "Perseus Blast Shutters"; opacity = 0},/obj/machinery/door/firedoor/prometeus,/turf/simulated/floor/plating,/area/shuttle/castelnau/prometeus/external)
 "sb" = (/obj/machinery/door/airlock/external{density = 1; frequency = 1331; id_tag = "calypso_shuttle_outer"; locked = 1; name = "Prometeus External Access"},/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/floor/tiled/techfloor/grid,/area/shuttle/castelnau/prometeus/external)
 "sc" = (/obj/machinery/atmospherics/binary/pump{dir = 1},/obj/effect/floor_decal/industrial/outline/blue,/obj/item/modular_computer/telescreen/preset{pixel_x = -32},/turf/simulated/floor/tiled/white/monotile,/area/shuttle/castelnau/prometeus/botany)
