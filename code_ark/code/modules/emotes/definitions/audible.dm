@@ -22,7 +22,7 @@
 	emote_message_3p = "USER давитс&#255;!"
 
 /decl/emote/audible/gnarl
-	emote_message_3p = "USER gnarls and shows its teeth.."
+	emote_message_3p = "USER рычит и скалитс&#255;!"
 
 /decl/emote/audible/chirp
 	key ="chirp"
