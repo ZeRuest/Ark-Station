@@ -16,10 +16,34 @@
 
 /datum/species/unathi
 	autohiss_basic_map = list(
-			"s" = list("ss", "sss", "ssss")
+			"s" = list("ss", "sss", "ssss"),
+
+			"ñ" = list("ñ", "ññ", "ñññ"),
+
+			"Ñ" = list("Ñ", "Ññ", "Ñññ")
 		)
 	autohiss_extra_map = list(
-			"x" = list("ks", "kss", "ksss")
+			"x" = list("ks", "kss", "ksss"),
+
+			"ê" = list("õ"),
+
+			"ã" = list("õ"),
+
+			"ç" = list("ñ", "ññ", "ñññ"),
+
+			"÷" = list("ù", "ùù", "ùùù"),
+
+			"æ" = list("ø", "øø", "øøø"),
+
+			"Ê" = list("Õ"),
+
+			"Ã" = list("Õ"),
+
+			"Ç" = list("Ñ", "Ññ", "Ñññ"),
+
+			"×" = list("Ù", "Ùù", "Ùùù"),
+
+			"Æ" = list("Ø", "Øø", "Øøø")
 		)
 	autohiss_exempt = list(
 					LANGUAGE_UNATHI_SINTA,
