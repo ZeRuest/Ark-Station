@@ -14,6 +14,7 @@
 //	#include "castelnau_unit_testing.dm"
 
 	#include "code/gamemodes/objectives.dm"
+	#include "code/game/turfs/flooring/flooring_premade.dm"
 
 	#include "datums/hairs.dm"
 	#include "datums/reports.dm"
@@ -87,7 +88,7 @@
 	#include "machinery/lighting.dm"
 	#include "machinery/vendors_storages.dm"
 	#include "machinery/other.dm"
-	
+
 	#include "structures/sofa.dm"
 //	#include "structures/signs.dm"
 	#include "structures/thrusters.dm"
