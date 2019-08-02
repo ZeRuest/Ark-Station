@@ -214,6 +214,8 @@
 					used_radios += r_ear
 
 /mob/living/carbon/human/handle_speech_sound()
+	if(species.name == SPECIES_HUMAN) // ark. needed for gender check
+		species.speech_sounds = GLOB.human_clearing_throat[gender]
 	if(species.speech_sounds && prob(species.speech_chance))
 		var/list/returns[2]
 		returns[1] = sound(pick(species.speech_sounds))

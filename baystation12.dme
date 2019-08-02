@@ -3085,6 +3085,7 @@
 #include "code\unit_tests\zas_tests.dm"
 #include "code\unit_tests\~helpers.dm"
 #include "code\unit_tests\~unit_test_types.dm"
+#include "code_ark\code\game\sound.dm"
 #include "code_ark\code\game\objects\items\music_player.dm"
 #include "code_ark\code\game\objects\items\music_tape.dm"
 #include "code_ark\code\game\objects\structures\watercloset.dm"

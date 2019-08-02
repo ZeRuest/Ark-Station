@@ -11,6 +11,9 @@
 	assisted_langs = list(LANGUAGE_NABBER)
 	min_age = 17
 	max_age = 100
+
+	speech_chance = 40 //ark
+
 	hidden_from_codex = FALSE
 	bandages_icon = 'icons/mob/bandage.dmi'
 
