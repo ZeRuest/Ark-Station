@@ -47,6 +47,6 @@
 	path = /obj/item/clothing/ring/watch
 	sort_category = "General"
 
-/datum/gear/music_tape
-	display_name = "custom music tape"
-	path = /obj/item/music_tape/custom
+/datum/gear/music_tapes
+	display_name = "custom music tapes"
+	path = /obj/item/weapon/storage/box/tapes

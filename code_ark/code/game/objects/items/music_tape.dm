@@ -108,3 +108,6 @@
 /obj/item/music_tape/proc/fix()
 	ruined = FALSE
 	update_icon()
+
+/obj/item/weapon/storage/box/tapes
+	startswith = list(/obj/item/music_tape/custom  = 3)
