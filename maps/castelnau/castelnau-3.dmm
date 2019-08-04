@@ -535,7 +535,7 @@
 "ko" = (/obj/machinery/door/blast/shutters/open{id_tag = "med_quarantine"; name = "Quarantine Shutters"},/obj/effect/wallframe_spawn/reinforced/polarized/full{id = "optheatre_tint"},/turf/simulated/floor/plating,/area/castelnau/medical/surgery)
 "kp" = (/turf/simulated/wall,/area/castelnau/medical/surgery)
 "kq" = (/turf/simulated/wall,/area/castelnau/medical/morgue)
-"kr" = (/obj/machinery/door/airlock/medical{autoset_access = 0; name = "Morgue"; req_access = newlist()},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/dark/monotile,/area/castelnau/medical/morgue)
+"kr" = (/obj/machinery/door/airlock/medical{autoset_access = 1; name = "Morgue"},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/dark/monotile,/area/castelnau/medical/morgue)
 "ks" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/castelnau/civ/bar)
 "kt" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/door/airlock/multi_tile/civilian{name = "Saloon"},/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/dark/monotile,/area/castelnau/civ/bar)
 "ku" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/door/firedoor,/obj/structure/disposalpipe/segment,/turf/simulated/floor/tiled/dark/monotile,/area/castelnau/civ/bar)
