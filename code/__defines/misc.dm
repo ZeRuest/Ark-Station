@@ -259,7 +259,7 @@
 #endif
 
 #ifndef UNIX_HTTP_POST_DLL_LOCATION
-#define UNIX_HTTP_POST_DLL_LOCATION "lib/libbyhttp.so"
+#define UNIX_HTTP_POST_DLL_LOCATION "/lib/libbyhttp.so"
 #endif
 
 #ifndef HTTP_POST_DLL_LOCATION
