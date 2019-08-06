@@ -53,7 +53,7 @@
 	if(istype(W, /obj/item/device/pipe_painter))
 		return
 
-	if(isWrench(W))		
+	if(isWrench(W))
 		if (air_contents.return_pressure() > 2*ONE_ATMOSPHERE)
 			to_chat(user, "<span class='warning'>You cannot unwrench \the [src], it is too exerted due to internal pressure.</span>")
 			add_fingerprint(user)
@@ -63,44 +63,44 @@
 		to_chat(user, "<span class='notice'>You begin to unfasten \the [src]...</span>")
 
 		if (do_after(user, 40, src))
-			user.visible_message("<span class='notice'>\The [user] unfastens \the [src].</span>", "<span class='notice'>You have unfastened \the [src].</span>", "You hear a ratchet.")		
+			user.visible_message("<span class='notice'>\The [user] unfastens \the [src].</span>", "<span class='notice'>You have unfastened \the [src].</span>", "You hear a ratchet.")
 			new /obj/item/pipe/tank(loc, src)
 			qdel(src)
 
 /obj/machinery/atmospherics/unary/tank/air
 	name = "Pressure Tank (Air)"
 	icon_state = "air"
-	filling = list("oxygen" = O2STANDARD, "nitrogen" = N2STANDARD)
+	filling = list(GAS_OXYGEN = O2STANDARD, GAS_NITROGEN = N2STANDARD)
 
 /obj/machinery/atmospherics/unary/tank/oxygen
 	name = "Pressure Tank (Oxygen)"
 	icon_state = "o2"
-	filling = list("oxygen" = 1)
+	filling = list(GAS_OXYGEN = 1)
 
 /obj/machinery/atmospherics/unary/tank/nitrogen
 	name = "Pressure Tank (Nitrogen)"
 	icon_state = "n2"
-	filling = list("nitrogen" = 1)
+	filling = list(GAS_NITROGEN = 1)
 
 /obj/machinery/atmospherics/unary/tank/carbon_dioxide
 	name = "Pressure Tank (Carbon Dioxide)"
 	icon_state = "co2"
-	filling = list("carbon_dioxide" = 1)
+	filling = list(GAS_CO2 = 1)
 
 /obj/machinery/atmospherics/unary/tank/phoron
 	name = "Pressure Tank (Phoron)"
 	icon_state = "phoron"
-	filling = list("phoron" = 1)
+	filling = list(GAS_PHORON = 1)
 
 /obj/machinery/atmospherics/unary/tank/nitrous_oxide
 	name = "Pressure Tank (Nitrous Oxide)"
 	icon_state = "n2o"
-	filling = list("sleeping_agent" = 1)
+	filling = list(GAS_N2O = 1)
 
 /obj/machinery/atmospherics/unary/tank/hydrogen
 	name = "Pressure Tank (Hydrogen)"
 	icon_state = "h2"
-	filling = list("hydrogen" = 1)
+	filling = list(GAS_HYDROGEN = 1)
 
 /obj/item/pipe/tank
 	icon = 'icons/atmos/tank.dmi'
@@ -108,7 +108,7 @@
 	name =  "Pressure Tank"
 	desc = "A large vessel containing pressurized gas."
 	color =  PIPE_COLOR_WHITE
-	connect_types = CONNECT_TYPE_REGULAR|CONNECT_TYPE_REGULAR|CONNECT_TYPE_SCRUBBER|CONNECT_TYPE_FUEL	
+	connect_types = CONNECT_TYPE_REGULAR|CONNECT_TYPE_REGULAR|CONNECT_TYPE_SCRUBBER|CONNECT_TYPE_FUEL
 	w_class = ITEM_SIZE_HUGE
 	level = 1
 	dir = SOUTH

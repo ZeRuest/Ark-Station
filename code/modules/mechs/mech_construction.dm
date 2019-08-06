@@ -27,6 +27,7 @@
 	frame.is_reinforced = FRAME_REINFORCED_WELDED
 	frame.set_name = name
 	frame.name = "frame of \the [frame.set_name]"
+	frame.material = material
 	frame.queue_icon_update()
 
 	qdel(src)
@@ -92,7 +93,7 @@
 		ME.installed(src)
 		GLOB.destroyed_event.register(system, src, .proc/forget_module)
 
-	
+
 
 	system.forceMove(src)
 	hardpoints[system_hardpoint] = system
@@ -154,4 +155,3 @@
 		playsound(user.loc, 'sound/items/Screwdriver.ogg', 100, 1)
 
 	return 1
-

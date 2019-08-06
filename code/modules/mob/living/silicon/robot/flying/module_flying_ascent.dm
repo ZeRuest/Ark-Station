@@ -6,15 +6,18 @@
 	sprites = list(
 		"Drone" = "drone-ascent"
 	)
-	// The duplicate clustertools in this list are so that they can set up to 
+	// The duplicate clustertools in this list are so that they can set up to
 	// hack doors, windows etc. without having to constantly cycle through tools.
 	equipment = list(
 		/obj/item/device/flash,
 		/obj/item/weapon/gun/energy/particle/small,
 		/obj/item/device/multitool/mantid,
 		/obj/item/clustertool,
-		/obj/item/clustertool, 
 		/obj/item/clustertool,
+		/obj/item/clustertool,
+		/obj/item/weapon/soap,
+		/obj/item/weapon/mop/advanced,
+		/obj/item/device/plunger/robot,
 		/obj/item/weapon/weldingtool/electric/mantid,
 		/obj/item/weapon/extinguisher,
 		/obj/item/device/t_scanner,
@@ -37,12 +40,14 @@
 		/obj/item/stack/material/cyborg/glass/reinforced,
 		/obj/item/stack/cable_coil/cyborg,
 		/obj/item/stack/material/cyborg/plasteel,
-		/obj/item/device/plunger/robot
+		/obj/item/stack/nanopaste
 	)
 	synths = list(
 		/datum/matter_synth/metal = 	30000,
 		/datum/matter_synth/glass = 	20000,
-		/datum/matter_synth/plasteel = 	10000
+		/datum/matter_synth/plasteel = 	10000,
+		/datum/matter_synth/nanite =    10000,
+		/datum/matter_synth/wire
 	)
 
 	languages = list(
@@ -60,6 +65,7 @@
 	var/datum/matter_synth/glass/glass =       locate() in synths
 	var/datum/matter_synth/plasteel/plasteel = locate() in synths
 	var/datum/matter_synth/wire/wire =         locate() in synths
+	var/datum/matter_synth/nanite/nanite =     locate() in synths
 
 	for(var/thing in list(
 		 /obj/item/stack/material/cyborg/steel,
@@ -83,6 +89,10 @@
 
 	var/obj/item/stack/material/cyborg/plasteel/PL = locate() in equipment
 	PL.synths = list(plasteel)
+
+	var/obj/item/stack/nanopaste/N = locate() in equipment
+	N.synths = list(nanite)
+
 	. = ..()
 
 /obj/item/weapon/robot_module/flying/ascent/Initialize()
@@ -98,3 +108,9 @@
 	if(resin.get_amount() < resin.get_max_amount())
 		resin.add(1)
 	..()
+
+/obj/item/weapon/robot_module/flying/ascent/finalize_equipment()
+	. = ..()
+	var/obj/item/stack/nanopaste/N = locate() in equipment
+	N.uses_charge = 1
+	N.charge_costs = list(1000)

@@ -36,7 +36,6 @@
 	var/mob/living/original	//TODO: remove.not used in any meaningful way ~Carn. First I'll need to tweak the way silicon-mobs handle minds.
 	var/active = 0
 
-	var/memory
 	var/list/known_connections //list of known (RNG) relations between people
 	var/gen_relations_info
 
@@ -70,6 +69,7 @@
 	..()
 
 /datum/mind/Destroy()
+	QDEL_NULL_LIST(memories)
 	SSticker.minds -= src
 	. = ..()
 
@@ -100,25 +100,6 @@
 	if(active)
 		new_character.key = key		//now transfer the key to link the client to our new body
 
-/datum/mind/proc/store_memory(new_text)
-	memory += "[new_text]<BR>"
-
-/datum/mind/proc/show_memory(mob/recipient)
-	var/output = "<B>[current.real_name]'s Memory</B><HR>"
-	output += memory
-
-	if(objectives.len>0)
-		output += "<HR><B>Objectives:</B>"
-
-		var/obj_count = 1
-		for(var/datum/objective/objective in objectives)
-			output += "<B>Objective #[obj_count]</B>: [objective.explanation_text]"
-			obj_count++
-	if(SSgoals.ambitions[src])
-		var/datum/goal/ambition/ambition = SSgoals.ambitions[src]
-		output += "<HR><B>Ambitions:</B> [ambition.summarize()]<br>"
-	recipient << browse(output,"window=memory")
-
 /datum/mind/proc/edit_memory()
 	if(GAME_STATE <= RUNLEVEL_SETUP)
 		alert("Not before round-start!", "Alert")
@@ -140,11 +121,6 @@
 		var/num = 1
 		for(var/datum/objective/O in objectives)
 			out += "<b>Objective #[num]:</b> [O.explanation_text] "
-			if(O.completed)
-				out += "(<font color='green'>complete</font>)"
-			else
-				out += "(<font color='red'>incomplete</font>)"
-			out += " <a href='?src=\ref[src];obj_completed=\ref[O]'>\[toggle\]</a>"
 			out += " <a href='?src=\ref[src];obj_delete=\ref[O]'>\[remove\]</a><br>"
 			num++
 		out += "<br><a href='?src=\ref[src];obj_announce=1'>\[announce objectives\]</a>"
@@ -181,6 +157,11 @@
 			if(did_generate_goal)
 				to_chat(current, SPAN_NOTICE("You have received a new goal. Use <b>Show Goals</b> to view it."))
 		return TRUE // To avoid 'you are not an admin' spam.
+
+	if(href_list["remove_memory"])
+		var/memory = locate(href_list["remove_memory"]) in memories
+		RemoveMemory(memory, usr)
+		return TRUE
 
 	if(href_list["abandon_goal"])
 		var/datum/goal/goal = get_goal_from_href(href_list["abandon_goal"])
@@ -259,11 +240,6 @@
 			role_alt_title = new_role
 			if(current)
 				current.skillset.obtain_from_client(job, current.client)
-
-	else if (href_list["memory_edit"])
-		var/new_memo = sanitize(input("Write new memory", "Memory", memory) as null|message)
-		if (isnull(new_memo)) return
-		memory = new_memo
 
 	else if (href_list["amb_edit"])
 		var/datum/mind/mind = locate(href_list["amb_edit"])
@@ -344,10 +320,6 @@
 					new_objective:target = M.mind
 					new_objective.explanation_text = "[objective_type] [M.real_name], the [M.mind.special_role ? M.mind:special_role : M.mind:assigned_role]."
 
-			if ("prevent")
-				new_objective = new /datum/objective/block
-				new_objective.owner = src
-
 			if ("hijack")
 				new_objective = new /datum/objective/hijack
 				new_objective.owner = src
@@ -416,11 +388,6 @@
 		if(!istype(objective))	return
 		objectives -= objective
 
-	else if(href_list["obj_completed"])
-		var/datum/objective/objective = locate(href_list["obj_completed"])
-		if(!istype(objective))	return
-		objective.completed = !objective.completed
-
 	else if(href_list["implant"])
 		var/mob/living/carbon/human/H = current
 
@@ -487,7 +454,6 @@
 					current.drop_from_inventory(W)
 			if("takeuplink")
 				take_uplink()
-				memory = null//Remove any memory they may have had.
 			if("crystals")
 				if (usr.client.holder.rights & R_FUN)
 					var/obj/item/device/uplink/suplink = find_syndicate_uplink()
@@ -506,7 +472,6 @@
 		for(var/datum/objective/objective in objectives)
 			to_chat(current, "<B>Objective #[obj_count]</B>: [objective.explanation_text]")
 			obj_count++
-	edit_memory()
 
 /datum/mind/proc/find_syndicate_uplink()
 	var/list/L = current.get_contents()

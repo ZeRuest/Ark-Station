@@ -10,7 +10,7 @@
 
 /obj/structure/bed/sofa/New(var/newloc)
 	base_icon = icon_state
-	..(newloc,MATERIAL_LEATHER)
+	..(newloc,MATERIAL_LEATHER_GENERIC)
 
 /obj/structure/bed/sofa/post_buckle_mob()
 	update_icon()

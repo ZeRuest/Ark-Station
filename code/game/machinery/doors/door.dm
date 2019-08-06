@@ -207,11 +207,6 @@
 	if(CanInteract(user, DefaultTopicState()))
 		return attackby(user, user)
 
-/obj/machinery/door/attack_tk(mob/user as mob)
-	if(requiresID() && !allowed(null))
-		return
-	..()
-
 /obj/machinery/door/attackby(obj/item/I as obj, mob/user as mob)
 	src.add_fingerprint(user, 0, I)
 
@@ -559,13 +554,18 @@
 	var/area/aft = access_area_by_dir(GLOB.reverse_dir[dir])
 	fore = fore || aft
 	aft = aft || fore
-	
+
 	if (!fore && !aft)
 		req_access = list()
 	else if (fore.secure || aft.secure)
 		req_access = req_access_union(fore, aft)
 	else
 		req_access = req_access_diff(fore, aft)
+
+/obj/machinery/door/do_simple_ranged_interaction(var/mob/user)
+	if(!requiresID() || allowed(null))
+		toggle()
+	return TRUE
 
 // Public access
 

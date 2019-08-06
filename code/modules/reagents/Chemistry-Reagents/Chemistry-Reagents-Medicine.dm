@@ -501,7 +501,7 @@
 			to_chat(M, pick(SPAN_NOTICE("The head aches from sounds..."), SPAN_NOTICE("My ears are plugged up...")))
 			M.stun_effect_act(0, 10, BP_HEAD, "headache")
 		if(prob(5) && !M.stat) //don't do that as dead person, please
-			M.custom_emote(VISIBLE_MESSAGE, pick("прижимает уши к голове.", "тяжело дышит через нос.", "морщится от боли."))
+			M.custom_emote(VISIBLE_MESSAGE, pick("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.", "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ.", "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ."))
 		if(prob(10))
 			to_chat(M, SPAN_DANGER("My heart gonna break out from the chest!"))
 			M.stun_effect_act(0, 15, BP_CHEST, "heart damage") //a small pain without damage

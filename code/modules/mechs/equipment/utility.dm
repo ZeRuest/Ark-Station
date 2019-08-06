@@ -7,8 +7,10 @@
 	var/obj/carrying
 	origin_tech = list(TECH_MATERIAL = 2, TECH_ENGINEERING = 2)
 
-/obj/item/mech_equipment/clamp/attack()
-	return 0
+/obj/item/mech_equipment/clamp/resolve_attackby(atom/A, mob/user, click_params)
+	if(istype(A, /obj/structure/closet) && owner)
+		return 0
+	return ..()
 
 /obj/item/mech_equipment/clamp/afterattack(var/atom/target, var/mob/living/user, var/inrange, var/params)
 	. = ..()
@@ -67,6 +69,12 @@
 /obj/item/mech_equipment/clamp/get_hardpoint_maptext()
 	if(carrying)
 		return carrying.name
+	. = ..()
+
+/obj/item/mech_equipment/clamp/uninstalled()
+	if(carrying)
+		carrying.dropInto(loc)
+		carrying = null
 	. = ..()
 
 // A lot of this is copied from floodlights.
@@ -160,7 +168,7 @@
 						locked = null
 						to_chat(user, SPAN_NOTICE("Lock on [locked] disengaged."))
 			if(CATAPULT_AREA)
-				
+
 				var/list/atoms = list()
 				if(isturf(target))
 					atoms = range(target,3)
@@ -188,7 +196,7 @@
 	name = "drill head"
 	desc = "A replaceable drill head usually used in exosuit drills."
 	icon_state = "drill_head"
-	
+
 /obj/item/weapon/material/drill_head/Initialize()
 	. = ..()
 	durability = 2 * material.integrity
@@ -204,7 +212,7 @@
 	//Drill can have a head
 	var/obj/item/weapon/material/drill_head/drill_head
 	origin_tech = list(TECH_MATERIAL = 2, TECH_ENGINEERING = 2)
-	
+
 
 
 /obj/item/mech_equipment/drill/Initialize()
@@ -239,7 +247,7 @@
 		if(drill_head == null)
 			to_chat(user, SPAN_WARNING("Your drill doesn't have a head!"))
 			return
-		
+
 		var/obj/item/weapon/cell/C = owner.get_cell()
 		if(istype(C))
 			C.use(active_power_use * CELLRATE)
@@ -247,7 +255,7 @@
 
 		var/T = target.loc
 
-		//Better materials = faster drill! 
+		//Better materials = faster drill!
 		var/delay = max(5, 20 - drill_head.material.brute_armor)
 		owner.setClickCooldown(delay) //Don't spamclick!
 		if(do_after(owner, delay, target) && drill_head)
@@ -278,9 +286,9 @@
 					drill_head.durability -= 1
 					log_and_message_admins("[src] used to drill [target].", user, owner.loc)
 
-				
 
-	
+
+
 				if(owner.hardpoints.len) //if this isn't true the drill should not be working to be fair
 					for(var/hardpoint in owner.hardpoints)
 						var/obj/item/I = owner.hardpoints[hardpoint]
@@ -293,13 +301,13 @@
 									ore.Move(ore_box)
 
 				playsound(src, 'sound/weapons/circsawhit.ogg', 50, 1)
-		
-		else
-			to_chat(user, "You must stay still while the drill is engaged!")		
 
-				
+		else
+			to_chat(user, "You must stay still while the drill is engaged!")
+
+
 		return 1
-		
+
 
 
 
@@ -315,5 +323,3 @@
 /obj/item/weapon/gun/energy/plasmacutter/mounted/mech
 	use_external_power = TRUE
 	has_safety = FALSE
-	
-

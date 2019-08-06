@@ -52,7 +52,7 @@
 		MATERIAL_MAPLE =       TRUE,
 		MATERIAL_EBONY =       TRUE,
 		MATERIAL_WALNUT =      TRUE,
-		MATERIAL_LEATHER =     TRUE,
+		MATERIAL_LEATHER_GENERIC =     TRUE,
 		MATERIAL_PLASTIC =     TRUE,
 		MATERIAL_CARDBOARD =   TRUE,
 		MATERIAL_CLOTH =       TRUE,
@@ -144,7 +144,7 @@
 						mat_stack.set_amount(mat_stack.amount + taking_sheets)
 						sheets -= taking_sheets
 						updated_stacks = TRUE
-						
+
 				// Create new stacks if needed.
 				while(sheets > 0)
 					var/obj/item/stack/material/mat_stack = new M.stack_type(src)

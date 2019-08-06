@@ -36,7 +36,7 @@ MANTIDIFY(/obj/machinery/door/airlock/external/bolted, "mantid airlock", "door")
 
 /obj/machinery/atmospherics/unary/vent_scrubber/on/ascent/Initialize()
 	. = ..()
-	scrubbing_gas -= "methyl_bromide"
+	scrubbing_gas -= GAS_METHYL_BROMIDE
 
 /obj/machinery/recharge_station/ascent
 	name = "mantid recharging dock"
@@ -67,6 +67,11 @@ MANTIDIFY(/obj/machinery/door/airlock/external/bolted, "mantid airlock", "door")
 	icon = 'icons/obj/ascent_sleepers.dmi'
 	base_type = /obj/machinery/sleeper
 	construct_state = /decl/machine_construction/default/no_deconstruct
+
+/obj/machinery/sleeper/ascent/Initialize(mapload, d, populate_parts)
+	. = ..()
+	base_chemicals["Crystalizing Agent"] = /datum/reagent/crystal
+	base_chemicals["Bromide"] = /datum/reagent/toxin/bromide
 
 /obj/machinery/autolathe/ascent
 	name = "\improper Ascent nanofabricator"
@@ -229,6 +234,6 @@ MANTIDIFY(/obj/machinery/door/airlock/external/bolted, "mantid airlock", "door")
 /obj/machinery/power/smes/buildable/power_shuttle/ascent
 	name = "mantid battery"
 	desc = "Some kind of strange alien SMES technology."
-	icon = 'icons/obj/machines/power/mantid_smes.dmi'	
+	icon = 'icons/obj/machines/power/mantid_smes.dmi'
 	overlay_icon = 'icons/obj/machines/power/mantid_smes.dmi'
 	construct_state = /decl/machine_construction/default/no_deconstruct

@@ -22,7 +22,6 @@
 		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/misc.dmi'
 		)
 
-
 /obj/item/weapon/handcuffs/examine(mob/user)
 	if (!(. = ..()))
 		return

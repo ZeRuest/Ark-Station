@@ -45,10 +45,6 @@
 	..()
 	hard_drive.store_file(new /datum/computer_file/program/reports())
 
-/obj/item/modular_computer/pda/heads/install_default_programs()
-	..()
-	hard_drive.store_file(new /datum/computer_file/program/reports())
-
 /obj/item/modular_computer/pda/heads/hop/install_default_hardware()
 	..()
 	scanner = new /obj/item/weapon/stock_parts/computer/scanner/paper(src)
@@ -68,10 +64,6 @@
 /obj/item/modular_computer/pda/heads/rd/install_default_hardware()
 	..()
 	scanner = new /obj/item/weapon/stock_parts/computer/scanner/paper(src)
-
-/obj/item/modular_computer/pda/cargo/install_default_programs()
-	..()
-	hard_drive.store_file(new /datum/computer_file/program/reports())
 
 /obj/item/modular_computer/pda/cargo/install_default_programs()
 	..()
