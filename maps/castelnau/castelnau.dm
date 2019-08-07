@@ -11,7 +11,7 @@
 	#include "castelnau_renames.dm"
 	#include "castelnau_security_state.dm"
 	#include "castelnau_shuttles.dm"
-//	#include "castelnau_unit_testing.dm"
+	#include "castelnau_unit_testing.dm"
 
 	#include "code/gamemodes/objectives.dm"
 	#include "code/game/turfs/flooring/flooring_premade.dm"

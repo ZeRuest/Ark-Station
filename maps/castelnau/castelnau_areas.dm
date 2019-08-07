@@ -404,6 +404,12 @@ CREATE_CST_AREA(supply/hangar)
 	sound_env = LARGE_ENCLOSED
 	req_access = list(access_castelnau_hangar)
 
+CREATE_CST_AREA(supply/smelter)
+	name = "Smelter"
+	icon_state = "hangar"
+	sound_env = LARGE_ENCLOSED
+	req_access = list(access_castelnau_hangar)
+
 //SECOND_DECK(Z-2)
 CREATE_CST_AREA(supply/office)
 	name = "Supply Office"
@@ -561,6 +567,10 @@ CREATE_CST_AREA(maintenance/firstdeck/aftport)
 	name = "First Deck Aft Port Maintenance"
 	icon_state = "apmaint"
 
+CREATE_CST_AREA(maintenance/firstdeck/aft)
+	name = "First Deck Aft Maintenance"
+	icon_state = "amaint"
+
 CREATE_CST_AREA(maintenance/firstdeck/forestarboard)
 	name = "First Deck Fore Starboard Maintenance"
 	icon_state = "fsmaint"
@@ -674,7 +684,7 @@ CREATE_CST_AREA(civ/cryo)
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 
 CREATE_CST_AREA(command/captain)
-	name = "Command - Captain's Office"
+	name = "Command - Main Office"
 	icon_state = "captain"
 	sound_env = MEDIUM_SOFTFLOOR
 	req_access = list(access_castelnau_comoffice)
@@ -692,6 +702,11 @@ CREATE_CST_AREA(command/eva)
 
 CREATE_CST_AREA(command/bridge)
 	name = "Bridge"
+	icon_state = "bridge"
+	req_access = list(access_castelnau_bridge)
+
+CREATE_CST_AREA(command/bridge/storage)
+	name = "Bridge storage"
 	icon_state = "bridge"
 	req_access = list(access_castelnau_bridge)
 
