@@ -6,7 +6,7 @@
 
 	charge_type = Sp_HOLDVAR
 	holder_var_type = "brainloss"
-	holder_var_amount = 10
+	holder_var_amount = 9.9
 
 	invocation = "Joyo!"
 	invocation_type = SpI_WHISPER

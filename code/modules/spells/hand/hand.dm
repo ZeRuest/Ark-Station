@@ -64,7 +64,8 @@
 	if(..())
 		casts--
 		to_chat(holder, "<span class='notice'>The [name] spell has [casts] out of [max_casts] charges left</span>")
-		cancel_hand()
+		if(!casts)
+			cancel_hand()
 		return TRUE
 	return FALSE
 
