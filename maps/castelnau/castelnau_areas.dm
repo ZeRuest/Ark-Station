@@ -626,6 +626,7 @@ CREATE_CST_AREA(medical/morgue)
 	name = "Morgue"
 	icon_state = "morgue"
 	ambience = list('sound/ambience/ambimo1.ogg','sound/ambience/ambimo2.ogg','sound/music/main.ogg')
+	req_access = list(access_castelnau_morgue)
 
 CREATE_CST_AREA(medical/sleeper)
 	name = "Emergency Treatment Center"
