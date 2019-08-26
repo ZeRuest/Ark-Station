@@ -14,7 +14,7 @@
 	#include "castelnau_unit_testing.dm"
 
 	#include "code/gamemodes/objectives.dm"
-
+	#include "flooring/flooring_premade.dm"
 	#include "game/antagonist/antagonist.dm"
 
 	#include "datums/hairs.dm"
