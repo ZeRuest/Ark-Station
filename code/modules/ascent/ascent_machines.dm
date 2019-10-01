@@ -73,12 +73,14 @@ MANTIDIFY(/obj/machinery/door/airlock/external/bolted, "mantid airlock", "door")
 	base_chemicals["Crystalizing Agent"] = /datum/reagent/crystal
 	base_chemicals["Bromide"] = /datum/reagent/toxin/bromide
 
-/obj/machinery/autolathe/ascent
+/obj/machinery/fabricator/ascent
 	name = "\improper Ascent nanofabricator"
 	desc = "A squat, complicated fabrication system clad in purple polymer."
-	icon = 'icons/obj/nanofabricator.dmi'
+	icon = 'icons/obj/machines/fabricators/nanofabricator.dmi'
+	icon_state = "nanofab"
+	base_icon_state = "nanofab"
 	req_access = list(access_ascent)
-	base_type = /obj/machinery/autolathe
+	base_type = /obj/machinery/fabricator
 	construct_state = /decl/machine_construction/default/no_deconstruct
 
 /obj/machinery/power/apc/hyper/ascent
@@ -207,7 +209,6 @@ MANTIDIFY(/obj/machinery/door/airlock/external/bolted, "mantid airlock", "door")
 		field_image.color = COLOR_CYAN
 		field_image.alpha = 50
 		field_image.layer = SINGULARITY_LAYER
-		field_image.plane = EFFECTS_BELOW_LIGHTING_PLANE
 		field_image.appearance_flags |= RESET_COLOR
 
 		var/matrix/M = matrix()
@@ -234,6 +235,6 @@ MANTIDIFY(/obj/machinery/door/airlock/external/bolted, "mantid airlock", "door")
 /obj/machinery/power/smes/buildable/power_shuttle/ascent
 	name = "mantid battery"
 	desc = "Some kind of strange alien SMES technology."
-	icon = 'icons/obj/machines/power/mantid_smes.dmi'
+	icon = 'icons/obj/machines/power/mantid_smes.dmi'	
 	overlay_icon = 'icons/obj/machines/power/mantid_smes.dmi'
 	construct_state = /decl/machine_construction/default/no_deconstruct

@@ -52,6 +52,10 @@
 	stop_automated_movement = 1
 	universal_speak = TRUE
 
+	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/chicken/game
+	meat_amount = 3
+	skin_material = MATERIAL_SKIN_FEATHERS
+
 	var/parrot_state = PARROT_WANDER //Hunt for a perch when created
 	var/parrot_sleep_max = 25 //The time the parrot sits while perched before looking around. Mosly a way to avoid the parrot's AI in life() being run every single tick.
 	var/parrot_sleep_dur = 25 //Same as above, this is the var that physically counts down
@@ -79,7 +83,7 @@
 									/obj/machinery/nuclearbomb,			/obj/machinery/particle_accelerator, \
 									/obj/machinery/recharge_station,	/obj/machinery/smartfridge, \
 									/obj/machinery/suit_storage_unit,	/obj/structure/showcase, \
-									/obj/item/modular_computer/console, /obj/structure/fountain)
+									/obj/structure/fountain)
 
 	//Parrots are kleptomaniacs. This variable ... stores the item a parrot is holding.
 	var/obj/item/held_item = null

@@ -8,6 +8,10 @@
 	pda_type = null
 	pda_slot = 0
 	flags =    0
+	
+/decl/hierarchy/outfit/job/ascent/attendant
+	name = "Ascent - Attendant"
+	back = /obj/item/weapon/rig/mantid
 
 /decl/hierarchy/outfit/job/ascent/tech
 	name = "Ascent - Technician"
@@ -72,9 +76,9 @@
 	. = ..()
 	for(var/tool in list(
 		/obj/item/weapon/gun/energy/particle/small,
-		/obj/item/device/multitool/mantid,
-		/obj/item/clustertool,
-		/obj/item/clustertool,
+		/obj/item/device/multitool/mantid, 
+		/obj/item/clustertool, 
+		/obj/item/clustertool, 
 		/obj/item/weapon/weldingtool/electric/mantid,
 		/obj/item/stack/medical/resin
 	))

@@ -121,12 +121,12 @@ proc/get_fusion_reaction(var/p_react, var/s_react, var/m_energy)
 	s_react = GAS_PHORON
 	energy_consumption = 0
 	energy_production = 5
-	radiation = 20
+	radiation = 40
 	instability = 20
 
 /decl/fusion_reaction/phoron_supermatter/handle_reaction_special(var/obj/effect/fusion_em_field/holder)
 
-	wormhole_event()
+	wormhole_event(GetConnectedZlevels(holder))
 
 	var/turf/origin = get_turf(holder)
 	holder.Rupture()

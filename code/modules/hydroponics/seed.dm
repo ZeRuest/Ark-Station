@@ -24,7 +24,7 @@
 	var/splat_type = /obj/effect/decal/cleanable/fruit_smudge // Graffiti decal.
 	var/has_mob_product
 	var/force_layer
-	var/const/REQ_CO2_MOLES    = 1.0// Moles of CO2 required for photosynthesis.
+	var/req_CO2_moles    = 1.0// Moles of CO2 required for photosynthesis.
 
 /datum/seed/New()
 
@@ -63,6 +63,7 @@
 	set_trait(TRAIT_IDEAL_HEAT,           293)          // Preferred temperature in Kelvin.
 	set_trait(TRAIT_NUTRIENT_CONSUMPTION, 0.25)         // Plant eats this much per tick.
 	set_trait(TRAIT_PLANT_COLOUR,         "#46b543")    // Colour of the plant icon.
+	set_trait(TRAIT_PHOTOSYNTHESIS,       1)            // If it turns CO2 into oxygen
 
 	update_growth_stages()
 
@@ -79,6 +80,9 @@
 	if(!isnull(ubound))  nval = min(nval,ubound)
 	if(!isnull(lbound))  nval = max(nval,lbound)
 	traits["[trait]"] =  nval
+
+	if(trait == TRAIT_PLANT_ICON)
+		update_growth_stages()
 
 /datum/seed/proc/create_spores(var/turf/T)
 	if(!T)
@@ -170,15 +174,17 @@
 	// Photosynthesis - *very* simplified process.
 	// For now, only light-dependent reactions are available (no Calvin cycle).
 	// It's active only for those plants which doesn't consume nor exude gasses.
+	if(!get_trait(TRAIT_PHOTOSYNTHESIS))
+		return
 	if(!(environment) || !(environment.gas))
 		return
 	if(LAZYLEN(exude_gasses) || LAZYLEN(consume_gasses ))
 		return
 	if(!(light_supplied) || !(get_trait(TRAIT_REQUIRES_WATER)))
 		return
-	if(environment.get_gas(GAS_CO2) >= REQ_CO2_MOLES)
-		environment.adjust_gas(GAS_CO2, -REQ_CO2_MOLES, 1)
-		environment.adjust_gas(GAS_OXYGEN, REQ_CO2_MOLES, 1)
+	if(environment.get_gas(GAS_CO2) >= req_CO2_moles)
+		environment.adjust_gas(GAS_CO2, -req_CO2_moles, 1)
+		environment.adjust_gas(GAS_OXYGEN, req_CO2_moles, 1)
 
 //Splatter a turf.
 /datum/seed/proc/splatter(var/turf/T,var/obj/item/thrown)

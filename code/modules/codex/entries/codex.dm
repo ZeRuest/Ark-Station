@@ -20,7 +20,7 @@
 /datum/codex_entry/nexus
 	display_name = "Nexus"
 	associated_strings = list("nexus")
-	mechanics_text = "The place to start with <span codexlink='codex'>The Codex</span><br>"
+	mechanics_text = "The place to start with <span codexlink='codex'>The Codex</span><br>" 
 
 /datum/codex_entry/nexus/get_text(var/mob/presenting_to)
 	var/list/dat = list("<h3>CODEX NEXUS</h3>")
@@ -38,16 +38,11 @@
 	dat += jointext(categories, " ")
 	return "<font color = '[CODEX_COLOR_MECHANICS]'>[jointext(dat, null)]</font>"
 
-/client/Topic(href, href_list, hsrc)
-	if(!usr || usr != mob)	//stops us calling Topic for somebody else's client. Also helps prevent usr=null
-		return
-
+/client/proc/codex_topic(href, href_list)
 	if(href_list["codex_search"]) //nano throwing errors
 		search_codex()
-		return
+		return TRUE
 
 	if(href_list["codex_index"]) //nano throwing errors
 		list_codex_entries()
-		return
-
-	..()
+		return TRUE

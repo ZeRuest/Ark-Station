@@ -197,7 +197,7 @@
 	animals lunging, etc.
 */
 /mob/proc/RangedAttack(var/atom/A, var/params)
-	if(!mutations.len)
+	if(!mutations.len) 
 		return FALSE
 
 	if((MUTATION_LASER in mutations) && a_intent == I_HURT)
@@ -245,7 +245,7 @@
 */
 /mob/proc/CtrlClickOn(var/atom/A)
 	return A.CtrlClick(src)
-
+	
 /atom/proc/CtrlClick(var/mob/user)
 	return FALSE
 

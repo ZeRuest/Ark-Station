@@ -19,11 +19,17 @@
 	melee_damage_lower = 7
 	melee_damage_upper = 15
 	natural_armor = list(melee = 10)
+	ability_cooldown = 30 SECONDS
+
+	meat_type =     /obj/item/weapon/reagent_containers/food/snacks/xenomeat
+	meat_amount =   5
+	skin_material = MATERIAL_SKIN_CHITIN
+	skin_amount =   15
+	bone_material = MATERIAL_BONE_CARTILAGE
+	bone_amount =   10
 
 	var/healing = FALSE
 	var/heal_amount = 6
-	var/last_vanished
-	var/vanish_cooldown = 30 SECONDS
 
 /mob/living/simple_animal/hostile/antlion/Life()
 	. = ..()
@@ -33,13 +39,15 @@
 	if(!.)
 		return
 	
-	if(can_vanish())
+	if(can_perform_ability())
 		vanish()
 
-/mob/living/simple_animal/hostile/antlion/proc/can_vanish()
-	if(!can_act() || last_vanished > world.time || !target_mob)
+/mob/living/simple_animal/hostile/antlion/can_perform_ability()
+	. = ..()
+	if(!.)
 		return FALSE
-	return TRUE
+	if(!target_mob)
+		return FALSE
 
 /mob/living/simple_animal/hostile/antlion/proc/vanish()
 	visible_message(SPAN_NOTICE("\The [src] burrows into \the [get_turf(src)]!"))
@@ -50,12 +58,19 @@
 /mob/living/simple_animal/hostile/antlion/proc/diggy()
 	var/list/turf_targets
 	if(target_mob)
-		turf_targets = trange(1, get_turf(target_mob))
+		for(var/turf/T in range(1, get_turf(target_mob)))
+			if(!T.is_floor())
+				continue
+			if(!T.z != src.z)
+				continue
+			turf_targets += T
 	else
-		turf_targets = trange(5, get_turf(src))
-	for(var/turf/TT in turf_targets)
-		if(!TT.is_floor()) //excludes walls, space and open space
-			turf_targets -= TT
+		for(var/turf/T in orange(5, src))
+			if(!T.is_floor())
+				continue
+			if(!T.z != src.z)
+				continue
+			turf_targets += T
 	if(!LAZYLEN(turf_targets)) //oh no
 		addtimer(CALLBACK(src, .proc/emerge, 2 SECONDS))
 		return
@@ -71,7 +86,7 @@
 	visible_message(SPAN_WARNING("\The [src] erupts from \the [T]!"))
 	set_invisibility(initial(invisibility))
 	prep_burrow(FALSE)
-	last_vanished = world.time + vanish_cooldown
+	cooldown_ability(ability_cooldown)
 	for(var/mob/living/carbon/human/H in get_turf(src))
 		var/zone_to_hit = pick(BP_R_FOOT, BP_L_FOOT, BP_R_LEG, BP_L_LEG, BP_GROIN)
 		H.apply_damage(rand(melee_damage_lower, melee_damage_upper), BRUTE, zone_to_hit, DAM_EDGE, used_weapon = "antlion mandible")
@@ -94,6 +109,7 @@
 	desc = "A huge antlion. It looks displeased."
 	icon_state = "queen"
 	icon_living = "queen"
+	icon_dead = "queen_dead"
 	mob_size = MOB_LARGE
 	health = 275
 	maxHealth = 275
@@ -101,9 +117,14 @@
 	melee_damage_upper = 29
 	natural_armor = list(melee = 20)
 	heal_amount = 9
-	vanish_cooldown = 45 SECONDS
+	ability_cooldown = 45 SECONDS
 	can_escape = TRUE
 	break_stuff_probability = 25
+
+	meat_amount =   10
+	skin_material = MATERIAL_SKIN_CHITIN
+	skin_amount =   25
+	bone_amount =   15
 
 /mob/living/simple_animal/hostile/antlion/mega/Initialize()
 	. = ..()

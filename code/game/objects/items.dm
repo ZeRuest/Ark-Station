@@ -250,7 +250,11 @@
 		R.activate_module(src)
 		R.hud_used.update_robot_modules_display()
 
-/obj/item/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/item/attackby(obj/item/weapon/W, mob/user)
+
+	if(SSfabrication.try_craft_with(src, W, user))
+		return
+
 	if(istype(W, /obj/item/weapon/storage))
 		var/obj/item/weapon/storage/S = W
 		if(S.use_to_pickup)
@@ -259,6 +263,7 @@
 					S.gather_all(src.loc, user)
 			else if(S.can_be_inserted(src, user))
 				S.handle_item_insertion(src)
+				return
 
 /obj/item/proc/talk_into(mob/M as mob, text)
 	return
@@ -818,13 +823,13 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 /obj/item/proc/get_pressure_weakness(pressure)
 	. = 1
 	if(pressure > ONE_ATMOSPHERE)
-		if(max_pressure_protection != null)
+		if(max_pressure_protection != null) 
 			if(max_pressure_protection < pressure)
 				return min(1, round((pressure - max_pressure_protection) / max_pressure_protection, 0.01))
 			else
 				return 0
 	if(pressure < ONE_ATMOSPHERE)
-		if(min_pressure_protection != null)
+		if(min_pressure_protection != null) 
 			if(min_pressure_protection > pressure)
 				return min(1, round((min_pressure_protection - pressure) / min_pressure_protection, 0.01))
 			else
@@ -834,3 +839,17 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 	if(user)
 		attack_self(user)
 	return TRUE
+
+/obj/item/proc/inherit_custom_item_data(var/datum/custom_item/citem)
+	. = src
+	if(citem.item_name)
+		SetName(citem.item_name)
+	if(citem.item_desc)
+		desc = citem.item_desc
+	if(citem.item_icon_state)
+		item_state_slots = null
+		item_icons = null
+		icon = CUSTOM_ITEM_OBJ
+		set_icon_state(citem.item_icon_state)
+		item_state = null
+		icon_override = CUSTOM_ITEM_MOB

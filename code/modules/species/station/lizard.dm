@@ -20,6 +20,7 @@
 	darksight_tint = DARKTINT_MODERATE
 	gluttonous = GLUT_TINY
 	strength = STR_HIGH
+	breath_pressure = 20
 	slowdown = 0.5
 	brute_mod = 0.8
 	flash_mod = 1.2
@@ -47,7 +48,7 @@
 	heat_level_2 = 480 //Default 400
 	heat_level_3 = 1100 //Default 1000
 
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN | SPECIES_NO_ROBOTIC_INTERNAL_ORGANS
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN | SPECIES_NO_ROBOTIC_INTERNAL_ORGANS
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
 	flesh_color = "#34af10"
@@ -84,7 +85,10 @@
 
 	prone_overlay_offset = list(-4, -4)
 
-	override_organ_types = list(BP_EYES = /obj/item/organ/internal/eyes/unathi)
+	override_organ_types = list(
+		BP_EYES = /obj/item/organ/internal/eyes/unathi,
+		BP_BRAIN = /obj/item/organ/internal/brain/unathi
+	)
 
 	descriptors = list(
 		/datum/mob_descriptor/height = 2,
@@ -113,7 +117,12 @@
 			RELIGION_OTHER
 		)
 	)
-
+	pain_emotes_with_pain_level = list(
+			list(/decl/emote/audible/wheeze, /decl/emote/audible/roar, /decl/emote/audible/bellow, /decl/emote/audible/howl) = 80,
+			list(/decl/emote/audible/grunt, /decl/emote/audible/groan, /decl/emote/audible/wheeze, /decl/emote/audible/hiss) = 50,
+			list(/decl/emote/audible/grunt, /decl/emote/audible/groan, /decl/emote/audible/hiss) = 20,
+		)
+		
 /datum/species/unathi/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)

@@ -240,33 +240,54 @@
 	build_path = /obj/item/weapon/stock_parts/circuitboard/autolathe
 	sort_string = "HABAD"
 
+/datum/design/circuit/replicator
+	name = "replicator board"
+	id = "replicator"
+	req_tech = list(TECH_DATA = 2, TECH_ENGINEERING = 3, TECH_BIO = 3)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/replicator
+	sort_string = "HABAE"
+
+/datum/design/circuit/microlathe
+	name = "microlathe board"
+	id = "microlathe"
+	req_tech = list(TECH_DATA = 1, TECH_ENGINEERING = 1)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/autolathe/micro
+	sort_string = "HABAF"
+
 /datum/design/circuit/mining_console
 	name = "mining console board"
 	id = "mining_console"
 	req_tech = list(TECH_DATA = 2, TECH_ENGINEERING = 2)
 	build_path = /obj/item/weapon/stock_parts/circuitboard/mineral_processing
-	sort_string = "HABAE"
+	sort_string = "HABAG"
 
 /datum/design/circuit/mining_processor
 	name = "mining processor board"
 	id = "mining_processor"
 	req_tech = list(TECH_DATA = 2, TECH_ENGINEERING = 2)
 	build_path = /obj/item/weapon/stock_parts/circuitboard/mining_processor
-	sort_string = "HABAF"
+	sort_string = "HABAH"
 
 /datum/design/circuit/mining_unloader
 	name = "ore unloader board"
 	id = "mining_unloader"
 	req_tech = list(TECH_DATA = 2, TECH_ENGINEERING = 2)
 	build_path = /obj/item/weapon/stock_parts/circuitboard/mining_unloader
-	sort_string = "HABAG"
+	sort_string = "HABAI"
 
 /datum/design/circuit/mining_stacker
 	name = "sheet stacker board"
 	id = "mining_stacker"
 	req_tech = list(TECH_DATA = 2, TECH_ENGINEERING = 2)
 	build_path = /obj/item/weapon/stock_parts/circuitboard/mining_stacker
-	sort_string = "HABAH"
+	sort_string = "HABAJ"
+
+/datum/design/circuit/suspension_gen
+	name = "suspension generator"
+	id = "suspension_gen"
+	req_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 3, TECH_MAGNET = 4)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/suspension_gen
+	sort_string = "HABAK"
 
 /datum/design/circuit/suspension_gen
 	name = "suspension generator"
@@ -384,7 +405,7 @@
 /datum/design/circuit/pacmanpotato
 	name = "PTTO-3 nuclear generator"
 	id = "pacmanpotato"
-	req_tech = list(TECH_DATA = 3, TECH_POWER = 5, TECH_ENGINEERING = 4, TECH_ILLEGAL = 4)
+	req_tech = list(TECH_DATA = 3, TECH_POWER = 5, TECH_ENGINEERING = 4, TECH_ESOTERIC = 4)
 	build_path = /obj/item/weapon/stock_parts/circuitboard/pacman/super/potato
 	sort_string = "JBAAD"
 
@@ -450,6 +471,19 @@
 	req_tech = list(TECH_DATA = 2, TECH_ENGINEERING = 3)
 	build_path = /obj/item/weapon/stock_parts/circuitboard/atmoscontrol
 	sort_string = "JCAAF"
+
+/datum/design/circuit/pipe_dispenser
+	name = "pipe dispenser"
+	id = "pipe_dispenser"
+	req_tech = list(TECH_ENGINEERING = 6, TECH_MATERIAL = 5)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/pipedispensor
+	sort_string = "JCAAG"
+
+/datum/design/circuit/pipe_dispenser/disposal
+	name = "disposal pipe dispenser"
+	id = "pipe_disposal"
+	build_path = /obj/item/weapon/stock_parts/circuitboard/pipedispensor/disposal
+	sort_string = "JCAAH"
 
 /datum/design/circuit/secure_airlock
 	name = "secure airlock electronics"
@@ -564,33 +598,40 @@
 	build_path = /obj/item/weapon/stock_parts/circuitboard/miningdrillbrace
 	sort_string = "KCAAB"
 
-/datum/design/circuit/bsafront
-	name = "bluespace particle beam generator mark VI."
-	id = "bsafront"
-	req_tech = list(TECH_ENGINEERING = 2, TECH_COMBAT = 2, TECH_BLUESPACE = 2)
-	build_path = /obj/item/weapon/stock_parts/circuitboard/bsafront
+/datum/design/circuit/floodlight
+	name = "emergency floodlight"
+	id = "floodlight"
+	req_tech = list(TECH_POWER = 1, TECH_ENGINEERING = 1)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/floodlight
 	sort_string = "KCAAC"
 
-/datum/design/circuit/bsamiddle
-	name = "bluespace fusor mark VI."
-	id = "bsamiddle"
+/datum/design/circuit/disperserfront
+	name = "obstruction field disperser beam generator"
+	id = "disperserfront"
 	req_tech = list(TECH_ENGINEERING = 2, TECH_COMBAT = 2, TECH_BLUESPACE = 2)
-	build_path = /obj/item/weapon/stock_parts/circuitboard/bsamiddle
+	build_path = /obj/item/weapon/stock_parts/circuitboard/disperserfront
 	sort_string = "KCAAD"
 
-/datum/design/circuit/bsaback
-	name = "bluespace material deconstructor mark VI."
-	id = "bsaback"
+/datum/design/circuit/dispersermiddle
+	name = "obstruction field disperser fusor"
+	id = "dispersermiddle"
 	req_tech = list(TECH_ENGINEERING = 2, TECH_COMBAT = 2, TECH_BLUESPACE = 2)
-	build_path = /obj/item/weapon/stock_parts/circuitboard/bsaback
+	build_path = /obj/item/weapon/stock_parts/circuitboard/dispersermiddle
 	sort_string = "KCAAE"
 
-/datum/design/circuit/bsa_console
-	name = "bluespace artillery control console"
-	id = "bsa_console"
-	req_tech = list(TECH_DATA = 2, TECH_COMBAT = 5, TECH_BLUESPACE = 5)
-	build_path = /obj/item/weapon/stock_parts/circuitboard/bsa
+/datum/design/circuit/disperserback
+	name = "obstruction field disperser material deconstructor"
+	id = "bsaback"
+	req_tech = list(TECH_ENGINEERING = 2, TECH_COMBAT = 2, TECH_BLUESPACE = 2)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/disperserback
 	sort_string = "KCAAF"
+
+/datum/design/circuit/disperser_console
+	name = "obstruction field disperser control console"
+	id = "disperser_console"
+	req_tech = list(TECH_DATA = 2, TECH_COMBAT = 5, TECH_BLUESPACE = 5)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/disperser
+	sort_string = "KCAAG"
 
 /datum/design/circuit/tcom
 	req_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 4)
@@ -623,13 +664,6 @@
 	id = "tcom-hub"
 	build_path = /obj/item/weapon/stock_parts/circuitboard/telecomms/hub
 	sort_string = "PAAAD"
-
-/datum/design/circuit/tcom/relay
-	name = "relay mainframe"
-	id = "tcom-relay"
-	req_tech = list(TECH_DATA = 3, TECH_ENGINEERING = 4, TECH_BLUESPACE = 3)
-	build_path = /obj/item/weapon/stock_parts/circuitboard/telecomms/relay
-	sort_string = "PAAAE"
 
 /datum/design/circuit/tcom/broadcaster
 	name = "subspace broadcaster"
@@ -675,12 +709,55 @@
 	build_path = /obj/item/weapon/stock_parts/circuitboard/ntnet_relay
 	sort_string = "WAAAA"
 
-/datum/design/circuit/replicator
-	name = "food replicator"
-	id = "freplicator"
-	req_tech = list(TECH_BIO = 3, TECH_DATA = 3)
-	build_path = /obj/item/weapon/stock_parts/circuitboard/replicator
-	sort_string = "WAAAR"
+/datum/design/circuit/washer
+	name = "washing machine"
+	id = "washer"
+	req_tech = list(TECH_ENGINEERING = 1)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/washer
+	sort_string = "WAAAS"
+
+/datum/design/circuit/microwave
+	name = "microwave"
+	id = "microwave"
+	req_tech = list(TECH_BIO = 2, TECH_ENGINEERING = 2)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/microwave
+	sort_string = "WAAAT"
+
+/datum/design/circuit/gibber
+	name = "meat gibber"
+	id = "gibber"
+	req_tech = list(TECH_BIO = 2, TECH_ENGINEERING = 2)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/gibber
+	sort_string = "WAAAU"
+
+/datum/design/circuit/cooker
+	name = "kitchen appliance (assorted)"
+	desc = "Allows for the construction of an interchangable cooking appliance circuit board. Use a multitool to select appliance."
+	id = "cooker"
+	req_tech = list(TECH_BIO = 1, TECH_MATERIAL = 1)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/cooker
+	sort_string = "WAAAV"
+
+/datum/design/circuit/honey_extractor
+	name = "honey extractor"
+	id = "honey_extractor"
+	req_tech = list(TECH_BIO = 2, TECH_ENGINEERING = 1)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/honey
+	sort_string = "WAAAW"
+
+/datum/design/circuit/seed_extractor
+	name = "seed extractor"
+	id = "seed_extractor"
+	req_tech = list(TECH_BIO = 2, TECH_ENGINEERING = 1)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/honey/seed
+	sort_string = "WAAAX"
+
+/datum/design/circuit/vending
+	name = "vending machine"
+	id = "vending"
+	req_tech = list(TECH_ENGINEERING = 2)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/vending
+	sort_string = "WAABA"
 
 /datum/design/circuit/washer
 	name = "washing machine"
@@ -746,3 +823,24 @@
 	materials = list(MATERIAL_GOLD = 250, MATERIAL_DIAMOND = 250, MATERIAL_URANIUM = 250, MATERIAL_PLASTIC = 1000, MATERIAL_ALUMINIUM = 1000)
 	build_path = /obj/item/weapon/stock_parts/circuitboard/engine/ion
 	sort_string = "XAAAB"
+
+/datum/design/circuit/sublimator/sauna
+	name = "sauna heater system"
+	id = "sauna"
+	req_tech = list(TECH_POWER = 2, TECH_ENGINEERING = 1)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/sublimator/sauna
+	sort_string = "XAAAC"
+
+/datum/design/circuit/vitals
+	name = "vitals monitor"
+	id = "vitals"
+	req_tech = list(TECH_BIO = 2, TECH_ENGINEERING = 1)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/vitals_monitor
+	sort_string = "XAAAD"
+
+/datum/design/circuit/sublimator/modular_computer
+	name = "general-purpose computer"
+	id = "pc_motherboard"
+	req_tech = list(TECH_POWER = 1, TECH_ENGINEERING = 1)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/modular_computer
+	sort_string = "XAAAD"

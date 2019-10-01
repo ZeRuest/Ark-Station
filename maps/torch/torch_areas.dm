@@ -195,14 +195,6 @@
 /area/maintenance/substation/seconddeck
 	name = "Second Deck Substation"
 
-/area/crew_quarters/safe_room/seconddeck
-	name = "\improper Second Deck Safe Room"
-
-/area/maintenance/bluespace
-	name = "Bluespace Drive"
-	icon_state = "engineering"
-	req_access = list(list(access_engine_equip, access_heads), access_engine, access_maint_tunnels)
-
 //First Deck (Z-4)
 /area/maintenance/firstdeck
 	name = "First Deck Maintenance"
@@ -692,9 +684,9 @@
 	icon_state = "Tactical"
 	req_access = list(access_emergency_armory)
 
-/area/command/bsa
-	name = "\improper Bluespace Artillery"
-	icon_state = "firingrange"
+/area/command/disperser
+	name = "\improper Obstruction Field Disperser"
+	icon_state = "disperser"
 	req_access = list(access_bridge)
 
 /area/crew_quarters/heads
@@ -759,6 +751,21 @@
 	req_access = list(access_senadv)
 
 // Engineering
+
+/area/engineering/shieldbay
+	name = "Shield Bay"
+	icon_state = "engineering"
+	req_access = list(access_engine, access_engine_equip)
+
+/area/engineering/bluespace
+	name = "Bluespace Drive Monitoring"
+	icon_state = "engineering"
+	color = COLOR_BLUE_GRAY
+	req_access = list(list(access_engine_equip, access_heads), access_engine, access_maint_tunnels)
+
+/area/engineering/bluespace/containment
+	name = "Bluespace Drive Containment"
+	color = COLOR_BLUE_LIGHT
 
 /area/engineering/atmos/aux
 	name = "\improper Auxiliary Atmospherics"
@@ -983,6 +990,10 @@
 /area/crew_quarters/head/aux
 	name = "\improper First Deck Head"
 
+/area/crew_quarters/head/sauna
+	name = "\improper Sauna"
+	icon_state = "sauna"
+
 /area/crew_quarters/gym
 	name = "\improper Gym"
 	icon_state = "fitness"
@@ -1183,21 +1194,6 @@
 
 /area/shield/bridge
 	name = "\improper Bridge Shield Generator"
-
-/area/shield/firstdeck
-	name = "\improper First Deck Shield Generator"
-
-/area/shield/seconddeck
-	name = "\improper Second Deck Shield Generator"
-
-/area/shield/thirddeck
-	name = "\improper Third Deck Shield Generator"
-
-/area/shield/fourthdeck
-	name = "\improper Fourth Deck Shield Generator"
-
-/area/shield/fifthdeck
-	name = "\improper Fifth Deck Shield Generator"
 
 // Misc
 /area/deity_spawn
@@ -1644,11 +1640,6 @@
 	icon_state = "nuke_storage"
 	area_flags = AREA_FLAG_IS_NOT_PERSISTENT
 	req_access = list(access_heads_vault)
-
-/area/security/range
-	name = "\improper Decommissioned Firing Range"
-	icon_state = "firingrange"
-	req_access = list(access_solgov_crew)
 
 // Crew
 

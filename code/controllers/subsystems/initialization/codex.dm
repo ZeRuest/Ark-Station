@@ -10,8 +10,8 @@ SUBSYSTEM_DEF(codex)
 	var/list/search_cache =      list()
 
 /datum/controller/subsystem/codex/Initialize()
-	// Codex link syntax is such:
-	// <l>keyword</l> when keyword is mentioned verbatim,
+	// Codex link syntax is such: 
+	// <l>keyword</l> when keyword is mentioned verbatim, 
 	// <span codexlink='keyword'>whatever</span> when shit gets tricky
 	linkRegex = regex(@"<(span|l)(\s+codexlink='([^>]*)'|)>([^<]+)</(span|l)>","g")
 

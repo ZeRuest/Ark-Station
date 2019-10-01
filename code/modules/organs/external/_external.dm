@@ -9,6 +9,8 @@
 	organ_tag = "limb"
 	appearance_flags = PIXEL_SCALE
 
+	var/slowdown = 0
+
 	// Strings
 	var/broken_description             // fracture string if any.
 	var/damage_state = "00"            // Modifier used for generating the on-mob damage overlay for this limb.
@@ -49,7 +51,7 @@
 	var/list/internal_organs = list()  // Internal organs of this body part
 	var/list/implants = list()         // Currently implanted objects.
 	var/base_miss_chance = 20          // Chance of missing.
-	var/genetic_degradation = 0
+	var/genetic_degradation = 0        // Amount of current genetic damage.
 
 	//Forensics stuff
 	var/list/autopsy_data = list()    // Trauma data for forensics.
@@ -98,6 +100,8 @@
 		replaced(owner)
 		sync_colour_to_human(owner)
 	get_icon()
+
+	slowdown = species.get_slowdown(owner)
 
 /obj/item/organ/external/Destroy()
 
@@ -160,7 +164,7 @@
 			burn_damage = 7.5
 
 	var/mult = 1 + !!(BP_IS_ASSISTED(src)) // This macro returns (large) bitflags.
-	burn_damage *= mult/species.burn_mod //ignore burn mod for EMP damage
+	burn_damage *= mult/species.get_burn_mod(owner) //ignore burn mod for EMP damage
 
 	var/power = 4 - severity //stupid reverse severity
 	for(var/obj/item/I in implants)
@@ -170,6 +174,12 @@
 	if(owner && burn_damage)
 		owner.custom_pain("Something inside your [src] burns a [severity < 2 ? "bit" : "lot"]!", power * 15) //robotic organs won't feel it anyway
 		take_external_damage(0, burn_damage, 0, used_weapon = "Hot metal")
+
+	if(owner && limb_flags & ORGAN_FLAG_CAN_GRASP)
+		owner.grasp_damage_disarm(src)
+
+	if(owner && limb_flags & ORGAN_FLAG_CAN_STAND)
+		owner.stance_damage_prone(src)
 
 /obj/item/organ/external/attack_self(var/mob/user)
 	if((owner && loc == owner) || !contents.len)
@@ -1097,6 +1107,8 @@ obj/item/organ/external/proc/remove_clamps()
 	update_icon(1)
 	unmutate()
 
+	slowdown = 0
+
 	for(var/obj/item/organ/external/T in children)
 		T.robotize(company, 1)
 
@@ -1423,11 +1435,13 @@ obj/item/organ/external/proc/remove_clamps()
 		var/unknown_body = 0
 		for(var/I in implants)
 			var/obj/item/weapon/implant/imp = I
-			if(istype(I,/obj/item/weapon/implant) && !imp.hidden)
+			if(istype(I,/obj/item/weapon/implant))
+				if(imp.hidden)
+					continue
 				if (imp.known)
 					. += "[capitalize(imp.name)] implanted"
-				else
-					unknown_body++
+					continue
+			unknown_body++
 		if(unknown_body)
 			. += "Unknown body present"
 	for(var/obj/item/organ/internal/augment/aug in internal_organs)

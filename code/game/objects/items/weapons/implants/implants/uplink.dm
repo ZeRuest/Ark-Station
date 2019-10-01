@@ -1,7 +1,7 @@
 /obj/item/weapon/implant/uplink
 	name = "uplink implant"
 	desc = "Summon things."
-	origin_tech = list(TECH_MATERIAL = 1, TECH_BIO = 2, TECH_ILLEGAL = 3)
+	origin_tech = list(TECH_MATERIAL = 1, TECH_BIO = 2, TECH_ESOTERIC = 3)
 	hidden = 1
 	var/activation_emote
 
@@ -19,8 +19,15 @@
 	return TRUE
 
 /obj/item/weapon/implant/uplink/trigger(emote, mob/source as mob)
-	if(hidden_uplink && usr == source) // Let's not have another people activate our uplink
+	if(hidden_uplink && usr == source && !malfunction) // Let's not have another people activate our uplink
 		hidden_uplink.check_trigger(source, emote, activation_emote)
+
+/obj/item/weapon/implant/uplink/emp_act(severity)
+	var/power = 4 - severity
+	if(prob(power * 15))
+		meltdown()
+	else if(prob(power * 40))
+		disable(rand(power*100,power*1000))
 
 /obj/item/weapon/implanter/uplink
 	name = "implanter (U)"

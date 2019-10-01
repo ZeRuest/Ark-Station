@@ -138,7 +138,7 @@
 			return
 		to_chat(user, "You fit \the [I] into the suit cycler.")
 		helmet = I
-
+		
 		updateUsrDialog()
 		return
 

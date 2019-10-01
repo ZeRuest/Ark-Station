@@ -208,8 +208,8 @@
 		BP_EYES =     /obj/item/organ/internal/eyes/skrell
 		)
 
-/datum/species/skrell/get_sex(var/mob/living/carbon/H)
-	return descriptors["headtail length"] == 1 ? MALE : FEMALE
+/datum/species/skrell/get_sex(var/mob/living/carbon/human/H)
+	return istype(H) && (H.descriptors["headtail length"] == 1 ? MALE : FEMALE)
 
 /datum/species/skrell/check_background()
 	return TRUE
@@ -293,7 +293,7 @@
 
 	species_flags = SPECIES_FLAG_NO_SCAN | SPECIES_FLAG_IS_PLANT | SPECIES_FLAG_NO_PAIN | SPECIES_FLAG_NO_SLIP
 	appearance_flags = 0
-	spawn_flags = SPECIES_CAN_JOIN  | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
 
 	blood_color = "#004400"
 	flesh_color = "#907e4a"

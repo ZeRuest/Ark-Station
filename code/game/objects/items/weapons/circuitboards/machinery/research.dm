@@ -1,8 +1,4 @@
-#ifndef T_BOARD
-#error T_BOARD macro is not defined but we need it!
-#endif
-
-obj/item/weapon/stock_parts/circuitboard/rdserver
+/obj/item/weapon/stock_parts/circuitboard/rdserver
 	name = T_BOARD("R&D server")
 	build_path = /obj/machinery/r_n_d/server
 	board_type = "machine"
@@ -29,9 +25,31 @@ obj/item/weapon/stock_parts/circuitboard/rdserver
 
 /obj/item/weapon/stock_parts/circuitboard/autolathe
 	name = T_BOARD("autolathe")
-	build_path = /obj/machinery/autolathe
+	build_path = /obj/machinery/fabricator
 	board_type = "machine"
 	origin_tech = list(TECH_ENGINEERING = 2, TECH_DATA = 2)
+	req_components = list(
+							/obj/item/weapon/stock_parts/matter_bin = 3,
+							/obj/item/weapon/stock_parts/manipulator = 1)
+	additional_spawn_components = list(
+		/obj/item/weapon/stock_parts/console_screen = 1,
+		/obj/item/weapon/stock_parts/keyboard = 1,
+		/obj/item/weapon/stock_parts/power/apc/buildable = 1
+	)
+
+/obj/item/weapon/stock_parts/circuitboard/autolathe/micro
+	name = T_BOARD("microlathe")
+	build_path = /obj/machinery/fabricator/micro
+	origin_tech = list(TECH_ENGINEERING = 1, TECH_DATA = 1)
+	req_components = list(
+		/obj/item/weapon/stock_parts/matter_bin = 1,
+		/obj/item/weapon/stock_parts/manipulator = 1
+	)
+/obj/item/weapon/stock_parts/circuitboard/replicator
+	name = T_BOARD("replicator")
+	build_path = /obj/machinery/fabricator/replicator
+	board_type = "machine"
+	origin_tech = list(TECH_ENGINEERING = 3, TECH_DATA = 2, TECH_BIO = 2)
 	req_components = list(
 							/obj/item/weapon/stock_parts/matter_bin = 3,
 							/obj/item/weapon/stock_parts/manipulator = 1)

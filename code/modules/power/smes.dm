@@ -11,6 +11,7 @@
 	density = 1
 	anchored = 1
 	clicksound = "switch"
+	core_skill = SKILL_ELECTRICAL
 	power_channel = LOCAL // Draws power from direct connections to powernets.
 	construct_state = /decl/machine_construction/default/panel_closed
 	uncreated_component_parts = null
@@ -351,7 +352,10 @@
 		qdel(src) // Either way we want to ensure the SMES is deleted.
 
 /obj/machinery/power/smes/emp_act(severity)
-	if(prob(50))
+	if(!num_terminals)
+		inputting(0)
+		outputting(0)
+	else if(prob(50))
 		inputting(rand(0,1))
 		outputting(rand(0,1))
 	if(prob(50))

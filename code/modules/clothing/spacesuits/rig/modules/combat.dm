@@ -17,7 +17,7 @@
 	name = "mounted flash"
 	desc = "You are the law."
 	icon_state = "flash"
-
+	
 	selectable = 0
 	toggleable = 1
 	activates_on_touch = 1

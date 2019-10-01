@@ -85,7 +85,7 @@
 		return INITIALIZE_HINT_QDEL
 	name = seed.display_name
 	max_health = round(seed.get_trait(TRAIT_ENDURANCE)/2)
-	if(seed.get_trait(TRAIT_SPREAD) == GROWTH_VINES)
+	if(seed.get_trait(TRAIT_SPREAD) == 2)
 		mouse_opacity = 2
 		max_growth = VINE_GROWTH_STAGES
 		growth_threshold = max_health/VINE_GROWTH_STAGES
@@ -201,14 +201,18 @@
 /obj/effect/vine/attackby(var/obj/item/weapon/W, var/mob/user)
 	START_PROCESSING(SSvines, src)
 
-	if(W.edge)
+	if(W.edge && W.w_class < ITEM_SIZE_NORMAL && user.a_intent != I_HURT)
 		if(!is_mature())
-			to_chat(user, "<span class='warning'>\The [src] is not mature enough to yield a sample yet.</span>")
+			to_chat(user, SPAN_WARNING("\The [src] is not mature enough to yield a sample yet."))
 			return
 		if(!seed)
-			to_chat(user, "<span class='warning'>There is nothing to take a sample from.</span>")
+			to_chat(user, SPAN_WARNING("There is nothing to take a sample from."))
 			return
-		seed.harvest(user,0,1)
+		var/needed_skill = seed.mysterious ? SKILL_ADEPT : SKILL_BASIC
+		if(prob(user.skill_fail_chance(SKILL_BOTANY, 90, needed_skill)))
+			to_chat(user, SPAN_WARNING("You failed to get a usable sample."))
+		else
+			seed.harvest(user,0,1)
 		health -= (rand(3,5)*5)
 	else
 		..()
@@ -217,6 +221,21 @@
 			damage *= 2
 		adjust_health(-damage)
 		playsound(get_turf(src), W.hitsound, 100, 1)
+		
+/obj/effect/vine/AltClick(var/mob/user)
+	if(!CanPhysicallyInteract(user) || user.incapacitated())
+		return ..()
+	var/obj/item/W = user.get_active_hand()
+	if(istype(W) && W.edge && W.w_class >= ITEM_SIZE_NORMAL)
+		visible_message(SPAN_NOTICE("[user] starts chopping down \the [src]."))
+		playsound(, W.hitsound, 100, 1)
+		var/chop_time = (health/W.force) * 0.5 SECONDS
+		if(user.skill_check(SKILL_BOTANY, SKILL_ADEPT))
+			chop_time *= 0.5
+		if(do_after(user, chop_time, src, TRUE))
+			visible_message(SPAN_NOTICE("[user] chops down \the [src]."))
+			playsound(get_turf(src), W.hitsound, 100, 1)
+			die_off()
 
 //handles being overrun by vines - note that attacker_parent may be null in some cases
 /obj/effect/vine/proc/vine_overrun(datum/seed/attacker_seed, obj/effect/plant/attacker_parent)

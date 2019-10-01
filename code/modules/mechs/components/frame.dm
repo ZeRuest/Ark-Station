@@ -264,7 +264,7 @@
 		if(arms)
 			to_chat(user, SPAN_WARNING("\The [src] already has manipulators installed."))
 			return
-		if(install_component(thing, user))
+		if(install_component(thing, user)) 
 			if(arms)
 				thing.dropInto(loc)
 				return
@@ -273,7 +273,7 @@
 		if(legs)
 			to_chat(user, SPAN_WARNING("\The [src] already has a propulsion system installed."))
 			return
-		if(install_component(thing, user))
+		if(install_component(thing, user)) 
 			if(legs)
 				thing.dropInto(loc)
 				return
@@ -282,7 +282,7 @@
 		if(head)
 			to_chat(user, SPAN_WARNING("\The [src] already has a sensor array installed."))
 			return
-		if(install_component(thing, user))
+		if(install_component(thing, user)) 
 			if(head)
 				thing.dropInto(loc)
 				return

@@ -98,14 +98,14 @@
 	name = "broken cryptographic sequencer"
 	icon_state = "emag"
 	item_state = "card-id"
-	origin_tech = list(TECH_MAGNET = 2, TECH_ILLEGAL = 2)
+	origin_tech = list(TECH_MAGNET = 2, TECH_ESOTERIC = 2)
 
 /obj/item/weapon/card/emag
 	desc = "It's a card with a magnetic strip attached to some circuitry."
 	name = "cryptographic sequencer"
 	icon_state = "emag"
 	item_state = "card-id"
-	origin_tech = list(TECH_MAGNET = 2, TECH_ILLEGAL = 2)
+	origin_tech = list(TECH_MAGNET = 2, TECH_ESOTERIC = 2)
 	var/uses = 10
 
 	var/static/list/card_choices = list(
@@ -163,10 +163,6 @@ var/const/NO_EMAG_ACT = -50
 	icon_state = "base"
 	item_state = "card-id"
 	slot_flags = SLOT_ID
-
-	sprite_sheets = list(
-		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_id_resomi.dmi'
-		)
 
 	var/list/access = list()
 	var/registered_name = "Unknown" // The name registered_name on the card

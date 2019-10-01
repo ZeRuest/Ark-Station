@@ -437,7 +437,7 @@
 /turf/simulated/floor/tiled/airless,
 /area/lost_supply_base/office)
 "aU" = (
-/obj/item/modular_computer/console{
+/obj/machinery/computer/modular{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/airless,
@@ -1003,7 +1003,7 @@
 /turf/simulated/wall,
 /area/lost_supply_base/common)
 "cw" = (
-/obj/machinery/food_replicator,
+/obj/machinery/fabricator/replicator,
 /turf/simulated/floor/tiled/airless,
 /area/lost_supply_base/common)
 "cx" = (
@@ -1545,7 +1545,7 @@
 	},
 /area/space)
 "ej" = (
-/obj/item/modular_computer/console,
+/obj/machinery/computer/modular,
 /turf/simulated/floor/shuttle/blue,
 /area/space)
 "ek" = (
@@ -2293,13 +2293,6 @@
 "gu" = (
 /turf/simulated/floor/asteroid,
 /area/mine/explored)
-"hb" = (
-/obj/effect/landmark/random_gen/asteroid{
-	generation_height = 100;
-	generation_width = 100
-	},
-/turf/space,
-/area/space)
 "ib" = (
 /obj/structure/hygiene/sink{
 	icon_state = "sink";
@@ -2316,7 +2309,7 @@
 	},
 /area/lost_supply_base/supply)
 "Jd" = (
-/obj/item/modular_computer/console{
+/obj/machinery/computer/modular{
 	dir = 1
 	},
 /turf/simulated/floor/shuttle/blue,
@@ -2422,7 +2415,7 @@ aa
 aa
 aa
 aa
-hb
+aa
 "}
 (2,1,1) = {"
 aa

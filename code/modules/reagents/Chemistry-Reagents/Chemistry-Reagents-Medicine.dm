@@ -470,7 +470,7 @@
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE
 	value = 3.6
-
+	
 /datum/reagent/ryetalyn/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/needs_update = M.mutations.len > 0
 

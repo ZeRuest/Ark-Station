@@ -124,7 +124,7 @@
 		if(damtype == BURN)
 			. |= DAM_LASER
 
-/obj/attackby(obj/item/O as obj, mob/user as mob)
+/obj/attackby(obj/item/O, mob/user)
 	if(obj_flags & OBJ_FLAG_ANCHORABLE)
 		if(isWrench(O))
 			wrench_floor_bolts(user)
@@ -159,7 +159,7 @@
 	if(obj_flags & OBJ_FLAG_ROTATABLE)
 		rotate(user)
 	..()
-
+	
 /obj/examine(mob/user)
 	. = ..()
 	if(. && (obj_flags & OBJ_FLAG_ROTATABLE))
@@ -172,7 +172,7 @@
 
 	if(anchored)
 		to_chat(user, SPAN_NOTICE("\The [src] is secured to the floor!"))
-		return
+		return 
 
 	set_dir(turn(dir, 90))
-	update_icon()
+	update_icon() 
