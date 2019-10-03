@@ -122,12 +122,6 @@ var/obj/screen/robot_inventory
 	mymob.pullin.icon_state = "pull0"
 	mymob.pullin.SetName("pull")
 	mymob.pullin.screen_loc = ui_borg_pull
-	
-	mymob.fire = new /obj/screen()
-	mymob.fire.icon = 'icons/mob/screen1_robot.dmi'
-	mymob.fire.icon_state = "fire0"
-	mymob.fire.SetName("fire")
-	mymob.fire.screen_loc = ui_fire
 
 	mymob.fire = new /obj/screen()
 	mymob.fire.icon = 'icons/mob/screen1_robot.dmi'

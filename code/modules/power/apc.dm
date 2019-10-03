@@ -173,17 +173,6 @@
 
 	. = ..()
 
-	if(areastring)
-		area = get_area_name(areastring)
-	else
-		var/area/A = get_area(src)
-		//if area isn't specified use current
-		area = A
-	SetName("\improper [area.name] APC")
-	area.apc = src
-
-	. = ..()
-
 	if (building==0)
 		init_round_start()
 	else

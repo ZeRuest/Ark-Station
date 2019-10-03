@@ -3,6 +3,7 @@
 	supervisors = "the Sol Central Government and the Sol Code of Military Justice"
 	minimal_player_age = 7
 	economic_power = 15
+	minimum_character_age = list(SPECIES_HUMAN = 40)
 	ideal_character_age = 50
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/CO
 	allowed_branches = list(
@@ -39,6 +40,7 @@
 	department_flag = COM
 	minimal_player_age = 7
 	economic_power = 10
+	minimum_character_age = list(SPECIES_HUMAN = 35)
 	ideal_character_age = 45
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/XO
 	allowed_branches = list(
@@ -96,6 +98,7 @@
 	supervisors = "the Commanding Officer"
 	economic_power = 20
 	minimal_player_age = 7
+	minimum_character_age = list(SPECIES_HUMAN = 35)
 	ideal_character_age = 60
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/research/cso
 	allowed_branches = list(
@@ -142,6 +145,7 @@
 	supervisors = "the Commanding Officer and the Executive Officer"
 	economic_power = 10
 	minimal_player_age = 7
+	minimum_character_age = list(SPECIES_HUMAN = 35)
 	ideal_character_age = 48
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/cmo
 	allowed_branches = list(
@@ -178,12 +182,13 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/cmo/get_description_blurb()
-	return "You are the Chief Medical Officer. You manage the medical department. You ensure all members of medical are skilled, tasked and handling their duties. Ensure your doctors are staffing your infirmary and your corpsman/paramedics are ready for response. Act as a second surgeon or backup chemist in the absence of either. You are expected to know medical very well, along with general regulations."
+	return "You are the Chief Medical Officer. You manage the medical department. You ensure all members of medical are skilled, tasked and handling their duties. Ensure your doctors are staffing your infirmary and your corpsman/paramedics are ready for response. Act as a second surgeon or backup pharmacist in the absence of either. You are expected to know medical very well, along with general regulations."
 
 /datum/job/chief_engineer
 	title = "Chief Engineer"
 	supervisors = "the Commanding Officer and the Executive Officer"
 	economic_power = 9
+	minimum_character_age = list(SPECIES_HUMAN = 27)
 	ideal_character_age = 40
 	minimal_player_age = 7
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/chief_engineer
@@ -240,6 +245,7 @@
 	supervisors = "the Commanding Officer and the Executive Officer"
 	economic_power = 8
 	minimal_player_age = 7
+	minimum_character_age = list(SPECIES_HUMAN = 25)
 	ideal_character_age = 35
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/cos
 	allowed_branches = list(
@@ -293,6 +299,7 @@
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_EXPERT,
 	                    SKILL_FINANCE     = SKILL_BASIC)
 	skill_points = 20
+	minimum_character_age = list(SPECIES_HUMAN = 27)
 
 	access = list(access_representative, access_security, access_medical,
 			            access_bridge, access_cargo, access_solgov_crew, access_hangar)
@@ -312,6 +319,7 @@
 	selection_color = "#2f2f7f"
 	minimal_player_age = 7
 	economic_power = 8
+	minimum_character_age = list(SPECIES_HUMAN = 35)
 	ideal_character_age = 45
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/sea/fleet
 	allowed_branches = list(
@@ -357,6 +365,7 @@
 	selection_color = "#2f2f7f"
 	minimal_player_age = 0
 	economic_power = 7
+	minimum_character_age = list(SPECIES_HUMAN = 22)
 	ideal_character_age = 24
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/bridgeofficer
 	allowed_branches = list(

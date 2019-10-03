@@ -289,13 +289,6 @@
 	build_path = /obj/item/weapon/stock_parts/circuitboard/suspension_gen
 	sort_string = "HABAK"
 
-/datum/design/circuit/suspension_gen
-	name = "suspension generator"
-	id = "suspension_gen"
-	req_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 3, TECH_MAGNET = 4)
-	build_path = /obj/item/weapon/stock_parts/circuitboard/suspension_gen
-	sort_string = "HABAI"
-
 /datum/design/circuit/rdservercontrol
 	name = "R&D server control console"
 	id = "rdservercontrol"
@@ -708,56 +701,6 @@
 	req_tech = list(TECH_DATA = 4)
 	build_path = /obj/item/weapon/stock_parts/circuitboard/ntnet_relay
 	sort_string = "WAAAA"
-
-/datum/design/circuit/washer
-	name = "washing machine"
-	id = "washer"
-	req_tech = list(TECH_ENGINEERING = 1)
-	build_path = /obj/item/weapon/stock_parts/circuitboard/washer
-	sort_string = "WAAAS"
-
-/datum/design/circuit/microwave
-	name = "microwave"
-	id = "microwave"
-	req_tech = list(TECH_BIO = 2, TECH_ENGINEERING = 2)
-	build_path = /obj/item/weapon/stock_parts/circuitboard/microwave
-	sort_string = "WAAAT"
-
-/datum/design/circuit/gibber
-	name = "meat gibber"
-	id = "gibber"
-	req_tech = list(TECH_BIO = 2, TECH_ENGINEERING = 2)
-	build_path = /obj/item/weapon/stock_parts/circuitboard/gibber
-	sort_string = "WAAAU"
-
-/datum/design/circuit/cooker
-	name = "kitchen appliance (assorted)"
-	desc = "Allows for the construction of an interchangable cooking appliance circuit board. Use a multitool to select appliance."
-	id = "cooker"
-	req_tech = list(TECH_BIO = 1, TECH_MATERIAL = 1)
-	build_path = /obj/item/weapon/stock_parts/circuitboard/cooker
-	sort_string = "WAAAV"
-
-/datum/design/circuit/honey_extractor
-	name = "honey extractor"
-	id = "honey_extractor"
-	req_tech = list(TECH_BIO = 2, TECH_ENGINEERING = 1)
-	build_path = /obj/item/weapon/stock_parts/circuitboard/honey
-	sort_string = "WAAAW"
-
-/datum/design/circuit/seed_extractor
-	name = "seed extractor"
-	id = "seed_extractor"
-	req_tech = list(TECH_BIO = 2, TECH_ENGINEERING = 1)
-	build_path = /obj/item/weapon/stock_parts/circuitboard/honey/seed
-	sort_string = "WAAAX"
-
-/datum/design/circuit/vending
-	name = "vending machine"
-	id = "vending"
-	req_tech = list(TECH_ENGINEERING = 2)
-	build_path = /obj/item/weapon/stock_parts/circuitboard/vending
-	sort_string = "WAABA"
 
 /datum/design/circuit/washer
 	name = "washing machine"

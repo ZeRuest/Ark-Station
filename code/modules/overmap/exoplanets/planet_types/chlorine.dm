@@ -16,9 +16,6 @@
 /obj/effect/overmap/sector/exoplanet/chlorine/get_atmosphere_color()
 	return "#e5f2bd"
 
-/obj/effect/overmap/sector/exoplanet/chlorine/generate_habitability()
-	return HABITABILITY_BAD
-
 /obj/effect/overmap/sector/exoplanet/chlorine/generate_map()
 	if(prob(50))
 		lightlevel = rand(7,10)/10 //It could be night.

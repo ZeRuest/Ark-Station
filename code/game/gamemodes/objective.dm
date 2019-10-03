@@ -140,6 +140,7 @@ var/global/list/all_objectives = list()
 		explanation_text = "Free Objective"
 	return target
 
+// Shuttle Escape //
 
 /datum/objective/protect/find_target_by_role(role, role_type = 0)
 	..(role, role_type)
