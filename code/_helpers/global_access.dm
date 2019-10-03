@@ -179,10 +179,14 @@
 			return global.admin_ranks;
 		if("admin_secrets")
 			return global.admin_secrets;
+		if("admin_verbs_admin")
+			return global.admin_verbs_admin;
 		if("admin_verbs_ban")
 			return global.admin_verbs_ban;
 		if("admin_verbs_debug")
 			return global.admin_verbs_debug;
+		if("admin_verbs_default")
+			return global.admin_verbs_default;
 		if("admin_verbs_fun")
 			return global.admin_verbs_fun;
 		if("admin_verbs_hideable")
@@ -347,6 +351,8 @@
 			return global.csrfz_check;
 		if("custom_event_msg")
 			return global.custom_event_msg;
+		if("cyrillic_unicode_keys")
+			return global.cyrillic_unicode_keys;
 		if("damage_icon_parts")
 			return global.damage_icon_parts;
 		if("dbcon")
@@ -1094,10 +1100,14 @@
 			global.admin_ranks=newval;
 		if("admin_secrets")
 			global.admin_secrets=newval;
+		if("admin_verbs_admin")
+			global.admin_verbs_admin=newval;
 		if("admin_verbs_ban")
 			global.admin_verbs_ban=newval;
 		if("admin_verbs_debug")
 			global.admin_verbs_debug=newval;
+		if("admin_verbs_default")
+			global.admin_verbs_default=newval;
 		if("admin_verbs_fun")
 			global.admin_verbs_fun=newval;
 		if("admin_verbs_hideable")
@@ -1262,6 +1272,8 @@
 			global.csrfz_check=newval;
 		if("custom_event_msg")
 			global.custom_event_msg=newval;
+		if("cyrillic_unicode_keys")
+			global.cyrillic_unicode_keys=newval;
 		if("damage_icon_parts")
 			global.damage_icon_parts=newval;
 		if("dbcon")
@@ -1919,8 +1931,10 @@
 	"admin_pm_repository",
 	"admin_ranks",
 	"admin_secrets",
+	"admin_verbs_admin",
 	"admin_verbs_ban",
 	"admin_verbs_debug",
+	"admin_verbs_default",
 	"admin_verbs_fun",
 	"admin_verbs_hideable",
 	"admin_verbs_mod",
@@ -2003,6 +2017,7 @@
 	"crew_repository",
 	"csrfz_check",
 	"custom_event_msg",
+	"cyrillic_unicode_keys",
 	"damage_icon_parts",
 	"dbcon",
 	"dbcon_old",
