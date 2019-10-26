@@ -46,6 +46,11 @@
 /datum/click_handler/default/mech/OnDblClick(var/atom/A, var/params)
 	OnClick(A, params)
 
+/mob/living/exosuit/allow_click_through(atom/A, params, mob/user)
+	if(LAZYISIN(pilots, user) && !hatch_closed)
+		return TRUE
+	. = ..()
+	
 /mob/living/exosuit/ClickOn(var/atom/A, var/params, var/mob/user)
 
 	if(!user || incapacitated() || user.incapacitated())
@@ -56,7 +61,7 @@
 
 	var/modifiers = params2list(params)
 	if(modifiers["shift"])
-		A.examine(user)
+		user.examinate(A)
 		return
 
 	if(!(user in pilots) && user != src)
@@ -155,7 +160,7 @@
 			var/extra_delay = 0
 			if(ME != null)
 				ME = selected_system
-				extra_delay = ME.equipment_delay	
+				extra_delay = ME.equipment_delay
 			setClickCooldown(arms ? arms.action_delay + extra_delay : 15 + extra_delay)
 			if(system_moved)
 				temp_system.forceMove(selected_system)

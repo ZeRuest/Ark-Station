@@ -5,12 +5,12 @@
 		var/datum/extension/armor/armor_datum = armor
 		. = armor_datum.apply_damage_modifications(arglist(.))
 
-/mob/living/proc/get_blocked_ratio(def_zone, damage_type, damage_flags, armor_pen)
+/mob/living/proc/get_blocked_ratio(def_zone, damage_type, damage_flags, armor_pen, damage)
 	var/list/armors = get_armors_by_zone(def_zone, damage_type, damage_flags)
 	. = 0
 	for(var/armor in armors)
 		var/datum/extension/armor/armor_datum = armor
-		. = 1 - (1 - .) * (1 - armor_datum.get_blocked(damage_type, damage_flags, armor_pen)) // multiply the amount we let through
+		. = 1 - (1 - .) * (1 - armor_datum.get_blocked(damage_type, damage_flags, armor_pen, damage)) // multiply the amount we let through
 	. = min(1, .)
 
 /mob/living/proc/get_armors_by_zone(def_zone, damage_type, damage_flags)
@@ -36,9 +36,19 @@
 	var/damaged
 	if(!P.nodamage)
 		damaged = apply_damage(damage, P.damage_type, def_zone, flags, P, P.armor_penetration)
+		bullet_impact_visuals(P, def_zone, damaged)
 	if(damaged || P.nodamage) // Run the block computation if we did damage or if we only use armor for effects (nodamage)
-		. = get_blocked_ratio(def_zone, P.damage_type, flags, P.armor_penetration)
+		. = get_blocked_ratio(def_zone, P.damage_type, flags, P.armor_penetration, P.damage)
 	P.on_hit(src, ., def_zone)
+
+// For visuals and blood splatters etc
+/mob/living/proc/bullet_impact_visuals(var/obj/item/projectile/P, var/def_zone, var/damage)
+	var/list/impact_sounds = LAZYACCESS(P.impact_sounds, get_bullet_impact_effect_type(def_zone))
+	if(length(impact_sounds))
+		playsound(src, pick(impact_sounds), 75)
+
+/mob/living/get_bullet_impact_effect_type(var/def_zone)
+	return BULLET_IMPACT_MEAT
 
 /mob/living/proc/aura_check(var/type)
 	if(!auras)
