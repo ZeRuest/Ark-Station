@@ -1,4 +1,4 @@
-# Ark
+# Ark [![Build Status](https://travis-ci.com/TheArkStation/Ark-Station.svg?branch=dev)](https://travis-ci.com/TheArkStation/Ark-Station)
 
 [Code](https://github.com/TheArkStation/Ark-Station/) - [Discord](https://discord.gg/aFrwtgG)
 
