@@ -51,5 +51,13 @@
 		. += "[world.address]:[world.port]"
 
 /hook/startup/proc/ircNotify()
-	send2mainirc("Server starting up on [get_world_url()]")
+	send2mainirc("@ВСЕНАБОРТ, сервер запускается на карте [GLOB.using_map.full_name], IP: <byond://[config.serverurl ? config.serverurl : (config.server ? config.server : "[world.address]:[world.port]")]>")
+	return 1
+
+/hook/roundstart/proc/ircNotify()
+	send2mainirc("Раунд с режимом [SSticker.master_mode] начался. Игроков: [GLOB.player_list.len].")
+	return 1
+
+/hook/roundend/proc/ircNotify()
+	send2mainirc("Раунд с режимом [SSticker.master_mode] завершен. Продолжительность: [roundduration2text()].")
 	return 1
