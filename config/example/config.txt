@@ -277,6 +277,9 @@ USEALIENWHITELIST
 ## IRC channel to send adminhelps to.  Leave blank to disable adminhelps-to-irc.
 #ADMIN_IRC #admin
 
+## ID роли в дискорде для уведомления о запуске сервера. Как пример: "50505050505050"
+#NOTIFY_ROLE_ID 
+
 ## Uncommen to allow ghosts to write in blood during Cult rounds.
 ALLOW_CULT_GHOSTWRITER
 
