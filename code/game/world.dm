@@ -628,6 +628,7 @@ proc/setup_database_connection()
 	. = dbcon.IsConnected()
 	if ( . )
 		failed_db_connections = 0	//If this connection succeeded, reset the failed connections counter.
+		GLOB.reputation.Initialize()
 	else
 		failed_db_connections++		//If it failed, increase the failed connections counter.
 		world.log << dbcon.ErrorMsg()
