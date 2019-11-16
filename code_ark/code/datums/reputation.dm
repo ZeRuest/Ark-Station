@@ -53,7 +53,7 @@ GLOBAL_DATUM_INIT(reputation, /datum/reputation_statistics, new)
 	return ..()
 
 /datum/reputation_holder/proc/gather_info()
-	var/DBQuery/query = dbcon.NewQuery("SELECT id, datediff(Now(),lastrepchange) as datediff, value FROM reputation WHERE key = '[owner.key]'")
+	var/DBQuery/query = dbcon.NewQuery("SELECT id, datediff(Now(),lastrepchange) as datediff, value FROM reputation WHERE `key` = '[owner.key]'")
 	query.Execute()
 	var/id
 	var/date_diff
