@@ -34,6 +34,8 @@
 
 	return A
 
+	return A
+
 // Returns an associative list in format path:weight
 /obj/random/proc/spawn_choices()
 	return list()

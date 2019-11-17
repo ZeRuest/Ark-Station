@@ -18,9 +18,6 @@
 	var/breakouttime = 1200 //Deciseconds = 120s = 2 minutes
 	var/cuff_sound = 'sound/weapons/handcuffs.ogg'
 	var/cuff_type = "handcuffs"
-	sprite_sheets = list(
-		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/misc.dmi'
-		)
 
 /obj/item/weapon/handcuffs/examine(mob/user)
 	. = ..()

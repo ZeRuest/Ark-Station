@@ -126,12 +126,8 @@ var/global/list/additional_antag_types = list()
 			SSticker.mode.antag_templates |= antag
 			message_admins("Admin [key_name_admin(usr)] added [antag.role_text] template to game mode.")
 
-	// I am very sure there's a better way to do this, but I'm not sure what it might be. ~Z
-	spawn(1)
-		for(var/datum/admins/admin in world)
-			if(usr.client == admin.owner)
-				admin.show_game_mode(usr)
-				return
+	if (usr.client && usr.client.holder)
+		usr.client.holder.show_game_mode(usr)
 
 /datum/game_mode/proc/announce() //to be called when round starts
 	to_world("<B>The current game mode is [capitalize(name)]!</B>")
@@ -380,7 +376,7 @@ var/global/list/additional_antag_types = list()
 	if(escaped_total > 0)
 		SSstatistics.set_field("escaped_total",escaped_total)
 
-	send2mainirc("Раунд с режимом [name] завершён. Выживших: [surviving_total]; призраков: [ghosts]; игроков: [GLOB.clients.len]; продолжительность: [roundduration2text()].")
+	send2mainirc("A round of [src.name] has ended - [surviving_total] survivor\s, [ghosts] ghost\s.")
 	SSwebhooks.send(WEBHOOK_ROUNDEND, list("survivors" = surviving_total, "escaped" = escaped_total, "ghosts" = ghosts))
 
 	return 0

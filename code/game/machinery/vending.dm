@@ -554,7 +554,7 @@
 	if (!throw_item)
 		return 0
 	spawn(0)
-		throw_item.throw_at(target, rand(1,2), 3, src)
+		throw_item.throw_at(target, rand(1,2), 3)
 	src.visible_message("<span class='warning'>\The [src] launches \a [throw_item] at \the [target]!</span>")
 	return 1
 
@@ -661,6 +661,7 @@
 	products = list(/obj/item/weapon/reagent_containers/food/drinks/coffee = 15,
 					/obj/item/weapon/reagent_containers/food/drinks/tea/black = 15,
 					/obj/item/weapon/reagent_containers/food/drinks/tea/green = 15,
+					/obj/item/weapon/reagent_containers/food/drinks/tea/chai = 15,
 					/obj/item/weapon/reagent_containers/food/drinks/h_chocolate = 10,
 					/obj/item/weapon/reagent_containers/food/condiment/small/packet/sugar = 25,
 					/obj/item/weapon/reagent_containers/pill/pod/cream = 25,
@@ -672,6 +673,7 @@
 	prices = list(/obj/item/weapon/reagent_containers/food/drinks/coffee = 10,
 				  /obj/item/weapon/reagent_containers/food/drinks/tea/black = 10,
 				  /obj/item/weapon/reagent_containers/food/drinks/tea/green = 10,
+				  /obj/item/weapon/reagent_containers/food/drinks/tea/chai = 10,
 				  /obj/item/weapon/reagent_containers/food/drinks/h_chocolate = 15,
 				  /obj/item/weapon/reagent_containers/food/condiment/small/packet/sugar = 1,
 				  /obj/item/weapon/reagent_containers/pill/pod/cream = 5,
