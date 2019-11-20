@@ -293,7 +293,8 @@ datum/unit_test/ladder_check/start_test()
 	return TRUE
 
 /datum/unit_test/ladder_check/proc/check_open_space(var/obj/structure/ladder/L)
-	if(!istype(get_turf(L), /turf/simulated/open))
+	var/turf/T = get_turf(L)
+	if(!T.is_open())
 		log_bad("There is a non-open turf blocking the way for [log_info_line(L)]")
 		return FALSE
 	return TRUE
