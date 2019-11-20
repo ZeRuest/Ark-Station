@@ -1,18 +1,4 @@
-//Shouldn't be a lot in here, only sierra versions of existing machines that need a different access req or something along those lines.
-
-/obj/machinery/vending/medical/sierra
-	req_access = list()
-
-/obj/machinery/drone_fabricator/sierra
-	fabricator_tag = "NES Sierra Maintenance"
-
-/obj/machinery/drone_fabricator/sierra/adv
-	name = "advanced drone fabricator"
-	fabricator_tag = "SFV Arrow Maintenance"
-	drone_type = /mob/living/silicon/robot/drone/construction
-
-//telecommunications gubbins for sierra-specific networks
-
+//castelnau telecommunications
 /obj/machinery/telecomms/hub/preset
 	id = "Hub"
 	network = "tcommsat"
@@ -42,49 +28,19 @@
 	channel_tags = list(list(EXP_FREQ, "Exploration", COMMS_COLOR_EXPLORER))
 	autolinkers = list("Exploration")
 
-// Suit cyclers and storage
-/obj/machinery/suit_cycler/exploration
-	name = "Exploration suit cycler"
-	model_text = "Exploration"
-	req_access = list() //DEBUG
-	species = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
-
-/obj/machinery/suit_storage_unit/explorer
-	name = "Exploration Voidsuit Storage Unit"
-	suit = /obj/item/clothing/suit/space/void/exploration
-	helmet = /obj/item/clothing/head/helmet/space/void/exploration
-	boots = /obj/item/clothing/shoes/magboots
-	tank = /obj/item/weapon/tank/oxygen
-	mask = /obj/item/clothing/mask/breath
-	req_access = list()
-	islocked = 1
-
-/obj/machinery/suit_storage_unit/pilot
-	name = "Expeditionary Pilot Voidsuit Storage Unit"
-	suit = /obj/item/clothing/suit/space/void/pilot
-	helmet = /obj/item/clothing/head/helmet/space/void/pilot
-	boots = /obj/item/clothing/shoes/magboots
-	tank = /obj/item/weapon/tank/oxygen
-	mask = /obj/item/clothing/mask/breath
-	req_access = list() //DEBUG
-	islocked = 1
-
-/obj/machinery/suit_cycler/pilot
-	req_access = list() //DEBUG
-
+// Vending machines & dispensers
 /obj/machinery/vending/security
-	name = "SecTech"
-	desc = "A security equipment vendor."
-	product_ads = "Crack capitalist skulls!;Beat some heads in!;Don't forget - harm is good!;Your weapons are right here.;Handcuffs!;Freeze, scumbag!;Don't tase me bro!;Tase them, bro.;Why not have a donut?"
-	icon_state = "sec"
-	icon_deny = "sec-deny"
-	icon_vend = "sec-vend"
-	vend_delay = 14
-	req_access = list()
-	products = list(/obj/item/weapon/handcuffs = 8,/obj/item/weapon/grenade/flashbang = 8,/obj/item/weapon/grenade/chem_grenade/teargas = 4,/obj/item/device/flash = 5,
-					/obj/item/bodybag = 4,/obj/item/weapon/storage/box/evidence = 6, /obj/item/clothing/accessory/badge/holo/NT = 4, /obj/item/clothing/accessory/badge/holo/NT/cord = 4)
-	contraband = list(/obj/item/clothing/glasses/sunglasses = 2,/obj/item/weapon/storage/box/donut = 2)
+	products = list(
+		/obj/item/weapon/handcuffs = 14,
+		/obj/item/weapon/grenade/flashbang = 4,
+		/obj/item/weapon/grenade/chem_grenade/teargas = 4,
+		/obj/item/device/flash = 7,
+		/obj/item/weapon/reagent_containers/spray/pepper = 4,
+		/obj/item/device/holowarrant = 4,
+		/obj/item/weapon/reagent_containers/food/snacks/donut/normal = 12,
+		/obj/item/weapon/storage/box/evidence = 8)
 
+//buttons
 /obj/machinery/button/toggle/valve/nacelle/first
 	name = "Third Deck Starboard Nacelle Fuel Control"
 
