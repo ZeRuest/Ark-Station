@@ -17,4 +17,4 @@
 
 /obj/structure/bed/double/nightlight/New(var/newloc)
 	..(newloc,MATERIAL_ALUMINIUM,MATERIAL_CLOTH)
-	set_light(0.2, 0.5, 2, 2, "#00E7DC")
+	set_light(0.2, 0.5, 2, 2, "#00e7dc")
