@@ -33,6 +33,7 @@
 "aG" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 6},/turf/simulated/floor/tiled,/area/space)
 "aH" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 8},/turf/simulated/floor/tiled,/area/space)
 "aI" = (/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled/dark,/area/space)
+"aJ" = (/obj/item/clothing/gloves/insulated,/obj/item/weapon/storage/belt/utility/full,/obj/item/device/multitool{pixel_x = 3},/obj/item/clothing/head/welding{pixel_x = -3; pixel_y = 5},/obj/item/weapon/storage/toolbox/mechanical,/obj/item/clothing/glasses/welding,/obj/effect/floor_decal/corner/pink{dir = 5},/obj/structure/table/rack,/turf/simulated/floor/tiled/dark,/area/space)
 "aQ" = (/turf/simulated/floor/tiled/dark,/area/space)
 "aU" = (/obj/machinery/atmospherics/unary/vent_scrubber/on,/turf/simulated/floor/tiled,/area/space)
 "aX" = (/obj/structure/railing/mapped{dir = 1; icon_state = "railing0-1"},/turf/simulated/floor/tiled/monotile,/area/space)
@@ -452,7 +453,6 @@
 "lx" = (/obj/machinery/vending/robotics,/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/tiled/dark/monotile,/area/space)
 "ly" = (/obj/machinery/fabricator,/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/tiled/dark/monotile,/area/space)
 "lz" = (/obj/structure/closet/crate/freezer,/obj/item/device/mmi,/obj/item/device/mmi,/obj/effect/floor_decal/corner/pink{dir = 5},/obj/machinery/power/apc{dir = 1; name = "north bump"; pixel_x = 0; pixel_y = 24},/obj/machinery/atmospherics/unary/vent_scrubber/on,/obj/structure/cable/green{d2 = 2; icon_state = "0-2"},/turf/simulated/floor/tiled/dark,/area/space)
-"lA" = (/obj/structure/table/rack{dir = 8; layer = 2.9},/obj/item/clothing/gloves/insulated,/obj/item/weapon/storage/belt/utility/full,/obj/item/device/multitool{pixel_x = 3},/obj/item/clothing/head/welding{pixel_x = -3; pixel_y = 5},/obj/item/weapon/storage/toolbox/mechanical,/obj/item/clothing/glasses/welding,/obj/effect/floor_decal/corner/pink{dir = 5},/turf/simulated/floor/tiled/dark,/area/space)
 "lB" = (/obj/machinery/computer/modular/preset/medical,/obj/effect/floor_decal/corner/pink/three_quarters{icon_state = "corner_white_three_quarters"; dir = 1},/turf/simulated/floor/tiled/dark,/area/space)
 "lC" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/firedoor,/obj/machinery/door/blast/regular{density = 0; dir = 4; icon_state = "pdoor0"; id_tag = "Biohazard"; name = "Biohazard Shutter"; opacity = 0},/obj/structure/cable/green{d2 = 2; icon_state = "0-2"},/turf/simulated/floor/plating,/area/space)
 "lD" = (/obj/effect/floor_decal/industrial/warning{icon_state = "warning"; dir = 8},/turf/simulated/floor/tiled/dark,/area/space)
@@ -796,7 +796,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabiYiIiZ
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababababjfiIjglslslslsiQjBjhfwagaglsaxkDkJjTkKlsaykDkJjTkKlsazkDkJjTkKlskYkZbgbgbglalbkPqeqffPqaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababababacacabjijjjmjljkjmjnjojCaefwagnBlslslelslslslslslflslslslslslglslslslslsnGnRdsoaodoelsqgqhabababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabacacacacabababababablvababgnjDgnlslhkeagnFliljnqaAnvnFlinJnwnxnynznAnClsjinDlsofofogoflsohlsqiqjabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabacabababablwlxlylzlAfVlBlCaejAjElsnEkykzkznHnInKnLnMnKnNnKnPnKnKnQanaoapaqoclsoioioikFojoklslsfAabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabacabababablwlxlylzaJfVlBlCaejAjElsnEkykzkznHnInKnLnMnKnNnKnPnKnKnQanaoapaqoclsoioioikFojoklslsfAabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabacabafafjFlDlEfNlFlGlHlIlJaejAaelslsfwfwfwlslsfwfwfwlslsfwfwfwlsnSlslslslslslsolomonooopaeiDlsfAabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababababababacabafafjGaBlLlMlNfVlclPlQaenTnUnVfQnWfQnXfQfQfQfQfQfQnYfQfQnXnZoqfQfQnVorosaUaeaeaeaeotbgoulsrbabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabacacacacacacacababababfwlRfwablklTlTlUaejAaegnaeibaeicaeaeaeaeaeaeaeaeaellaeibaenOgnovowoxnZnZnZnZoylslslsfAabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
