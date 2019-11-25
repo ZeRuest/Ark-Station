@@ -1,0 +1,3 @@
+/mob/Destroy()
+	focus = null
+	. = ..()

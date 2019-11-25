@@ -23,12 +23,6 @@
 	update_icons()
 	return TRUE
 
-/mob/living/carbon/alien/diona/hotkey_drop()
-	if(holding_item || hat)
-		drop_item()
-	else
-		to_chat(usr, "<span class='warning'>You have nothing to drop.</span>")
-
 /mob/living/carbon/alien/diona/proc/can_collect(var/obj/item/collecting)
 	return (!holding_item && \
 		istype(collecting) && \

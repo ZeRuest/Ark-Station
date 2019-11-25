@@ -30,70 +30,6 @@
 /client/proc/client_dir(input, direction=-1)
 	return turn(input, direction*dir2angle(dir))
 
-/client/Northeast()
-	diagonal_action(NORTHEAST)
-/client/Northwest()
-	diagonal_action(NORTHWEST)
-/client/Southeast()
-	diagonal_action(SOUTHEAST)
-/client/Southwest()
-	diagonal_action(SOUTHWEST)
-
-/client/proc/diagonal_action(direction)
-	switch(client_dir(direction, 1))
-		if(NORTHEAST)
-			swap_hand()
-			return
-		if(SOUTHEAST)
-			attack_self()
-			return
-		if(SOUTHWEST)
-			if(iscarbon(usr))
-				var/mob/living/carbon/C = usr
-				C.toggle_throw_mode()
-			else
-				to_chat(usr, "<span class='warning'>This mob type cannot throw items.</span>")
-			return
-		if(NORTHWEST)
-			mob.hotkey_drop()
-
-/mob/proc/hotkey_drop()
-	to_chat(src, "<span class='warning'>This mob type cannot drop items.</span>")
-
-/mob/living/carbon/hotkey_drop()
-	var/obj/item/hand = get_active_hand()
-	if(!hand)
-		to_chat(src, "<span class='warning'>You have nothing to drop in your hand.</span>")
-	else if(hand.can_be_dropped_by_client(src))
-		drop_item()
-
-//This gets called when you press the delete button.
-/client/verb/delete_key_pressed()
-	set hidden = 1
-
-	if(!usr.pulling)
-		to_chat(usr, "<span class='notice'>You are not pulling anything.</span>")
-		return
-	usr.stop_pulling()
-
-/client/verb/swap_hand()
-	set hidden = 1
-	if(istype(mob, /mob/living/carbon))
-		mob:swap_hand()
-	if(istype(mob,/mob/living/silicon/robot))
-		var/mob/living/silicon/robot/R = mob
-		R.cycle_modules()
-	return
-
-
-
-/client/verb/attack_self()
-	set hidden = 1
-	if(mob)
-		mob.mode()
-	return
-
-
 /client/verb/toggle_throw_mode()
 	set hidden = 1
 	if(!istype(mob, /mob/living/carbon))
@@ -102,7 +38,6 @@
 		mob:toggle_throw_mode()
 	else
 		return
-
 
 /client/verb/drop_item()
 	set hidden = 1
@@ -233,30 +168,6 @@
 	if(MOVING_DELIBERATELY(src))
 		prob_slip *= 0.5
 	return prob_slip
-
-#define DO_MOVE(this_dir) var/final_dir = turn(this_dir, -dir2angle(dir)); Move(get_step(mob, final_dir), final_dir);
-
-/client/verb/moveup()
-	set name = ".moveup"
-	set instant = 1
-	DO_MOVE(NORTH)
-
-/client/verb/movedown()
-	set name = ".movedown"
-	set instant = 1
-	DO_MOVE(SOUTH)
-
-/client/verb/moveright()
-	set name = ".moveright"
-	set instant = 1
-	DO_MOVE(EAST)
-
-/client/verb/moveleft()
-	set name = ".moveleft"
-	set instant = 1
-	DO_MOVE(WEST)
-
-#undef DO_MOVE
 
 /mob/proc/set_next_usable_move_intent()
 	var/checking_intent = (istype(move_intent) ? move_intent.type : move_intents[1])

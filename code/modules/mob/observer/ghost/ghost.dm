@@ -73,6 +73,8 @@ var/global/list/image/ghost_sightless_images = list() //this is a list of images
 
 	GLOB.ghost_mob_list += src
 
+	set_focus(src)
+
 	..()
 
 /mob/observer/ghost/Destroy()

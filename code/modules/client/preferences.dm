@@ -45,6 +45,9 @@ datum/preferences
 	real_name = random_name(gender,species)
 	b_type = RANDOM_BLOOD_TYPE
 
+	key_bindings = deepCopyList(GLOB.hotkey_keybinding_list_by_key) // give them default keybinds and update their movement keys
+	client.update_movement_keys()
+
 	if(client && !IsGuestKey(client.key))
 		load_path(client.ckey)
 		load_preferences()

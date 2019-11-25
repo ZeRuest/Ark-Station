@@ -151,6 +151,8 @@ var/global/list/string_slot_flags = list(
 		var/datum/grab/G = all_grabstates[grabstate_name]
 		G.refresh_updown()
 
+	init_keybindings()
+
 	return 1
 
 //*** params cache
