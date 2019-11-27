@@ -20,7 +20,8 @@
 	                    SKILL_VIROLOGY    = SKILL_BASIC)
 
 	max_skill = list(   SKILL_MEDICAL     = SKILL_MAX,
-	                    SKILL_ANATOMY     = SKILL_MAX)
+	                    SKILL_ANATOMY     = SKILL_MAX,
+	                    SKILL_VIROLOGY    = SKILL_MAX)
 	skill_points = 26
 
 	access = list(access_castelnau_medical, access_castelnau_morgue, access_castelnau_maint_tunnels, access_castelnau_eva)
@@ -51,7 +52,8 @@
 	                    SKILL_ANATOMY   = SKILL_BASIC)
 
 	max_skill = list(   SKILL_MEDICAL     = SKILL_MAX,
-	                    SKILL_VIROLOGY    = SKILL_MAX)
+	                    SKILL_VIROLOGY    = SKILL_MAX,
+	                    SKILL_CHEMISTRY   = SKILL_MAX)
 	access = list(access_castelnau_medical, access_castelnau_morgue, access_castelnau_maint_tunnels, access_castelnau_eva)
 
 	minimal_access = list(access_castelnau_medical, access_castelnau_morgue, access_castelnau_maint_tunnels, access_castelnau_eva)
