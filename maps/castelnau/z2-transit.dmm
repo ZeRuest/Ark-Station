@@ -48,30 +48,9 @@
 	},
 /turf/space,
 /area/space)
-"h" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	name = "thrower_throwdown";
-	tiles = 0
-	},
-/turf/space/bluespace,
-/area/space)
-"i" = (
-/obj/effect/shuttle_landmark/castelnau/transit/perseus,
-/turf/space,
-/area/space)
 "j" = (
 /obj/effect/shuttle_landmark/ert/internim,
 /turf/space/bluespace,
-/area/space)
-"k" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 8;
-	name = "thrower_escapeshuttletop(left)";
-	tiles = 0
-	},
-/turf/space,
 /area/space)
 "l" = (
 /obj/effect/shuttle_landmark/merc/internim,
@@ -87,10 +66,6 @@
 	},
 /turf/space/bluespace,
 /area/space)
-"r" = (
-/obj/effect/shuttle_landmark/castelnau/transit/bixie,
-/turf/space,
-/area/space)
 "s" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -102,24 +77,6 @@
 /area/space)
 "t" = (
 /obj/effect/shuttle_landmark/skipjack/internim,
-/turf/space/bluespace,
-/area/space)
-"x" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 8;
-	name = "thrower_escapeshuttletop(left)";
-	tiles = 0
-	},
-/turf/space,
-/area/space)
-"y" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
-	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
-	},
 /turf/space/bluespace,
 /area/space)
 "z" = (
@@ -138,22 +95,6 @@
 /obj/effect/step_trigger/thrower{
 	direction = 1;
 	name = "thrower_throwup";
-	tiles = 0
-	},
-/turf/space/bluespace,
-/area/space)
-"I" = (
-/obj/effect/step_trigger/thrower{
-	direction = 1;
-	name = "thrower_throwup";
-	tiles = 0
-	},
-/turf/space/bluespace,
-/area/space)
-"L" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	name = "thrower_throwdown";
 	tiles = 0
 	},
 /turf/space/bluespace,
@@ -994,19 +935,19 @@ f
 f
 f
 f
-L
-L
-L
-L
-L
-L
-L
+A
+A
+A
+A
+A
+A
+A
 q
-y
-y
-y
-y
-y
+s
+s
+s
+s
+s
 f
 a
 X
@@ -1189,14 +1130,14 @@ f
 f
 f
 f
-y
-L
-L
-L
+s
+A
+A
+A
 c
-y
-y
-y
+s
+s
+s
 f
 f
 f
@@ -1208,7 +1149,7 @@ f
 f
 f
 f
-y
+s
 f
 a
 X
@@ -1391,7 +1332,7 @@ f
 f
 f
 f
-y
+s
 f
 f
 f
@@ -1410,7 +1351,7 @@ f
 f
 f
 f
-y
+s
 f
 a
 X
@@ -1593,7 +1534,7 @@ f
 f
 f
 f
-y
+s
 f
 f
 f
@@ -1612,7 +1553,7 @@ f
 f
 f
 f
-y
+s
 f
 a
 X
@@ -1787,15 +1728,15 @@ f
 f
 f
 f
-L
-L
-L
-L
-L
-L
-L
-y
-y
+A
+A
+A
+A
+A
+A
+A
+s
+s
 f
 f
 f
@@ -1814,7 +1755,7 @@ f
 f
 f
 f
-y
+s
 f
 a
 X
@@ -1988,15 +1929,15 @@ f
 f
 f
 f
-y
+s
 c
 f
 f
 f
 f
 f
-y
-y
+s
+s
 f
 f
 f
@@ -2016,7 +1957,7 @@ f
 f
 f
 f
-y
+s
 f
 a
 X
@@ -2190,7 +2131,7 @@ f
 f
 f
 f
-y
+s
 f
 f
 f
@@ -2215,10 +2156,10 @@ f
 f
 f
 f
-y
-y
-y
-y
+s
+s
+s
+s
 f
 a
 X
@@ -2392,7 +2333,7 @@ f
 f
 f
 f
-y
+s
 f
 f
 f
@@ -2419,7 +2360,7 @@ f
 f
 f
 f
-y
+s
 f
 f
 a
@@ -2432,12 +2373,12 @@ f
 f
 f
 f
-I
-I
-I
-I
-I
-I
+C
+C
+C
+C
+C
+C
 f
 f
 f
@@ -2594,7 +2535,7 @@ f
 f
 f
 f
-y
+s
 f
 f
 f
@@ -2621,7 +2562,7 @@ f
 f
 f
 f
-y
+s
 f
 f
 a
@@ -2633,14 +2574,14 @@ f
 f
 f
 f
-I
-I
+C
+C
 f
 f
 f
 f
-I
-I
+C
+C
 f
 f
 f
@@ -2796,7 +2737,7 @@ f
 f
 f
 f
-y
+s
 f
 f
 f
@@ -2823,7 +2764,7 @@ f
 f
 f
 f
-y
+s
 f
 f
 a
@@ -2835,15 +2776,15 @@ f
 f
 f
 f
-I
+C
 f
 f
 f
 f
 f
 f
-I
-I
+C
+C
 f
 f
 f
@@ -2998,7 +2939,7 @@ f
 f
 f
 f
-y
+s
 f
 f
 f
@@ -3025,7 +2966,7 @@ f
 f
 f
 f
-y
+s
 f
 f
 a
@@ -3033,11 +2974,11 @@ X
 a
 f
 f
-I
-I
-I
-I
-I
+C
+C
+C
+C
+C
 f
 f
 f
@@ -3045,8 +2986,8 @@ f
 f
 f
 f
-I
-I
+C
+C
 f
 f
 f
@@ -3200,7 +3141,7 @@ f
 f
 f
 f
-y
+s
 f
 f
 f
@@ -3227,7 +3168,7 @@ f
 f
 f
 f
-y
+s
 f
 f
 a
@@ -3235,7 +3176,7 @@ X
 a
 f
 f
-I
+C
 f
 f
 f
@@ -3248,7 +3189,7 @@ f
 f
 f
 f
-I
+C
 f
 f
 f
@@ -3402,7 +3343,7 @@ f
 f
 f
 f
-y
+s
 f
 f
 f
@@ -3427,21 +3368,21 @@ f
 f
 f
 f
-y
-y
-y
-y
+s
+s
+s
+s
 f
 a
 X
 a
 f
 f
-I
-I
-I
-I
-I
+C
+C
+C
+C
+C
 f
 f
 f
@@ -3450,7 +3391,7 @@ f
 f
 f
 f
-I
+C
 f
 f
 f
@@ -3604,21 +3545,15 @@ f
 f
 f
 f
-y
-y
+s
+s
 f
 f
 f
 f
 f
-y
-y
-f
-f
-f
-f
-f
-f
+s
+s
 f
 f
 f
@@ -3632,7 +3567,13 @@ f
 f
 f
 f
-y
+f
+f
+f
+f
+f
+f
+s
 f
 a
 X
@@ -3643,7 +3584,7 @@ f
 f
 f
 f
-I
+C
 f
 f
 f
@@ -3652,7 +3593,7 @@ f
 f
 f
 f
-I
+C
 f
 f
 f
@@ -3807,15 +3748,15 @@ f
 f
 f
 f
-L
-L
-L
-L
-L
-L
-L
-L
-y
+A
+A
+A
+A
+A
+A
+A
+A
+s
 f
 f
 f
@@ -3834,18 +3775,18 @@ f
 f
 f
 f
-y
+s
 f
 a
 X
 a
 f
 f
-I
-I
-I
-I
-I
+C
+C
+C
+C
+C
 f
 f
 f
@@ -3854,7 +3795,7 @@ f
 f
 f
 f
-I
+C
 f
 f
 f
@@ -4017,7 +3958,7 @@ f
 f
 f
 f
-y
+s
 f
 f
 f
@@ -4036,14 +3977,14 @@ f
 f
 f
 f
-y
+s
 f
 a
 X
 a
 f
 f
-I
+C
 f
 f
 f
@@ -4056,7 +3997,7 @@ f
 f
 f
 f
-I
+C
 f
 f
 f
@@ -4219,7 +4160,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -4238,18 +4179,18 @@ f
 f
 f
 f
-y
+s
 f
 a
 X
 a
 f
 f
-I
-I
-I
-I
-I
+C
+C
+C
+C
+C
 f
 f
 f
@@ -4257,8 +4198,8 @@ f
 f
 f
 f
-I
-I
+C
+C
 f
 f
 f
@@ -4421,14 +4362,14 @@ f
 f
 f
 f
-y
-y
-y
-y
-y
-y
-y
-y
+s
+s
+s
+s
+s
+s
+s
+s
 f
 f
 f
@@ -4440,7 +4381,7 @@ f
 f
 f
 f
-y
+s
 f
 a
 X
@@ -4451,15 +4392,15 @@ f
 f
 f
 f
-I
+C
 f
 f
 f
 f
 f
 f
-I
-I
+C
+C
 f
 f
 f
@@ -4630,19 +4571,19 @@ f
 f
 f
 f
-L
-L
-L
-L
-L
-L
-L
+A
+A
+A
+A
+A
+A
+A
 q
-y
-y
-y
-y
-y
+s
+s
+s
+s
+s
 f
 a
 X
@@ -4653,14 +4594,14 @@ f
 f
 f
 f
-I
-I
+C
+C
 f
 f
 f
 f
-I
-I
+C
+C
 f
 f
 f
@@ -4856,12 +4797,12 @@ f
 f
 f
 f
-I
-I
-I
-I
-I
-I
+C
+C
+C
+C
+C
+C
 f
 f
 f
@@ -7045,18 +6986,18 @@ f
 f
 f
 f
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
 f
 f
 a
@@ -7247,7 +7188,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -7258,7 +7199,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 a
@@ -7273,20 +7214,20 @@ f
 f
 f
 f
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
 f
 f
 f
@@ -7449,7 +7390,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -7460,7 +7401,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 a
@@ -7475,7 +7416,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -7488,7 +7429,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -7651,7 +7592,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -7662,7 +7603,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 a
@@ -7677,7 +7618,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -7690,7 +7631,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -7841,19 +7782,19 @@ X
 (39,1,1) = {"
 a
 f
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
 f
 f
 f
@@ -7864,7 +7805,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 a
@@ -7879,7 +7820,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -7892,7 +7833,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -8043,7 +7984,7 @@ X
 (40,1,1) = {"
 a
 f
-L
+A
 f
 f
 f
@@ -8055,7 +7996,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -8066,7 +8007,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 a
@@ -8081,7 +8022,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -8094,11 +8035,11 @@ f
 f
 f
 f
-L
-L
-L
-L
-L
+A
+A
+A
+A
+A
 f
 f
 f
@@ -8245,7 +8186,7 @@ X
 (41,1,1) = {"
 a
 f
-L
+A
 f
 f
 f
@@ -8257,18 +8198,18 @@ f
 f
 f
 f
-L
-L
-L
+A
+A
+A
 f
 f
 f
 f
-L
-L
-L
-L
-L
+A
+A
+A
+A
+A
 f
 f
 a
@@ -8283,10 +8224,10 @@ f
 f
 f
 f
-L
-L
-L
-L
+A
+A
+A
+A
 f
 f
 f
@@ -8300,7 +8241,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -8447,7 +8388,7 @@ X
 (42,1,1) = {"
 a
 f
-L
+A
 f
 f
 f
@@ -8466,7 +8407,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -8486,9 +8427,9 @@ f
 f
 f
 f
-L
-L
-L
+A
+A
+A
 f
 f
 f
@@ -8502,8 +8443,8 @@ f
 f
 f
 f
-L
-L
+A
+A
 f
 f
 f
@@ -8649,7 +8590,7 @@ X
 (43,1,1) = {"
 a
 f
-L
+A
 f
 f
 f
@@ -8668,7 +8609,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -8687,8 +8628,8 @@ f
 f
 f
 f
-L
-L
+A
+A
 f
 f
 f
@@ -8705,8 +8646,8 @@ f
 f
 f
 f
-L
-L
+A
+A
 f
 f
 f
@@ -8851,7 +8792,7 @@ X
 (44,1,1) = {"
 a
 f
-L
+A
 f
 f
 f
@@ -8870,9 +8811,9 @@ f
 f
 f
 f
-L
-L
-L
+A
+A
+A
 f
 f
 f
@@ -8889,7 +8830,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -8908,7 +8849,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -9053,7 +8994,7 @@ X
 (45,1,1) = {"
 a
 f
-L
+A
 f
 f
 f
@@ -9074,7 +9015,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -9091,7 +9032,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -9110,7 +9051,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -9255,15 +9196,15 @@ X
 (46,1,1) = {"
 a
 f
-L
-L
-L
-L
-L
-L
-L
-L
-L
+A
+A
+A
+A
+A
+A
+A
+A
+A
 f
 f
 f
@@ -9276,7 +9217,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -9293,7 +9234,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -9312,7 +9253,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -9465,7 +9406,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -9478,7 +9419,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -9495,7 +9436,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -9514,7 +9455,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -9667,7 +9608,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -9680,7 +9621,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -9697,7 +9638,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -9716,7 +9657,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -9861,15 +9802,15 @@ X
 (49,1,1) = {"
 a
 f
-L
-L
-L
-L
-L
-L
-L
-L
-L
+A
+A
+A
+A
+A
+A
+A
+A
+A
 f
 f
 f
@@ -9882,7 +9823,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -9899,7 +9840,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -9918,7 +9859,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -10063,7 +10004,7 @@ X
 (50,1,1) = {"
 a
 f
-L
+A
 f
 f
 f
@@ -10084,7 +10025,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -10101,7 +10042,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -10120,7 +10061,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -10265,7 +10206,7 @@ X
 (51,1,1) = {"
 a
 f
-L
+A
 f
 f
 f
@@ -10284,9 +10225,9 @@ f
 f
 f
 f
-L
-L
-L
+A
+A
+A
 f
 f
 f
@@ -10303,8 +10244,8 @@ f
 f
 f
 f
-L
-L
+A
+A
 f
 f
 f
@@ -10321,8 +10262,8 @@ f
 f
 f
 f
-L
-L
+A
+A
 f
 f
 f
@@ -10467,7 +10408,7 @@ X
 (52,1,1) = {"
 a
 f
-L
+A
 f
 f
 f
@@ -10486,7 +10427,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -10506,9 +10447,9 @@ f
 f
 f
 f
-L
-L
-L
+A
+A
+A
 f
 f
 f
@@ -10522,8 +10463,8 @@ f
 f
 f
 f
-L
-L
+A
+A
 f
 f
 f
@@ -10669,7 +10610,7 @@ X
 (53,1,1) = {"
 a
 f
-L
+A
 f
 f
 f
@@ -10688,7 +10629,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -10707,10 +10648,10 @@ f
 f
 f
 f
-L
-L
-L
-L
+A
+A
+A
+A
 f
 f
 f
@@ -10724,7 +10665,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -10871,7 +10812,7 @@ X
 (54,1,1) = {"
 a
 f
-L
+A
 f
 f
 f
@@ -10883,18 +10824,18 @@ f
 f
 f
 f
-L
-L
-L
+A
+A
+A
 f
 f
 f
 f
-L
-L
-L
-L
-L
+A
+A
+A
+A
+A
 f
 f
 a
@@ -10909,7 +10850,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -10922,11 +10863,11 @@ f
 f
 f
 f
-L
-L
-L
-L
-L
+A
+A
+A
+A
+A
 f
 f
 f
@@ -11073,7 +11014,7 @@ X
 (55,1,1) = {"
 a
 f
-L
+A
 f
 f
 f
@@ -11085,7 +11026,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -11096,7 +11037,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 a
@@ -11111,7 +11052,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -11124,7 +11065,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -11275,19 +11216,19 @@ X
 (56,1,1) = {"
 a
 f
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
 f
 f
 f
@@ -11298,7 +11239,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 a
@@ -11313,7 +11254,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -11326,7 +11267,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -11489,7 +11430,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -11500,7 +11441,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 a
@@ -11515,7 +11456,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -11528,7 +11469,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -11691,7 +11632,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -11702,7 +11643,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 a
@@ -11717,20 +11658,20 @@ f
 f
 f
 f
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
 f
 f
 f
@@ -11893,7 +11834,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 f
@@ -11904,7 +11845,7 @@ f
 f
 f
 f
-L
+A
 f
 f
 a
@@ -12095,18 +12036,18 @@ f
 f
 f
 f
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
-L
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
 f
 f
 a
@@ -14511,17 +14452,17 @@ X
 X
 X
 X
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
+g
+g
+g
+g
+g
+g
+g
+g
+g
+g
+g
 X
 X
 X
@@ -14533,17 +14474,17 @@ X
 X
 X
 X
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
+g
+g
+g
+g
+g
+g
+g
+g
+g
+g
+g
 X
 X
 X
@@ -14713,17 +14654,17 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
 X
-x
+g
 X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -14735,17 +14676,17 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
 X
-x
+g
 X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -14915,17 +14856,17 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
 X
-x
+g
 X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -14937,17 +14878,17 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
 X
-x
+g
 X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -15117,7 +15058,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -15127,7 +15068,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -15139,7 +15080,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -15149,7 +15090,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -15319,7 +15260,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -15329,7 +15270,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -15341,7 +15282,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -15351,7 +15292,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -15521,7 +15462,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -15531,7 +15472,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -15543,7 +15484,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -15553,7 +15494,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -15723,7 +15664,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -15733,7 +15674,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -15745,7 +15686,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -15755,7 +15696,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -15925,7 +15866,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -15935,7 +15876,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -15947,7 +15888,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -15957,7 +15898,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -16127,7 +16068,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -16137,7 +16078,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -16149,7 +16090,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -16159,7 +16100,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -16329,8 +16270,8 @@ X
 X
 X
 X
-x
-x
+g
+g
 X
 X
 X
@@ -16338,7 +16279,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -16351,8 +16292,8 @@ X
 X
 X
 X
-x
-x
+g
+g
 X
 X
 X
@@ -16360,8 +16301,8 @@ X
 X
 X
 X
-x
-x
+g
+g
 X
 X
 X
@@ -16532,7 +16473,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -16540,7 +16481,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -16554,7 +16495,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -16562,7 +16503,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -16734,15 +16675,15 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
 X
 X
 X
-i
-x
+X
+g
 X
 X
 X
@@ -16756,15 +16697,15 @@ X
 X
 X
 X
-x
-r
+g
 X
 X
 X
 X
 X
 X
-x
+X
+g
 X
 X
 X
@@ -16936,7 +16877,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -16944,7 +16885,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -16958,7 +16899,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -16966,7 +16907,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -17138,7 +17079,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -17146,7 +17087,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -17160,7 +17101,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -17168,7 +17109,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -17340,7 +17281,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -17348,7 +17289,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -17362,7 +17303,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -17370,7 +17311,7 @@ X
 X
 X
 X
-x
+g
 X
 X
 X
@@ -17542,15 +17483,15 @@ X
 X
 X
 X
-x
-x
-x
-x
-x
-x
-x
-x
-x
+g
+g
+g
+g
+g
+g
+g
+g
+g
 X
 X
 X
@@ -17564,15 +17505,15 @@ X
 X
 X
 X
-x
-x
-x
-x
-x
-x
-x
-x
-x
+g
+g
+g
+g
+g
+g
+g
+g
+g
 X
 X
 X
