@@ -1,0 +1,7 @@
+# Require reviews from Core team for changes to CI or infra stuff
+.github/ @TheArkStation/maintainers 
+.azure-pipelines.yml @TheArkStation/maintainers 
+Dockerfile @TheArkStation/maintainers 
+flyway.conf @TheArkStation/maintainers 
+sql/ @TheArkStation/maintainers 
+LICENSE @TheArkStation/maintainers 

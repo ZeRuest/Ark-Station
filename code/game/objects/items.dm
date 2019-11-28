@@ -218,7 +218,9 @@
 		var/obj/item/weapon/storage/S = loc
 		S.remove_from_storage(src)
 
-	throwing = 0
+	if(!QDELETED(throwing))
+		throwing.finalize(hit=TRUE)
+
 	if (loc == user)
 		if(!user.unEquip(src))
 			return
@@ -251,17 +253,7 @@
 		R.hud_used.update_robot_modules_display()
 
 /obj/item/attackby(obj/item/weapon/W, mob/user)
-	if((. = SSfabrication.try_craft_with(src, W, user)))
-		return
-
-	if(istype(W, /obj/item/weapon/storage))
-		var/obj/item/weapon/storage/S = W
-		if(S.use_to_pickup)
-			if(S.collection_mode) //Mode is set to collect all items
-				if(isturf(src.loc))
-					S.gather_all(src.loc, user)
-			else if(S.can_be_inserted(src, user))
-				S.handle_item_insertion(src)
+	return SSfabrication.try_craft_with(src, W, user)
 
 /obj/item/proc/talk_into(mob/M as mob, text)
 	return

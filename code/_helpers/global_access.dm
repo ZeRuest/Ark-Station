@@ -133,6 +133,8 @@
 			return global.SSsupply;
 		if("SStemperature")
 			return global.SStemperature;
+		if("SSthrowing")
+			return global.SSthrowing;
 		if("SSticker")
 			return global.SSticker;
 		if("SStimer")
@@ -351,6 +353,8 @@
 			return global.csrfz_check;
 		if("custom_event_msg")
 			return global.custom_event_msg;
+		if("cyrillic_unicode_keys")
+			return global.cyrillic_unicode_keys;
 		if("damage_icon_parts")
 			return global.damage_icon_parts;
 		if("dbcon")
@@ -1052,6 +1056,8 @@
 			global.SSsupply=newval;
 		if("SStemperature")
 			global.SStemperature=newval;
+		if("SSthrowing")
+			global.SSthrowing=newval;
 		if("SSticker")
 			global.SSticker=newval;
 		if("SStimer")
@@ -1270,6 +1276,8 @@
 			global.csrfz_check=newval;
 		if("custom_event_msg")
 			global.custom_event_msg=newval;
+		if("cyrillic_unicode_keys")
+			global.cyrillic_unicode_keys=newval;
 		if("damage_icon_parts")
 			global.damage_icon_parts=newval;
 		if("dbcon")
@@ -1904,6 +1912,7 @@
 	"SSsun",
 	"SSsupply",
 	"SStemperature",
+	"SSthrowing",
 	"SSticker",
 	"SStimer",
 	"SStrade",
@@ -2013,6 +2022,7 @@
 	"crew_repository",
 	"csrfz_check",
 	"custom_event_msg",
+	"cyrillic_unicode_keys",
 	"damage_icon_parts",
 	"dbcon",
 	"dbcon_old",

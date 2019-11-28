@@ -33,7 +33,7 @@
 		. += new/datum/stack_recipe/spoon(src)
 		. += new/datum/stack_recipe/coin(src)
 
-	if(integrity >= 50 && hardness >= MATERIAL_RIGID)
+	if(integrity >= 50 && hardness >= MATERIAL_FLEXIBLE + 10)
 		. += new/datum/stack_recipe/furniture/door(src)
 		. += new/datum/stack_recipe/furniture/barricade(src)
 		. += new/datum/stack_recipe/furniture/stool(src)
@@ -47,6 +47,7 @@
 		. += new/datum/stack_recipe/railing(src)
 		. += new/datum/stack_recipe/rod(src)
 		. += new/datum/stack_recipe/furniture/wall_frame(src)
+		. += new/datum/stack_recipe/furniture/table_frame(src)
 
 	if(hardness > MATERIAL_RIGID + 10)
 		. += new/datum/stack_recipe/fork(src)
@@ -84,6 +85,7 @@
 	. += new/datum/stack_recipe/light_small(src)
 	. += new/datum/stack_recipe/light_switch(src)
 	. += new/datum/stack_recipe/light_switch/windowtint(src)
+	. += new/datum/stack_recipe/light_color_switch(src)
 	. += new/datum/stack_recipe/apc(src)
 	. += new/datum/stack_recipe/air_alarm(src)
 	. += new/datum/stack_recipe/fire_alarm(src)
@@ -132,6 +134,7 @@
 	. += new/datum/stack_recipe/coilgun(src)
 	. += new/datum/stack_recipe/stick(src)
 	. += new/datum/stack_recipe/noticeboard(src)
+	. += new/datum/stack_recipe/furniture/table_frame(src)
 
 /material/wood/mahogany/generate_recipes(var/reinforce_material)
 	. = ..()
@@ -170,5 +173,4 @@
 	. = ..()
 	if(reinforce_material)	//recipies below don't support composite materials
 		return
-	. += new/datum/stack_recipe/furniture/table_frame(src)
 	. += new/datum/stack_recipe/grenade(src)
