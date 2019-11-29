@@ -242,7 +242,7 @@ proc/slur(phrase)
 			//if(11,12)	newletter="<big>[newletter]</big>"
 			//if(13)	newletter="<small>[newletter]</small>"
 		newphrase+="[newletter]";counter-=1
-	return newphrase
+	return russian_to_cp1251(newphrase)
 
 /proc/stutter(n)
 	var/te = html_decode(n)
@@ -265,7 +265,7 @@ proc/slur(phrase)
 						n_letter = text("[n_letter]-[n_letter]")
 		t = text("[t][n_letter]")//since the above is ran through for each letter, the text just adds up back to the original word.
 		p++//for each letter p is increased to find where the next letter will be.
-	return sanitize(t)
+	return russian_to_cp1251(sanitize(t))
 
 
 proc/Gibberish(t, p)//t is the inputted message, and any value higher than 70 for p will cause letters to be replaced instead of added
