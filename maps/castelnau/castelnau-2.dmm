@@ -8,18 +8,6 @@
 "ac" = (
 /turf/simulated/wall/ocp_wall,
 /area/castelnau/thruster/d2starboard)
-"ad" = (
-/obj/effect/shuttle_landmark/ninja/deck2,
-/turf/space,
-/area/space)
-"ae" = (
-/obj/effect/shuttle_landmark/ert/deck3,
-/turf/space,
-/area/space)
-"af" = (
-/obj/effect/shuttle_landmark/castelnau/second_deck/one,
-/turf/space,
-/area/space)
 "ag" = (
 /obj/effect/landmark{
 	name = "carpspawn"
@@ -72,12 +60,6 @@
 	},
 /turf/space,
 /area/space)
-"ao" = (
-/obj/structure/lattice,
-/obj/structure/catwalk,
-/obj/random/trash/space,
-/turf/space,
-/area/space)
 "ap" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
@@ -91,18 +73,6 @@
 	dir = 4;
 	pixel_x = -32
 	},
-/turf/space,
-/area/space)
-"ar" = (
-/obj/structure/lattice,
-/obj/structure/catwalk,
-/obj/structure/railing/mapped{
-	dir = 8
-	},
-/obj/structure/railing/mapped{
-	dir = 1
-	},
-/obj/random/trash/space,
 /turf/space,
 /area/space)
 "as" = (
@@ -485,14 +455,6 @@
 	},
 /turf/simulated/wall/r_wall/hull,
 /area/castelnau/thruster/d2starboard)
-"bi" = (
-/obj/structure/lattice,
-/obj/structure/catwalk,
-/obj/structure/navlight_shuttle{
-	dir = 4
-	},
-/turf/space,
-/area/space)
 "bj" = (
 /obj/effect/wallframe_spawn/reinforced/hull,
 /obj/machinery/door/firedoor,
@@ -3882,7 +3844,6 @@
 	pixel_y = 23;
 	req_access = list("ACCESS_PROMETEUS")
 	},
-/obj/item/weapon/ladder_mobile,
 /obj/machinery/light_switch{
 	dir = 8;
 	pixel_x = 23
@@ -3900,9 +3861,8 @@
 	req_access = list("ACCESS_CASTELNAU_ENGINEERING")
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/clothing/under/solgov/utility/fleet/officer/engineering{
-	dir = 4;
-	icon_state = "console"
+/obj/machinery/computer/modular/preset/engineering{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/castelnau/engineering/engineering_monitoring)
@@ -3920,11 +3880,11 @@
 	pixel_y = -14
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/clothing/under/solgov/utility/fleet/officer/engineering{
-	dir = 8
-	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/machinery/computer/modular/preset/engineering{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/castelnau/engineering/engineering_monitoring)
@@ -4157,9 +4117,8 @@
 /obj/effect/floor_decal/corner/red/three_quarters{
 	dir = 4
 	},
-/obj/machinery/camera/network/security{
-	dir = 1;
-	icon_state = "console"
+/obj/machinery/computer/modular/preset/security{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/castelnau/security/processing)
@@ -4218,7 +4177,6 @@
 /turf/simulated/floor/tiled/monotile,
 /area/castelnau/security/hall)
 "hp" = (
-/obj/structure/closet/secure_closet/hop/castelnau,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -4355,7 +4313,6 @@
 "hB" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/clothing/glasses/material,
-/obj/structure/closet/secure_closet/miner/castelnau,
 /turf/simulated/floor/tiled,
 /area/castelnau/supply/office)
 "hC" = (
@@ -4896,7 +4853,6 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/obj/structure/closet/secure_closet/miner/castelnau,
 /turf/simulated/floor/tiled,
 /area/castelnau/supply/office)
 "iy" = (
@@ -5517,7 +5473,6 @@
 	dir = 8;
 	pixel_x = 23
 	},
-/obj/structure/closet/secure_closet/quartermaster/castelnau,
 /turf/simulated/floor/tiled,
 /area/castelnau/supply/office)
 "jv" = (
@@ -5567,7 +5522,6 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/yellow/border,
 /obj/item/clothing/mask/plunger,
-/obj/structure/closet/secure_closet/engineering_personal/senior,
 /turf/simulated/floor/tiled/steel_grid,
 /area/castelnau/engineering/storage)
 "jA" = (
@@ -5638,22 +5592,6 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/button/toggle/valve/nacelle/first{
-	dir = 1;
-	id_tag = "eng_2_fuel";
-	name = "Engine 2 Fuel Flow";
-	pixel_x = -6;
-	pixel_y = -22;
-	req_access = list("ACCESS_CASTELNAU_THRUSTERS")
-	},
-/obj/machinery/button/toggle/valve/nacelle/second{
-	dir = 1;
-	id_tag = "eng_1_fuel";
-	name = "Engine 1 Fuel Flow";
-	pixel_x = 6;
-	pixel_y = -22;
-	req_access = list("ACCESS_CASTELNAU_THRUSTERS")
-	},
 /turf/simulated/floor/tiled/monotile,
 /area/castelnau/engineering/engineering_monitoring)
 "jE" = (
@@ -6565,7 +6503,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{
 	id_tag = "n2_out"
 	},
-/obj/machinery/air_sensor/atmos/nitrogen,
 /turf/simulated/floor/reinforced/nitrogen,
 /area/castelnau/engineering/atmos)
 "lg" = (
@@ -6575,7 +6512,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{
 	id_tag = "air_out"
 	},
-/obj/machinery/air_sensor/atmos/air,
 /turf/simulated/floor/reinforced/airmix,
 /area/castelnau/engineering/atmos)
 "li" = (
@@ -6634,9 +6570,6 @@
 "ln" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
-	},
-/obj/machinery/light/small/green{
-	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/castelnau/engineering/engine_smes)
@@ -7199,7 +7132,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/green{
 	dir = 1
 	},
-/obj/machinery/air_sensor/atmos/oxygen,
 /turf/simulated/floor/reinforced/oxygen,
 /area/castelnau/engineering/atmos)
 "me" = (
@@ -8017,9 +7949,6 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/machinery/button/alternate/door/bolts{
 	dir = 8;
 	id_tag = "reactor_lock";
@@ -8082,7 +8011,6 @@
 "nC" = (
 /obj/structure/closet,
 /obj/item/weapon/storage/bible/booze,
-/obj/random/drinkbottle,
 /obj/effect/floor_decal/corner/green/three_quarters{
 	dir = 1
 	},
@@ -8090,6 +8018,9 @@
 	dir = 8;
 	icon_state = "warning"
 	},
+/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,
 /turf/simulated/floor/tiled,
 /area/castelnau/security/brig)
 "nD" = (
@@ -8157,6 +8088,9 @@
 /area/castelnau/security/observation)
 "nJ" = (
 /obj/machinery/camera/network/security{
+	dir = 4
+	},
+/obj/machinery/computer/modular/preset/security{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/monotile,
@@ -8672,7 +8606,6 @@
 	dir = 1;
 	icon_state = "warning"
 	},
-/obj/machinery/air_sensor/reactor/one,
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
@@ -9008,12 +8941,10 @@
 /turf/simulated/floor/tiled/monotile,
 /area/castelnau/security/equip)
 "oW" = (
-/obj/structure/closet/secure_closet/security/castenlau,
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/monotile,
 /area/castelnau/security/equip)
 "oX" = (
-/obj/structure/closet/secure_closet/warden/castenlau,
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/machinery/light{
 	dir = 4
@@ -9321,10 +9252,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/castelnau/engineering/engine_room)
-"pC" = (
-/obj/effect/shuttle_landmark/castelnau/second_deck/two,
-/turf/space,
-/area/space)
 "pD" = (
 /obj/machinery/flasher{
 	id_tag = "brig"
@@ -9902,6 +9829,10 @@
 	dir = 4;
 	initial_id_tag = "fusion_reactor"
 	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4;
+	icon_state = "warning"
+	},
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/castelnau/engineering/engine_room)
 "qD" = (
@@ -10138,6 +10069,13 @@
 	},
 /turf/simulated/floor/airless,
 /area/castelnau/thruster/d2starboard)
+"qY" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4;
+	icon_state = "warning"
+	},
+/turf/simulated/floor/holofloor/tiled/dark,
+/area/castelnau/engineering/engine_room)
 "qZ" = (
 /obj/effect/wallframe_spawn/reinforced_phoron/hull,
 /obj/machinery/door/blast/regular/open{
@@ -10155,17 +10093,18 @@
 /turf/simulated/floor/reinforced,
 /area/castelnau/engineering/engine_room)
 "rb" = (
-/obj/machinery/fabricator,
+/obj/machinery/fabricator{
+	emagged = 1
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/castelnau/security/armory)
 "rc" = (
 /obj/structure/table/rack/dark,
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/item/weapon/gun/energy/laser,
-/obj/item/weapon/gun/energy/laser,
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/item/ammo_casing/shell/apds,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/castelnau/security/armory)
 "rd" = (
@@ -10267,10 +10206,6 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/castelnau/engineering/engine_smes)
 "rq" = (
-/obj/item/clothing/under/solgov/utility/fleet/officer/engineering{
-	dir = 4;
-	icon_state = "console"
-	},
 /obj/machinery/alarm{
 	alarm_id = "xenobio2_alarm";
 	dir = 4;
@@ -10525,6 +10460,8 @@
 	pixel_x = 23;
 	req_access = list("ACCESS_PROMETEUS")
 	},
+/obj/item/ammo_casing/shell/apds,
+/obj/item/ammo_casing/shell/apds,
 /turf/simulated/floor/tiled/techfloor,
 /area/castelnau/security/armory)
 "rN" = (
@@ -10651,7 +10588,6 @@
 	dir = 10
 	},
 /obj/item/device/geiger,
-/obj/item/weapon/book/manual/reactor,
 /turf/simulated/floor/tiled,
 /area/castelnau/engineering/reactor_control_room)
 "sb" = (
@@ -10749,7 +10685,6 @@
 	icon_state = "warning"
 	},
 /obj/effect/floor_decal/industrial/warning,
-/obj/machinery/air_sensor/reactor/two,
 /turf/simulated/floor/reinforced,
 /area/castelnau/engineering/engine_room)
 "sl" = (
@@ -10858,8 +10793,8 @@
 /area/castelnau/security/armory)
 "sv" = (
 /obj/structure/table/rack/dark,
-/obj/item/weapon/gun/energy/ionrifle,
 /obj/machinery/light/small,
+/obj/item/weapon/gun/launcher/grenade/loaded,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/castelnau/security/armory)
 "sw" = (
@@ -10867,7 +10802,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
-/obj/item/weapon/gun/energy/sniperrifle,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/castelnau/security/armory)
 "sx" = (
@@ -11035,9 +10969,6 @@
 	dir = 4;
 	icon_state = "warningcorner"
 	},
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/machinery/button/alternate/door/bolts{
 	dir = 8;
 	id_tag = "reactor_2_lock";
@@ -11148,7 +11079,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/green{
 	dir = 4
 	},
-/obj/machinery/air_sensor/atmos/hydrogen,
 /turf/simulated/floor/reinforced/hydrogen,
 /area/castelnau/engineering/atmos)
 "tf" = (
@@ -11170,7 +11100,6 @@
 	dir = 4;
 	id_tag = "n2o_out"
 	},
-/obj/machinery/air_sensor/atmos/nitrous_oxide,
 /turf/simulated/floor/reinforced/n20,
 /area/castelnau/engineering/atmos)
 "ti" = (
@@ -11186,7 +11115,6 @@
 	dir = 4;
 	id_tag = "co2_out"
 	},
-/obj/machinery/air_sensor/atmos/carbon_dioxide,
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/castelnau/engineering/atmos)
 "tk" = (
@@ -11711,15 +11639,6 @@
 /obj/structure/ladder/up,
 /turf/space,
 /area/space)
-"um" = (
-/obj/structure/lattice,
-/obj/structure/catwalk,
-/obj/random/trash/space,
-/obj/structure/navlight_shuttle/red{
-	dir = 8
-	},
-/turf/space,
-/area/space)
 "un" = (
 /obj/structure/dispenser/oxygen,
 /turf/simulated/floor/plating,
@@ -12202,14 +12121,6 @@
 /obj/structure/sign/warning/hot_exhaust{
 	pixel_y = 24
 	},
-/turf/space,
-/area/space)
-"vr" = (
-/obj/effect/shuttle_landmark/skipjack/deck2,
-/turf/space,
-/area/space)
-"vs" = (
-/obj/effect/shuttle_landmark/merc/deck2,
 /turf/space,
 /area/space)
 
@@ -15598,7 +15509,7 @@ aa
 aa
 aa
 aa
-ae
+aa
 aa
 aa
 aa
@@ -18526,7 +18437,7 @@ oH
 pE
 qH
 rz
-ao
+aj
 aj
 aa
 aa
@@ -19116,7 +19027,7 @@ aa
 aa
 aa
 aa
-ao
+aj
 bz
 bz
 ej
@@ -21242,7 +21153,7 @@ aa
 aa
 aa
 aj
-bi
+aj
 bz
 bX
 cA
@@ -21266,7 +21177,7 @@ pR
 pR
 ta
 tD
-um
+aj
 aC
 aa
 aa
@@ -23217,7 +23128,7 @@ aa
 aa
 aa
 aa
-ao
+aj
 ba
 bG
 cd
@@ -23243,7 +23154,7 @@ ld
 ta
 tX
 tD
-ao
+aj
 aa
 aa
 aa
@@ -23816,7 +23727,7 @@ aa
 aa
 aa
 aa
-af
+aa
 aa
 aa
 aa
@@ -26406,7 +26317,7 @@ aa
 aa
 aa
 aa
-ar
+an
 aC
 aj
 ba
@@ -26861,7 +26772,7 @@ aa
 aa
 aa
 ah
-ao
+aj
 ab
 aE
 aQ
@@ -27200,7 +27111,7 @@ uK
 uX
 vf
 uF
-ao
+aj
 aa
 aa
 aa
@@ -28251,9 +28162,9 @@ mz
 nw
 oz
 qC
-oy
+qY
 qC
-oy
+qY
 sR
 mu
 oy
@@ -28896,7 +28807,7 @@ aa
 aa
 aa
 aa
-vs
+aa
 aa
 aa
 aa
@@ -30986,7 +30897,7 @@ aa
 aa
 aa
 aa
-pC
+aa
 aa
 aa
 aa
@@ -31252,7 +31163,7 @@ aa
 aa
 aa
 aa
-ad
+aa
 aa
 aa
 aa
@@ -32682,7 +32593,7 @@ aa
 aa
 aa
 aa
-vr
+aa
 aa
 aa
 aa

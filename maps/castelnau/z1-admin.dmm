@@ -891,7 +891,6 @@
 	},
 /area/centcom)
 "asS" = (
-/obj/effect/paint/hull,
 /turf/simulated/wall/r_titanium,
 /area/shuttle/administration/centcom)
 "asV" = (
@@ -1665,7 +1664,6 @@
 	locked = 1;
 	name = "Shuttle Hatch"
 	},
-/obj/effect/shuttle_landmark/admin/start,
 /turf/simulated/floor/plating,
 /area/shuttle/administration/centcom)
 "avT" = (
@@ -4495,7 +4493,6 @@
 	locked = 1;
 	name = "Forward Docking Hatch"
 	},
-/obj/effect/shuttle_landmark/specops/start,
 /turf/simulated/floor/plating,
 /area/shuttle/specops/centcom)
 "aGr" = (
@@ -4975,7 +4972,6 @@
 	locked = 1;
 	name = "Shuttle Hatch"
 	},
-/obj/effect/shuttle_landmark/ferry/start,
 /turf/simulated/floor/shuttle/blue,
 /area/shuttle/transport1/centcom)
 "aHS" = (
@@ -8651,7 +8647,6 @@
 	master_tag = "merchant_ship_dock";
 	pixel_x = -28
 	},
-/obj/effect/shuttle_landmark/merchant/start,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating,
 /area/shuttle/merchant/home)
@@ -10026,12 +10021,6 @@
 /obj/effect/paint/red,
 /turf/simulated/wall/r_titanium,
 /area/shuttle/specops/centcom)
-"wkp" = (
-/obj/effect/wallframe_spawn/reinforced/titanium,
-/obj/effect/paint/hull,
-/obj/effect/paint/black,
-/turf/simulated/floor/plating,
-/area/shuttle/administration/centcom)
 
 (1,1,1) = {"
 ala
@@ -17182,9 +17171,9 @@ atd
 atd
 atd
 atq
-wkp
+aum
 avI
-wkp
+aum
 asR
 avY
 awr
