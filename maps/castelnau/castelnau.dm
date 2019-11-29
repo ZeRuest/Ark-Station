@@ -81,6 +81,7 @@
 	#include "job/outfits/service_outfits.dm"
 	#include "job/outfits/supply_outfits.dm"
 
+	#include "machinery/account_database.dm"
 	#include "machinery/eng_equip.dm"
 	#include "machinery/consoles.dm"
 	#include "machinery/keycard authentication.dm"
