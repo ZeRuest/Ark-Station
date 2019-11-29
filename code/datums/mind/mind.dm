@@ -73,7 +73,7 @@
 	SSticker.minds -= src
 	. = ..()
 
-/datum/mind/proc/transfer_to(mob/living/new_character)
+/datum/mind/proc/transfer_to(mob/living/new_character, swap_skills = FALSE)
 	if(!istype(new_character))
 		world.log << "## DEBUG: transfer_to(): Some idiot has tried to transfer_to() a non mob/living mob. Please inform Carn"
 	if(current)					//remove ourself from our old body's mind variable
@@ -86,7 +86,10 @@
 	if(new_character.mind)		//remove any mind currently in our new body's mind variable
 		new_character.mind.current = null
 
-	new_character.skillset.obtain_from_mob(current)	//handles moving skills over.
+	if(swap_skills)	//handles moving skills over.
+		new_character.skillset.swap_from_to(current.skillset)
+	else
+		new_character.skillset.obtain_from_mob(current)
 
 	current = new_character		//link ourself to our new body
 	new_character.mind = src	//and link our new body to ourself

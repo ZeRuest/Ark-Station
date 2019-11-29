@@ -3190,6 +3190,7 @@
 #include "code_ark\code\modules\mob\language\alien\resomi.dm"
 #include "code_ark\code\modules\mob\living\autohiss.dm"
 #include "code_ark\code\modules\mob\living\carbon\human\human_powers.dm"
+#include "code_ark\code\modules\mob\skills\skillset.dm"
 #include "code_ark\code\modules\modular_computers\laptop.dm"
 #include "code_ark\code\modules\objects\items\weapons\storage\storage.dm"
 #include "code_ark\code\modules\organs\resomi_robolimbs.dm"
