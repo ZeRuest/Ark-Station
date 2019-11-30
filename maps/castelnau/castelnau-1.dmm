@@ -252,7 +252,6 @@
 /area/shuttle/castelnau/prometeus/anomaly)
 "aK" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/artifact,
 /obj/structure/anomaly_container,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/castelnau/prometeus/anomaly)
@@ -301,7 +300,8 @@
 /area/castelnau/maintenance/thirddeck/starboard)
 "aR" = (
 /obj/machinery/atmospherics/unary/tank/air{
-	dir = 4
+	dir = 4;
+	icon_state = "air"
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/machinery/light/small/red{
@@ -428,6 +428,7 @@
 	id_tag = "perseus_secure_storage";
 	name = "Secure Storage Blast Door"
 	},
+/obj/machinery/door/firedoor/prometeus,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/castelnau/prometeus/anomaly)
 "bd" = (
@@ -490,6 +491,7 @@
 	pressure_checks = 2;
 	pressure_checks_default = 2
 	},
+/obj/machinery/air_sensor/prometeus/gas,
 /turf/simulated/floor/reinforced/airless,
 /area/shuttle/castelnau/prometeus/gas)
 "bk" = (
@@ -521,9 +523,11 @@
 /obj/machinery/shipsensors,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/floor_decal/industrial/warning/full,
+/obj/structure/navlight_shuttle/red,
 /turf/simulated/floor/airless,
 /area/shuttle/castelnau/perseus/cargo)
 "bq" = (
+/obj/random/trash/space,
 /obj/machinery/light/navigation/delay2,
 /turf/simulated/floor/airless,
 /area/castelnau/maintenance/thirddeck/starboard)
@@ -686,6 +690,7 @@
 	pixel_x = 24;
 	req_access = list("ACCESS_PROMETEUS")
 	},
+/obj/machinery/air_sensor/prometeus/anomaly,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/castelnau/prometeus/anomaly)
 "bK" = (
@@ -852,6 +857,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
+/obj/structure/navlight_shuttle{
+	dir = 4
+	},
 /turf/simulated/floor/airless,
 /area/shuttle/castelnau/prometeus/medical)
 "ch" = (
@@ -865,6 +873,7 @@
 "cj" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/effect/paint_stripe/red,
+/obj/machinery/door/firedoor/prometeus,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable/green{
@@ -882,6 +891,7 @@
 /obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/catwalk,
+/obj/machinery/door/firedoor/prometeus,
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
@@ -894,6 +904,7 @@
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/meter,
 /obj/effect/paint_stripe/red,
+/obj/machinery/door/firedoor/prometeus,
 /turf/simulated/floor/plating,
 /area/shuttle/castelnau/prometeus/anomaly)
 "cn" = (
@@ -906,6 +917,7 @@
 	autoset_access = 0;
 	req_access = list("ACCESS_PROMETEUS")
 	},
+/obj/machinery/door/firedoor/prometeus,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/castelnau/prometeus/anomaly)
@@ -914,6 +926,7 @@
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/meter,
 /obj/effect/paint_stripe/red,
+/obj/machinery/door/firedoor/prometeus,
 /turf/simulated/floor/plating,
 /area/shuttle/castelnau/prometeus/anomaly)
 "cp" = (
@@ -928,6 +941,7 @@
 	dir = 9
 	},
 /obj/effect/wallframe_spawn/reinforced_phoron/titanium,
+/obj/machinery/door/firedoor/prometeus,
 /obj/machinery/door/blast/regular{
 	id_tag = "prometeus_test_observation";
 	name = "Gas Lab Observation Shutters"
@@ -1142,6 +1156,7 @@
 	name = "Perseus Blast Shutters";
 	opacity = 0
 	},
+/obj/machinery/door/firedoor/prometeus,
 /turf/simulated/floor/plating,
 /area/shuttle/castelnau/prometeus/cockpit)
 "cR" = (
@@ -1158,6 +1173,7 @@
 	name = "Perseus Blast Shutters";
 	opacity = 0
 	},
+/obj/machinery/door/firedoor/prometeus,
 /turf/simulated/floor/plating,
 /area/shuttle/castelnau/prometeus/medical)
 "cT" = (
@@ -1183,6 +1199,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/closet/secure_closet/scientist/castenlau,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/castelnau/prometeus/equip)
 "cW" = (
@@ -1294,6 +1311,9 @@
 /area/shuttle/castelnau/prometeus/gas)
 "dg" = (
 /obj/machinery/atmospherics/unary/heater,
+/obj/machinery/alarm/prometeus{
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/castelnau/prometeus/gas)
 "dh" = (
@@ -1722,6 +1742,7 @@
 	name = "Perseus Blast Shutters";
 	opacity = 0
 	},
+/obj/machinery/door/firedoor/prometeus,
 /turf/simulated/floor/plating,
 /area/shuttle/castelnau/prometeus/cockpit)
 "dO" = (
@@ -1734,6 +1755,7 @@
 "dP" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/effect/paint_stripe/red,
+/obj/machinery/door/firedoor/prometeus,
 /turf/simulated/floor/plating,
 /area/shuttle/castelnau/prometeus/cockpit)
 "dQ" = (
@@ -1909,6 +1931,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/closet/secure_closet/scientist/castenlau,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/castelnau/prometeus/equip)
 "eg" = (
@@ -2370,6 +2393,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/closet/secure_closet/scientist/castenlau,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/castelnau/prometeus/equip)
 "fe" = (
@@ -2399,6 +2423,10 @@
 	},
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 8
+	},
+/obj/machinery/alarm/prometeus{
+	dir = 4;
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/castelnau/prometeus/anomaly)
@@ -2456,6 +2484,10 @@
 	},
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 6
+	},
+/obj/machinery/power/apc/prometeus{
+	dir = 4;
+	pixel_x = 24
 	},
 /obj/structure/cable/yellow{
 	d2 = 8;
@@ -2809,6 +2841,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/shuttle/castelnau/prometeus/cockpit)
 "fV" = (
+/obj/machinery/door/firedoor/prometeus,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass/research{
 	name = "Cockpit"
@@ -2936,6 +2969,7 @@
 /turf/simulated/floor/tiled,
 /area/shuttle/castelnau/prometeus/eva)
 "gj" = (
+/obj/machinery/door/firedoor/prometeus,
 /obj/machinery/door/airlock/research{
 	name = "Locker Room"
 	},
@@ -2973,6 +3007,7 @@
 /area/shuttle/castelnau/prometeus/equip)
 "gm" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/secure_closet/scientist/senior_scientist_castelnau,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/castelnau/prometeus/equip)
 "gn" = (
@@ -3506,6 +3541,7 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/castelnau/prometeus/cockpit)
 "hk" = (
+/obj/machinery/door/firedoor/prometeus,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/medical,
 /turf/simulated/floor/tiled/white/monotile,
@@ -3601,6 +3637,7 @@
 /area/shuttle/castelnau/prometeus/eva)
 "hs" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/secure_closet/scientist/castenlau,
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -24;
@@ -3624,6 +3661,7 @@
 /obj/machinery/light/spot{
 	dir = 4
 	},
+/obj/structure/closet/secure_closet/scientist/castenlau/pilot,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/castelnau/prometeus/equip)
 "hv" = (
@@ -3862,6 +3900,7 @@
 /turf/simulated/wall/r_titanium,
 /area/shuttle/castelnau/perseus/cargo)
 "hR" = (
+/obj/effect/shuttle_landmark/castelnau/hangar/perseus,
 /obj/machinery/door/airlock/external/bolted{
 	frequency = 1331;
 	id_tag = "perseus_shuttle_outer";
@@ -3997,6 +4036,10 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/shuttle/castelnau/prometeus/cockpit)
 "if" = (
+/obj/machinery/alarm/prometeus{
+	dir = 1;
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/shuttle/castelnau/prometeus/cockpit)
 "ig" = (
@@ -4017,6 +4060,10 @@
 	send_access = list("ACCESS_PROMETEUS")
 	},
 /obj/structure/table/standard,
+/obj/machinery/alarm/prometeus{
+	dir = 1;
+	pixel_y = -24
+	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
 	},
@@ -4227,6 +4274,7 @@
 /area/shuttle/castelnau/prometeus/eva)
 "iv" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/secure_closet/scientist/castenlau,
 /obj/machinery/light_switch{
 	dir = 4;
 	pixel_x = -24
@@ -4346,6 +4394,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/power/apc/prometeus{
+	pixel_y = -24
+	},
 /obj/structure/cable/yellow{
 	d2 = 8;
 	icon_state = "0-8"
@@ -4396,6 +4447,9 @@
 	pixel_x = -24
 	},
 /obj/effect/floor_decal/industrial/warning/full,
+/obj/structure/navlight_shuttle{
+	dir = 1
+	},
 /turf/simulated/floor/airless,
 /area/shuttle/castelnau/perseus/cargo)
 "iL" = (
@@ -4551,6 +4605,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor/prometeus,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass/research{
 	name = "Cockpit"
@@ -4561,6 +4616,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/shuttle/castelnau/prometeus/cockpit)
 "ja" = (
+/obj/machinery/door/firedoor/prometeus,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -4577,11 +4633,13 @@
 "jb" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/effect/paint_stripe/red,
+/obj/machinery/door/firedoor/prometeus,
 /obj/structure/sign/bluecross_1,
 /turf/simulated/floor/plating,
 /area/shuttle/castelnau/prometeus/medical)
 "jc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor/prometeus,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass/medical{
@@ -4597,9 +4655,11 @@
 "jd" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/effect/paint_stripe/red,
+/obj/machinery/door/firedoor/prometeus,
 /turf/simulated/floor/plating,
 /area/shuttle/castelnau/prometeus/medical)
 "je" = (
+/obj/machinery/door/firedoor/prometeus,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -4613,12 +4673,14 @@
 /area/shuttle/castelnau/prometeus/eva)
 "jf" = (
 /obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor/prometeus,
 /obj/effect/paint_stripe/red,
 /turf/simulated/floor/plating,
 /area/shuttle/castelnau/prometeus/eva)
 "jg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/firedoor/prometeus,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/green{
 	d1 = 1;
@@ -4640,6 +4702,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor/prometeus,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable/yellow{
@@ -4655,6 +4718,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/firedoor/prometeus,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -4673,6 +4737,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/door/firedoor/prometeus,
 /obj/machinery/door/airlock/glass/research{
 	name = "Gas Lab"
 	},
@@ -5217,6 +5282,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor/prometeus,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -5438,6 +5504,7 @@
 /area/shuttle/castelnau/prometeus/hall)
 "kg" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor/prometeus,
 /turf/simulated/floor/tiled/monotile,
 /area/shuttle/castelnau/prometeus/hall)
 "kh" = (
@@ -5546,16 +5613,21 @@
 /area/shuttle/castelnau/prometeus/hall)
 "kp" = (
 /obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor/prometeus,
 /obj/effect/paint_stripe/red,
 /turf/simulated/floor/plating,
 /area/shuttle/castelnau/prometeus/dorm)
 "kq" = (
+/obj/structure/bed/sofa/beige/left{
+	dir = 6
+	},
 /obj/machinery/light_switch{
 	pixel_y = 24
 	},
 /turf/simulated/floor/carpet/purple,
 /area/shuttle/castelnau/prometeus/dorm)
 "kr" = (
+/obj/structure/bed/sofa/beige/right,
 /obj/machinery/light{
 	dir = 1;
 	icon_state = "tube1"
@@ -5755,6 +5827,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/castelnau/hallway/primary/thirddeck/aft)
 "kN" = (
+/obj/effect/shuttle_landmark/castelnau/hangar/prometeus,
 /obj/effect/wallframe_spawn/reinforced,
 /obj/effect/paint_stripe/red,
 /obj/structure/cable/green{
@@ -5762,6 +5835,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/door/firedoor/prometeus,
 /obj/machinery/door/blast/regular/open{
 	density = 0;
 	dir = 4;
@@ -5799,6 +5873,7 @@
 	dir = 4
 	},
 /obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor/prometeus,
 /obj/effect/paint_stripe/red,
 /obj/structure/cable/green{
 	d1 = 4;
@@ -5878,6 +5953,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor/prometeus,
 /obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
@@ -6099,6 +6175,7 @@
 /area/shuttle/castelnau/prometeus/hall)
 "li" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor/prometeus,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -6190,6 +6267,9 @@
 /turf/simulated/floor/tiled,
 /area/shuttle/castelnau/prometeus/hall)
 "ln" = (
+/obj/structure/bed/sofa/beige/right{
+	dir = 4
+	},
 /turf/simulated/floor/carpet/purple,
 /area/shuttle/castelnau/prometeus/dorm)
 "lo" = (
@@ -6206,6 +6286,10 @@
 "lq" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/box/donkpockets,
+/obj/machinery/alarm/prometeus{
+	dir = 8;
+	pixel_x = 24
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
@@ -6242,6 +6326,7 @@
 	pixel_x = -24
 	},
 /obj/effect/floor_decal/industrial/warning/full,
+/obj/structure/navlight_shuttle/red,
 /turf/simulated/floor/airless,
 /area/shuttle/castelnau/bixie/cargo)
 "lw" = (
@@ -6455,6 +6540,10 @@
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/purple/bordercorner,
+/obj/machinery/alarm/prometeus{
+	dir = 1;
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled,
 /area/shuttle/castelnau/prometeus/hall)
 "lP" = (
@@ -6495,6 +6584,7 @@
 /area/shuttle/castelnau/prometeus/hall)
 "lS" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor/prometeus,
 /obj/structure/sign/science_2{
 	pixel_y = -32
 	},
@@ -6548,6 +6638,7 @@
 /area/shuttle/castelnau/prometeus/hall)
 "lY" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor/prometeus,
 /obj/structure/sign/warning/airlock{
 	dir = 1;
 	pixel_y = -32
@@ -6617,6 +6708,7 @@
 /area/shuttle/castelnau/prometeus/hall)
 "mf" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor/prometeus,
 /obj/structure/sign/xenoflora{
 	pixel_y = -32
 	},
@@ -6712,6 +6804,7 @@
 /turf/simulated/floor/tiled,
 /area/shuttle/castelnau/prometeus/hall)
 "mm" = (
+/obj/machinery/door/firedoor/prometeus,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -6797,6 +6890,10 @@
 /turf/simulated/floor/wood/walnut,
 /area/shuttle/castelnau/prometeus/dorm)
 "mq" = (
+/obj/machinery/power/apc/prometeus{
+	dir = 4;
+	pixel_x = 24
+	},
 /obj/structure/cable/yellow{
 	d2 = 8;
 	icon_state = "0-8"
@@ -6906,6 +7003,7 @@
 /turf/simulated/wall/r_titanium,
 /area/shuttle/castelnau/bixie/cargo)
 "mA" = (
+/obj/effect/shuttle_landmark/castelnau/hangar/bixie,
 /obj/machinery/door/airlock/external/bolted{
 	frequency = 1390;
 	icon_state = "closed";
@@ -7069,11 +7167,13 @@
 "mO" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/effect/paint_stripe/red,
+/obj/machinery/door/firedoor/prometeus,
 /turf/simulated/floor/plating,
 /area/shuttle/castelnau/prometeus/rnd)
 "mP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/firedoor/prometeus,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -7092,11 +7192,13 @@
 "mR" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/effect/paint_stripe/red,
+/obj/machinery/door/firedoor/prometeus,
 /turf/simulated/floor/plating,
 /area/shuttle/castelnau/prometeus/robotic)
 "mS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor/prometeus,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -7115,6 +7217,7 @@
 "mU" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/effect/paint_stripe/red,
+/obj/machinery/door/firedoor/prometeus,
 /turf/simulated/floor/plating,
 /area/shuttle/castelnau/prometeus/external)
 "mV" = (
@@ -7145,10 +7248,12 @@
 "mX" = (
 /obj/effect/paint_stripe/red,
 /obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor/prometeus,
 /turf/simulated/floor/plating,
 /area/shuttle/castelnau/prometeus/external)
 "mY" = (
 /obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor/prometeus,
 /obj/effect/paint_stripe/red,
 /turf/simulated/floor/plating,
 /area/shuttle/castelnau/prometeus/botany)
@@ -7162,12 +7267,14 @@
 /turf/simulated/wall/titanium,
 /area/shuttle/castelnau/prometeus/botany)
 "nb" = (
+/obj/machinery/door/firedoor/prometeus,
 /obj/machinery/smartfridge{
 	req_access = list("ACCESS_PROMETEUS")
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/castelnau/prometeus/botany)
 "nc" = (
+/obj/machinery/door/firedoor/prometeus,
 /obj/machinery/door/airlock/glass/research{
 	name = "Xenoflora Laboratory"
 	},
@@ -7529,9 +7636,17 @@
 /area/castelnau/hallway/primary/thirddeck/aft)
 "nD" = (
 /obj/machinery/telecomms/broadcaster/preset_prometeus,
+/obj/machinery/alarm/prometeus{
+	dir = 4;
+	pixel_x = -24
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/castelnau/prometeus/tele)
 "nE" = (
+/obj/machinery/power/apc/prometeus{
+	dir = 1;
+	pixel_y = 24
+	},
 /obj/structure/cable/yellow{
 	d2 = 2;
 	icon_state = "0-2"
@@ -8171,6 +8286,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor/prometeus,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -8408,6 +8524,7 @@
 	dir = 1;
 	icon_state = "warning"
 	},
+/obj/machinery/air_sensor/prometeus/xenobotany,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/castelnau/prometeus/botany)
 "pg" = (
@@ -8496,6 +8613,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
+/obj/machinery/alarm/prometeus{
+	dir = 8;
+	pixel_x = 24
+	},
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
@@ -8505,6 +8626,7 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/castelnau/prometeus/xen)
 "pp" = (
+/obj/machinery/door/firedoor/prometeus,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/civilian{
 	id_tag = "pro_restroom";
@@ -8743,6 +8865,7 @@
 /turf/simulated/floor/tiled,
 /area/castelnau/hallway/primary/thirddeck/aft)
 "pN" = (
+/obj/machinery/door/firedoor/prometeus,
 /obj/machinery/door/window/southleft{
 	autoset_access = 0;
 	req_access = list("ACCESS_PROMETEUS")
@@ -8972,12 +9095,14 @@
 /area/shuttle/castelnau/prometeus/external)
 "qg" = (
 /obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor/prometeus,
 /obj/effect/paint_stripe/red,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
 /area/shuttle/castelnau/prometeus/botany)
 "qh" = (
 /obj/effect/floor_decal/industrial/warning,
+/obj/machinery/door/firedoor/prometeus,
 /obj/machinery/door/window/southleft{
 	autoset_access = 0;
 	req_access = list("ACCESS_PROMETEUS")
@@ -9500,6 +9625,7 @@
 /area/shuttle/castelnau/prometeus/botany)
 "ri" = (
 /obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor/prometeus,
 /obj/effect/paint_stripe/red,
 /turf/simulated/floor/plating,
 /area/shuttle/castelnau/prometeus/xen)
@@ -9794,9 +9920,17 @@
 /area/shuttle/castelnau/prometeus/tele)
 "rN" = (
 /obj/structure/table/standard,
+/obj/machinery/power/apc/prometeus{
+	dir = 8;
+	pixel_x = -24
+	},
 /obj/structure/cable/yellow{
 	d2 = 4;
 	icon_state = "0-4"
+	},
+/obj/machinery/alarm/prometeus{
+	dir = 1;
+	pixel_y = -24
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4;
@@ -9923,6 +10057,7 @@
 	name = "Perseus Blast Shutters";
 	opacity = 0
 	},
+/obj/machinery/door/firedoor/prometeus,
 /turf/simulated/floor/plating,
 /area/shuttle/castelnau/prometeus/external)
 "sb" = (
@@ -10622,6 +10757,9 @@
 	level = 2
 	},
 /obj/effect/floor_decal/industrial/warning/full,
+/obj/structure/navlight_shuttle{
+	dir = 1
+	},
 /turf/simulated/floor/airless,
 /area/shuttle/castelnau/bixie/cargo)
 "tn" = (
@@ -10676,6 +10814,9 @@
 	dir = 10;
 	icon_state = "warning"
 	},
+/obj/structure/navlight_shuttle/red{
+	dir = 8
+	},
 /turf/simulated/floor/airless,
 /area/shuttle/castelnau/prometeus/external)
 "tw" = (
@@ -10715,6 +10856,7 @@
 	dir = 6
 	},
 /obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor/prometeus,
 /obj/machinery/door/blast/regular/open{
 	density = 0;
 	icon_state = "pdoor0";
@@ -10730,6 +10872,7 @@
 	},
 /obj/effect/wallframe_spawn/reinforced,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/firedoor/prometeus,
 /obj/machinery/door/blast/regular/open{
 	density = 0;
 	icon_state = "pdoor0";
@@ -10767,6 +10910,10 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/alarm/prometeus{
+	dir = 8;
+	pixel_x = 24
+	},
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
@@ -10944,6 +11091,10 @@
 	icon_state = "map_injector";
 	id = "pro_xenobio_in"
 	},
+/obj/machinery/alarm/prometeus{
+	dir = 4;
+	pixel_x = -24
+	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/castelnau/prometeus/xen)
 "ua" = (
@@ -10966,6 +11117,7 @@
 	dir = 4
 	},
 /obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor/prometeus,
 /obj/machinery/door/blast/regular/open{
 	density = 0;
 	dir = 8;
@@ -10997,6 +11149,10 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/power/apc/prometeus{
+	dir = 4;
+	pixel_x = 24
+	},
 /obj/structure/cable/yellow,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/castelnau/prometeus/xen)
@@ -11095,6 +11251,7 @@
 /area/shuttle/castelnau/prometeus/xen)
 "uv" = (
 /obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor/prometeus,
 /obj/machinery/door/blast/regular/open{
 	density = 0;
 	dir = 8;
@@ -11242,6 +11399,7 @@
 	pressure_checks_default = 2
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/machinery/air_sensor/prometeus/xenobiology,
 /turf/simulated/floor/reinforced,
 /area/shuttle/castelnau/prometeus/xen)
 "uK" = (
@@ -11325,6 +11483,9 @@
 /area/shuttle/castelnau/prometeus/xen)
 "uU" = (
 /obj/effect/shuttle_landmark/ert/dock,
+/obj/effect/shuttle_landmark/ferry/out{
+	docking_controller = "rescue_shuttle_dock_airlock"
+	},
 /turf/space,
 /area/space)
 "uX" = (
@@ -11342,6 +11503,64 @@
 /obj/machinery/robotics_fabricator,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/castelnau/prometeus/robotic)
+"yo" = (
+/obj/effect/shuttle_landmark/skipjack/deck1,
+/turf/space,
+/area/space)
+"BH" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/random/trash/space,
+/turf/space,
+/area/space)
+"Cf" = (
+/obj/effect/shuttle_landmark/castelnau/simple_mark,
+/turf/space,
+/area/space)
+"Ds" = (
+/obj/effect/shuttle_landmark/ninja/deck3,
+/turf/space,
+/area/space)
+"EB" = (
+/obj/effect/shuttle_landmark/skipjack/deck3,
+/turf/space,
+/area/space)
+"ER" = (
+/obj/effect/shuttle_landmark/castelnau/third_deck/two,
+/turf/space,
+/area/space)
+"If" = (
+/obj/effect/shuttle_landmark/castelnau/third_deck/one,
+/turf/space,
+/area/space)
+"LU" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/railing/mapped,
+/obj/random/trash/space,
+/turf/space,
+/area/space)
+"RK" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/railing/mapped{
+	dir = 4
+	},
+/obj/random/trash/space,
+/turf/space,
+/area/space)
+"WC" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 1
+	},
+/obj/machinery/alarm/prometeus{
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/castelnau/prometeus/hall)
 
 (1,1,1) = {"
 aa
@@ -13093,7 +13312,7 @@ aa
 aa
 aa
 aa
-aa
+ER
 aa
 aa
 aa
@@ -14123,7 +14342,7 @@ aa
 aa
 aa
 aa
-aa
+yo
 aa
 aa
 aa
@@ -18000,7 +18219,7 @@ aa
 aa
 aa
 aa
-aa
+Cf
 aa
 aa
 aa
@@ -19938,7 +20157,7 @@ qF
 rC
 sF
 ly
-ad
+BH
 aa
 aa
 aa
@@ -20372,7 +20591,7 @@ aa
 aa
 aa
 ag
-ad
+BH
 ab
 bt
 an
@@ -20818,7 +21037,7 @@ aa
 aa
 aa
 aa
-aa
+If
 aa
 aa
 aa
@@ -21765,7 +21984,7 @@ tu
 tu
 tu
 oK
-uy
+LU
 aa
 aa
 aa
@@ -21915,7 +22134,7 @@ oK
 ad
 ad
 ax
-rL
+RK
 rL
 uO
 aa
@@ -27223,7 +27442,7 @@ gs
 hA
 iC
 de
-kk
+WC
 ll
 lP
 nd
@@ -29799,7 +30018,7 @@ aa
 aa
 aa
 aa
-aa
+Ds
 aa
 aa
 aa
@@ -30135,7 +30354,7 @@ aa
 aa
 aa
 aa
-aa
+EB
 aa
 aa
 aa

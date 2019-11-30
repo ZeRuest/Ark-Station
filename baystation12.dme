@@ -3211,6 +3211,7 @@
 #include "code_ark\code\modules\sprite_accessories\accessory_resomi.dm"
 #include "code_ark\modules\client\client_defines.dm"
 #include "code_ark\modules\client\client_procs.dm"
+#include "code_ark\modules\reagents\reagent_containers\food\drinks.dm"
 #include "custom_items\clothing\_defines.dm"
 #include "custom_items\clothing\head\wig_longbraided.dm"
 #include "custom_items\clothing\masks\gasmask.dm"

@@ -75,8 +75,10 @@
 	dir = 8;
 	id_tag = "fuel2_out"
 	},
+/turf/simulated/floor/reinforced/castelnau/fuel,
 /area/castelnau/thruster/d1starboard)
 "ap" = (
+/turf/simulated/floor/reinforced/castelnau/fuel,
 /area/castelnau/thruster/d1starboard)
 "aq" = (
 /turf/simulated/wall/r_wall,
@@ -129,6 +131,7 @@
 	pixel_y = 1;
 	use_power = 1
 	},
+/turf/simulated/floor/reinforced/castelnau/fuel,
 /area/castelnau/thruster/d1starboard)
 "ax" = (
 /obj/structure/catwalk,
@@ -170,6 +173,7 @@
 /obj/machinery/air_sensor{
 	id_tag = "ReacEngFuel2"
 	},
+/turf/simulated/floor/reinforced/castelnau/fuel,
 /area/castelnau/thruster/d1starboard)
 "aC" = (
 /obj/structure/ladder,
@@ -278,6 +282,10 @@
 	},
 /obj/structure/ladder,
 /turf/simulated/open,
+/area/space)
+"aT" = (
+/obj/effect/shuttle_landmark/ert/deck4,
+/turf/space,
 /area/space)
 "aU" = (
 /turf/simulated/wall/r_wall/hull,
@@ -1410,9 +1418,11 @@
 /turf/simulated/floor/carpet/blue2,
 /area/castelnau/command/captain)
 "cY" = (
+/obj/structure/bed/sofa/beige/left,
 /turf/simulated/floor/carpet/blue2,
 /area/castelnau/command/captain)
 "cZ" = (
+/obj/structure/bed/sofa/beige/right,
 /obj/machinery/light_switch{
 	pixel_y = 24
 	},
@@ -1436,6 +1446,9 @@
 /turf/simulated/floor/tiled,
 /area/castelnau/hallway/primary/firstdeck/fore)
 "db" = (
+/obj/machinery/keycard_auth/castelnau{
+	pixel_y = 24
+	},
 /obj/machinery/button/alternate/door/bolts{
 	dir = 4;
 	id_tag = "captain_door";
@@ -2259,6 +2272,9 @@
 /obj/structure/table/woodentable,
 /obj/structure/table/woodentable,
 /obj/item/weapon/paper_bin,
+/obj/item/weapon/pen/multi/cmd/hop{
+	name = "first officer's pen"
+	},
 /obj/machinery/light{
 	dir = 4
 	},
@@ -2280,6 +2296,7 @@
 	pixel_y = -21
 	},
 /obj/machinery/computer/modular/preset/cardslot/command{
+	icon_state = "computer";
 	dir = 1
 	},
 /turf/simulated/floor/wood/walnut,
@@ -2288,6 +2305,7 @@
 /obj/structure/table/woodentable/walnut,
 /obj/item/weapon/paper_bin,
 /obj/item/weapon/stamp/captain,
+/obj/item/weapon/pen/multi/cmd/captain,
 /turf/simulated/floor/carpet/red,
 /area/castelnau/command/captain)
 "eJ" = (
@@ -2337,6 +2355,10 @@
 	dir = 1;
 	id = "fowindow";
 	pixel_x = 12;
+	pixel_y = -21
+	},
+/obj/machinery/keycard_auth/castelnau{
+	pixel_x = 3;
 	pixel_y = -21
 	},
 /obj/machinery/button/alternate/door/bolts{
@@ -2616,6 +2638,7 @@
 /area/shuttle/escape_pod9/station)
 "fl" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
+/obj/effect/shuttle_landmark/escape_pod/start/pod9,
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod9/station)
 "fm" = (
@@ -2635,6 +2658,7 @@
 /area/castelnau/command/bridge)
 "fn" = (
 /obj/machinery/computer/modular/preset/security{
+	icon_state = "computer";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -2736,6 +2760,7 @@
 /area/castelnau/command/captain)
 "fA" = (
 /obj/machinery/computer/modular/preset/cardslot/command{
+	icon_state = "computer";
 	dir = 8
 	},
 /turf/simulated/floor/wood,
@@ -3919,6 +3944,7 @@
 /area/castelnau/command/captain)
 "hD" = (
 /obj/machinery/computer/modular/preset/medical{
+	icon_state = "computer";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -4068,6 +4094,10 @@
 "hU" = (
 /obj/structure/bed/chair/comfy/blue{
 	dir = 1
+	},
+/obj/machinery/keycard_auth/castelnau{
+	pixel_x = 24;
+	pixel_y = -6
 	},
 /obj/effect/floor_decal/corner_techfloor_grid/full{
 	dir = 4
@@ -4951,6 +4981,7 @@
 /area/shuttle/escape_pod8/station)
 "iR" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
+/obj/effect/shuttle_landmark/escape_pod/start/pod8,
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod8/station)
 "iS" = (
@@ -5747,6 +5778,7 @@
 /obj/machinery/air_sensor{
 	id_tag = "ReacEngFuel1"
 	},
+/turf/simulated/floor/reinforced/castelnau/fuel,
 /area/castelnau/thruster/d1port)
 "kg" = (
 /obj/effect/wallframe_spawn/reinforced,
@@ -5956,6 +5988,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
+/turf/simulated/floor/reinforced/castelnau/fuel,
 /area/castelnau/thruster/d1port)
 "kG" = (
 /obj/effect/floor_decal/borderfloor{
@@ -6188,6 +6221,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
+/obj/machinery/computer/modular/preset/medical,
 /turf/simulated/floor/tiled/white,
 /area/castelnau/medical/infirmreception)
 "lc" = (
@@ -6413,6 +6447,7 @@
 "lt" = (
 /obj/item/weapon/flame/candle,
 /obj/structure/table/steel,
+/obj/machinery/floor_light/prebuilt/bar/violet,
 /obj/structure/disposalpipe/junction{
 	dir = 8;
 	icon_state = "pipe-j2"
@@ -6531,6 +6566,7 @@
 	pixel_y = 1;
 	use_power = 1
 	},
+/turf/simulated/floor/reinforced/castelnau/fuel,
 /area/castelnau/thruster/d1port)
 "lI" = (
 /obj/item/weapon/storage/box/donut,
@@ -6557,6 +6593,9 @@
 /area/castelnau/command/bridge)
 "lK" = (
 /obj/structure/bed/chair/comfy/blue,
+/obj/machinery/keycard_auth/castelnau{
+	pixel_x = 24
+	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
@@ -7229,6 +7268,7 @@
 /area/shuttle/escape_pod7/station)
 "mM" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
+/obj/effect/shuttle_landmark/escape_pod/start/pod7,
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod7/station)
 "mO" = (
@@ -7306,6 +7346,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/castelnau/command/bridge/storage)
 "mV" = (
+/turf/simulated/floor/reinforced/castelnau/fuel,
 /area/castelnau/thruster/d1port)
 "mW" = (
 /obj/structure/table/woodentable_reinforced/walnut,
@@ -7363,6 +7404,9 @@
 "na" = (
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/structure/bed/sofa/black/left{
+	dir = 6
 	},
 /obj/structure/window/reinforced{
 	dir = 8
@@ -7662,6 +7706,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
+/turf/simulated/floor/reinforced/castelnau/fuel,
 /area/castelnau/thruster/d1starboard)
 "nq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -7744,6 +7789,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/table/steel,
+/obj/machinery/floor_light/prebuilt/bar/violet,
 /turf/simulated/floor/tiled/dark,
 /area/castelnau/civ/bar)
 "nx" = (
@@ -7794,6 +7840,7 @@
 	},
 /obj/item/weapon/material/ashtray/glass,
 /obj/structure/table/steel,
+/obj/machinery/floor_light/prebuilt/bar/violet,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -8018,6 +8065,7 @@
 /turf/simulated/floor/plating,
 /area/castelnau/command/bridge/storage)
 "nR" = (
+/obj/structure/closet/secure_closet/adjutant,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -8070,6 +8118,7 @@
 /obj/structure/sign/warning/pods/east{
 	pixel_y = 24
 	},
+/obj/structure/bed/sofa/black,
 /turf/simulated/floor/carpet/red,
 /area/castelnau/civ/lounge)
 "nW" = (
@@ -8077,6 +8126,7 @@
 	alarm_id = "xenobio4_alarm";
 	pixel_y = 24
 	},
+/obj/structure/bed/sofa/black/right,
 /turf/simulated/floor/carpet/red,
 /area/castelnau/civ/lounge)
 "nX" = (
@@ -8601,6 +8651,8 @@
 /turf/simulated/floor/plating,
 /area/castelnau/maintenance/firstdeck/foreport)
 "oT" = (
+/obj/structure/closet/secure_closet/captains/castelnau,
+/obj/item/weapon/gun/projectile/revolver/webley/captain,
 /obj/item/ammo_magazine/speedloader/magnum,
 /obj/item/weapon/paper/monitorkey,
 /obj/machinery/alarm{
@@ -9394,6 +9446,7 @@
 /area/castelnau/medical/chemistry)
 "qi" = (
 /obj/machinery/smartfridge/drinks,
+/obj/machinery/floor_light/prebuilt/bar/violet,
 /obj/machinery/door/blast/shutters/open{
 	id_tag = "bar_shutters";
 	name = "Bar Shutters"
@@ -9404,6 +9457,7 @@
 /obj/item/weapon/paper_bin,
 /obj/item/weapon/pen,
 /obj/structure/table/marble,
+/obj/machinery/floor_light/prebuilt/bar/violet,
 /obj/machinery/door/blast/shutters/open{
 	id_tag = "bar_shutters";
 	name = "Bar Shutters"
@@ -9413,6 +9467,7 @@
 "qk" = (
 /obj/item/weapon/material/ashtray/bronze,
 /obj/structure/table/marble,
+/obj/machinery/floor_light/prebuilt/bar/violet,
 /obj/machinery/door/blast/shutters/open{
 	id_tag = "bar_shutters";
 	name = "Bar Shutters"
@@ -9421,6 +9476,7 @@
 /area/castelnau/civ/bar)
 "ql" = (
 /obj/structure/table/marble,
+/obj/machinery/floor_light/prebuilt/bar/violet,
 /obj/machinery/door/blast/shutters/open{
 	id_tag = "bar_shutters";
 	name = "Bar Shutters"
@@ -9429,6 +9485,7 @@
 /area/castelnau/civ/bar)
 "qm" = (
 /obj/structure/table/marble,
+/obj/machinery/floor_light/prebuilt/bar/violet,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/blast/shutters/open{
 	id_tag = "bar_shutters";
@@ -9622,6 +9679,7 @@
 /area/shuttle/escape_pod6/station)
 "qD" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
+/obj/effect/shuttle_landmark/escape_pod/start/pod6,
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod6/station)
 "qE" = (
@@ -10621,6 +10679,7 @@
 	dir = 4;
 	pixel_x = -23
 	},
+/obj/machinery/floor_light/prebuilt/bar/violet,
 /turf/simulated/floor/tiled/dark,
 /area/castelnau/civ/bar)
 "rY" = (
@@ -10636,11 +10695,13 @@
 "rZ" = (
 /obj/structure/table/reinforced,
 /obj/machinery/chemical_dispenser/bar_soft/full,
+/obj/machinery/floor_light/prebuilt/bar/violet,
 /turf/simulated/floor/tiled/dark,
 /area/castelnau/civ/bar)
 "sa" = (
 /obj/structure/table/reinforced,
 /obj/machinery/chemical_dispenser/bar_alc/full,
+/obj/machinery/floor_light/prebuilt/bar/violet,
 /turf/simulated/floor/tiled/dark,
 /area/castelnau/civ/bar)
 "sb" = (
@@ -10909,6 +10970,7 @@
 	req_access = list("ACCESS_CASTELNAU_BAR")
 	},
 /obj/structure/table/steel,
+/obj/machinery/floor_light/prebuilt/bar/violet,
 /obj/item/device/boombox,
 /turf/simulated/floor/tiled/dark,
 /area/castelnau/civ/bar)
@@ -10916,14 +10978,17 @@
 /obj/machinery/vending/boozeomat{
 	dir = 8
 	},
+/obj/machinery/floor_light/prebuilt/bar/violet,
 /turf/simulated/floor/tiled/dark,
 /area/castelnau/civ/bar)
 "sy" = (
 /obj/structure/table/reinforced,
 /obj/machinery/chemical_dispenser/bar_coffee/full,
+/obj/machinery/floor_light/prebuilt/bar/violet,
 /turf/simulated/floor/tiled/dark,
 /area/castelnau/civ/bar)
 "sz" = (
+/obj/machinery/floor_light/prebuilt/bar/violet,
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
@@ -10943,11 +11008,13 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/machinery/floor_light/prebuilt/bar/violet,
 /obj/machinery/recharger,
 /obj/item/weapon/reagent_containers/food/drinks/shaker,
 /turf/simulated/floor/tiled/dark,
 /area/castelnau/civ/bar)
 "sB" = (
+/obj/machinery/floor_light/prebuilt/bar/violet,
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -11805,6 +11872,7 @@
 	dir = 8;
 	id_tag = "fuel1_out"
 	},
+/turf/simulated/floor/reinforced/castelnau/fuel,
 /area/castelnau/thruster/d1port)
 "uj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
@@ -12055,6 +12123,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/bed/sofa/black/right{
+	dir = 4
+	},
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -12186,6 +12257,83 @@
 	},
 /turf/simulated/floor/wood/walnut,
 /area/castelnau/security/recreation)
+"vk" = (
+/obj/effect/shuttle_landmark/merchant/out,
+/obj/effect/shuttle_landmark/admin/out{
+	docking_controller = "merchant_shuttle_station_dock"
+	},
+/turf/space,
+/area/space)
+"vH" = (
+/obj/structure/catwalk,
+/obj/machinery/light/small/green{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/castelnau/maintenance/firstdeck/aft)
+"vJ" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/obj/machinery/light/small/green{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/castelnau/maintenance/firstdeck/aft)
+"vL" = (
+/obj/effect/shuttle_landmark/castelnau/first_deck/two,
+/turf/space,
+/area/space)
+"Aq" = (
+/obj/machinery/floor_light/prebuilt/bar/violet,
+/turf/simulated/floor/tiled/dark,
+/area/castelnau/civ/bar)
+"Cb" = (
+/obj/effect/shuttle_landmark/merc/deck3,
+/turf/space,
+/area/space)
+"El" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/random/trash/space,
+/turf/space,
+/area/space)
+"KB" = (
+/obj/effect/shuttle_landmark/merc/deck1,
+/turf/space,
+/area/space)
+"RV" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/obj/random/trash/space,
+/turf/space,
+/area/space)
+"XK" = (
+/obj/effect/shuttle_landmark/ert/deck5,
+/turf/space,
+/area/space)
+"XP" = (
+/obj/effect/shuttle_landmark/castelnau/first_deck/one,
+/turf/space,
+/area/space)
+"YJ" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/floor_light/prebuilt/bar/violet,
+/turf/simulated/floor/tiled/dark,
+/area/castelnau/civ/bar)
 
 (1,1,1) = {"
 aa
@@ -14998,7 +15146,7 @@ aa
 aa
 aa
 aa
-aa
+XK
 aa
 aa
 aa
@@ -17760,7 +17908,7 @@ aa
 aa
 aa
 aa
-aa
+aT
 aa
 aa
 aa
@@ -19090,7 +19238,7 @@ aa
 aa
 aa
 aa
-ah
+El
 aW
 aW
 bO
@@ -19134,7 +19282,7 @@ aa
 aa
 aa
 aa
-aa
+Cb
 aa
 aa
 aa
@@ -19263,7 +19411,7 @@ qH
 rF
 rE
 ah
-ah
+El
 aa
 aa
 aa
@@ -22430,7 +22578,7 @@ aa
 aa
 aa
 aa
-aa
+vk
 aQ
 aX
 bu
@@ -24246,7 +24394,7 @@ aa
 aa
 aa
 aa
-aa
+XP
 aa
 aa
 aa
@@ -24422,8 +24570,8 @@ iq
 jx
 ks
 lp
-oq
-pt
+YJ
+Aq
 on
 pq
 qi
@@ -25015,7 +25163,7 @@ aa
 aa
 aa
 aa
-ah
+El
 aZ
 bc
 bc
@@ -25498,7 +25646,7 @@ lw
 tE
 tN
 tL
-ah
+El
 aa
 aa
 aa
@@ -26380,7 +26528,7 @@ aa
 aa
 aa
 aa
-aj
+RV
 au
 ah
 aU
@@ -27478,7 +27626,7 @@ jP
 lE
 uh
 ud
-ah
+El
 aa
 aa
 aa
@@ -28060,23 +28208,23 @@ aa
 bM
 bM
 cO
+vH
 cO
 cO
 cO
+vH
 cO
 cO
 cO
-cO
-cO
-cO
+vH
 cO
 mG
 nX
+vJ
 nX
 nX
 nX
-nX
-nX
+vJ
 sp
 bM
 bM
@@ -31104,7 +31252,7 @@ aa
 aa
 aa
 aa
-aa
+vL
 aa
 aa
 aa
@@ -32132,7 +32280,7 @@ aa
 aa
 aa
 aa
-aa
+KB
 aa
 aa
 aa
