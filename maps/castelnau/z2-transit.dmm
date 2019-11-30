@@ -52,6 +52,10 @@
 /obj/effect/shuttle_landmark/ert/internim,
 /turf/space/bluespace,
 /area/space)
+"k" = (
+/obj/effect/shuttle_landmark/castelnau/transit/perseus,
+/turf/space,
+/area/space)
 "l" = (
 /obj/effect/shuttle_landmark/merc/internim,
 /turf/space/bluespace,
@@ -78,6 +82,10 @@
 "t" = (
 /obj/effect/shuttle_landmark/skipjack/internim,
 /turf/space/bluespace,
+/area/space)
+"y" = (
+/obj/effect/shuttle_landmark/castelnau/transit/bixie,
+/turf/space,
 /area/space)
 "z" = (
 /obj/effect/shuttle_landmark/ninja/internim,
@@ -16682,7 +16690,7 @@ X
 X
 X
 X
-X
+k
 g
 X
 X
@@ -16698,7 +16706,7 @@ X
 X
 X
 g
-X
+y
 X
 X
 X

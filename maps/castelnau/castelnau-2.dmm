@@ -3844,6 +3844,7 @@
 	pixel_y = 23;
 	req_access = list("ACCESS_PROMETEUS")
 	},
+/obj/item/weapon/ladder_mobile,
 /obj/machinery/light_switch{
 	dir = 8;
 	pixel_x = 23
@@ -3862,6 +3863,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/computer/modular/preset/engineering{
+	icon_state = "computer";
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -3884,6 +3886,7 @@
 	dir = 4
 	},
 /obj/machinery/computer/modular/preset/engineering{
+	icon_state = "computer";
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -4118,6 +4121,7 @@
 	dir = 4
 	},
 /obj/machinery/computer/modular/preset/security{
+	icon_state = "computer";
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -4177,6 +4181,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/castelnau/security/hall)
 "hp" = (
+/obj/structure/closet/secure_closet/hop/castelnau,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -4313,6 +4318,7 @@
 "hB" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/clothing/glasses/material,
+/obj/structure/closet/secure_closet/miner/castelnau,
 /turf/simulated/floor/tiled,
 /area/castelnau/supply/office)
 "hC" = (
@@ -4853,6 +4859,7 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
+/obj/structure/closet/secure_closet/miner/castelnau,
 /turf/simulated/floor/tiled,
 /area/castelnau/supply/office)
 "iy" = (
@@ -5473,6 +5480,7 @@
 	dir = 8;
 	pixel_x = 23
 	},
+/obj/structure/closet/secure_closet/quartermaster/castelnau,
 /turf/simulated/floor/tiled,
 /area/castelnau/supply/office)
 "jv" = (
@@ -5522,6 +5530,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/yellow/border,
 /obj/item/clothing/mask/plunger,
+/obj/structure/closet/secure_closet/engineering_personal/senior,
 /turf/simulated/floor/tiled/steel_grid,
 /area/castelnau/engineering/storage)
 "jA" = (
@@ -5592,6 +5601,22 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/button/toggle/valve/nacelle/first{
+	dir = 1;
+	id_tag = "eng_2_fuel";
+	name = "Engine 2 Fuel Flow";
+	pixel_x = -6;
+	pixel_y = -22;
+	req_access = list("ACCESS_CASTELNAU_THRUSTERS")
+	},
+/obj/machinery/button/toggle/valve/nacelle/second{
+	dir = 1;
+	id_tag = "eng_1_fuel";
+	name = "Engine 1 Fuel Flow";
+	pixel_x = 6;
+	pixel_y = -22;
+	req_access = list("ACCESS_CASTELNAU_THRUSTERS")
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/castelnau/engineering/engineering_monitoring)
 "jE" = (
@@ -6503,6 +6528,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{
 	id_tag = "n2_out"
 	},
+/obj/machinery/air_sensor/atmos/nitrogen,
 /turf/simulated/floor/reinforced/nitrogen,
 /area/castelnau/engineering/atmos)
 "lg" = (
@@ -6512,6 +6538,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{
 	id_tag = "air_out"
 	},
+/obj/machinery/air_sensor/atmos/air,
 /turf/simulated/floor/reinforced/airmix,
 /area/castelnau/engineering/atmos)
 "li" = (
@@ -6570,6 +6597,9 @@
 "ln" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
+	},
+/obj/machinery/light/small/green{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/castelnau/engineering/engine_smes)
@@ -7132,6 +7162,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/green{
 	dir = 1
 	},
+/obj/machinery/air_sensor/atmos/oxygen,
 /turf/simulated/floor/reinforced/oxygen,
 /area/castelnau/engineering/atmos)
 "me" = (
@@ -8091,6 +8122,7 @@
 	dir = 4
 	},
 /obj/machinery/computer/modular/preset/security{
+	icon_state = "computer";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/monotile,
@@ -8606,6 +8638,7 @@
 	dir = 1;
 	icon_state = "warning"
 	},
+/obj/machinery/air_sensor/reactor/one,
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
@@ -8941,10 +8974,12 @@
 /turf/simulated/floor/tiled/monotile,
 /area/castelnau/security/equip)
 "oW" = (
+/obj/structure/closet/secure_closet/security/castenlau,
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/monotile,
 /area/castelnau/security/equip)
 "oX" = (
+/obj/structure/closet/secure_closet/warden/castenlau,
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/machinery/light{
 	dir = 4
@@ -10206,6 +10241,10 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/castelnau/engineering/engine_smes)
 "rq" = (
+/obj/item/clothing/under/solgov/utility/fleet/officer/engineering{
+	dir = 4;
+	icon_state = "console"
+	},
 /obj/machinery/alarm{
 	alarm_id = "xenobio2_alarm";
 	dir = 4;
@@ -10588,6 +10627,7 @@
 	dir = 10
 	},
 /obj/item/device/geiger,
+/obj/item/weapon/book/manual/reactor,
 /turf/simulated/floor/tiled,
 /area/castelnau/engineering/reactor_control_room)
 "sb" = (
@@ -10685,6 +10725,7 @@
 	icon_state = "warning"
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/machinery/air_sensor/reactor/two,
 /turf/simulated/floor/reinforced,
 /area/castelnau/engineering/engine_room)
 "sl" = (
@@ -11079,6 +11120,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/green{
 	dir = 4
 	},
+/obj/machinery/air_sensor/atmos/hydrogen,
 /turf/simulated/floor/reinforced/hydrogen,
 /area/castelnau/engineering/atmos)
 "tf" = (
@@ -11100,6 +11142,7 @@
 	dir = 4;
 	id_tag = "n2o_out"
 	},
+/obj/machinery/air_sensor/atmos/nitrous_oxide,
 /turf/simulated/floor/reinforced/n20,
 /area/castelnau/engineering/atmos)
 "ti" = (
@@ -11115,6 +11158,7 @@
 	dir = 4;
 	id_tag = "co2_out"
 	},
+/obj/machinery/air_sensor/atmos/carbon_dioxide,
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/castelnau/engineering/atmos)
 "tk" = (
@@ -12121,6 +12165,65 @@
 /obj/structure/sign/warning/hot_exhaust{
 	pixel_y = 24
 	},
+/turf/space,
+/area/space)
+"yu" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/random/trash/space,
+/obj/structure/navlight_shuttle/red{
+	dir = 8
+	},
+/turf/space,
+/area/space)
+"AD" = (
+/obj/effect/shuttle_landmark/skipjack/deck2,
+/turf/space,
+/area/space)
+"EX" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/random/trash/space,
+/turf/space,
+/area/space)
+"Jm" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/obj/random/trash/space,
+/turf/space,
+/area/space)
+"Rr" = (
+/obj/effect/shuttle_landmark/castelnau/second_deck/two,
+/turf/space,
+/area/space)
+"RT" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/navlight_shuttle{
+	dir = 4
+	},
+/turf/space,
+/area/space)
+"Tn" = (
+/obj/effect/shuttle_landmark/merc/deck2,
+/turf/space,
+/area/space)
+"UG" = (
+/obj/effect/shuttle_landmark/castelnau/second_deck/one,
+/turf/space,
+/area/space)
+"Wd" = (
+/obj/effect/shuttle_landmark/ninja/deck2,
+/turf/space,
+/area/space)
+"WN" = (
+/obj/effect/shuttle_landmark/ert/deck3,
 /turf/space,
 /area/space)
 
@@ -15509,7 +15612,7 @@ aa
 aa
 aa
 aa
-aa
+WN
 aa
 aa
 aa
@@ -18437,7 +18540,7 @@ oH
 pE
 qH
 rz
-aj
+EX
 aj
 aa
 aa
@@ -19027,7 +19130,7 @@ aa
 aa
 aa
 aa
-aj
+EX
 bz
 bz
 ej
@@ -21153,7 +21256,7 @@ aa
 aa
 aa
 aj
-aj
+RT
 bz
 bX
 cA
@@ -21177,7 +21280,7 @@ pR
 pR
 ta
 tD
-aj
+yu
 aC
 aa
 aa
@@ -23128,7 +23231,7 @@ aa
 aa
 aa
 aa
-aj
+EX
 ba
 bG
 cd
@@ -23154,7 +23257,7 @@ ld
 ta
 tX
 tD
-aj
+EX
 aa
 aa
 aa
@@ -23727,7 +23830,7 @@ aa
 aa
 aa
 aa
-aa
+UG
 aa
 aa
 aa
@@ -26317,7 +26420,7 @@ aa
 aa
 aa
 aa
-an
+Jm
 aC
 aj
 ba
@@ -26772,7 +26875,7 @@ aa
 aa
 aa
 ah
-aj
+EX
 ab
 aE
 aQ
@@ -27111,7 +27214,7 @@ uK
 uX
 vf
 uF
-aj
+EX
 aa
 aa
 aa
@@ -28807,7 +28910,7 @@ aa
 aa
 aa
 aa
-aa
+Tn
 aa
 aa
 aa
@@ -30897,7 +31000,7 @@ aa
 aa
 aa
 aa
-aa
+Rr
 aa
 aa
 aa
@@ -31163,7 +31266,7 @@ aa
 aa
 aa
 aa
-aa
+Wd
 aa
 aa
 aa
@@ -32593,7 +32696,7 @@ aa
 aa
 aa
 aa
-aa
+AD
 aa
 aa
 aa
