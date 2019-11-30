@@ -252,7 +252,6 @@
 /area/shuttle/castelnau/prometeus/anomaly)
 "aK" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/artifact,
 /obj/structure/anomaly_container,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/castelnau/prometeus/anomaly)
