@@ -36,10 +36,10 @@ GLOBAL_LIST_INIT(castelnay_command, list("Captain"))
 
 	default_law_type = /datum/ai_laws/nanotrasen
 	use_overmap = 1
-	num_exoplanets = 0
+	num_exoplanets = 2
 	planet_size = list(200,200)
 
-	away_site_budget = 0
+	away_site_budget = 4
 	id_hud_icons = 'maps/castelnau/icons/assignment_hud.dmi'
 
 	starting_money = 30000
