@@ -30,6 +30,8 @@
 	                    SKILL_SCIENCE     = SKILL_MAX)
 	skill_points = 30
 
+	forced_spawnpoint = "Prometeus Cryogenic Storage"
+
 /datum/job/scientist
 	title = "Scientist"
 	department = "Science"
@@ -64,6 +66,8 @@
 
 	skill_points = 25
 
+	forced_spawnpoint = "Prometeus Cryogenic Storage"
+
 /datum/job/roboticist
 	title = "Roboticist"
 	department = "Science"
@@ -96,6 +100,8 @@
 
 	skill_points = 20
 
+	forced_spawnpoint = "Prometeus Cryogenic Storage"
+
 /datum/job/scientist_assistant
 	title = "Research Assistant"
 	department = "Science"
@@ -126,6 +132,8 @@
 
 	minimal_access = list(access_castelnau_prometeus)
 
+	forced_spawnpoint = "Prometeus Cryogenic Storage"
+
 /datum/job/scientist_pilot
 	title = "Research Pilot"
 	department = "Science"
@@ -150,3 +158,5 @@
 
 	access = list(access_castelnau_prometeus, access_castelnau_prometeus_helm)
 	minimal_access = list(access_castelnau_prometeus, access_castelnau_prometeus_helm)
+
+	forced_spawnpoint = "Prometeus Cryogenic Storage"

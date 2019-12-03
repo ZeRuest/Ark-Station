@@ -13,7 +13,10 @@
 	#include "castelnau_shuttles.dm"
 	#include "castelnau_unit_testing.dm"
 
+	#include "code/_global_vars/lists/locations.dm"
+	#include "code/game/objects/effects/landmarks.dm"
 	#include "code/gamemodes/objectives.dm"
+	#include "code/modules/client/preferences_spawnpoints.dm"
 	#include "flooring/flooring_premade.dm"
 	#include "game/antagonist/antagonist.dm"
 

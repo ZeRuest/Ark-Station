@@ -18,6 +18,7 @@ GLOBAL_VAR(spawntypes)
 	var/list/restrict_job = null
 	var/list/disallow_job = null
 
+
 /datum/spawnpoint/proc/check_job_spawning(job)
 	if(restrict_job && !(job in restrict_job))
 		return 0
@@ -61,10 +62,12 @@ GLOBAL_VAR(spawntypes)
 	display_name = "Cryogenic Storage"
 	msg = "has completed cryogenic revival"
 	disallow_job = list("Robot")
+	var/spawn_name
 
 /datum/spawnpoint/cryo/New()
 	..()
 	turfs = GLOB.latejoin_cryo
+	spawn_name = GLOB.using_map.full_name
 
 /datum/spawnpoint/cryo/after_join(mob/living/carbon/human/victim)
 	if(!istype(victim))
@@ -74,7 +77,7 @@ GLOBAL_VAR(spawntypes)
 		if(!C.occupant)
 			C.set_occupant(victim, 1)
 			victim.Sleeping(rand(1,3))
-			to_chat(victim,SPAN_NOTICE("You are slowly waking up from the cryostasis aboard [GLOB.using_map.full_name]. It might take a few seconds."))
+			to_chat(victim,SPAN_NOTICE("You are slowly waking up from the cryostasis aboard [spawn_name]. It might take a few seconds."))
 			return
 
 /datum/spawnpoint/cyborg
