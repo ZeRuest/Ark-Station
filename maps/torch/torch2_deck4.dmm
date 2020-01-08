@@ -2,12 +2,6 @@
 "aa" = (
 /turf/space,
 /area/space)
-"ab" = (
-/obj/effect/landmark{
-	name = "carpspawn"
-	},
-/turf/space,
-/area/space)
 "ac" = (
 /obj/effect/shuttle_landmark/skipjack/deck4,
 /turf/space,
@@ -227,6 +221,7 @@
 "aJ" = (
 /obj/effect/wallframe_spawn/reinforced/hull,
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
+	dir = 4;
 	display_name = "Starboard Dock C";
 	frequency = 1380;
 	id_tag = "admin_shuttle_dock_airlock";
@@ -710,9 +705,8 @@
 	icon_state = "shuttle_chair_preview";
 	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 4;
-	frequency = 1380;
 	id_tag = "escape_pod_6_pump"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -726,9 +720,8 @@
 	icon_state = "shuttle_chair_preview";
 	dir = 8
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 8;
-	frequency = 1380;
 	id_tag = "escape_pod_6_pump"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -752,9 +745,8 @@
 	icon_state = "shuttle_chair_preview";
 	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 4;
-	frequency = 1380;
 	id_tag = "escape_pod_9_pump"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -768,9 +760,8 @@
 	icon_state = "shuttle_chair_preview";
 	dir = 8
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 8;
-	frequency = 1380;
 	id_tag = "escape_pod_7_pump"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -951,9 +942,8 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/storage/auxillary/starboard)
 "dh" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 2;
-	frequency = 1380;
 	id_tag = "merchant_shuttle_station_pump"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -1186,9 +1176,8 @@
 	icon_state = "shuttle_chair_preview";
 	dir = 8
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 8;
-	frequency = 1380;
 	id_tag = "escape_pod_9_pump"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -1229,9 +1218,8 @@
 	icon_state = "shuttle_chair_preview";
 	dir = 8
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 8;
-	frequency = 1380;
 	id_tag = "escape_pod_6_pump"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -1242,9 +1230,8 @@
 	icon_state = "shuttle_chair_preview";
 	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 4;
-	frequency = 1380;
 	id_tag = "escape_pod_9_pump"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -1842,6 +1829,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
+	dir = 8;
 	frequency = 1380;
 	id_tag = "escape_pod_7_berth";
 	name = "escape pod two berth controller";
@@ -2352,9 +2340,8 @@
 	icon_state = "shuttle_chair_preview";
 	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 4;
-	frequency = 1380;
 	id_tag = "escape_pod_6_pump"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -3507,6 +3494,7 @@
 "lQ" = (
 /obj/effect/wallframe_spawn/reinforced/hull,
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
+	dir = 4;
 	display_name = "Port Dock C";
 	frequency = 1331;
 	id_tag = "rescue_shuttle_dock_airlock";
@@ -4983,9 +4971,8 @@
 	icon_state = "warning";
 	dir = 9
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	dir = 2;
-	frequency = 1331;
 	id_tag = "nuke_shuttle_dock_pump"
 	},
 /obj/machinery/oxygen_pump{
@@ -5017,9 +5004,8 @@
 	pixel_x = 0;
 	pixel_y = 24
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	dir = 2;
-	frequency = 1331;
 	id_tag = "nuke_shuttle_dock_pump"
 	},
 /turf/simulated/floor,
@@ -5041,9 +5027,8 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	dir = 2;
-	frequency = 1331;
 	id_tag = "nuke_shuttle_dock_pump"
 	},
 /obj/machinery/oxygen_pump{
@@ -6110,9 +6095,8 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	dir = 1;
-	frequency = 1331;
 	id_tag = "nuke_shuttle_dock_pump"
 	},
 /obj/structure/sign/double/solgovflag/left{
@@ -6129,9 +6113,8 @@
 /area/hallway/primary/fourthdeck/fore)
 "tP" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	dir = 1;
-	frequency = 1331;
 	id_tag = "nuke_shuttle_dock_pump"
 	},
 /turf/simulated/floor,
@@ -6144,9 +6127,8 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	dir = 1;
-	frequency = 1331;
 	id_tag = "nuke_shuttle_dock_pump"
 	},
 /turf/simulated/floor,
@@ -8158,9 +8140,8 @@
 	icon_state = "shuttle_chair_preview";
 	dir = 8
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 8;
-	frequency = 1380;
 	id_tag = "escape_pod_9_pump"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -9694,6 +9675,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
+	dir = 8;
+	does_spin = null;
 	frequency = 1380;
 	id_tag = "escape_pod_9_berth";
 	name = "escape pod four berth controller";
@@ -9721,9 +9704,8 @@
 	icon_state = "shuttle_chair_preview";
 	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 4;
-	frequency = 1380;
 	id_tag = "escape_pod_8_pump"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -9735,11 +9717,12 @@
 "GB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
+	dir = 8;
 	display_name = "Port Dock A";
 	frequency = 1380;
 	id_tag = "skipjack_shuttle_dock_airlock";
 	pixel_x = 24;
-	pixel_y = -24;
+	pixel_y = 0;
 	req_access = list(list("ACCESS_EXTERNAL","ACCESS_TORCH_CREW"));
 	tag_airpump = "skipjack_shuttle_dock_pump";
 	tag_chamber_sensor = "skipjack_shuttle_dock_sensor";
@@ -9916,9 +9899,8 @@
 	icon_state = "shuttle_chair_preview";
 	dir = 8
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 8;
-	frequency = 1380;
 	id_tag = "escape_pod_8_pump"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -9929,9 +9911,8 @@
 	icon_state = "shuttle_chair_preview";
 	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 4;
-	frequency = 1380;
 	id_tag = "escape_pod_9_pump"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -10014,9 +9995,8 @@
 /area/maintenance/fourthdeck/aft)
 "HR" = (
 /obj/effect/floor_decal/industrial/warning/full,
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 1;
-	frequency = 1380;
 	id_tag = "skipjack_shuttle_dock_pump"
 	},
 /obj/machinery/airlock_sensor{
@@ -10209,9 +10189,8 @@
 	icon_state = "shuttle_chair_preview";
 	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 4;
-	frequency = 1380;
 	id_tag = "escape_pod_8_pump"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -10225,9 +10204,8 @@
 	icon_state = "shuttle_chair_preview";
 	dir = 8
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 8;
-	frequency = 1380;
 	id_tag = "escape_pod_8_pump"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -10241,9 +10219,8 @@
 	icon_state = "shuttle_chair_preview";
 	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 4;
-	frequency = 1380;
 	id_tag = "escape_pod_9_pump"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -10257,9 +10234,8 @@
 	icon_state = "shuttle_chair_preview";
 	dir = 8
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 8;
-	frequency = 1380;
 	id_tag = "escape_pod_9_pump"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -11966,6 +11942,7 @@
 	pixel_x = 21
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
+	dir = 1;
 	frequency = 1380;
 	id_tag = "escape_pod_8";
 	name = "escape pod three controller";
@@ -12528,9 +12505,8 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	dir = 4;
-	frequency = 1331;
 	id_tag = "rescue_shuttle_dock_pump"
 	},
 /turf/simulated/floor/plating,
@@ -13413,9 +13389,8 @@
 /turf/simulated/wall/r_wall/hull,
 /area/storage/auxillary/starboard)
 "RR" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 4;
-	frequency = 1380;
 	id_tag = "admin_shuttle_dock_pump"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -13642,6 +13617,7 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
+	dir = 1;
 	frequency = 1380;
 	id_tag = "escape_pod_9";
 	name = "escape pod four controller";
@@ -13993,9 +13969,8 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	dir = 1;
-	frequency = 1331;
 	id_tag = "rescue_shuttle_dock_pump"
 	},
 /obj/item/device/radio/intercom{
@@ -14340,6 +14315,7 @@
 /area/crew_quarters/safe_room/fourthdeck)
 "Ud" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
+	dir = 4;
 	frequency = 1380;
 	id_tag = "escape_pod_8_berth";
 	name = "escape pod three berth controller";
@@ -14663,6 +14639,7 @@
 /area/hallway/primary/fourthdeck/aft)
 "US" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
+	dir = 4;
 	frequency = 1380;
 	id_tag = "escape_pod_6_berth";
 	name = "escape pod one berth controller";
@@ -14683,9 +14660,8 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 2;
-	frequency = 1380;
 	id_tag = "admin_shuttle_dock_pump"
 	},
 /obj/item/device/radio/intercom{
@@ -18573,7 +18549,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -19980,7 +19956,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -20815,7 +20791,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -22655,7 +22631,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -23421,7 +23397,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -23664,7 +23640,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -24438,7 +24414,6 @@ aa
 aa
 aa
 aa
-ab
 aa
 aa
 aa
@@ -24452,6 +24427,7 @@ aa
 aa
 aa
 aa
+ww
 aa
 aa
 aa
@@ -25460,7 +25436,7 @@ aa
 os
 aa
 aa
-ww
+aa
 aa
 aa
 wx
@@ -26235,7 +26211,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -28855,7 +28831,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -29527,7 +29503,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -29878,7 +29854,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -31541,7 +31517,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -33503,7 +33479,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -34174,7 +34150,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -36139,7 +36115,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -36534,7 +36510,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -37612,7 +37588,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -39760,7 +39736,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -40179,7 +40155,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -41995,7 +41971,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -44064,7 +44040,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -45088,7 +45064,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -51088,7 +51064,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa

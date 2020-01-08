@@ -133,8 +133,7 @@
 
 			for (var/obj/machinery/meter/meter in T)
 				if (meter.target == src)
-					new /obj/item/pipe_meter(T)
-					qdel(meter)
+					meter.dismantle()
 			qdel(src)
 
 /obj/machinery/atmospherics/proc/change_color(var/new_color)
@@ -268,8 +267,7 @@
 		new /obj/item/pipe(loc, src)
 		for (var/obj/machinery/meter/meter in T)
 			if (meter.target == src)
-				new /obj/item/pipe_meter(T)
-				qdel(meter)
+				meter.dismantle()
 		qdel(src)
 	else if(node1 && node2)
 		overlays += icon_manager.get_atmos_icon("pipe", , pipe_color, "[pipe_icon]intact[icon_connect_type]")
@@ -513,8 +511,7 @@
 		new /obj/item/pipe(loc, src)
 		for (var/obj/machinery/meter/meter in T)
 			if (meter.target == src)
-				new /obj/item/pipe_meter(T)
-				qdel(meter)
+				meter.dismantle()
 		qdel(src)
 	else
 		overlays.Cut()
@@ -776,8 +773,7 @@
 		new /obj/item/pipe(loc, src)
 		for (var/obj/machinery/meter/meter in T)
 			if (meter.target == src)
-				new /obj/item/pipe_meter(T)
-				qdel(meter)
+				meter.dismantle()
 		qdel(src)
 	else
 		overlays.Cut()

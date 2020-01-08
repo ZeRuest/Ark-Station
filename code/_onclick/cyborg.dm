@@ -16,6 +16,9 @@
 		return M.ClickOn(A, params, src)
 
 	var/list/modifiers = params2list(params)
+	if (modifiers["ctrl"] && modifiers["alt"])
+		CtrlAltClickOn(A)
+		return
 	if(modifiers["shift"] && modifiers["ctrl"])
 		CtrlShiftClickOn(A)
 		return
@@ -116,6 +119,9 @@
 /mob/living/silicon/robot/AltClickOn(var/atom/A)
 	A.BorgAltClick(src)
 
+/mob/living/silicon/robot/CtrlAltClickOn(atom/A)
+	A.BorgCtrlAltClick(src)
+
 /atom/proc/BorgCtrlShiftClick(var/mob/living/silicon/robot/user) //forward to human click if not overriden
 	CtrlShiftClick(user)
 
@@ -155,6 +161,9 @@
 
 /obj/machinery/atmospherics/binary/pump/BorgAltClick()
 	return AltClick()
+
+/atom/proc/BorgCtrlAltClick(var/mob/living/silicon/robot/user)
+	CtrlAltClick(user)
 
 /*
 	As with AI, these are not used in click code,

@@ -78,7 +78,7 @@
 			bound_height = width * world.icon_size
 
 	if (turf_hand_priority)
-		set_extension(src, /datum/extension/turf_hand, /datum/extension/turf_hand, turf_hand_priority)
+		set_extension(src, /datum/extension/turf_hand, turf_hand_priority)
 
 	health = maxhealth
 	update_connections(1)
