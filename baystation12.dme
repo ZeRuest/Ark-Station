@@ -1344,6 +1344,7 @@
 #include "code\modules\alarm\fire_alarm.dm"
 #include "code\modules\alarm\motion_alarm.dm"
 #include "code\modules\alarm\power_alarm.dm"
+#include "code\modules\arkstuff\hygene.dm"
 #include "code\modules\ascent\_ascent.dm"
 #include "code\modules\ascent\ascent_atmos.dm"
 #include "code\modules\ascent\ascent_atoms.dm"
