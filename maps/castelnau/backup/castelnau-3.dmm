@@ -547,6 +547,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
+	frequency = 1380;
 	id_tag = "merchant_shuttle_station_pump"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -573,6 +574,7 @@
 "bv" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
+	frequency = 1380;
 	id_tag = "merchant_shuttle_station_pump"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -895,6 +897,7 @@
 "bW" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
+	frequency = 1380;
 	id_tag = "merchant_shuttle_station_pump"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -918,6 +921,7 @@
 "bY" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
+	frequency = 1380;
 	id_tag = "merchant_shuttle_station_pump"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -8694,6 +8698,7 @@
 /obj/machinery/light_switch{
 	pixel_y = 23
 	},
+/obj/machinery/disease2/diseaseanalyser,
 /obj/effect/floor_decal/corner/blue/half{
 	dir = 1
 	},
@@ -8723,6 +8728,7 @@
 /obj/effect/floor_decal/corner/blue/half{
 	dir = 1
 	},
+/obj/machinery/disease2/incubator,
 /turf/simulated/floor/tiled/white,
 /area/castelnau/security/ivestigation)
 "pb" = (
@@ -8735,6 +8741,7 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
+/obj/machinery/computer/centrifuge,
 /obj/effect/floor_decal/corner/blue/half{
 	dir = 1
 	},
@@ -11700,6 +11707,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
+	frequency = 1331;
 	id_tag = "sd_port_pump"
 	},
 /obj/structure/catwalk,
