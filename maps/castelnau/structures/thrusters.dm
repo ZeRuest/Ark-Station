@@ -1,6 +1,3 @@
-/obj/machinery/air_sensor/nacelle
-	frequency = 1441
-
 /obj/machinery/air_sensor/nacelle/first
 	id_tag = "ReacEng1"
 

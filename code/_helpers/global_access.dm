@@ -351,6 +351,8 @@
 			return global.csrfz_check;
 		if("custom_event_msg")
 			return global.custom_event_msg;
+		if("cyrillic_unicode_keys")
+			return global.cyrillic_unicode_keys;
 		if("damage_icon_parts")
 			return global.damage_icon_parts;
 		if("dbcon")
@@ -1270,6 +1272,8 @@
 			global.csrfz_check=newval;
 		if("custom_event_msg")
 			global.custom_event_msg=newval;
+		if("cyrillic_unicode_keys")
+			global.cyrillic_unicode_keys=newval;
 		if("damage_icon_parts")
 			global.damage_icon_parts=newval;
 		if("dbcon")
@@ -2013,6 +2017,7 @@
 	"crew_repository",
 	"csrfz_check",
 	"custom_event_msg",
+	"cyrillic_unicode_keys",
 	"damage_icon_parts",
 	"dbcon",
 	"dbcon_old",
