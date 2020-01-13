@@ -3026,8 +3026,9 @@
 /obj/machinery/sleeper{
 	dir = 8
 	},
-/obj/item/stack/material/glass{
-	amount = 50
+/turf/unsimulated/floor{
+	dir = 2;
+	icon_state = "white"
 	},
 /area/centcom/living)
 "avx" = (
@@ -3054,8 +3055,8 @@
 	},
 /obj/item/weapon/material/kitchen/rollingpin,
 /turf/unsimulated/floor{
-	dir = 8;
-	icon_state = "wood"
+	dir = 2;
+	icon_state = "white"
 	},
 /area/centcom/living)
 "avB" = (
@@ -3566,8 +3567,6 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 9
 	},
-/area/centcom/creed)
-"awR" = (
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -3775,9 +3774,6 @@
 	dir = 1;
 	name = "Master R&amp;D Server Controller"
 	},
-/area/centcom/specops)
-"axj" = (
-/obj/structure/table/reinforced,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -3787,12 +3783,6 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 10
 	},
-/area/centcom/specops)
-"axk" = (
-/obj/structure/table/rack,
-/obj/item/weapon/gun/energy/gun,
-/obj/item/weapon/gun/energy/gun,
-/obj/item/weapon/gun/energy/gun,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -3801,9 +3791,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/area/centcom/specops)
-"axl" = (
-/obj/machinery/vending/assist,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -4231,9 +4218,6 @@
 /obj/structure/closet/secure_closet/medical3{
 	pixel_x = -5
 	},
-/area/centcom/specops)
-"ayb" = (
-/obj/machinery/porta_turret/crescent,
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
@@ -4250,15 +4234,6 @@
 /obj/structure/closet/secure_closet/medical2{
 	pixel_x = 5
 	},
-/area/centcom/specops)
-"ayd" = (
-/obj/structure/table/reinforced,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
@@ -4361,28 +4336,6 @@
 	name = "Special Operations";
 	opacity = 1
 	},
-/area/centcom/specops)
-"ayp" = (
-/obj/item/device/multitool,
-/obj/item/device/multitool,
-/obj/item/device/flash,
-/obj/item/device/flash,
-/obj/item/weapon/rcd,
-/obj/item/weapon/rcd,
-/obj/item/weapon/rcd_ammo,
-/obj/item/weapon/rcd_ammo,
-/obj/item/weapon/rcd_ammo,
-/obj/item/weapon/rcd_ammo,
-/obj/item/weapon/rcd,
-/obj/item/weapon/rcd,
-/obj/item/weapon/rcd_ammo,
-/obj/item/weapon/rcd_ammo,
-/obj/item/weapon/rcd_ammo,
-/obj/item/weapon/rcd_ammo,
-/obj/item/weapon/rcd_ammo,
-/obj/item/weapon/rcd_ammo,
-/obj/item/weapon/rcd_ammo,
-/obj/structure/table/steel_reinforced,
 /turf/unsimulated/floor{
 	icon_state = "vault";
 	dir = 8
@@ -4525,9 +4478,6 @@
 /obj/structure/bed/chair{
 	dir = 4
 	},
-/area/centcom/specops)
-"azs" = (
-/obj/effect/wingrille_spawn/reinforced/crescent,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -4537,7 +4487,6 @@
 	icon_state = "computer";
 	dir = 8
 	},
-/obj/effect/floor_decal/industrial/warning/corner,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -4549,7 +4498,6 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
-/obj/structure/window/reinforced/crescent,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -5703,13 +5651,6 @@
 	pixel_x = -12;
 	pixel_y = -25
 	},
-/obj/structure/window/reinforced/crescent,
-/obj/effect/paint/black,
-/turf/simulated/floor/plating,
-/area/shuttle/specops/centcom)
-"aDS" = (
-/obj/structure/bed,
-/obj/item/weapon/bedsheet/red,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -5813,7 +5754,7 @@
 /area/shuttle/specops/centcom)
 "aED" = (
 /turf/unsimulated/floor{
-	icon_state = "steel"
+	icon_state = "dark"
 	},
 /area/centcom/ferry)
 "aEE" = (
@@ -6087,16 +6028,15 @@
 	dir = 1
 	},
 /turf/unsimulated/floor{
-	dir = 2;
-	icon_state = "carpet"
+	icon_state = "steel"
 	},
 /area/centcom/holding)
 "aGf" = (
 /obj/machinery/door/airlock/glass{
 	name = "Arrivals Processing"
 	},
-/obj/effect/floor_decal/carpet{
-	dir = 1
+/turf/unsimulated/floor{
+	icon_state = "steel"
 	},
 /area/centcom/holding)
 "aGg" = (
@@ -6241,7 +6181,6 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
-/obj/effect/floor_decal/carpet,
 /turf/unsimulated/floor{
 	icon_state = "wood"
 	},
@@ -6267,16 +6206,14 @@
 /obj/machinery/status_display,
 /obj/effect/wingrille_spawn/reinforced/crescent,
 /turf/unsimulated/floor{
-	icon_state = "steel"
+	icon_state = "plating";
+	name = "plating"
 	},
 /area/centcom/holding)
 "aGT" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/area/centcom/holding)
-"aGG" = (
-/obj/effect/floor_decal/industrial/warning,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -6453,7 +6390,7 @@
 /obj/machinery/vending/cigarette,
 /obj/effect/floor_decal/corner/green/three_quarters,
 /turf/unsimulated/floor{
-	icon_state = "wood"
+	icon_state = "steel"
 	},
 /area/centcom/holding)
 "aHw" = (
@@ -6469,7 +6406,7 @@
 	dir = 5
 	},
 /turf/unsimulated/floor{
-	icon_state = "steel"
+	icon_state = "lino"
 	},
 /area/centcom/holding)
 "aHz" = (
@@ -6497,7 +6434,6 @@
 	locked = 1;
 	name = "Transport Airlock"
 	},
-/obj/item/weapon/reagent_containers/food/snacks/boiledrice,
 /turf/unsimulated/floor{
 	icon_state = "vault";
 	dir = 5
@@ -6656,7 +6592,6 @@
 	dir = 5;
 	icon_state = "intact"
 	},
-/obj/item/weapon/reagent_containers/food/snacks/meatsteak,
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
@@ -6751,8 +6686,6 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 8
 	},
-/obj/item/weapon/book/manual/barman_recipes,
-/obj/item/weapon/reagent_containers/glass/rag,
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
@@ -7058,7 +6991,6 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 6
 	},
-/obj/item/weapon/scalpel,
 /turf/unsimulated/floor{
 	icon_state = "vault";
 	dir = 5
@@ -7156,9 +7088,6 @@
 	icon_state = "computer";
 	dir = 8
 	},
-/area/tdome)
-"aJl" = (
-/obj/structure/closet/secure_closet/medical2,
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
@@ -7195,9 +7124,8 @@
 /obj/machinery/bodyscanner{
 	dir = 8
 	},
-/obj/item/weapon/storage/box/masks{
-	pixel_x = 0;
-	pixel_y = 0
+/turf/unsimulated/floor{
+	icon_state = "white"
 	},
 /area/centcom/holding)
 "aJB" = (
@@ -7581,10 +7509,6 @@
 /obj/item/stack/tile/floor_freezer{
 	amount = 50
 	},
-/turf/simulated/floor/shuttle/blue,
-/area/shuttle/transport1/centcom)
-"aKa" = (
-/obj/structure/closet/secure_closet/bar,
 /turf/unsimulated/floor{
 	icon_state = "plating";
 	name = "plating"
@@ -7599,7 +7523,8 @@
 	amount = 50
 	},
 /turf/unsimulated/floor{
-	icon_state = "white"
+	icon_state = "plating";
+	name = "plating"
 	},
 /area/acting/backstage)
 "aKO" = (
@@ -7664,10 +7589,6 @@
 /obj/item/stack/material/wood{
 	amount = 50
 	},
-/turf/simulated/floor/shuttle/red,
-/area/shuttle/syndicate_elite/mothership)
-"aKl" = (
-/obj/machinery/vending/cigarette,
 /turf/unsimulated/floor{
 	icon_state = "plating";
 	name = "plating"
@@ -7684,12 +7605,6 @@
 /obj/item/stack/material/sandstone{
 	amount = 50
 	},
-/area/tdome/tdomeobserve)
-"aKn" = (
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/obj/structure/table/standard,
 /turf/unsimulated/floor{
 	icon_state = "plating";
 	name = "plating"
@@ -7712,8 +7627,6 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/area/tdome/tdomeobserve)
-"aKp" = (
 /turf/unsimulated/floor{
 	icon_state = "plating";
 	name = "plating"
@@ -7730,9 +7643,6 @@
 /obj/item/stack/material/glass/reinforced{
 	amount = 50
 	},
-/area/tdome/tdomeobserve)
-"aKt" = (
-/obj/structure/closet/secure_closet/freezer/meat,
 /turf/unsimulated/floor{
 	icon_state = "plating";
 	name = "plating"
@@ -7781,9 +7691,6 @@
 /obj/item/stack/material/silver{
 	amount = 50
 	},
-/area/tdome/tdomeobserve)
-"aKx" = (
-/obj/machinery/vending/snack,
 /turf/unsimulated/floor{
 	icon_state = "plating";
 	name = "plating"
@@ -8269,9 +8176,6 @@
 	icon_state = "intact";
 	dir = 9
 	},
-/area/acting/backstage)
-"aKZ" = (
-/obj/machinery/papershredder,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -8464,7 +8368,8 @@
 	products = list(/obj/item/weapon/storage/fancy/cigarettes = 10, /obj/item/weapon/storage/box/matches = 10, /obj/item/weapon/flame/lighter/zippo/random = 4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana = 2)
 	},
 /turf/unsimulated/floor{
-	icon_state = "dark"
+	icon_state = "plating";
+	name = "plating"
 	},
 /area/acting/backstage)
 "aNi" = (
@@ -8499,10 +8404,6 @@
 /obj/machinery/door/airlock/command{
 	name = "Thunderdome Administration"
 	},
-/turf/simulated/floor,
-/area/acting/backstage)
-"aLo" = (
-/obj/machinery/biogenerator,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -30865,8 +30766,6 @@ aab
 aab
 aab
 aab
-"}
-(91,1,1) = {"
 aab
 aab
 aab
@@ -31069,8 +30968,6 @@ aab
 aab
 aab
 aab
-"}
-(92,1,1) = {"
 aab
 aab
 aab
@@ -31282,8 +31179,6 @@ aab
 aab
 aab
 aab
-"}
-(93,1,1) = {"
 aab
 aab
 aab
@@ -31853,8 +31748,6 @@ aab
 aab
 aab
 aab
-"}
-(96,1,1) = {"
 aab
 aab
 aab
@@ -32060,8 +31953,6 @@ aab
 aab
 aab
 aab
-"}
-(97,1,1) = {"
 aab
 aab
 aab
@@ -32172,53 +32063,6 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-"}
-(98,1,1) = {"
 aab
 aab
 aab
@@ -32429,6 +32273,43 @@ aab
 aab
 aab
 aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 "}
 (99,1,1) = {"
 aab
@@ -32471,8 +32352,6 @@ aab
 aab
 aab
 aab
-"}
-(99,1,1) = {"
 aab
 aab
 aab
@@ -32676,8 +32555,6 @@ aab
 aab
 aab
 aab
-"}
-(100,1,1) = {"
 aab
 aab
 aab
@@ -32903,31 +32780,6 @@ aab
 aab
 aab
 aab
-"}
-(101,1,1) = {"
-aaa
-aaq
-aaq
-aaq
-aaq
-aaq
-aaq
-aaq
-aaq
-aaq
-aaq
-aaa
-aaq
-aaq
-aaq
-aaq
-aaq
-aaq
-aaq
-aaq
-aaq
-aaq
-aaa
 aab
 aab
 aab
@@ -33114,49 +32966,6 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-"}
-(102,1,1) = {"
-aac
-bKU
-wCv
-ljS
-wCv
-bKU
-wCv
-ljS
-ljS
-cMe
-mjR
-aeE
-wDD
-tcf
-wDD
-wDD
-rJY
-wDD
-wDD
-wjw
-uJE
-wDD
-ajo
 aab
 aab
 aab
@@ -33367,31 +33176,6 @@ aab
 aab
 aab
 aab
-"}
-(103,1,1) = {"
-aac
-ljS
-dBi
-niJ
-fJf
-fJf
-niJ
-mrn
-bKU
-cMe
-mjR
-aeE
-rIu
-rIu
-rIu
-rIu
-rIu
-rIu
-vQS
-vOe
-uIr
-vQS
-ajo
 aab
 aab
 aab
@@ -33567,46 +33351,6 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-"}
-(104,1,1) = {"
-aac
-ljS
-btO
-ufC
-mjR
-mjR
-ufC
-icO
-ljS
-cMe
-mjR
-aeE
-rIb
-rIu
-uzq
-jSi
-lwD
-rIu
-rIu
-qIk
-qIk
-rIu
-ajo
 aab
 aab
 aab
@@ -33958,41 +33702,6 @@ aab
 aab
 aab
 aab
-aLF
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
 aab
 aab
 aab
@@ -34059,36 +33768,6 @@ aab
 aab
 aab
 aab
-"}
-(106,1,1) = {"
-aac
-bKU
-cMe
-mjR
-dzK
-iIc
-mjR
-fpW
-fJf
-moq
-mjR
-aeE
-rIu
-rIu
-dIU
-dIU
-pgJ
-dIU
-pgJ
-dIU
-dIU
-pgJ
-ajo
-aab
-aab
-aab
-aab
-aab
 aab
 aab
 aab
@@ -34199,7 +33878,6 @@ aab
 aab
 aab
 aab
-aLF
 aab
 aab
 aab
@@ -34234,46 +33912,6 @@ aab
 aab
 aab
 aab
-aLF
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-"}
-(107,1,1) = {"
-aac
-wCv
-cMe
-mjR
-jxq
-hzB
-mjR
-bnc
-iBC
-iBC
-iBC
-aeE
-vgY
-rIu
-dIU
-qir
-tDw
-tDw
-tDw
-tDw
-tDw
-qMl
-ajo
 aab
 aab
 aab
@@ -34413,26 +34051,6 @@ aab
 aab
 aab
 aab
-aLF
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
 aab
 aab
 aab
@@ -34457,7 +34075,40 @@ aab
 aab
 aab
 aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aLF
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab

@@ -240,24 +240,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/engineering/engine_monitoring)
-"au" = (
-/obj/effect/floor_decal/techfloor{
-	icon_state = "techfloor_edges";
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/supply{
-	icon_state = "intact-supply";
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	icon_state = "intact-scrubbers";
-	dir = 6
-	},
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/closet/firecloset,
-/turf/simulated/floor/tiled/techfloor,
-/area/engineering/atmos)
 "av" = (
 /turf/simulated/floor/airless,
 /area/space)
@@ -5424,9 +5406,6 @@
 	c_tag = "Engine - Access";
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/universal{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/engine_room)
 "lR" = (
@@ -6399,7 +6378,6 @@
 	icon_state = "chair_preview";
 	dir = 4
 	},
-/obj/random_multi/single_item/poppy,
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/engine_monitoring)
 "ow" = (
@@ -38183,7 +38161,7 @@ pw
 Oy
 oE
 nY
-NG
+zV
 TG
 BI
 Ky
