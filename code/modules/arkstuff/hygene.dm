@@ -1,5 +1,5 @@
 /mob/living/carbon/human
-	var/list/smells_and_hygene = list()
+	var/list/smells_and_hygene = list() 
 
 
 /datum/reagent/perfume  //As reagent, because why not?
