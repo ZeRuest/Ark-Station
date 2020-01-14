@@ -75,7 +75,7 @@
 	terminal.master = src
 	GLOB.destroyed_event.register(terminal, src, .proc/unset_terminal)
 
-	set_extension(src, /datum/extension/event_registration/shuttle_stationary, /datum/extension/event_registration/shuttle_stationary, GLOB.moved_event, machine, .proc/machine_moved, get_area(src))
+	set_extension(src, /datum/extension/event_registration/shuttle_stationary, GLOB.moved_event, machine, .proc/machine_moved, get_area(src))
 	set_status(machine, PART_STAT_CONNECTED)
 	start_processing(machine)
 
@@ -179,3 +179,11 @@
 /obj/item/weapon/stock_parts/power/terminal/buildable
 	part_flags = PART_FLAG_HAND_REMOVE
 	matter = list(MATERIAL_STEEL = 400)
+
+/decl/stock_part_preset/terminal_setup
+	expected_part_type = /obj/item/weapon/stock_parts/power/terminal
+
+/decl/stock_part_preset/terminal_setup/apply(obj/machinery/machine, var/obj/item/weapon/stock_parts/power/terminal/part)
+	var/obj/machinery/power/terminal/term = locate() in machine.loc
+	if(istype(term) && !term.master)
+		part.set_terminal(machine, term)

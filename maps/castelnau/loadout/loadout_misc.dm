@@ -22,12 +22,12 @@
 /datum/gear/lipstick
 	sort_category = "Cosmetics"
 
-/datum/gear/soap
-	display_name = "soap selection"
-	sort_category = "Cosmetics"
-	path = /obj/item/weapon/soap
-	flags = GEAR_HAS_TYPE_SELECTION
-	cost = 5
+// /datum/gear/soap
+// 	display_name = "soap selection"
+// 	sort_category = "Cosmetics"
+// 	path = /obj/item/weapon/soap
+// 	flags = GEAR_HAS_TYPE_SELECTION
+// 	cost = 5
 
 /datum/gear/comb
 	sort_category = "Cosmetics"
