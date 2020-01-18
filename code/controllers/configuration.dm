@@ -172,6 +172,7 @@ var/list/gamemode_cache = list()
 	var/irc_bot_host = ""
 	var/main_irc = ""
 	var/admin_irc = ""
+	var/notify_role_id = ""
 	var/announce_shuttle_dock_to_irc = FALSE
 
 	// Event settings
@@ -628,6 +629,9 @@ var/list/gamemode_cache = list()
 
 				if("admin_irc")
 					config.admin_irc = value
+
+				if("notify_role_id")
+					config.notify_role_id = value
 
 				if("announce_shuttle_dock_to_irc")
 					config.announce_shuttle_dock_to_irc = TRUE

@@ -11,7 +11,7 @@
 	unarmed_types = list(
 		/datum/unarmed_attack/stomp,
 		/datum/unarmed_attack/kick,
-		/datum/unarmed_attack/claws/strong,
+		/datum/unarmed_attack/claws/strong/gloves,
 		/datum/unarmed_attack/punch,
 		/datum/unarmed_attack/bite/strong
 	)
@@ -39,7 +39,7 @@
 
 	cold_level_1 = 80
 	cold_level_2 = 50
-	cold_level_3 = 0
+	cold_level_3 = -1
 	
 	min_age = 1
 	max_age = 100

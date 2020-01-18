@@ -2,14 +2,14 @@
 	name = "console"
 	maximum_component_parts = list(/obj/item/weapon/stock_parts = 14)	//There's a lot of stuff that goes in these
 	var/list/interact_sounds = list("keyboard", "keystroke")
-	var/obj/item/weapon/stock_parts/computer/hard_drive/portable/usb
+	var/obj/item/weapon/stock_parts/computer/hard_drive/portable/portable_drive
 
 /obj/machinery/computer/modular/Initialize()
-	set_extension(src, /datum/extension/interactive/ntos, /datum/extension/interactive/ntos/console)
+	set_extension(src, /datum/extension/interactive/ntos/console)
 	. = ..()
 
 /obj/machinery/computer/modular/Destroy()
-	QDEL_NULL(usb)
+	QDEL_NULL(portable_drive)
 	var/datum/extension/interactive/ntos/os = get_extension(src, /datum/extension/interactive/ntos)
 	if(os)
 		os.system_shutdown()
@@ -34,6 +34,8 @@
 	var/datum/extension/interactive/ntos/os = get_extension(src, /datum/extension/interactive/ntos)
 	if(os)
 		if(!os.on)
+			if(!CanInteract(user, DefaultTopicState()))
+				return FALSE // Do full interactivity check before state change.
 			os.system_boot()
 
 		os.ui_interact(user)
@@ -64,11 +66,11 @@
 
 /obj/machinery/computer/modular/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/weapon/stock_parts/computer/hard_drive/portable))
-		if(usb)
-			to_chat(user, SPAN_WARNING("There's already \a [usb] plugged in."))
+		if(portable_drive)
+			to_chat(user, SPAN_WARNING("There's already \a [portable_drive] plugged in."))
 			return TRUE
 		else if(user.unEquip(I, src))
-			usb = I
+			portable_drive = I
 			verbs += /obj/machinery/computer/modular/proc/eject_usb
 			visible_message(SPAN_NOTICE("[user] plugs \the [I] into \the [src]."))
 			return TRUE
@@ -85,11 +87,11 @@
 
 	if(ismob(usr))
 		var/mob/user = usr
-		visible_message(SPAN_NOTICE("[user] ejects \the [usb] from \the [src]."))
-		user.put_in_hands(usb)
+		visible_message(SPAN_NOTICE("[user] ejects \the [portable_drive] from \the [src]."))
+		user.put_in_hands(portable_drive)
 	else
-		usb.dropInto(loc)
-	usb = null
+		portable_drive.dropInto(loc)
+	portable_drive = null
 	verbs -= /obj/machinery/computer/modular/proc/eject_usb
 
 /obj/machinery/computer/modular/CouldUseTopic(var/mob/user)
@@ -111,3 +113,16 @@
 	var/datum/extension/interactive/ntos/os = get_extension(src, /datum/extension/interactive/ntos)
 	if(os)
 		os.open_terminal(user)
+
+/obj/machinery/computer/modular/verb/emergency_shutdown()
+	set name = "Forced Shutdown"
+	set category = "Object"
+	set src in view(1)
+
+	if(!CanPhysicallyInteract(usr))
+		return
+
+	var/datum/extension/interactive/ntos/os = get_extension(src, /datum/extension/interactive/ntos)
+	if(os && os.on)
+		to_chat(usr, "You press a hard-reset button on \the [src].")
+		os.system_shutdown()

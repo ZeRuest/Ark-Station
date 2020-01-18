@@ -207,7 +207,7 @@
 /turf/simulated/floor/asteroid,
 /area/mine/explored)
 "bf" = (
-/obj/effect/overmap/sector/cluster,
+/obj/effect/overmap/visitable/sector/cluster,
 /turf/simulated/floor/asteroid,
 /area/mine/explored)
 "cb" = (
@@ -267,8 +267,7 @@
 /turf/simulated/floor/airless,
 /area/djstation)
 "mb" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1379;
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
 	id_tag = "lp_north_pump"
 	},
 /turf/simulated/floor/airless,
@@ -416,9 +415,8 @@
 /turf/simulated/floor/airless,
 /area/djstation)
 "Cb" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
 	dir = 8;
-	frequency = 1379;
 	id_tag = "lp_east_pump"
 	},
 /turf/simulated/floor/airless,

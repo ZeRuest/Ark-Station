@@ -2862,7 +2862,7 @@
 	},
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
-	frequency = 2002;
+	frequency = 1438;
 	icon_state = "map_injector";
 	id = "unishi_cooling_in";
 	name = "Coolant Injector";
@@ -2940,7 +2940,6 @@
 	dir = 8;
 	external_pressure_bound = 100;
 	external_pressure_bound_default = 0;
-	frequency = 2002;
 	icon_state = "map_vent_in";
 	id_tag = "unishi_cooling_out";
 	initialize_directions = 1;
@@ -3079,12 +3078,6 @@
 /obj/machinery/reagent_temperature/cooler,
 /turf/simulated/floor/tiled/white,
 /area/unishi/chem)
-"Ul" = (
-/obj/effect/landmark{
-	name = "carpspawn"
-	},
-/turf/space,
-/area/space)
 
 (1,1,1) = {"
 aa
@@ -6399,7 +6392,7 @@ aa
 aa
 aa
 aa
-Ul
+aa
 aa
 aa
 aa
@@ -8092,7 +8085,7 @@ aa
 aa
 aa
 aa
-Ul
+aa
 aa
 aa
 aa
@@ -9178,7 +9171,7 @@ gJ
 aa
 aa
 aa
-Ul
+aa
 aa
 aa
 aa
@@ -9766,7 +9759,7 @@ aa
 aa
 aa
 aa
-Ul
+aa
 aa
 aa
 aa

@@ -43,7 +43,7 @@
 	)
 
 	//Species that the suits can be configured to fit.
-	var/list/species = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_RESOMI)
+	var/list/species = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
 
 	var/decl/item_modifier/target_modification
 	var/target_species
@@ -97,7 +97,7 @@
 			to_chat(user, "<span class='danger'>There is no room inside the cycler for [G.affecting.name].</span>")
 			return
 
-		visible_message("<span class='notice'>[user] starts putting [G.affecting.name] into the suit cycler.</span>", 3)
+		visible_message("<span class='notice'>[user] starts putting [G.affecting.name] into the suit cycler.</span>", range = 3)
 
 		if(do_after(user, 20, src))
 			if(!G || !G.affecting) return

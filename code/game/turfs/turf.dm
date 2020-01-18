@@ -35,7 +35,7 @@
 
 	var/tmp/changing_turf
 
-/turf/Initialize(mapload)
+/turf/Initialize(mapload, ...)
 	. = ..()
 	if(dynamic_lighting)
 		luminosity = 0
@@ -43,8 +43,12 @@
 		luminosity = 1
 
 	opaque_counter = opacity
+
 	if (mapload && permit_ao)
 		queue_ao()
+
+	if (z_flags & ZM_MIMIC_BELOW)
+		setup_zmimic(mapload)
 
 /turf/on_update_icon()
 	update_flood_overlay()
@@ -66,9 +70,17 @@
 	remove_cleanables()
 	fluid_update()
 	REMOVE_ACTIVE_FLUID_SOURCE(src)
+
 	if (ao_queued)
 		SSao.queue -= src
 		ao_queued = 0
+
+	if (z_flags & ZM_MIMIC_BELOW)
+		cleanup_zmimic()
+
+	if (bound_overlay)
+		QDEL_NULL(bound_overlay)
+
 	..()
 	return QDEL_HINT_IWILLGC
 
@@ -286,13 +298,14 @@ var/const/enterloopsanity = 100
 		decals = null
 
 // Called when turf is hit by a thrown object
-/turf/hitby(atom/movable/AM as mob|obj, var/speed)
+/turf/hitby(atom/movable/AM as mob|obj, var/datum/thrownthing/TT)
 	if(src.density)
-		spawn(2)
-			step(AM, turn(AM.last_move, 180))
 		if(isliving(AM))
 			var/mob/living/M = AM
-			M.turf_collision(src, speed)
+			M.turf_collision(src, TT.speed)
+		var/intial_dir = TT.init_dir
+		spawn(2)
+			step(AM, turn(intial_dir, 180))
 
 /turf/proc/can_engrave()
 	return FALSE

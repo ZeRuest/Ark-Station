@@ -59,6 +59,22 @@ GLOBAL_LIST_INIT(machine_path_to_circuit_type, cache_circuits_by_build_path())
 				if(number == 0)
 					break
 
+// Returns the first valid preset decl for a given part, or null
+/obj/machinery/proc/can_apply_preset_to(var/obj/item/weapon/stock_parts/part)
+	if(!stock_part_presets)
+		return
+	for(var/path in stock_part_presets)
+		var/decl/stock_part_preset/preset = decls_repository.get_decl(path)
+		if(istype(part, preset.expected_part_type))
+			return preset
+
+// Applies the first valid preset to the given part. Returns preset applied, or null.
+/obj/machinery/proc/apply_preset_to(var/obj/item/weapon/stock_parts/part)
+	var/decl/stock_part_preset/preset = can_apply_preset_to(part)
+	if(preset)
+		preset.apply(null, part)
+		return preset
+
 // Returns a list of subtypes of the given component type, with associated value = number of that component.
 /obj/machinery/proc/types_of_component(var/part_type)
 	. = list()
@@ -92,7 +108,7 @@ GLOBAL_LIST_INIT(machine_path_to_circuit_type, cache_circuits_by_build_path())
 		LAZYREMOVE(uncreated_component_parts, path)
 	return install_component(path, TRUE)
 
-// Can be given a path or an instance. False will guarantee part creation. 
+// Can be given a path or an instance. False will guarantee part creation.
 // If an instance is given or created, it is returned, otherwise null is returned.
 /obj/machinery/proc/install_component(var/obj/item/weapon/stock_parts/part, force = FALSE, refresh_parts = TRUE)
 	if(ispath(part))
@@ -251,14 +267,14 @@ Standard helpers for users interacting with machinery parts.
 					return TRUE
 
 /obj/machinery/proc/part_insertion(mob/user, obj/item/weapon/stock_parts/part) // Second argument may actually be an arbitrary item.
-	if(!user.canUnEquip(part))
+	if(!user.canUnEquip(part) && !isstack(part))
 		return FALSE
 	var/number = can_add_component(part, user)
 	if(!number)
 		return istype(part) // If it's not a stock part, we don't block further interactions; presumably the user meant to do something else.
 	if(isstack(part))
 		var/obj/item/stack/stack = part
-		install_component(stack.split(number))
+		install_component(stack.split(number, TRUE))
 	else
 		user.unEquip(part, src)
 		install_component(part)

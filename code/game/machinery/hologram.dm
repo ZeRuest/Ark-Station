@@ -105,7 +105,7 @@ var/const/HOLOPAD_MODE = RANGE_BASED
 				var/zlevels = GetConnectedZlevels(z)
 				if(GLOB.using_map.use_overmap && holopadType == HOLOPAD_LONG_RANGE)
 					for(var/zlevel in map_sectors)
-						var/obj/effect/overmap/O = map_sectors["[zlevel]"]
+						var/obj/effect/overmap/visitable/O = map_sectors["[zlevel]"]
 						if(!isnull(O))
 							zlevels |= O.map_z
 				for(var/obj/machinery/hologram/holopad/H in SSmachines.machinery)
@@ -264,9 +264,9 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 /obj/machinery/hologram/holopad/proc/create_holo(mob/living/silicon/ai/A, mob/living/carbon/caller_id, turf/T = loc)
 	var/obj/effect/overlay/hologram = new(T)//Spawn a blank effect at the location.
 	if(caller_id)
-		var/datum/computer_file/report/crew_record/R = get_crewmember_record(caller_id.name)
-		if(R)
-			hologram.overlays += getHologramIcon(icon(R.photo_front), hologram_color = holopadType) // Add the callers image as an overlay to keep coloration!
+		//Ark snizu
+		hologram.overlays += getHologramIcon(icon(getFlatIcon(caller_id)), hologram_color = holopadType) // Add the callers image as an overlay to keep coloration!
+		//Ark sverhu
 	else if(A)
 		if(holopadType == HOLOPAD_LONG_RANGE)
 			hologram.overlays += A.holo_icon_longrange
@@ -280,7 +280,7 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 	hologram.anchored = 1//So space wind cannot drag it.
 	if(caller_id)
 		hologram.SetName("[caller_id.name] (Hologram)")
-		hologram.forceMove(get_step(src,1))
+		hologram.pixel_y = 13 // Ark
 		masters[caller_id] = hologram
 	else
 		hologram.SetName("[A.name] (Hologram)") //If someone decides to right click.

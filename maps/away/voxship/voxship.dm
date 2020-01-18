@@ -12,11 +12,12 @@
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/vox_shuttle)
 	area_usage_test_exempted_root_areas = list(/area/voxship)
 
-/obj/effect/overmap/sector/vox_base
+/obj/effect/overmap/visitable/sector/vox_base
 	name = "large asteroid"
 	desc = "Sensor array detects a large asteroid."
 	in_space = 1
 	icon_state = "meteor4"
+	hide_from_reports = TRUE
 	initial_generic_waypoints = list(
 		"nav_voxbase_1",
 	)
@@ -50,7 +51,7 @@
 	name = "shuttle control console"
 	shuttle_tag = "Vox Shuttle"
 
-/obj/effect/overmap/ship/landable/vox
+/obj/effect/overmap/visitable/ship/landable/vox
 	name = "Unknown Signature"
 	shuttle = "Vox Shuttle"
 	fore_dir = NORTH

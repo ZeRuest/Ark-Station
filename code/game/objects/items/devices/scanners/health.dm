@@ -55,7 +55,9 @@
 		return
 
 	. = medical_scan_results(scan_subject, verbose, user.get_skill_value(SKILL_MEDICAL))
-	to_chat(user, "<hr>[.]<hr>")
+	to_chat(user, "<hr>")
+	to_chat(user, .)
+	to_chat(user, "<hr>")
 
 /proc/medical_scan_results(var/mob/living/carbon/human/H, var/verbose, var/skill_level = SKILL_DEFAULT)
 	. = list()
@@ -284,13 +286,6 @@
 				chemtraces += "[initial(R.name)] ([H.chem_doses[T]])"
 		if(chemtraces.len)
 			. += "<span class='scan_notice'>Metabolism products of [english_list(chemtraces)] found in subject's system.</span>"
-
-	if(H.virus2.len)
-		for (var/ID in H.virus2)
-			if (ID in virusDB)
-				print_reagent_default_message = FALSE
-				var/datum/computer_file/data/virus_record/V = virusDB[ID]
-				. += "<span class='scan_warning'>Warning: Pathogen [V.fields["name"]] detected in subject's blood. Known antigen : [V.fields["antigen"]]</span>"
 
 	if(print_reagent_default_message)
 		. += "No results."

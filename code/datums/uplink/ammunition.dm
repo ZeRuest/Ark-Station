@@ -11,6 +11,12 @@
 	item_cost = 3
 	path = /obj/item/ammo_magazine/pistol/small
 
+/datum/uplink_item/item/ammo/empslug
+	name = "Haywire Slug"
+	desc = "Single 12-gauge shotgun slug fitted with a single-use ion pulse generator"
+	item_cost = 1
+	path = /obj/item/ammo_casing/shotgun/emp
+
 /datum/uplink_item/item/ammo/holdout_speedloader
 	name = "Small Speedloader"
 	desc = "A speedloader for small revolvers. Contains 6 rounds."
@@ -33,8 +39,11 @@
 	desc = "A magazine for assault rifles. Contains 20 rounds."
 	item_cost = 8
 	path = /obj/item/ammo_magazine/rifle
-	antag_roles = list(MODE_MERCENARY)
-
+/datum/uplink_item/item/ammo/bullpup //for zipguns
+	name = "Bullpup Rifle Magazine"
+	desc = "A magazine for bullpup assault rifles. Contains 15 rounds."
+	item_cost = 8
+	path = /obj/item/ammo_magazine/mil_rifle
 /datum/uplink_item/item/ammo/sniperammo
 	name = "Ammobox of Sniper Rounds"
 	desc = "A container of rounds for the anti-materiel rifle. Contains 7 rounds."
@@ -110,3 +119,9 @@
 	desc = "A box of EMP ammo for small pistols and revolvers. Contains 8 rounds."
 	item_cost = 6
 	path = /obj/item/ammo_magazine/box/emp/smallpistol
+
+/datum/uplink_item/item/ammo/stripperclip
+	name = "Stripper Clip"
+	desc = "A stripper clip used to load bolt action rifles. Contains just 5 rounds."
+	item_cost = 2
+	path = /obj/item/ammo_magazine/speedloader/clip

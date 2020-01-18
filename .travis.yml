@@ -18,6 +18,8 @@ matrix:
       env: TEST=MAP MAP_PATH=example
     - name: "Map - Torch"
       env: TEST=MAP MAP_PATH=torch
+    - name: "Map - Castelnau"
+      env: TEST=MAP MAP_PATH=castelnau
     - name: "Map - Bearcat"
       env: TEST=MAP MAP_PATH=bearcat
     - name: "Map - Away Sites"
