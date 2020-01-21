@@ -1,7 +1,7 @@
 /obj/structure/navlight_shuttle
 	name = "navigation light"
 	desc = "Large and bright green light."
-	icon = 'maps/castelnau/icons/obj/structures.dmi'
+	icon = 'code_ark/icons/obj/structures.dmi'
 	icon_state = "navlight_green"
 	anchored = 1
 	density = 0
