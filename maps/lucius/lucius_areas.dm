@@ -3,13 +3,13 @@
 
 //Second Deck (Z-1)
 /area/lucius/storage
-	name = "Lucius - Main Storage"
-	icon_state = "storage"
+	name = "Lucius - Primary Storage"
+	icon_state = "primarystorage"
 	req_access = list("SOL_GENERAL")
 
 /area/lucius/hallway/second
-	name = "Lucius - Second Deck Hallway"
-	icon_state = "hallway"
+	name = "Lucius - Second Deck Fore Hallway"
+	icon_state = "hallF"
 
 /area/lucius/hangar
 	name = "Lucius - Hangar"
@@ -19,7 +19,7 @@
 
 /area/lucius/maintenance/second
 	name = "Lucius - Second Deck Aft Maintenance"
-	icon_state = "maint"
+	icon_state = "maintA"
 	req_access = list("SOL_MAINT")
 
 /area/lucius/engineering
@@ -29,12 +29,12 @@
 
 /area/lucius/fuel
 	name = "Lucius - Fuel Bay"
-	icon_state = "eng"
+	icon_state = "fuel"
 	req_access = list("SOL_ENG")
 
-/area/lucius/fuel
+/area/lucius/thrust
 	name = "Lucius - Engines Bay"
-	icon_state = "eng"
+	icon_state = "thrust"
 	req_access = list("SOL_ENG")
 
 //First Deck (Z-2)
@@ -45,31 +45,31 @@
 
 /area/lucius/captain
 	name = "Lucius - Captain's Office"
-	icon_state = "bridge"
+	icon_state = "captain"
 	req_access = list("SOL_HIGH_COMMAND")
 	sound_env = SMALL_ENCLOSED
 
 /area/lucius/hallway/first/fore
 	name = "Lucius - First Deck Fore Hallway"
-	icon_state = "hallway"
+	icon_state = "hallF"
 
 /area/lucius/hallway/first/aft
 	name = "Lucius - First Deck Aft Hallway"
-	icon_state = "hallway"
+	icon_state = "hallA"
 
 /area/lucius/maintenance/first/port
 	name = "Lucius - First Deck Port Maintenance"
-	icon_state = "maint"
+	icon_state = "maintP"
 	req_access = list("SOL_MAINT")
 
 /area/lucius/maintenance/first/starboard
 	name = "Lucius - First Deck Starboard Maintenance"
-	icon_state = "maint"
+	icon_state = "maintS"
 	req_access = list("SOL_MAINT")
 
 /area/lucius/med
 	name = "Lucius - Medbay"
-	icon_state = "med"
+	icon_state = "medbay"
 	req_access = list("SOL_MED")
 
 /area/lucius/crew_quarters
@@ -83,13 +83,13 @@
 
 /area/lucius/telecomms
 	name = "Lucius - Telecommunications"
-	icon_state = "telecomms"
+	icon_state = "tcomms"
 	req_access = list("SOL_ENG")
 	ambience = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg')
 
 /area/lucius/atmos
 	name = "Lucius - Atmospherics"
-	icon_state = "telecomms"
+	icon_state = "atmos"
 	req_access = list("SOL_ENG")
 
 /area/lucius/xeno
@@ -104,12 +104,12 @@
 
 //SHUTTLE
 
-/area/lucius/yermak/main
-	name = "Yermak - Main Compartment"
-	icon_state = "yermak"
+/area/lucius/lazarev/main
+	name = "Lazarev - Main Compartment"
+	icon_state = "lazarev"
 	req_access = list("SOL_GENERAL")
 
-/area/lucius/yermak/main
-	name = "Yermak - Helm"
-	icon_state = "yermak"
+/area/lucius/lazarev/helm
+	name = "Lazarev - Helm"
+	icon_state = "lazarev_helm"
 	req_access = list("SOL_COMMAND")
