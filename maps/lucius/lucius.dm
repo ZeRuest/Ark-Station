@@ -3,3 +3,4 @@
 	#include "job/_sol_access_defs.dm"
 	#include "job/sol_access.dm"
 	#include "machinery/eng_equip.dm"
+	#include "structures/font.dm"
