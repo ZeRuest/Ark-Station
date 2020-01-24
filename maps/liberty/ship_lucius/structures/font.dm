@@ -1,5 +1,5 @@
 /obj/structure/font
-	icon = 'maps/lucius/icons/structures/font.dmi'
+	icon = 'maps/liberty/ship_lucius/icons/structures/font.dmi'
 	density = 0
 
 /obj/structure/font/l

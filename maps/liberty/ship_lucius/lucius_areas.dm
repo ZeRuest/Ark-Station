@@ -26,16 +26,19 @@
 	name = "Lucius - Engineering"
 	icon_state = "eng"
 	req_access = list("SOL_ENG")
+	ambience = list('sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambiatm1.ogg')
 
 /area/lucius/fuel
 	name = "Lucius - Fuel Bay"
 	icon_state = "fuel"
 	req_access = list("SOL_ENG")
+	ambience = list('sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambiatm1.ogg')
 
 /area/lucius/thrust
 	name = "Lucius - Engines Bay"
 	icon_state = "thrust"
 	req_access = list("SOL_ENG")
+	ambience = list('sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambiatm1.ogg')
 
 //First Deck (Z-2)
 /area/lucius/bridge
@@ -91,6 +94,7 @@
 	name = "Lucius - Atmospherics"
 	icon_state = "atmos"
 	req_access = list("SOL_ENG")
+	ambience = list('sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambiatm1.ogg')
 
 /area/lucius/xeno
 	name = "Lucius - Xenolife Bay"
