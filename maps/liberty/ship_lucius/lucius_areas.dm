@@ -108,12 +108,7 @@
 
 //SHUTTLE
 
-/area/lucius/lazarev/main
+/area/lucius/lazarev
 	name = "Lazarev - Main Compartment"
 	icon_state = "lazarev"
 	req_access = list("SOL_GENERAL")
-
-/area/lucius/lazarev/helm
-	name = "Lazarev - Helm"
-	icon_state = "lazarev_helm"
-	req_access = list("SOL_COMMAND")

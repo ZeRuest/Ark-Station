@@ -1,4 +1,5 @@
 	#include "lucius_areas.dm"
+	#include "lucius_shuttles.dm"
 	#include "datums/programs/card.dm"
 	#include "job/_sol_access_defs.dm"
 	#include "job/sol_access.dm"
