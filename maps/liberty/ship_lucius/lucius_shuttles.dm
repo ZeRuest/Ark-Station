@@ -29,6 +29,7 @@
 	color = "#bd0606"
 	vessel_mass = 750
 	vessel_size = SHIP_SIZE_TINY
+	fuel_consumption = 3
 
 /datum/shuttle/autodock/overmap/lucius
 	name = "SEV Lucius"
@@ -62,7 +63,7 @@
 	defer_initialisation = TRUE
 	flags = SHUTTLE_FLAGS_PROCESS
 	skill_needed = SKILL_NONE
-	ceiling_type = /turf/simulated/floor/shuttle_ceiling/skrell
+	ceiling_type = /turf/simulated/floor/shuttle_ceiling
 	mothershuttle = "SEV Lucius"
 
 /obj/effect/shuttle_landmark/lazarev/start
