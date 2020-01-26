@@ -29,7 +29,6 @@
 	color = "#bd0606"
 	vessel_mass = 750
 	vessel_size = SHIP_SIZE_TINY
-	fuel_consumption = 3
 
 /datum/shuttle/autodock/overmap/lucius
 	name = "SEV Lucius"
@@ -65,6 +64,7 @@
 	skill_needed = SKILL_NONE
 	ceiling_type = /turf/simulated/floor/shuttle_ceiling
 	mothershuttle = "SEV Lucius"
+	fuel_consumption = 3
 
 /obj/effect/shuttle_landmark/lazarev/start
 	name = "Lazarev Hangar"
