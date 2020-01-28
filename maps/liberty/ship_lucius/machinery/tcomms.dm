@@ -1,37 +1,9 @@
-var/const/SOL_COMM_FREQ = 1363
-#define	COMMS_COLOR_SOL_COMMAND    "#ff00ff"
-
-// channel_color_presets += list("Negotiating Blue" = COMMS_COLOR_SOL_COMMAND)
-
-/*radiochannels = list(
-	"Common"		= PUB_FREQ,
-	"Science"		= SCI_FREQ,
-	"Command"		= COMM_FREQ,
-	"Medical"		= MED_FREQ,
-	"Engineering"	= ENG_FREQ,
-	"Security" 		= SEC_FREQ,
-	"Response Team" = ERT_FREQ,
-	"Special Ops" 	= DTH_FREQ,
-	"Mercenary" 	= SYND_FREQ,
-	"Raider"		= RAID_FREQ,
-	"Exploration"	= EXP_FREQ,
-	"Supply" 		= SUP_FREQ,
-	"Service" 		= SRV_FREQ,
-	"AI Private"	= AI_FREQ,
-	"Entertainment" = ENT_FREQ,
-	"Medical(I)"	= MED_I_FREQ,
-	"Security(I)"	= SEC_I_FREQ,
-	"Recon"			= SKRELL_FREQ,
-	"Sol Command"   = SOL_COMM_FREQ
-) */
 
 
-// IT IS SUPER IMPORTANT TO ADD THIS FREQUENCY TO THE LIST OF FREQUENCIES! SEE COMMUNICATIONS.DM!
-// ASSIGN A COLOR!
-// ADD AN ENCRYPTION KEY!
 // SET THE ACCESS!
 
 
+// TCOMMS PRESETS
 /obj/machinery/telecomms/server/presets/lucius_command
 	id = "Command Server"
 	freq_listening = list(SOL_COMM_FREQ)

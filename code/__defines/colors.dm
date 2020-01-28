@@ -34,7 +34,7 @@
 #define COLOR_DARK_GREEN_GRAY  "#54654c"
 #define COLOR_BLUE_GRAY        "#6a97b0"
 #define COLOR_DARK_BLUE_GRAY   "#3e4855"
-#define COLOR_SURGERY_BLUE     "#e0f2f6" 
+#define COLOR_SURGERY_BLUE     "#e0f2f6"
 #define COLOR_SUN              "#ec8b2f"
 #define COLOR_PURPLE_GRAY      "#a2819e"
 #define COLOR_BLUE_LIGHT       "#33ccff"
@@ -108,6 +108,7 @@
 #define	COMMS_COLOR_CENTCOMM   "#5c5c7c"
 #define	COMMS_COLOR_SYNDICATE  "#6d3f40"
 #define	COMMS_COLOR_SKRELL     "#7331c4"
+#define	COMMS_COLOR_SOL_COMMAND "#ff00ff" // THE ARK PROJECT CODE
 
 #define WOOD_COLOR_GENERIC     "#d5a66e"
 #define WOOD_COLOR_RICH        "#792f27"

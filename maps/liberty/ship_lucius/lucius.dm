@@ -1,6 +1,7 @@
 	#include "lucius_areas.dm"
 	#include "lucius_shuttles.dm"
 	#include "datums/programs/card.dm"
+	#include "items/headsets.dm"
 	#include "job/_sol_access_defs.dm"
 	#include "job/sol_access.dm"
 	#include "machinery/eng_equip.dm"
