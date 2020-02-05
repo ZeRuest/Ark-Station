@@ -135,17 +135,17 @@
 	name = "Scandal"
 	flawor = " lemon and E. musk."
 
-/obj/item/weapon/reagent_containers/spray/perfume/Narcisco
-	name = "Narcisco"
-	icon_state = "Narcisco"
-	item_state = "Narcisco"
+/obj/item/weapon/reagent_containers/spray/perfume/Narciso
+	name = "Narciso"
+	icon_state = "Narciso"
+	item_state = "Narciso"
 
-/obj/item/weapon/reagent_containers/spray/perfume/Narcisco/New()
+/obj/item/weapon/reagent_containers/spray/perfume/Narciso/New()
 	..()
-	reagents.add_reagent(/datum/reagent/perfume/Narcisco, volume)
+	reagents.add_reagent(/datum/reagent/perfume/Narciso, volume)
 
-/datum/reagent/perfume/Narcisco
-	name = "Narcisco"
+/datum/reagent/perfume/Narciso
+	name = "Narciso"
 	flawor = " coriander and magnolia."
 
 /obj/item/weapon/reagent_containers/spray/perfume/Amore_Verde
