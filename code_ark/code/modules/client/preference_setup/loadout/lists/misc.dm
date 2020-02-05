@@ -36,6 +36,7 @@
 	display_name = "toothbrush"
 	sort_category = "Cosmetics"
 	cost = 1
+	path = /obj/item/weapon/toothbrush
 
 /datum/gear/toothbrush/New()
 	gear_tweaks += new/datum/gear_tweak/path(list(
@@ -50,6 +51,7 @@
 	display_name = "perfume"
 	sort_category = "Cosmetics"
 	cost = 1
+	path = /obj/item/weapon/reagent_containers/spray/perfume
 
 /datum/gear/perfume/New()
 	var/list/perfumes = list()
