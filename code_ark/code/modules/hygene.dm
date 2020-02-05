@@ -30,6 +30,7 @@
 	gender = PLURAL
 	volume = 35
 	icon = 'icons/obj/parfume__cosmetics.dmi'
+	icon_state = "Nyx_Noir"
 
 /obj/item/weapon/reagent_containers/spray/perfume/Nyx
 	name = "Nyx Noir"
